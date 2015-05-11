@@ -1,7 +1,7 @@
 var _cache = {};
 
 export default function cache(url, options) {
-  var key = url + JSON.stringify(options);
+  var key = url + (options ? JSON.stringify(options) : '');
 
   if (_cache[key]) {
     return new Promise(function(resolve, reject) {

@@ -10,6 +10,7 @@ const {
 
 import App from './handlers/Base';
 import Home from'./handlers/Home';
+import Events from'./handlers/Events';
 import Careers from'./handlers/Careers';
 import Todo from'./handlers/Todo';
 import NotFound from './handlers/NotFound';
@@ -18,7 +19,11 @@ var routes = (
   <Route path="/" handler={App}>
     <Route name="services" path="services" handler={Todo} />
     <Route name="case-studies" path="case-studies" handler={Todo} />
-    <Route name="events" path="events" handler={Todo} />
+    <Route path="events">
+      <DefaultRoute name="events" handler={Events} />
+      <Route name="events-charlotte" path="charlotte" handler={Events} />
+      <Route name="events-denver" path="denver" handler={Events} />
+    </Route>
     <Route name="blog" path="blog" handler={Todo} />
     <Route name="careers" path="careers" handler={Careers} />
     <Route name="contact" path="contact" handler={Todo} />

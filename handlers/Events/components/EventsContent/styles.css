@@ -1,0 +1,133 @@
+/** @define EventsContent; use strict */
+
+.EventsContent {}
+
+.EventsContent-nav {
+  background: #ebebeb;
+  text-align: center;
+}
+
+.EventsContent-nav-link {
+  border-bottom: 1px solid transparent;
+  color: #333;
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.EventsContent-nav-link.is-active {
+  border-bottom-color: #000;
+}
+
+.EventsContent-list {
+  margin: 0 0 0 5%;
+  padding: 0;
+}
+
+.EventsContent-item {
+  display: block;
+  padding: 1.5em 15% 1.5em 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.EventsContent-item-segment {
+  display: inline-block;
+  min-width: 120px;
+  vertical-align: top;
+}
+
+.EventsContent-date {
+  color: #eb4e1b;
+  float: left;
+  font-size: 2.25em;
+  margin-right: 0.3333em
+}
+
+.EventsContent-month-year,
+.EventsContent-time {
+  font-size: 0.666em;
+  margin: 0.333em 0;
+  text-transform: uppercase;
+}
+
+.EventsContent-eventName {}
+
+.EventsContent-groupName {
+  color: #aaa;
+  font-size: 0.666em;
+  margin-top: 0.333em;
+  text-transform: uppercase;
+}
+
+.EventsContent-button {
+  background: #fff;
+  border: 1px solid #eb4e1b;
+  border-radius: 0.3333em;
+  color: #eb4e1b;
+  display: inline-block;
+  font-size: 0.666em;
+  font-weight: 900;
+  padding: 1em 3em;
+  position: absolute;
+  right: 5%;
+  top: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 660px) {
+  .EventsContent-list {
+    margin-left: 1.5em;
+  }
+
+  .EventsContent-button {
+    right: 1.5rem;
+  }
+
+
+  .EventsContent-item-segment {
+    min-width: 100px;
+  }
+
+  .EventsContent-date {
+    font-size: 1.75em;
+    margin-top: 0.0.555em;
+    margin-right: 0.1666em
+  }
+
+  .EventsContent-month-year,
+  .EventsContent-time {
+    font-size: 0.666em;
+    margin: 0.333em 0;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .EventsContent-item-segment {
+    display: block;
+    min-width: none;
+  }
+
+  .EventsContent-date {
+    font-size: 3.75em;
+  }
+
+  .EventsContent-list {
+    margin-left: 0;
+  }
+
+  .EventsContent-item {
+    padding-left: 1.5em;
+  }
+
+  .EventsContent-month-year,
+  .EventsContent-time {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+}
+
