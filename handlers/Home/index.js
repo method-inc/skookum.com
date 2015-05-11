@@ -1,11 +1,12 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import Hero from 'Hero';
 
 class Home extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Home">
-        Home
+        <Hero title="Careers" subtitle="We never do the same thing twice" />
       </div>
     );
   }

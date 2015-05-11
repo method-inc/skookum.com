@@ -12,7 +12,6 @@ class AppBase extends React.Component {
     return (
       <div>
         <NavBar />
-        Welcome AppBase
         <RouteHandler />
       </div>
     );
