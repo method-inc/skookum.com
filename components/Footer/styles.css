@@ -1,0 +1,31 @@
+/** @define Footer; use strict */
+
+.Footer {
+  background: #000;
+  color: #bbb;
+  font-size: 0.666em;
+  padding: 1.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Footer-link {
+  color: #bbb;
+  display: inline-block;
+  padding: 0.666em;
+  text-decoration: none;
+}
+
+.Footer-hr {
+  border: 0;
+  border-bottom: 1px solid #444;
+}
+.Footer-logo {
+  display: block;
+  margin: 2em auto 0;
+  width: 60px;
+}
+
+.Footer-legal {}
+
+

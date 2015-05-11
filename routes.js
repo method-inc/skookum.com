@@ -20,7 +20,9 @@ var routes = (
     <Route name="case-studies" path="case-studies" handler={Todo} />
     <Route name="events" path="events" handler={Todo} />
     <Route name="blog" path="blog" handler={Todo} />
+    <Route name="careers" path="careers" handler={Careers} />
     <Route name="contact" path="contact" handler={Todo} />
+    <Route name="open-source" path="open-source" handler={Todo} />
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
