@@ -1,0 +1,179 @@
+/** @define CareersContent; use strict */
+
+.CareersContent {
+  padding: 1.5em 0;
+}
+
+/** INTRODUCTION ================ */
+
+.CareersContent-value {
+  color: #eb4e1b;
+  font-weight: 900;
+  font-size: 1.3333em;
+  line-height: 1.16666;
+  text-transform: uppercase;
+  padding: 0 1.5em;
+}
+
+.CareersContent-value:after {
+  content: ' ';
+  display: block;
+  width: 30%;
+  margin-top: 1em;
+  border-bottom: 1px solid #eb4e1b;
+  margin-bottom: 2em;
+}
+
+.CareersContent-a {
+  color: #313131;
+  font-size: 0.8em;
+  padding: 0 1.5em;
+  line-height: 1.8;
+}
+
+/** VALUES ================ */
+
+.CareersContent-values {
+  margin-top: 1.5em;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+.CareersContent-values-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CareersContent-values-hr {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 0.5em auto 0;
+  width: 40%;
+}
+
+.CareersContent-values-title,
+.CareersContent-values-value {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 3rem 0.5em;
+  width: 50%;
+}
+
+.CareersContent-values-number {
+  color: #000;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.CareersContent-values-text {
+  color: #666;
+  font-size: 1em;
+  height: 2em;
+}
+
+/** BENEFITS ================ */
+
+.CareersContent-benefits {
+  background: #eb4e1b;
+  color: #fff;
+  padding: 3em 1.5em;
+}
+
+.CareersContent-benefits-title {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.CareersContent-benefits-list {
+  margin: 0;
+  padding: 0;
+}
+
+.CareersContent-benefits-item {
+  font-size: 0.8em;
+  font-weight: 300;
+  list-style: none;
+  line-height: 1.16666;
+  margin-bottom: 1em;
+}
+
+/** PEOPLE ================ */
+
+.CareersContent-people {
+  padding: 1.5em 0;
+
+}
+
+.CareersContent-people-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CareersContent-people-hr {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 0.5em auto 0;
+  width: 40%;
+}
+
+.CareersContent-people-list {
+  list-style: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+.CareersContent-person {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33.3333%;
+}
+
+.CareersContent-person-name,
+.CareersContent-person-title {
+  display: none;
+}
+
+.CareersContent-person-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  .CareersContent-person {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .CareersContent-person {
+    width: 20%;
+  }
+
+
+  .CareersContent-value,
+  .CareersContent-a {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .CareersContent-person {
+    width: 12.5%;
+  }
+}
+

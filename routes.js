@@ -10,6 +10,7 @@ const {
 
 import App from './handlers/Base';
 import Home from'./handlers/Home';
+import Careers from'./handlers/Careers';
 import Todo from'./handlers/Todo';
 import NotFound from './handlers/NotFound';
 

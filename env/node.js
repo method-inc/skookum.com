@@ -1,4 +1,6 @@
 /** @flow */
+Object.assign(process.env, require('../.env'));
+
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 var debug = require('debug')('app startup');
@@ -7,6 +9,7 @@ import express from 'express';
 import React from 'react';
 import Router from 'react-router';
 import {Resolver} from 'react-resolver';
+import api from '../api';
 import routes from '../routes';
 import {resources} from './webpack';
 
@@ -20,6 +23,7 @@ var tmpl = o => read('./index.html', 'utf8')
 
 var app = express();
 
+app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
 
