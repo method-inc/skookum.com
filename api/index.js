@@ -112,6 +112,20 @@ var patchAuthorWithBamboo = (n, ...fields) => (
     )
 );
 
+api.get('/contentful/featured', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(n => n.name === 'blog_post')[0].sys.id)
+    .then(id => contentful.entries({
+      content_type: id,
+      limit: 3,
+      'fields.featured': true,
+    }))
+    .then(
+      n => res.send(n.map(n => n.fields)),
+      error => res.send(error)
+    );
+});
+
 api.get('/contentful/:slug', function(req, res) {
   contentful.entries({
     query: req.params.slug,

@@ -13,18 +13,15 @@ class Blog extends React.Component {
     return (
       <div className="Blog">
         <Hero color="#000" title="Blog" subtitle="A collection of our team’s writings">
-          <Link to="article" params={{slug: 'hmf-now-half-as-long'}} className="Blog-featured">
-            <span className="Blog-featured-title">Hmf...now half as long</span>
-            <span className="Blog-featured-author">Pat Morrell</span>
-          </Link>
-          <Link to="article" params={{slug: 'what-i-learned-at-a-startup'}} className="Blog-featured">
-            <span className="Blog-featured-title">What I Learned At A Startup</span>
-            <span className="Blog-featured-author">Glenn Goodrich</span>
-          </Link>
-          <Link to="article" params={{slug: 'software-joe-ryans-carolina-panther-tailgate-or-why-you-want-to-live-in-charlotte'}} className="Blog-featured">
-            <span className="Blog-featured-title">Joe Ryan’s Tailgate, Or Why You Want to Live In Charlotte</span>
-            <span className="Blog-featured-author">Tim Roberson</span>
-          </Link>
+          {this.props.featured.slice(0, 3).map(f => (
+            <Link key={f.slug} to="article" params={{slug: f.slug}} className="Blog-featured">
+              <span className="Blog-featured-title">{f.title}</span>
+              <span className="Blog-featured-author">{f.author.fields.name}</span>
+              {f.poster.fields && (
+                <img src={f.poster.fields.file.url} className="Blog-featured-image" />
+              )}
+            </Link>
+          ))}
         </Hero>
         <FilterBar items={this.props.tags} />
         {this.props.articles.map(a => (
@@ -61,8 +58,11 @@ Blog.displayName = 'Blog';
 
 export default Resolver.createContainer(Blog, {
   resolve: {
+    featured() {
+      return fetch('http://localhost:4444/api/contentful/featured').then(n => n.json());
+    },
     articles() {
       return fetch('http://localhost:4444/api/contentful').then(n => n.json());
-    }
+    },
   },
 });
