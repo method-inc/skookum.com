@@ -230,9 +230,20 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .CareersContent-person {
     width: 12.5%;
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .CareersContent-person {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .CareersContent-person {
+    width: 7.5%;
+  }
+}

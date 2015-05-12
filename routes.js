@@ -11,6 +11,8 @@ const {
 import App from './handlers/Base';
 import Home from'./handlers/Home';
 import Events from'./handlers/Events';
+import Blog from'./handlers/Blog';
+import BlogArticle from'./handlers/BlogArticle';
 import Careers from'./handlers/Careers';
 import Todo from'./handlers/Todo';
 import NotFound from './handlers/NotFound';
@@ -24,7 +26,10 @@ var routes = (
       <Route name="events-charlotte" path="charlotte" handler={Events} />
       <Route name="events-denver" path="denver" handler={Events} />
     </Route>
-    <Route name="blog" path="blog" handler={Todo} />
+    <Route path="blog">
+      <DefaultRoute name="blog" handler={Blog} />
+      <Route name="article" path=":slug" handler={BlogArticle} />
+    </Route>
     <Route name="careers" path="careers" handler={Careers} />
     <Route name="contact" path="contact" handler={Todo} />
     <Route name="open-source" path="open-source" handler={Todo} />

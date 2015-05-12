@@ -12,12 +12,16 @@
     "build": "node ./scripts/build && node dist/main.js"
   },
   "dependencies": {
+    "array.prototype.find": "^1.0.0",
     "btoa": "^1.1.2",
+    "contentful": "^1.1.1",
     "es6-promise": "^2.1.0",
+    "escape-html": "^1.0.1",
     "express": "^4.12.3",
     "flux": "^2.0.1",
     "immutable": "^3.7.1",
     "isomorphic-fetch": "^2.0.1",
+    "marked": "^0.3.3",
     "node-noop": "0.0.1",
     "normalize.css": "^3.0.3",
     "object.assign": "^1.1.1",

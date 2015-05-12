@@ -6,6 +6,7 @@ require('isomorphic-fetch');
 var debug = require('debug')('app startup');
 
 import express from 'express';
+import escape from 'escape-html';
 import React from 'react';
 import Router from 'react-router';
 import {Resolver} from 'react-resolver';

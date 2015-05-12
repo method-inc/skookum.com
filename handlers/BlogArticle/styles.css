@@ -1,0 +1,90 @@
+/** @define BlogArticle */
+
+.BlogArticle {}
+
+.BlogArticle-content {
+  line-height: 1.666;
+  padding-top: 2.3333rem;
+}
+
+.BlogArticle-content h2,
+.BlogArticle-content h3,
+.BlogArticle-content h4,
+.BlogArticle-content h5,
+.BlogArticle-content h6,
+.BlogArticle-content ul,
+.BlogArticle-content ol,
+.BlogArticle-content p,
+.BlogArticle-author {
+  max-width: 600px;
+  margin: 0 auto 2.333rem;
+  padding: 0 5%;
+}
+
+.BlogArticle-content h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.BlogArticle-content h3 {
+  color: #313131;
+  margin-bottom: 1.3333rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.BlogArticle-content ul,
+.BlogArticle-content ol {
+  max-width: 500px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.BlogArticle-content li {
+  line-height: 1.22222;
+  margin-bottom: 0.444rem;
+}
+
+.BlogArticle-content a {
+  color: inherit;
+}
+
+.BlogArticle-author {}
+.BlogArticle-author-image {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 2.5%;
+  overflow: hidden;
+  vertical-align: top;
+  width: 10%;
+}
+
+.BlogArticle-author-details {
+  display: inline-block;
+  font-size: 0.91666em;
+  padding: 0.875rem 0;
+  vertical-align: top;
+}
+
+.BlogArticle-author-image img {
+  max-width: 100%;
+}
+
+.BlogArticle-author-name {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.BlogArticle-author-twitter {
+  display: block;
+  margin-top: 0.2em;
+}
+
+@media screen and (min-width: 800px) {
+  .BlogArticle-author-image {
+    margin-left: -12.5%;
+  }
+}
+
