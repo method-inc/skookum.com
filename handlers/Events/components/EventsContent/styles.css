@@ -2,25 +2,6 @@
 
 .EventsContent {}
 
-.EventsContent-nav {
-  background: #ebebeb;
-  text-align: center;
-}
-
-.EventsContent-nav-link {
-  border-bottom: 1px solid transparent;
-  color: #333;
-  display: inline-block;
-  font-size: 0.75em;
-  padding: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.EventsContent-nav-link.is-active {
-  border-bottom-color: #000;
-}
-
 .EventsContent-list {
   margin: 0 0 0 5%;
   padding: 0;

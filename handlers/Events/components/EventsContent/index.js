@@ -4,6 +4,8 @@ require('./styles.css');
 
 import React from 'react';
 import {Link} from 'react-router';
+import FilterBar from 'FilterBar';
+
 var {PropTypes} = React;
 
 const MONTHS = [
@@ -47,11 +49,11 @@ class EventsContent extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="EventsContent">
-        <div className="EventsContent-nav">
-          <Link to="events" className="EventsContent-nav-link" activeClassName="is-active">All</Link>
-          <Link to="events-charlotte" className="EventsContent-nav-link" activeClassName="is-active">Charlotte</Link>
-          <Link to="events-denver" className="EventsContent-nav-link" activeClassName="is-active">Denver</Link>
-        </div>
+        <FilterBar items={[
+          {to: 'events', text: 'All'},
+          {to: 'events-charlotte', text: 'Charlotte'},
+          {to: 'events-denver', text: 'Denver'},
+        ]} />
         <ol className="EventsContent-list">
           {this.props.events.map(e => (
             <li key={e.event_url} className="EventsContent-item">

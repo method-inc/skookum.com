@@ -6,6 +6,7 @@ import {Resolver} from 'react-resolver';
 import marked from 'marked';
 
 import Hero from 'Hero';
+import FilterBar from 'FilterBar';
 
 class Blog extends React.Component {
   render(): ?ReactElement {
@@ -25,6 +26,7 @@ class Blog extends React.Component {
             <span className="Blog-featured-author">Tim Roberson</span>
           </Link>
         </Hero>
+        <FilterBar items={this.props.tags} />
         {this.props.articles.map(a => (
           <div key={a.slug} className="Blog-article">
             <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
@@ -42,6 +44,17 @@ class Blog extends React.Component {
 
 Blog.propTypes = {
   articles: React.PropTypes.array.isRequired,
+  tags: React.PropTypes.array.isRequired,
+};
+
+Blog.defaultProps = {
+  tags: [
+    {to: 'blog', text: 'All'},
+    {to: 'blog', params: {tag: 'development'}, text: 'Development'},
+    {to: 'blog', params: {tag: 'innovation'}, text: 'Innovation'},
+    {to: 'blog', params: {tag: 'product'}, text: 'Product'},
+    {to: 'blog', params: {tag: 'culture'}, text: 'Culture'},
+  ]
 };
 
 Blog.displayName = 'Blog';
