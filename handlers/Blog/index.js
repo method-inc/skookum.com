@@ -11,10 +11,22 @@ class Blog extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Blog">
-        <Hero title="Blog" subtitle="A collection of our team’s writings" />
+        <Hero color="#000" title="Blog" subtitle="A collection of our team’s writings">
+          <Link to="article" params={{slug: 'hmf-now-half-as-long'}} className="Blog-featured">
+            <span className="Blog-featured-title">Hmf...now half as long</span>
+            <span className="Blog-featured-author">Pat Morrell</span>
+          </Link>
+          <Link to="article" params={{slug: 'what-i-learned-at-a-startup'}} className="Blog-featured">
+            <span className="Blog-featured-title">What I Learned At A Startup</span>
+            <span className="Blog-featured-author">Glenn Goodrich</span>
+          </Link>
+          <Link to="article" params={{slug: 'software-joe-ryans-carolina-panther-tailgate-or-why-you-want-to-live-in-charlotte'}} className="Blog-featured">
+            <span className="Blog-featured-title">Joe Ryan’s Tailgate, Or Why You Want to Live In Charlotte</span>
+            <span className="Blog-featured-author">Tim Roberson</span>
+          </Link>
+        </Hero>
         {this.props.articles.map(a => (
-          a.slug &&
-          <div key={a.id} className="Blog-article">
+          <div key={a.slug} className="Blog-article">
             <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
             <div className="Blog-article-summary" dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.slice(0, 200) + '...'))}} />
             {/*<div className="Blog-article-tags">{a.tags.map(t => <a className="Blog-article-tag" href="#">{t}</a>)}</div>*/}

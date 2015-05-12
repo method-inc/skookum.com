@@ -4,6 +4,33 @@
   padding-bottom: 2.333em;
 }
 
+.Blog-featured {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  height: 10em;
+  margin-top: 1.5em;
+  margin-left: -1px;
+  padding: 2em 1.5em 0;
+  text-decoration: none;
+  vertical-align: top;
+  width: 31.6666%; /* 33.333 - (5% / 3) for the right padding */
+}
+
+.Blog-featured-title {
+  display: block;
+  font-size: 1.16666em;
+  font-weight: 900;
+  margin-bottom: 0.8em;
+}
+
+.Blog-featured-author {
+  color: #eaeaea;
+  font-size: 0.666em;
+  font-weight: 100;
+}
+
 .Blog-article {
   border-bottom: 1px solid #ddd;
   padding: 2.333em 33.3333% 2.3333em 0;

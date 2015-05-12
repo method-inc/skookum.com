@@ -15,6 +15,7 @@ class NavBar extends React.Component {
   }
 
   toggleNavigation(e: any) {
+    if (e) e.preventDefault();
     this.setState({showNav: !this.state.showNav});
   }
 

@@ -103,19 +103,25 @@ api.get('/contentful', function(req, res) {
 
 var patchAuthorWithBamboo = (n, ...fields) => (
   employee({displayName: n.author.fields.name})
-    .then(e => Object.assign(
-      n.author,
-      n.author.fields,
-      e && selectFields(e, fields)
-    ))
-    .then(_ => n)
+    .then(e => (
+      Object.assign(
+        n.author,
+        n.author.fields,
+        e && selectFields(e, fields)
+      ), n)
+    )
 );
 
 api.get('/contentful/:slug', function(req, res) {
   contentful.entries({
     query: req.params.slug,
   })
-  .then(n => patchAuthorWithBamboo(n[0].fields, 'photoUrl'))
+  .then(n => (
+    // promises can make some things pretty ugly
+    n.length === 0 ?
+      res.sendStatus(404) :
+      patchAuthorWithBamboo(n[0].fields, 'photoUrl')
+  ))
   .then(n => res.send(n))
   .catch(error => res.send({error}));
 });
