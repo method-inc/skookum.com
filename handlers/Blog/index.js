@@ -28,7 +28,7 @@ class Blog extends React.Component {
               <span className="Blog-featured-title">{f.title}</span>
               <span className="Blog-featured-author">{f.author.fields.name}</span>
               {f.poster.fields && (
-                <img src={f.poster.fields.file.url} className="Blog-featured-image" />
+                <img src={f.poster.fields.file.url + '?w=400'} className="Blog-featured-image" />
               )}
             </Link>
           ))}
@@ -37,7 +37,7 @@ class Blog extends React.Component {
         {this.props.articles.map(a => (
           <div key={a.slug} className="Blog-article">
             <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
-            <div className="Blog-article-summary" dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.slice(0, 200) + '...'))}} />
+            <div className="Blog-article-summary" dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.slice(0, 400) + '...'))}} />
             {/*<div className="Blog-article-tags">{a.tags.map(t => <a className="Blog-article-tag" href="#">{t}</a>)}</div>*/}
             <div className="Blog-article-info">
               <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{new Date(a.datePublished).toString()}</span>
