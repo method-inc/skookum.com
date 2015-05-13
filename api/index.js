@@ -87,9 +87,15 @@ api.get('/events', function(req, res) {
   */
 });
 
+var capitalize = s => s[0].toUpperCase() + s.slice(1);
+
 api.get('/contentful', function(req, res) {
   const PER_PAGE = 5;
   const PAGE = req.query.page || 1;
+  var query = {};
+  if (req.query.tag) {
+    query['fields.tags[in]'] = capitalize(req.query.tag);
+  }
 
   return contentful.contentTypes()
     .then(n => n.filter(n => n.name === 'blog_post')[0].sys.id)
@@ -98,6 +104,7 @@ api.get('/contentful', function(req, res) {
       limit: PER_PAGE,
       order: '-fields.datePublished',
       skip: PER_PAGE * (PAGE - 1),
+      ...query
     }))
     .then(
       n => res.send(n.map(n => n.fields)),

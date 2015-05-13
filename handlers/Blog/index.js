@@ -65,10 +65,10 @@ Blog.propTypes = {
 Blog.defaultProps = {
   tags: [
     {to: 'blog', text: 'All'},
-    {to: 'blog', params: {tag: 'development'}, text: 'Development'},
-    {to: 'blog', params: {tag: 'innovation'}, text: 'Innovation'},
-    {to: 'blog', params: {tag: 'product'}, text: 'Product'},
-    {to: 'blog', params: {tag: 'culture'}, text: 'Culture'},
+    {to: 'tag', params: {tag: 'development'}, text: 'Development'},
+    {to: 'tag', params: {tag: 'innovation'}, text: 'Innovation'},
+    {to: 'tag', params: {tag: 'product'}, text: 'Product'},
+    {to: 'tag', params: {tag: 'culture'}, text: 'Culture'},
   ]
 };
 
