@@ -88,12 +88,16 @@ api.get('/events', function(req, res) {
 });
 
 api.get('/contentful', function(req, res) {
+  const PER_PAGE = 5;
+  const PAGE = req.query.page || 1;
+
   return contentful.contentTypes()
     .then(n => n.filter(n => n.name === 'blog_post')[0].sys.id)
     .then(id => contentful.entries({
       content_type: id,
-      limit: 5,
+      limit: PER_PAGE,
       order: '-fields.datePublished',
+      skip: PER_PAGE * (PAGE - 1),
     }))
     .then(
       n => res.send(n.map(n => n.fields)),

@@ -1,5 +1,6 @@
 require('./styles.css');
 
+import qs from 'querystring'
 import React from 'react';
 import {Link} from 'react-router';
 import {Resolver} from 'react-resolver';
@@ -8,8 +9,17 @@ import marked from 'marked';
 import Hero from 'Hero';
 import FilterBar from 'FilterBar';
 
+const DEFAULT_PARAMS = {
+  page: '1',
+};
+
 class Blog extends React.Component {
   render(): ?ReactElement {
+    var params = Object.assign(
+      {}, DEFAULT_PARAMS,
+      this.context.router.getCurrentParams()
+    );
+
     return (
       <div className="Blog">
         <Hero color="#000" title="Blog" subtitle="A collection of our team’s writings">
@@ -34,10 +44,18 @@ class Blog extends React.Component {
             </div>
           </div>
         ))}
+        <div className="Blog-pager">
+          {params.page > 1 && <Link className="Blog-article-pager" to="blog-paged" params={{page: params.page - 1}}>Previous Page</Link>}
+          {this.props.articles.length === 5 && <Link className="Blog-article-pager" to="blog-paged" params={{page: +params.page + 1}}>Next Page</Link>}
+        </div>
       </div>
     );
   }
 }
+
+Blog.contextTypes = {
+  router: React.PropTypes.func.isRequired,
+};
 
 Blog.propTypes = {
   articles: React.PropTypes.array.isRequired,
@@ -59,10 +77,13 @@ Blog.displayName = 'Blog';
 export default Resolver.createContainer(Blog, {
   resolve: {
     featured() {
+      // TODO: cache this
       return fetch('http://localhost:4444/api/contentful/featured').then(n => n.json());
     },
-    articles() {
-      return fetch('http://localhost:4444/api/contentful').then(n => n.json());
+    articles(props, context) {
+      return fetch(
+        `http://localhost:4444/api/contentful?${qs.stringify(props.params)}`
+      ).then(n => n.json());
     },
   },
 });

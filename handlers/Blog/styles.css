@@ -1,7 +1,6 @@
 /** @define Blog */
 
 .Blog {
-  padding-bottom: 2.333em;
 }
 
 .Blog-featured {
@@ -76,6 +75,23 @@
 
 .Blog-article-author {
   color: inherit;
+  text-decoration: none;
+}
+
+.Blog-pager {
+  margin: 1.5em 5%;
+  /* padding-bottom: 2.333em; */
+}
+
+.Blog-article-pager {
+  color: inherit;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 900;
+  margin-left: -0.416666em;
+  margin-right: 0.416666em;
+  padding: 0.416666em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
