@@ -1,7 +1,7 @@
 # Skookum.com: 2015 and beyond
 
 We’re now eating our own ice cream. The Skookum.com website is built with
-https://github.com/Skookum/yo-genreact.
+https://github.com/Skookum/generator-genreact.
 
 It may be a bit overwhelming if you try to understand all of it right out of the
 gate, though. This is a many layered architecture that sets you up for success
