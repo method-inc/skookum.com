@@ -92,13 +92,14 @@ var capitalize = s => s[0].toUpperCase() + s.slice(1);
 api.get('/contentful', function(req, res) {
   const PER_PAGE = 5;
   const PAGE = req.query.page || 1;
+  var content_type = req.query.content_type || 'blog_post';
   var query = {};
   if (req.query.tag) {
     query['fields.tags[in]'] = capitalize(req.query.tag);
   }
 
   return contentful.contentTypes()
-    .then(n => n.filter(n => n.name === 'blog_post')[0].sys.id)
+    .then(n => n.filter(n => n.name === content_type)[0].sys.id)
     .then(id => contentful.entries({
       content_type: id,
       limit: PER_PAGE,

@@ -81,6 +81,11 @@ export default Resolver.createContainer(Blog, {
       return fetch('http://localhost:4444/api/contentful/featured').then(n => n.json());
     },
     articles(props, context) {
+      console.log(
+        'requesting articles with %s',
+        qs.stringify(props.params),
+        props
+      );
       return fetch(
         `http://localhost:4444/api/contentful?${qs.stringify(props.params)}`
       ).then(n => n.json());
