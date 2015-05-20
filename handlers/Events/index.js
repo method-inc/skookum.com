@@ -34,7 +34,7 @@ class Events extends React.Component {
 Events.displayName = 'Events';
 
 Events.propTypes = {
-  events: PropTypes.array.isRequired,
+  events: PropTypes.object.isRequired,
 };
 
 Events.contextTypes = {

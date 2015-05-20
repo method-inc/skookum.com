@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
+var EMPTY_OBJECT = {};
 
 class Hero extends React.Component {
   render(): ?ReactElement {
@@ -11,10 +12,14 @@ class Hero extends React.Component {
       title,
       subtitle,
       children,
+      style = EMPTY_OBJECT,
     } = this.props;
 
     return (
-      <div className="Hero" style={{backgroundColor: this.props.color}}>
+      <div className="Hero" style={
+        { ...style,
+          backgroundColor: this.props.color
+        }}>
         <h1 className="Hero-title">{title}</h1>
         <p className="Hero-subtitle">{subtitle}</p>
         {children}
@@ -28,6 +33,7 @@ Hero.propTypes = {
   subtitle: PropTypes.string,
   color: PropTypes.string,
   children: PropTypes.node,
+  style: PropTypes.object,
 };
 
 Hero.defaultProps = {

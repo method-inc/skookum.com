@@ -1,0 +1,67 @@
+/** @define HomeCaseStudy; use strict */
+
+.HomeCaseStudy {
+  color: #fff;
+  padding: 3em 1.5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.HomeCaseStudy-content {
+  position: relative;
+  z-index: 2;
+}
+
+.HomeCaseStudy-title {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.HomeCaseStudy-summary {
+  font-size: 0.8125em;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  margin-bottom: 4em;
+}
+
+.HomeCaseStudy:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -90deg,
+    rgba(235, 66, 8, 1),
+    rgba(235, 66, 8, 0.5)
+  );
+}
+
+.HomeCaseStudy-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .HomeCaseStudy {
+    padding: 3em 5% 3em 50%;
+  }
+
+  .HomeCaseStudy:after {
+    background: linear-gradient(
+      90deg,
+      rgba(235, 66, 8, 0.5),
+      rgba(235, 66, 8, 0.5) 30%,
+      rgba(235, 66, 8, 1) 45%
+    );
+  }
+
+  .HomeCaseStudy-image {
+    right: 50%;
+  }
+}

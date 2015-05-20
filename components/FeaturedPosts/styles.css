@@ -1,0 +1,57 @@
+/** @define FeaturedPosts; use strict */
+
+.FeaturedPosts-featured {
+  background: #000;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  height: 10em;
+  margin-top: 1.5em;
+  margin-left: -1px;
+  padding: 2em 1.5em 0;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 31.6666%; /* 33.333 - (5% / 3) for the right padding */
+}
+
+.FeaturedPosts-title {
+  font-weight: 900;
+  font-size: 1.16666em;
+  color: #fff;
+}
+
+.FeaturedPosts-author {
+  color: #eaeaea;
+  display: block;
+  font-size: 0.666em;
+  font-weight: 100;
+  position: relative;
+  z-index: 1;
+}
+
+.FeaturedPosts-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 250%;
+  max-height: 250%;
+  opacity: 0.3;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+  .FeaturedPosts-featured {
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    margin: -1px 0 0 0;
+    width: auto;
+  }
+}
+

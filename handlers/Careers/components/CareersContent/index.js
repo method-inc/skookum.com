@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import MajorSectionElement from 'MajorSectionElement';
 
 var {PropTypes} = React;
 
@@ -39,8 +40,9 @@ class CareersContent extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="CareersContent">
-        <div className={cn('value')}>In order to create real value you must put people at the center of everything</div>
-        <div className={cn('a')}>We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Devnver, CO. We believe in work/life balance and offer a ton of competitive perks.</div>
+        <MajorSectionElement
+          title="In order to create real value you must put people at the center of everything"
+          content="We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Devnver, CO. We believe in work/life balance and offer a ton of competitive perks." />
         <div className={cn('values')}>
           <div className={cn('values-title')}>
             Our Values

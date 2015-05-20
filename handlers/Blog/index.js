@@ -8,6 +8,7 @@ import marked from 'marked';
 
 import Hero from 'Hero';
 import FilterBar from 'FilterBar';
+import FeaturedPosts from 'FeaturedPosts';
 
 const DEFAULT_PARAMS = {
   page: '1',
@@ -23,15 +24,7 @@ class Blog extends React.Component {
     return (
       <div className="Blog">
         <Hero color="#000" title="Blog" subtitle="A collection of our team’s writings">
-          {this.props.featured.slice(0, 3).map(f => (
-            <Link key={f.slug} to="article" params={{slug: f.slug}} className="Blog-featured">
-              <span className="Blog-featured-title">{f.title}</span>
-              <span className="Blog-featured-author">{f.author.fields.name}</span>
-              {f.poster.fields && (
-                <img src={f.poster.fields.file.url + '?w=400'} className="Blog-featured-image" />
-              )}
-            </Link>
-          ))}
+          <FeaturedPosts className="Blog-featured" />
         </Hero>
         <FilterBar items={this.props.tags} />
         {this.props.articles.map(a => (
@@ -76,10 +69,6 @@ Blog.displayName = 'Blog';
 
 export default Resolver.createContainer(Blog, {
   resolve: {
-    featured() {
-      // TODO: cache this
-      return fetch('http://localhost:4444/api/contentful/featured').then(n => n.json());
-    },
     articles(props, context) {
       console.log(
         'requesting articles with %s',

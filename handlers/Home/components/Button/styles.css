@@ -1,0 +1,24 @@
+/** @define HomeButton; use strict */
+
+.HomeButton {
+  border-radius: 0.333rem;
+  border: 2px solid #fff;
+  color: inherit;
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1.25rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.HomeButton-arrow {
+  font-size: 1.3333em;
+  float: right;
+  line-height: 0.875;
+  margin-left: 1.5em;
+  margin-right: -0.5em;
+}
+
+

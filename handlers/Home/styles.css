@@ -1,0 +1,83 @@
+
+.Home-featured {
+  background: #000;
+  color: #fff;
+  padding: 0 0 1.5em;
+}
+
+.Home-featured .FeaturedPosts {
+  margin-bottom: 1.5em;
+  padding-left: 5%;
+}
+
+.Home-featured .HomeButton {
+  margin: 0 5%;
+}
+
+.Home-quote {
+  padding: 3em 5%;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.Home-quote-quote {
+  color: #aaa;
+  font-weight: 100;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.Home-quote-quote:before,
+.Home-quote-quote:after {
+  color: rgba(255, 255, 255, 0.1666);
+  font-size: 5em;
+  font-weight: 900;
+  position: relative;
+  top: 0.18em;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.Home-quote-quote:before {
+  content: '“';
+}
+
+.Home-quote-quote:after {
+  content: '”';
+}
+
+.Home-quote-cite {
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.Home-quote-cite:before {
+  content: '– ';
+}
+
+.Home-location {
+  line-height: 2;
+  padding: 4em 1.5em 2em;
+}
+
+.Home-location-name {
+  color: rgb(235, 66, 8);
+  font-size: 1.1666em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.Home-location-detail {
+  font-size: 0.875em;
+}
+
+@media screen and (min-width: 600px) {
+  .Home-location {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+}
