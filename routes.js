@@ -23,9 +23,8 @@ var routes = (
     <Route name="services" path="services" handler={Todo} />
     <Route name="case-studies" path="case-studies" handler={CaseStudies} />
     <Route path="events">
+      <Route name="events-location" path=":location" handler={Events} />
       <DefaultRoute name="events" handler={Events} />
-      <Route name="events-charlotte" path="charlotte" handler={Events} />
-      <Route name="events-denver" path="denver" handler={Events} />
     </Route>
     <Route path="blog">
       <Route name="blog-paged" path="page/:page" handler={Blog} />

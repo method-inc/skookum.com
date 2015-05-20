@@ -4,9 +4,8 @@ import __ from 'array.prototype.find';
 import express from 'express';
 import cache from './cache';
 import contentful from './contentful';
+import meetup from './meetup';
 var api = express();
-
-const CHARLOTTE_OFFICE_ID = 1543691;
 
 function selectFields(arr: Object|Array, fields: Array): Object|Array {
   if (Array.isArray(arr)) {
@@ -74,18 +73,7 @@ api.get('/team/:name', function(req, res) {
     );
 });
 
-api.get('/events', function(req, res) {
-  var fields = req.query.fields ? req.query.fields.split(',') : ['displayName'];
-  var charlotte = cache(`https://api.meetup.com/2/events?sign=true&venue_id=${CHARLOTTE_OFFICE_ID}&page=20&key=${process.env.MEETUP_API}`)
-    .then(json => res.send(json.results))
-    .catch(e => res.send({error: e}));
-
-  /*
-  Promise.all([charlotte])
-    .then(n => [n[0].json()])
-    .then(json => res.send({n: n}))
-  */
-});
+api.get('/events', meetup);
 
 var capitalize = s => s[0].toUpperCase() + s.slice(1);
 

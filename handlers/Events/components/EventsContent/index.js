@@ -51,11 +51,11 @@ class EventsContent extends React.Component {
       <div className="EventsContent">
         <FilterBar items={[
           {to: 'events', text: 'All'},
-          {to: 'events-charlotte', text: 'Charlotte'},
-          {to: 'events-denver', text: 'Denver'},
+          {to: 'events-location', params: {location: 'charlotte'}, text: 'Charlotte'},
+          {to: 'events-location', params: {location: 'denver'}, text: 'Denver'},
         ]} />
         <ol className="EventsContent-list">
-          {this.props.events.map(e => (
+          {this.props.events.length > 0 ? this.props.events.map(e => (
             <li key={e.event_url} className="EventsContent-item">
               <div className="EventsContent-item-segment">
                 {this.renderDate(e.time)}
@@ -66,7 +66,13 @@ class EventsContent extends React.Component {
               </div>
               <a className="EventsContent-button" href={e.event_url}>RSVP</a>
             </li>
-          ))}
+          )) : (
+            <li key="¯\_(ツ)_/¯" className="EventsContent-item">
+              <div className="EventsContent-item-segment">
+                <div className="EventsContent-eventName">There are no currently scheduled events at this time.</div>
+              </div>
+            </li>
+          )}
         </ol>
       </div>
     );
