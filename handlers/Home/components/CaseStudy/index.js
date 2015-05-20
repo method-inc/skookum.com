@@ -33,7 +33,7 @@ export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
       return fetch(
-        `http://localhost:4444/api/contentful?content_type=case_study&limit=1`
+        `http://localhost:${process.env.PORT}/api/contentful?content_type=case_study&limit=1`
       ).then(n => n.json()).then(n => n[0]);
     }
   }

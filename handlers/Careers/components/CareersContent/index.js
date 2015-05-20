@@ -105,7 +105,7 @@ export default Resolver.createContainer(CareersContent, {
       ];
 
       return fetch(
-        `http://localhost:4444/api/team?fields=${FIELDS.toString()}`
+        `http://localhost:${process.env.PORT}/api/team?fields=${FIELDS.toString()}`
       ).then(n => n.json());
     }
   }

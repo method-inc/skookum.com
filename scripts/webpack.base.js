@@ -118,6 +118,7 @@ module.exports = function(options) {
 
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(options.env || 'development'),
+        'process.env.PORT': JSON.stringify(options.serverPort),
         '__APP_SERVER__': JSON.stringify(
           options.serverPort ?
             'http://localhost:' + options.serverPort :

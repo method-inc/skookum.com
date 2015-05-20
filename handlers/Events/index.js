@@ -44,7 +44,7 @@ Events.contextTypes = {
 export default Resolver.createContainer(Events, {
   resolve: {
     events() {
-      return fetch('http://localhost:4444/api/events').then(n => n.json());
+      return fetch(`http://localhost:${process.env.PORT}/api/events`).then(n => n.json());
     }
   }
 });

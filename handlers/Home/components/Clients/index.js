@@ -30,7 +30,7 @@ export default Resolver.createContainer(Clients, {
   resolve: {
     clients() {
       return fetch(
-        `http://localhost:4444/api/contentful?content_type=client&limit=8`
+        `http://localhost:${process.env.PORT}/api/contentful?content_type=client&limit=8`
       ).then(n => n.json());
     },
   },

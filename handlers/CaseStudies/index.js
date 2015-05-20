@@ -35,7 +35,7 @@ export default Resolver.createContainer(CaseStudies, {
   resolve: {
     caseStudies() {
       return fetch(
-        `http://localhost:4444/api/contentful?content_type=case_study`
+        `http://localhost:${process.env.PORT}/api/contentful?content_type=case_study`
       ).then(n => n.json());
     }
   },

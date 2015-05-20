@@ -48,8 +48,8 @@ app.get('*', function(req, res) {
   ));
 });
 
-debug('app server starting on 4444');
-var server = app.listen(4444, function () {
+debug(`app server starting on ${process.env.PORT}`);
+var server = app.listen(process.env.PORT || 4444, function () {
   var host = server.address().address;
   var port = server.address().port;
 

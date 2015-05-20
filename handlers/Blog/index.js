@@ -76,7 +76,7 @@ export default Resolver.createContainer(Blog, {
         props
       );
       return fetch(
-        `http://localhost:4444/api/contentful?${qs.stringify(props.params)}`
+        `http://localhost:${process.env.PORT}/api/contentful?${qs.stringify(props.params)}`
       ).then(n => n.json());
     },
   },
