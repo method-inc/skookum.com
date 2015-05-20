@@ -86,12 +86,16 @@ api.get('/contentful', function(req, res) {
     query['fields.tags[in]'] = capitalize(req.query.tag);
   }
 
+  if (content_type === 'blog_post') {
+    var order =  '-fields.datePublished';
+  }
+
   return contentful.contentTypes()
     .then(n => n.filter(n => n.name === content_type)[0].sys.id)
     .then(id => contentful.entries({
       content_type: id,
-      limit: PER_PAGE,
-      order: '-fields.datePublished',
+      limit: req.query.limit || PER_PAGE,
+      order: order,
       skip: PER_PAGE * (PAGE - 1),
       ...query
     }))

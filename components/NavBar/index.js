@@ -22,7 +22,7 @@ class NavBar extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="NavBar">
-        <img className="NavBar-logo" src="/public/images/logo.svg" />
+        <Link to="home"><img className="NavBar-logo" src="/public/images/logo.svg" /></Link>
         <a onClick={this.toggleNavigation} className="NavBar-menu" href="#navigation" ariaLabel="Navigation">Menu</a>
         <nav id="navigation" className={`NavBar-nav ${this.state.showNav ? 'is-visible' : ''}`}>
           {this.props.items.map(n => (

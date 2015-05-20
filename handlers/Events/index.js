@@ -5,7 +5,6 @@ import Content from 'EventsContent';
 var {PropTypes} = React;
 
 class Events extends React.Component {
-
   sortedEvents(location: string) {
     return location ? this.props.events[location] :
       Object.keys(this.props.events).reduce((events, location) => {
