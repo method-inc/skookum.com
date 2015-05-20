@@ -2,7 +2,7 @@
 module.exports = require('./scripts/webpack.base')({
   env: 'development',
   target: 'node',
-  serverPort: 4444,
+  serverPort: process.env.PORT || 4444,
 });
 
 

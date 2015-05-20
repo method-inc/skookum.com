@@ -40,7 +40,7 @@ export default Resolver.createContainer(FeaturedPosts, {
   resolve: {
     posts() {
       // TODO: cache this
-      return fetch('http://localhost:4444/api/contentful/featured').then(n => n.json());
+      return fetch(`http://localhost:${process.env.PORT}/api/contentful/featured`).then(n => n.json());
     },
   },
 });

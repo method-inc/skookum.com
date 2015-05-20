@@ -1,5 +1,3 @@
-Object.assign(process.env, require('../.env'));
-
 import __ from 'array.prototype.find';
 import express from 'express';
 import cache from './cache';
