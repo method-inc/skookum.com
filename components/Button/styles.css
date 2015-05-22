@@ -13,6 +13,11 @@
   text-transform: uppercase;
 }
 
+.HomeButton.is-primary {
+  background: #f16521;
+  color: #fff;
+}
+
 .HomeButton-arrow {
   font-size: 1.3333em;
   float: right;

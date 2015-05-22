@@ -3,41 +3,41 @@
 
 jest.dontMock('../index.js');
 
-describe('Hero', function() {
+describe('ContactForm', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const Hero = require('../index.js');
+    const ContactForm = require('../index.js');
 
     Renderer.render(
-      <Hero />
+      <ContactForm />
     );
 
     Renderer.render(
-      <Hero title="Hello world" />
+      <ContactForm id="1234" />
     );
 
     const REQUIRED_PROP_TYPES = [
-      'title',
+      'id',
     ];
 
     expect(console.warn.calls.length).toBe(REQUIRED_PROP_TYPES.length);
     expect(console.warn.calls[0].args[0]).toBe(
       'Warning: Failed propType: Required prop `' +
       REQUIRED_PROP_TYPES[0] +
-      '` was not specified in `Hero`.'
+      '` was not specified in `ContactForm`.'
     );
   });
 
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const Hero = require('../index.js');
+    const ContactForm = require('../index.js');
 
     Renderer.render(
-      <Hero title="Hello" color="#000" />
+      <ContactForm />
     );
 
     const result = Renderer.getRenderOutput();
