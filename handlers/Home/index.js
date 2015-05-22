@@ -32,7 +32,7 @@ class Home extends React.Component {
         <div className="Home-content">
           <MajorSectionElement
             title="We create what’s next."
-            content="Skookum® is a maker shop that helps companies transform their businesses with the Internet of Things (IoT) and Machine-to-Machine(M2M) software. For our clients, this means new revenue streams, substantial efficiency gains, and a sustainable competitive advantage." />
+            content="Skookum® is a digital innovation shop for the web, mobile, and the internet of things. We help business leaders create meaningful new revenue, realize new efficiencies, and improve the quality of life for employees and customers." />
           <CaseStudy />
           <Clients />
           <div className="Home-featured">
