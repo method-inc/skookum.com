@@ -7,6 +7,8 @@ import marked from 'marked';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
 import qs from 'querystring'
+import api from 'api';
+
 var {PropTypes} = React;
 
 const DEFAULT_PARAMS = {
@@ -59,9 +61,7 @@ export default Resolver.createContainer(ArticlesList, {
         qs.stringify(props.params),
         props
       );
-      return fetch(
-        `http://localhost:${process.env.PORT}/api/contentful?${qs.stringify(props.params)}`
-      ).then(n => n.json());
+      return api(`contentful?${qs.stringify(props.params)}`);
     },
   },
 });

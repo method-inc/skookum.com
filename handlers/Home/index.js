@@ -57,9 +57,7 @@ class Home extends React.Component {
   }
 }
 
-Home.propTypes = {
-  caseStudy: React.PropTypes.object.isRequired,
-};
+Home.propTypes = {};
 
 Home.displayName = 'Home';
 

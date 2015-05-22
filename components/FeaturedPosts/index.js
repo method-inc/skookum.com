@@ -5,6 +5,7 @@ require('./styles.css');
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
+import api from 'api';
 
 var {PropTypes} = React;
 
@@ -39,8 +40,7 @@ FeaturedPosts.propTypes = {
 export default Resolver.createContainer(FeaturedPosts, {
   resolve: {
     posts() {
-      // TODO: cache this
-      return fetch(`http://localhost:${process.env.PORT}/api/contentful/featured`).then(n => n.json());
+      return api(`contentful/featured`);
     },
   },
 });

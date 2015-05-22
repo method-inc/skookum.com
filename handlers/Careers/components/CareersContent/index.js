@@ -5,6 +5,7 @@ require('./styles.css');
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import MajorSectionElement from 'MajorSectionElement';
+import api from 'api';
 
 var {PropTypes} = React;
 
@@ -104,9 +105,7 @@ export default Resolver.createContainer(CareersContent, {
         'photoUrl',
       ];
 
-      return fetch(
-        `http://localhost:${process.env.PORT}/api/team?fields=${FIELDS.toString()}`
-      ).then(n => n.json());
+      return api(`team?fields=${FIELDS.toString()}`);
     }
   }
 });

@@ -4,6 +4,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
+import api from 'api';
 
 class CaseStudies extends React.Component {
   render(): ?ReactElement {
@@ -34,9 +35,7 @@ CaseStudies.displayName = 'CaseStudies';
 export default Resolver.createContainer(CaseStudies, {
   resolve: {
     caseStudies() {
-      return fetch(
-        `http://localhost:${process.env.PORT}/api/contentful?content_type=case_study`
-      ).then(n => n.json());
+      return api(`contentful?content_type=case_study`);
     }
   },
 });

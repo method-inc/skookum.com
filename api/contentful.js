@@ -1,4 +1,3 @@
-
 import contentful from 'contentful';
 
 var client = contentful.createClient({

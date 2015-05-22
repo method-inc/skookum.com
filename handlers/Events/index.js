@@ -2,6 +2,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import Content from 'EventsContent';
+import api from 'api';
 var {PropTypes} = React;
 
 class Events extends React.Component {
@@ -44,7 +45,7 @@ Events.contextTypes = {
 export default Resolver.createContainer(Events, {
   resolve: {
     events() {
-      return fetch(`http://localhost:${process.env.PORT}/api/events`).then(n => n.json());
+      return api(`events`);
     }
   }
 });

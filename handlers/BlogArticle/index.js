@@ -4,6 +4,7 @@ import React from 'react';
 import marked from 'marked';
 import {Resolver} from 'react-resolver';
 
+import api from 'api';
 import Hero from 'Hero';
 
 var {PropTypes} = React;
@@ -49,7 +50,7 @@ BlogArticle.displayName = 'BlogArticle';
 export default Resolver.createContainer(BlogArticle, {
   resolve: {
     article(props) {
-      return fetch(`http://localhost:${process.env.PORT}/api/contentful/${props.params.slug}`).then(n => n.json());
+      return api(`contentful/${props.params.slug}`);
     }
   },
 });

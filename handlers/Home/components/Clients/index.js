@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import api from 'api';
 var {PropTypes} = React;
 
 class Clients extends React.Component {
@@ -29,9 +30,7 @@ Clients.propTypes = {
 export default Resolver.createContainer(Clients, {
   resolve: {
     clients() {
-      return fetch(
-        `http://localhost:${process.env.PORT}/api/contentful?content_type=client&limit=8`
-      ).then(n => n.json());
+      return api(`contentful?content_type=client&limit=8`);
     },
   },
 });

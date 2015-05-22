@@ -18,6 +18,7 @@ webpack(
     env: 'production',
     target: 'web',
     serverPort: process.env.PORT,
+    API_URL: '',
   })
 )
 .run(function(err, stats) {
@@ -32,6 +33,7 @@ webpack(
     env: 'production',
     target: 'node',
     serverPort: process.env.PORT,
+    API_URL: 'http://localhost:' + process.env.PORT,
   })
 )
 .run(function(err) {
