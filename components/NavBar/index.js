@@ -10,7 +10,7 @@ class NavBar extends React.Component {
   constructor(props: Object, context: Object) {
     super(props, context);
 
-    this.state = {showNav: true};
+    this.state = {showNav: false};
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
 
