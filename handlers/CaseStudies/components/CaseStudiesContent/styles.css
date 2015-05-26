@@ -4,8 +4,8 @@
   box-sizing: border-box;
   color: #000;
   display: inline-block;
-  height: 12em;
-  padding: 2.333em 20% 1em 2.333em;
+  height: 14em;
+  padding: 3.333em 10% 2em 3.333em;
   position: relative;
   overflow: hidden;
   vertical-align: top;
@@ -16,7 +16,7 @@
 .CaseStudiesContent-title {
   display: block;
   font-weight: 900;
-  font-size: 1.1666em;
+  font-size: 1em;
   margin-bottom: 1em;
   position: relative;
   text-transform: uppercase;
@@ -28,6 +28,22 @@
   line-height: 1.4;
   position: relative;
   z-index: 1;
+}
+
+.CaseStudiesContent-item:before {
+  content: ' ';
+  transition: background 0.3333s ease-in;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.CaseStudiesContent-item:hover:before {
+  background: rgba(248, 178, 63, 0.5);
 }
 
 .CaseStudiesContent-image {

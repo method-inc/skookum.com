@@ -8,12 +8,10 @@ import Button from 'Button';
 import api from 'api';
 
 function lookup (o, s) {
-  console.log('looking up %s in %o', s, o);
   if (!o) return null;
 
   var path = s.split('.');
   for (var p in path) {
-    console.log('looking up %s', p, o[p]);
     if (!o[p]) return null;
     o = o[p];
   }
