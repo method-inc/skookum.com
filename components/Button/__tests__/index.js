@@ -16,11 +16,11 @@ describe('Button', function() {
     );
 
     Renderer.render(
-      <Button id="1234" />
+      <Button>Hello</Button>
     );
 
     const REQUIRED_PROP_TYPES = [
-      'id',
+      'children',
     ];
 
     expect(console.warn.calls.length).toBe(REQUIRED_PROP_TYPES.length);
@@ -37,7 +37,7 @@ describe('Button', function() {
     const Button = require('../index.js');
 
     Renderer.render(
-      <Button />
+      <Button>Hello</Button>
     );
 
     const result = Renderer.getRenderOutput();

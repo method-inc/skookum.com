@@ -10,13 +10,13 @@ class Button extends React.Component {
   render(): ?ReactElement {
     var {children, type, ...props} = this.props;
     type = type ? `is-${type}` : '';
-    var className = `HomeButton ${type}`;
+    var className = `Button ${type}`;
 
     if (this.props.to || this.props.href) {
       return (
         <Link {...props} className={className}>
           {children}
-          {type !== 'is-primary' && <span className="HomeButton-arrow">〉</span>}
+          {type !== 'is-primary' && <span className="Button-arrow">〉</span>}
         </Link>
       );
     }
@@ -24,7 +24,7 @@ class Button extends React.Component {
     return (
       <button {...props} className={className}>
         {children}
-        {type !== 'is-primary' && <span className="HomeButton-arrow">〉</span>}
+        {type !== 'is-primary' && <span className="Button-arrow">〉</span>}
       </button>
     );
   }
