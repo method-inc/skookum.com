@@ -1,6 +1,6 @@
-/** @define HomeButton; use strict */
+/** @define Button; use strict */
 
-.HomeButton {
+.Button {
   border-radius: 0.333rem;
   border: 2px solid #fff;
   color: inherit;
@@ -13,12 +13,16 @@
   text-transform: uppercase;
 }
 
-.HomeButton-arrow {
+.Button.is-primary {
+  background: #f16521;
+  color: #fff;
+}
+
+.Button-arrow {
   font-size: 1.3333em;
   float: right;
   line-height: 0.875;
   margin-left: 1.5em;
   margin-right: -0.5em;
 }
-
 

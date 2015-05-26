@@ -1,0 +1,56 @@
+/** @define ContactForm; use strict */
+
+.ContactForm {
+  padding: 4em 1.5em 1.5em;
+}
+.ContactForm-header {
+  font-weight: 900;
+  font-size: 1.3333em;
+  text-transform: uppercase;
+}
+
+.ContactForm-divider {
+  border: 0;
+  border-bottom: 2px solid #111;
+  margin: 1.5em 0;
+  width: 80px;
+}
+
+.ContactForm-fieldset {
+  border: 0;
+  padding: 0 0 1em;
+}
+
+.ContactForm-label {
+  color: #333;
+  display: block;
+  font-size: 0.875em;
+  text-transform: uppercase;
+}
+
+.ContactForm-label.is-checkbox {
+  font-size: 0.75em;
+}
+
+.ContactForm-input,
+.ContactForm-textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 0.5em;
+}
+
+.ContactForm-textarea {
+  height: 5em;
+}
+
+.ContactForm-textarea {
+  border: 1px solid #e1e1e1;
+}
+
+.ContactForm-checkbox {
+  margin-right: 0.5em;
+}
+

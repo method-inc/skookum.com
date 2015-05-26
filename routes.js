@@ -15,6 +15,7 @@ import Blog from'./handlers/Blog';
 import BlogArticle from'./handlers/BlogArticle';
 import Careers from'./handlers/Careers';
 import CaseStudies from'./handlers/CaseStudies';
+import Contact from'./handlers/Contact';
 import Todo from'./handlers/Todo';
 import NotFound from './handlers/NotFound';
 
@@ -33,7 +34,7 @@ var routes = (
       <DefaultRoute name="blog" handler={Blog} />
     </Route>
     <Route name="careers" path="careers" handler={Careers} />
-    <Route name="contact" path="contact" handler={Todo} />
+    <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={Todo} />
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>

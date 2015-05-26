@@ -1,0 +1,15 @@
+@media screen and (min-width: 601px) {
+  .Contact-flex {
+    display: flex;
+  }
+
+  .ContactForm {
+    flex: 0.6666;
+    padding-left: 15%;
+  }
+
+  .GazetteInfo {
+    flex: 0.333;
+    padding-right: 15%;
+  }
+}
