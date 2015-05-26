@@ -1,0 +1,41 @@
+/** @define CaseStudiesContent; use strict */
+
+.CaseStudiesContent-item {
+  box-sizing: border-box;
+  color: #000;
+  display: inline-block;
+  height: 12em;
+  padding: 2.333em 20% 1em 2.333em;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  width: 50%;
+  text-decoration: none;
+}
+
+.CaseStudiesContent-title {
+  display: block;
+  font-weight: 900;
+  font-size: 1.1666em;
+  margin-bottom: 1em;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.CaseStudiesContent-description {
+  font-size: 0.75em;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.CaseStudiesContent-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 300%;
+}

@@ -4,7 +4,9 @@ require('./styles.css');
 
 import React from 'react';
 import {Link} from 'react-router';
+import {Resolver} from 'react-resolver';
 import FilterBar from 'FilterBar';
+import api from 'api';
 
 var {PropTypes} = React;
 
@@ -32,6 +34,19 @@ var fmtTime = hr => (
 );
 
 class EventsContent extends React.Component {
+  sortedEvents(location: string) {
+    return location ? this.props.events[location] :
+      Object.keys(this.props.events).reduce((events, location) => {
+        if (this.props.events[location])
+          this.props.events[location].forEach(n => events.push(n));
+        return events;
+      }, []).sort((a, b) => {
+        if (a.time < b.time) return -1;
+        if (a.time > b.time) return 1;
+        return 0;
+      });
+  }
+
   renderDate(time): ReactElement {
     var _date = new Date(time);
     var date = pad(_date.getDate());
@@ -47,6 +62,9 @@ class EventsContent extends React.Component {
   }
 
   render(): ?ReactElement {
+    var {location} = this.context.router.getCurrentParams();
+    var events = this.sortedEvents(location)
+
     return (
       <div className="EventsContent">
         <FilterBar items={[
@@ -55,7 +73,7 @@ class EventsContent extends React.Component {
           {to: 'events-location', params: {location: 'denver'}, text: 'Denver'},
         ]} />
         <ol className="EventsContent-list">
-          {this.props.events.length > 0 ? this.props.events.map(e => (
+          {events.length > 0 ? events.map(e => (
             <li key={e.event_url} className="EventsContent-item">
               <div className="EventsContent-item-segment">
                 {this.renderDate(e.time)}
@@ -79,8 +97,21 @@ class EventsContent extends React.Component {
   }
 }
 
+EventsContent.displayName = 'EventsContent';
+
 EventsContent.propTypes = {
   events: PropTypes.array.isRequired,
 };
 
-export default EventsContent;
+EventsContent.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
+
+export default Resolver.createContainer(EventsContent, {
+  resolve: {
+    events() {
+      return api(`events`);
+    }
+  }
+});
+
