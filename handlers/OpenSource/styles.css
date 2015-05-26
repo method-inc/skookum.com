@@ -1,0 +1,20 @@
+/** @define OpenSource; use strict */
+
+.OpenSource {}
+
+.OpenSource-project {
+  box-sizing: border-box;
+  display: block;
+  padding: 1.5em 12em 1.5em 1.5em;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.OpenSource-title {}
+.OpenSource-description {
+  color: #aaa;
+  font-size: 0.666em;
+  margin-top: 0.333em;
+  text-transform: uppercase;
+}
+

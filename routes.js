@@ -9,15 +9,16 @@ const {
 } = Router;
 
 import App from './handlers/Base';
-import Home from'./handlers/Home';
-import Events from'./handlers/Events';
 import Blog from'./handlers/Blog';
 import BlogArticle from'./handlers/BlogArticle';
 import Careers from'./handlers/Careers';
 import CaseStudies from'./handlers/CaseStudies';
 import Contact from'./handlers/Contact';
-import Todo from'./handlers/Todo';
+import Events from'./handlers/Events';
+import Home from'./handlers/Home';
 import NotFound from './handlers/NotFound';
+import OpenSource from'./handlers/OpenSource';
+import Todo from'./handlers/Todo';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -35,7 +36,7 @@ var routes = (
     </Route>
     <Route name="careers" path="careers" handler={Careers} />
     <Route name="contact" path="contact" handler={Contact} />
-    <Route name="open-source" path="open-source" handler={Todo} />
+    <Route name="open-source" path="open-source" handler={OpenSource} />
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
