@@ -38,6 +38,15 @@ var BENEFITS = [
 ];
 
 class CareersContent extends React.Component {
+  constructor() {
+      super();
+      this.state = { activePersonIndex: -1 };
+  }
+
+  activatePopover(i) {
+    this.setState({ activePersonIndex: i });
+  }
+
   render(): ?ReactElement {
     return (
       <div className="CareersContent">
@@ -71,9 +80,13 @@ class CareersContent extends React.Component {
           </div>
           <ul className={cn('people-list')}>
             {this.props.people.map((n, i) => (
-              <li key={i} className={cn('person')}>
-                <strong className={cn('person-name')}>{n.displayName}</strong>
-                <span className={cn('person-title')}>{n.jobTitle}</span>
+              <li key={i} className={cn('person')} onMouseOver={this.activatePopover.bind(i)} >
+                <div className={cn('person-popover') + ((this.state.activePersonIndex && this.state.activePersonIndex === i) ? ' is-active' : '')}>
+                  <div className={cn('person-popover-content')}>
+                    <strong className={cn('person-name')}>{n.displayName}</strong>
+                    <div className={cn('person-title')}>{n.jobTitle}</div>
+                  </div>
+                </div>
                 <img className={cn('person-image')} src={n.photoUrl} />
               </li>
             ))}
@@ -102,7 +115,7 @@ export default Resolver.createContainer(CareersContent, {
       var FIELDS = [
         'displayName',
         'jobTitle',
-        'photoUrl',
+        'photoUrl'
       ];
 
       return api(`team?fields=${FIELDS.toString()}`);
