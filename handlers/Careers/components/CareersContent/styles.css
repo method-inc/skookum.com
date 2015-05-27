@@ -162,6 +162,7 @@
 .CareersContent-people-list {
   list-style: none;
   margin: 1.5em 0;
+  line-height: 0;
   padding: 0;
 }
 
@@ -170,15 +171,16 @@
   display: inline-block;
   width: 33.3333%;
   position: relative;
+  line-height: normal;
 }
 
-.CareersContent-person-image {
+.CareersContent-person .ImagePopover-person-image {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.CareersContent-person-popover {
+.CareersContent .ImagePopover-person-content-wrapper {
   display: none;
   position: absolute;
   left: 100%;
@@ -193,12 +195,17 @@
   font-size: 0.8em;
 }
 
+.CareersContent-person .ImagePopover-person-content-wrapper.is-active {
+  display: block;
+}
+
 .CareersContent-person-name,
 .CareersContent-person-title {
   padding: 0.333em .666em ;
+  width: 100%;
 }
 
-.CareersContent-person-popover-content {
+.CareersContent-person .ImagePopover-person-content {
   display: flex;
   position: relative;
   width: 100%;
@@ -207,7 +214,7 @@
   flex-direction: column;
 }
 
-.CareersContent-person-popover-content:after {
+.CareersContent-person .ImagePopover-person-content:after {
   z-index: 5;
 
   right: 100%;
@@ -222,10 +229,6 @@
   border-right-color: #eb4e1b;
   border-width: 10px;
   margin-top: -10px;
-}
-
-.CareersContent-person-popover.is-active {
-  display: block;
 }
 
 @media screen and (min-width: 400px) {

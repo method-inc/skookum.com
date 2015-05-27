@@ -5,6 +5,7 @@ require('./styles.css');
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import MajorSectionElement from 'MajorSectionElement';
+import ImagePopover from 'ImagePopover';
 import api from 'api';
 
 var {PropTypes} = React;
@@ -37,14 +38,33 @@ var BENEFITS = [
   'And other things we’d rather surprise you with',
 ];
 
+var lastTimeoutId = null;
+
 class CareersContent extends React.Component {
   constructor() {
       super();
       this.state = { activePersonIndex: -1 };
   }
 
-  activatePopover(i) {
-    this.setState({ activePersonIndex: i });
+  updateSelectedPopover(i) {
+    var _i = this.state.activePersonIndex === i ? -1 : i;
+    lastTimeoutId && clearTimeout(lastTimeoutId);
+    lastTimeoutId = null;
+    this.setState({ activePersonIndex: _i });
+  }
+
+  updatePopoverExpiration() {
+    lastTimeoutId && clearTimeout(lastTimeoutId);
+    lastTimeoutId = setTimeout(() => { this.updateSelectedPopover(-1) }, 1500);
+  }
+
+  createPopoverContent( person, index ) {
+    return (
+      <div>
+        <strong className={cn('person-name')}>{person.displayName}</strong>
+        <div className={cn('person-title')}>{person.jobTitle}</div>
+      </div>
+      );
   }
 
   render(): ?ReactElement {
@@ -79,15 +99,17 @@ class CareersContent extends React.Component {
             <hr className={cn('people-hr')} />
           </div>
           <ul className={cn('people-list')}>
-            {this.props.people.map((n, i) => (
-              <li key={i} className={cn('person')} onMouseOver={this.activatePopover.bind(i)} >
-                <div className={cn('person-popover') + ((this.state.activePersonIndex && this.state.activePersonIndex === i) ? ' is-active' : '')}>
-                  <div className={cn('person-popover-content')}>
-                    <strong className={cn('person-name')}>{n.displayName}</strong>
-                    <div className={cn('person-title')}>{n.jobTitle}</div>
-                  </div>
-                </div>
-                <img className={cn('person-image')} src={n.photoUrl} />
+            {this.props.people.map((person, i) => (
+              <li key={i} className={cn('person')} >
+                <ImagePopover
+                  id={'person-' + i}
+                  type="person"
+                  data={i}
+                  handleMouseEnter={this.updateSelectedPopover.bind(this)}
+                  handleMouseLeave={this.updatePopoverExpiration.bind(this)}
+                  isActive={this.state.activePersonIndex !== -1 && this.state.activePersonIndex === i}
+                  content={this.createPopoverContent(person, i)}
+                  imgUrl={person.photoUrl} />
               </li>
             ))}
           </ul>
