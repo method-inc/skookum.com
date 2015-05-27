@@ -201,8 +201,9 @@
 
 .CareersContent-person-name,
 .CareersContent-person-title {
+  display: inline-block;
   padding: 0.333em .666em ;
-  width: 100%;
+  width: 90%;
 }
 
 .CareersContent-person .ImagePopover-person-content {
