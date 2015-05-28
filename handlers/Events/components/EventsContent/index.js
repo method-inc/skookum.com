@@ -5,7 +5,6 @@ require('./styles.css');
 import React from 'react';
 import {Link} from 'react-router';
 import {Resolver} from 'react-resolver';
-import FilterBar from 'FilterBar';
 import api from 'api';
 
 var {PropTypes} = React;
@@ -67,11 +66,6 @@ class EventsContent extends React.Component {
 
     return (
       <div className="EventsContent">
-        <FilterBar items={[
-          {to: 'events', text: 'All'},
-          {to: 'events-location', params: {location: 'charlotte'}, text: 'Charlotte'},
-          {to: 'events-location', params: {location: 'denver'}, text: 'Denver'},
-        ]} />
         <ol className="EventsContent-list">
           {events.length > 0 ? events.map(e => (
             <li key={e.event_url} className="EventsContent-item">
