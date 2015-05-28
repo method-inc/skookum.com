@@ -38,8 +38,6 @@ var BENEFITS = [
   'And other things we’d rather surprise you with',
 ];
 
-var lastTimeoutId = null;
-
 class CareersContent extends React.Component {
   constructor() {
       super();
@@ -48,17 +46,14 @@ class CareersContent extends React.Component {
 
   updateSelectedPopover(i) {
     var _i = this.state.activePersonIndex === i ? -1 : i;
-    lastTimeoutId && clearTimeout(lastTimeoutId);
-    lastTimeoutId = null;
     this.setState({ activePersonIndex: _i });
   }
 
-  updatePopoverExpiration() {
-    lastTimeoutId && clearTimeout(lastTimeoutId);
-    lastTimeoutId = setTimeout(() => { this.updateSelectedPopover(-1) }, 1500);
+  closePopover() {
+    this.setState({ activePersonIndex: -1 });
   }
 
-  createPopoverContent( person, index ) {
+  createPopoverContent(person) {
     return (
       <div>
         <strong className={cn('person-name')}>{person.displayName}</strong>
@@ -103,12 +98,11 @@ class CareersContent extends React.Component {
               <li key={i} className={cn('person')} >
                 <ImagePopover
                   id={'person-' + i}
-                  type="person"
                   data={i}
                   handleMouseEnter={this.updateSelectedPopover.bind(this)}
-                  handleMouseLeave={this.updatePopoverExpiration.bind(this)}
+                  handleMouseLeave={this.closePopover.bind(this)}
                   isActive={this.state.activePersonIndex !== -1 && this.state.activePersonIndex === i}
-                  content={this.createPopoverContent(person, i)}
+                  content={this.createPopoverContent(person)}
                   imgUrl={person.photoUrl} />
               </li>
             ))}
