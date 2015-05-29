@@ -136,7 +136,7 @@ api.get('/contentful/:slug', function(req, res) {
     // promises can make some things pretty ugly
     n.length === 0 ?
       res.sendStatus(404) :
-      patchAuthorWithBamboo(n[0].fields, 'photoUrl')
+      patchAuthorWithBamboo(n[0].fields, 'photoUrl', 'jobTitle')
   ))
   .then(n => res.send(n))
   .catch(error => res.send({error}));

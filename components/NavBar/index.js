@@ -12,11 +12,16 @@ class NavBar extends React.Component {
 
     this.state = {showNav: false};
     this.toggleNavigation = this.toggleNavigation.bind(this);
+    this.closeNavigation = this.closeNavigation.bind(this);
   }
 
   toggleNavigation(e: any) {
     if (e) e.preventDefault();
     this.setState({showNav: !this.state.showNav});
+  }
+
+  closeNavigation(e: any) {
+    this.setState({showNav: false});
   }
 
   render(): ?ReactElement {
@@ -26,7 +31,7 @@ class NavBar extends React.Component {
         <a onClick={this.toggleNavigation} className="NavBar-menu" href="#navigation" ariaLabel="Navigation">Menu</a>
         <nav id="navigation" className={`NavBar-nav ${this.state.showNav ? 'is-visible' : ''}`}>
           {this.props.items.map(n => (
-            <Link className="NavBar-nav-link" key={n.pathName} to={n.pathName}>{n.text}</Link>
+            <Link className="NavBar-nav-link" key={n.pathName} to={n.pathName} onClick={this.closeNavigation}>{n.text}</Link>
           ))}
         </nav>
       </div>

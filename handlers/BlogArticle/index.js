@@ -32,7 +32,7 @@ class BlogArticle extends React.Component {
             <img className="BlogArticle-author-img" src={author.photoUrl} />
           </div>
           <div className="BlogArticle-author-details">
-            <div><span className="BlogArticle-author-name">{author.name}</span> | <span className="BlogArticle-author-name">{author.title || 'Guest Author'}</span></div>
+            <div><span className="BlogArticle-author-name">{author.name}</span> | <span className="BlogArticle-author-name">{author.title || author.jobTitle || 'Guest Author'}</span></div>
             {author.twitter && <span className="BlogArticle-author-twitter">{author.twitter}</span>}
           </div>
         </div>

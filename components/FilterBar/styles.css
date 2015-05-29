@@ -2,7 +2,13 @@
 
 .FilterBar {
   background: #ebebeb;
-  text-align: center;
+  overflow: auto;
+}
+
+.FilterBar-content {
+  /* arbitrary width to make sure everything is visible */
+  margin: 0 auto;
+  min-width: 24em;
 }
 
 .FilterBar-link {
