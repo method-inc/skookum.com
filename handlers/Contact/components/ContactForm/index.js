@@ -3,6 +3,7 @@
 require('./styles.css');
 
 import React from 'react';
+import Input from 'Input';
 import Button from 'Button';
 
 class ContactForm extends React.Component {
@@ -11,22 +12,10 @@ class ContactForm extends React.Component {
       <form className="ContactForm">
         <header className="ContactForm-header">Submit an Inquiry</header>
         <hr className="ContactForm-divider" />
-        <fieldset className="ContactForm-fieldset">
-          <label className="ContactForm-label">What’s your name? *</label>
-          <input className="ContactForm-input" name="name" />
-        </fieldset>
-        <fieldset className="ContactForm-fieldset">
-          <label className="ContactForm-label">And how about your email? *</label>
-          <input className="ContactForm-input" />
-        </fieldset>
-        <fieldset className="ContactForm-fieldset">
-          <label className="ContactForm-label">Submit your message here *</label>
-          <textarea className="ContactForm-textarea" name="message" />
-        </fieldset>
-        <fieldset className="ContactForm-fieldset">
-          <label className="ContactForm-label">The “I’m-not-a-robot” test</label>
-          <input className="ContactForm-input" name="message" />
-        </fieldset>
+        <Input label="What’s your name? *" name="name" />
+        <Input label="And how about your email? *" name="email" />
+        <Input element="textarea" label="Submit your message here *" name="message" />
+        <Input label="The “I’m-not-a-robot” test *" name="humanity" />
         <fieldset className="ContactForm-fieldset">
           <label className="ContactForm-label is-checkbox">
             <input className="ContactForm-checkbox" type="checkbox" name="message" />

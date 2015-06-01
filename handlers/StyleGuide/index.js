@@ -5,6 +5,8 @@ import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import Logo from 'Logo';
 import Typography from 'Typography';
+import Input from 'Input';
+import Button from 'Button';
 
 const defaultStyles = {boxSizing: 'border-box', display: 'inline-block', verticalAlign: 'top',};
 const subheroStyles = {...defaultStyles, width: '33.333%',};
@@ -43,17 +45,16 @@ class StyleGuide extends React.Component {
             />
           </div>
         ))}
-        <Section title="Logo & Colors">
-          {[['#000000', ''], ['#f16521', '#fff'], ['#faab18', '#fff'], ['#ffdd2e', '#000']].map(n => (
-            <div style={{background: n[0], ...logoStyles}} key={n[0]}>
-              <div style={{fontSize: '1.875em', color: n[1] || '#fff', fontWeight: 100, textTransform: 'uppercase',}}>{n[0]}</div>
-              <div style={{width: '70%', margin: '1.5em auto'}}><Logo color={n[1]} /></div>
-            </div>
-          ))}
-          <div style={{padding: '3em 1.5em', background: '#f4f4f4'}}>
-            <div style={{fontSize: '1.875em', fontWeight: 100, textTransform: 'uppercase',}}>#f4f4f4</div>
+        <Section title="Logo & Colors" />
+        {[['#000000', ''], ['#f16521', '#fff'], ['#faab18', '#fff'], ['#ffdd2e', '#000']].map(n => (
+          <div style={{background: n[0], ...logoStyles}} key={n[0]}>
+            <div style={{fontSize: '1.875em', color: n[1] || '#fff', fontWeight: 100, textTransform: 'uppercase',}}>{n[0]}</div>
+            <div style={{width: '70%', margin: '1.5em auto'}}><Logo color={n[1]} /></div>
           </div>
-        </Section>
+        ))}
+        <div style={{padding: '3em 1.5em', background: '#f4f4f4'}}>
+          <div style={{fontSize: '1.875em', fontWeight: 100, textTransform: 'uppercase',}}>#f4f4f4</div>
+        </div>
         <Section title="Typography">
           <div style={{...typographyStyles, paddingLeft: '5%', paddingRight: '5%',}}>
             <Typography type={Typography.PAGE_HEADER}>Page Header</Typography>
@@ -85,6 +86,22 @@ class StyleGuide extends React.Component {
             <Typography type={Typography.LINK}>Link</Typography>
             <p style={littleTextStyle}>Lato Regular. All Caps. 12px.</p>
           </div>
+        </Section>
+        <Section title="Elements">
+          <Input label="Form Label" />
+          <Input label="Textarea Label" element="textarea" />
+          <div style={subheroStyles}>
+            <Button type="primary">Primary Button</Button>
+          </div>
+          <div style={subheroStyles}>
+            <Button type="secondary">Secondary Button</Button>
+          </div>
+          <div style={subheroStyles}>
+            <Button type="more">More Button</Button>
+          </div>
+        </Section>
+        <Section title="Icons">
+          TODO
         </Section>
       </div>
     );
