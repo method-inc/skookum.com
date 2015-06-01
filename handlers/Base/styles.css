@@ -1,10 +1,10 @@
-/** @define AppBase; use strict */
+/* this is the one place where global styles will go
+ * and not be restricted to the implementing UI component*/
 @import 'normalize.css';
 
 .AppBase {
 
 }
-
 
 img {
   display: block;
