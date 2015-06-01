@@ -3,7 +3,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Link} from 'react-router';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 
@@ -33,11 +32,13 @@ var fmtTime = hr => (
 );
 
 class EventsContent extends React.Component {
-  sortedEvents(location: string) {
-    return location ? this.props.events[location] :
+  // TODO: create a Type for what the event structure should be
+  sortedEvents(maybeLocation: ?string): object|Array<object> {
+    return maybeLocation ? this.props.events[maybeLocation] :
       Object.keys(this.props.events).reduce((events, location) => {
-        if (this.props.events[location])
+        if (this.props.events[location]) {
           this.props.events[location].forEach(n => events.push(n));
+        }
         return events;
       }, []).sort((a, b) => {
         if (a.time < b.time) return -1;
@@ -62,7 +63,7 @@ class EventsContent extends React.Component {
 
   render(): ?ReactElement {
     var {location} = this.context.router.getCurrentParams();
-    var events = this.sortedEvents(location)
+    var events = this.sortedEvents(location);
 
     return (
       <div className="EventsContent">
@@ -105,7 +106,7 @@ export default Resolver.createContainer(EventsContent, {
   resolve: {
     events() {
       return api(`events`);
-    }
-  }
+    },
+  },
 });
 

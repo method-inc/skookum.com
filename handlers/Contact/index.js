@@ -1,7 +1,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import ContactForm from 'ContactForm';
 import GazetteInfo from 'GazetteInfo';

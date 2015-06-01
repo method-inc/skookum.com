@@ -9,16 +9,20 @@
   background: hsla(20, 88%, 56%, 0.97);
   color: #fff;
   padding: 3em;
+  pointer-events: none;
   transition: 0.1666s all ease-in;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .Navigation.is-visible {
   z-index: 3;
   opacity: 1;
   transform: scale(1);
+  pointer-events: all;
 }
 
-.Navigation.is-visible {
+.Navigation.isnt-visible {
   opacity: 0;
   transform: scale(0.8);
 }

@@ -1,7 +1,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Link} from 'react-router';
 import Hero from 'Hero';
 import MajorSectionElement from 'MajorSectionElement';
 import FeaturedPosts from 'FeaturedPosts';

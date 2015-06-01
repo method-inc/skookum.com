@@ -2,7 +2,7 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import {Link} from 'react-router';
 
 var PRIMARY = [
@@ -19,28 +19,26 @@ var SECONDARY = [
   ['events', 'Events'],
 ];
 
-class Navigation extends React.Component {
+var renderNavigation = (list, props) => (
+  <ul className="Navigation-list">
+    {list.map(n => (
+      <li className="Navigation-item" key={n[0]}>
+        <Link className="Navigation-link" to={n[0]} onClick={props.onClick}>{n[1]}</Link>
+      </li>
+    ))}
+  </ul>
+);
+
+class Navigation extends Component {
   render(): ?ReactElement {
     var {visible} = this.props;
-    var className = `Navigation ${visible ? 'isnt-visible' : 'is-visible'}`;
+    var className = `Navigation ${visible ? 'is-visible' : 'isnt-visible'}`;
 
     return (
       <div className={className}>
-        <ul className="Navigation-list">
-          {PRIMARY.map(n => (
-            <li className="Navigation-item">
-              <Link className="Navigation-link" to={n[0]}>{n[1]}</Link>
-            </li>
-          ))}
-        </ul>
+        {renderNavigation(PRIMARY, this.props)}
         <div className="Navigation-divider" />
-        <ul className="Navigation-list">
-          {SECONDARY.map(n => (
-            <li className="Navigation-item">
-              <Link className="Navigation-link" to={n[0]}>{n[1]}</Link>
-            </li>
-          ))}
-        </ul>
+        {renderNavigation(SECONDARY, this.props)}
         <hr className="Navigation-hr" />
         <div className="Navigation-socials">
           <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
@@ -51,5 +49,9 @@ class Navigation extends React.Component {
     );
   }
 }
+
+Navigation.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Navigation;

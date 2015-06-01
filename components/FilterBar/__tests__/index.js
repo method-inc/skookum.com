@@ -16,7 +16,7 @@ describe('FilterBar', function() {
     );
 
     Renderer.render(
-      <FilterBar items=[{to: 'hello', text: 'World'}] />
+      <FilterBar items={[{to: 'hello', text: 'World'}]} />
     );
 
     const REQUIRED_PROP_TYPES = [

@@ -3,7 +3,6 @@
 require('./styles.css');
 
 import React from 'react';
-var {PropTypes} = React;
 
 class GazetteInfo extends React.Component {
   render(): ?ReactElement {

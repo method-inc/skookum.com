@@ -7,7 +7,7 @@ import {Resolver} from 'react-resolver';
 import Button from 'Button';
 import api from 'api';
 
-function lookup (o, s) {
+function lookup(o, s) {
   if (!o) return null;
 
   var path = s.split('.');
@@ -46,6 +46,6 @@ export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
       return api(`contentful?content_type=case_study&limit=1`).then(n => n[0]);
-    }
-  }
+    },
+  },
 });

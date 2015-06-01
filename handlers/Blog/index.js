@@ -37,7 +37,7 @@ Blog.defaultProps = {
     {to: 'tag', params: {tag: 'innovation'}, text: 'Innovation'},
     {to: 'tag', params: {tag: 'product'}, text: 'Product'},
     {to: 'tag', params: {tag: 'culture'}, text: 'Culture'},
-  ]
+  ],
 };
 
 Blog.displayName = 'Blog';

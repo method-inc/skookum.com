@@ -13,7 +13,7 @@ class BlogArticle extends React.Component {
   render(): ?ReactElement {
     var {
       title,
-      tags,
+      // tags,
       author,
       datePublished,
       body,
@@ -51,6 +51,6 @@ export default Resolver.createContainer(BlogArticle, {
   resolve: {
     article(props) {
       return api(`contentful/${props.params.slug}`);
-    }
+    },
   },
 });
