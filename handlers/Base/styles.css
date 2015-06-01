@@ -10,3 +10,9 @@ img {
   display: block;
 }
 
+p {
+  color: #000;
+  font-size: 1em;
+  line-height: 1.875em;
+}
+
