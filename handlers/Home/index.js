@@ -27,7 +27,7 @@ class Home extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Home">
-        <Hero title="Skookum" color="#000" style={{paddingTop: 200, paddingBottom: 300}} />
+        <Hero title="Skookum" color="black" style={{paddingTop: 200, paddingBottom: 300}} />
         <div className="Home-content">
           <MajorSectionElement
             title="We create what’s next."
