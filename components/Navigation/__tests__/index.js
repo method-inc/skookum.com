@@ -3,30 +3,41 @@
 
 jest.dontMock('../index.js');
 
-describe('NavBar', function() {
+describe('Navigation', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const NavBar = require('../index.js');
+    const Navigation = require('../index.js');
 
     Renderer.render(
-      <NavBar />
+      <Navigation />
     );
 
-    const REQUIRED_PROP_TYPES = [];
+    Renderer.render(
+      <Navigation id="1234" />
+    );
 
-    expect(console.warn.calls).not.toBeDefined();
+    const REQUIRED_PROP_TYPES = [
+      'id',
+    ];
+
+    expect(console.warn.calls.length).toBe(REQUIRED_PROP_TYPES.length);
+    expect(console.warn.calls[0].args[0]).toBe(
+      'Warning: Failed propType: Required prop `' +
+      REQUIRED_PROP_TYPES[0] +
+      '` was not specified in `Navigation`.'
+    );
   });
 
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const NavBar = require('../index.js');
+    const Navigation = require('../index.js');
 
     Renderer.render(
-      <NavBar />
+      <Navigation />
     );
 
     const result = Renderer.getRenderOutput();

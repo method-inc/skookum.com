@@ -35,6 +35,7 @@ var routes = (
       <DefaultRoute name="blog" handler={Blog} />
     </Route>
     <Route name="careers" path="careers" handler={Careers} />
+    <Route name="culture" path="culture" handler={Todo} />
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
     <DefaultRoute name="home" handler={Home} />
