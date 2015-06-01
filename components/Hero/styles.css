@@ -4,19 +4,41 @@
   background: #eb4e1b;
   color: #fff;
   padding: 3em 0 4.5em 5%;
-  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.Hero.is-light {
+  color: #000;
 }
 
 .Hero-title {
-  border-bottom: 1px solid #fff;
-  font-size: 2em;
+  font-size: 1.875em; /*30 / 16*/
   font-weight: 900;
   margin: 0 0 0.6666em;
-  padding-bottom: 0.2222em;
+  text-transform: uppercase;
 }
 
 .Hero-subtitle {
-  font-size: 0.8em;
+  font-size: 0.875em; /*14 / 16*/
   font-weight: 300;
+}
+
+.Hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.Hero-overlay,
+.Hero-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Hero-overlay {
+  z-index: 1;
 }
 

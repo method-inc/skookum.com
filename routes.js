@@ -18,6 +18,7 @@ import Events from'./handlers/Events';
 import Home from'./handlers/Home';
 import NotFound from './handlers/NotFound';
 import OpenSource from'./handlers/OpenSource';
+import StyleGuide from './handlers/StyleGuide';
 import Todo from'./handlers/Todo';
 
 var routes = (
@@ -38,6 +39,7 @@ var routes = (
     <Route name="culture" path="culture" handler={Todo} />
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
+    <Route name="styleguide" path="styleguide" handler={StyleGuide} />
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
