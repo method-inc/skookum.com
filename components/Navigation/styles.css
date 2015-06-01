@@ -1,0 +1,90 @@
+/** @define Navigation; use strict */
+
+.Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsla(20, 88%, 56%, 0.97);
+  color: #fff;
+  padding: 3em;
+  transition: 0.1666s all ease-in;
+}
+
+.Navigation.is-visible {
+  z-index: 3;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Navigation.is-visible {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.Navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Navigation-link {
+  color: #fff;
+  display: inline-block;
+  padding: 0.6666em 0.6666em 0.6666em 10%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.Navigation-hr {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  width: 90%;
+}
+
+.Navigation-sublink {
+  color: #fff;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  .Navigation-sublink {
+    display: inline-block;
+    padding: 0.666em;
+  }
+
+  .Navigation-sublink {
+  }
+
+  .Navigation-sublink:first-child {
+    margin-left: -0.666em;
+  }
+
+  .Navigation-socials {
+    padding: 0 5.5%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .Navigation {
+    padding: 1.5em;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .Navigation-hr {
+    width: 100%;
+  }
+
+  .Navigation-link,
+  .Navigation-sublink {
+    display: block;
+    padding: 0.666em 0;
+    text-align: center;
+  }
+}
+

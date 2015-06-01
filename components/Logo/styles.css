@@ -1,0 +1,8 @@
+/** @define Logo; use strict */
+
+.Logo {}
+
+.Logo-path {
+  transition: all 0.333s ease-in;
+}
+
