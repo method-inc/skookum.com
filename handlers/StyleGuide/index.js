@@ -1,3 +1,5 @@
+require('./styles.css');
+
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
@@ -13,8 +15,8 @@ const littleTextStyle = {display: 'block', color: '#A7A7A7', fontSize: '0.75em',
 class Section extends React.Component {
   render(): ?ReactElement {
     return (
-      <div className="Styleguide-section">
-        <h2 className="Styleguide-section-title">{this.props.title}</h2>
+      <div className="StyleGuide-section">
+        <h2 className="StyleGuide-section-title">{this.props.title}</h2>
         {this.props.children}
       </div>
     );
