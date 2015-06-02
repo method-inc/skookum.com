@@ -47,9 +47,9 @@ class Hero extends React.Component {
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
         </Link>
         <div className="Hero-content">
+          {children}
           <h1 className="Hero-title">{title}</h1>
           <p className="Hero-subtitle">{subtitle}</p>
-          {children}
         </div>
 
         <div className="Hero-overlay" style={{

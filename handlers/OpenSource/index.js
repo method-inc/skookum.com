@@ -2,7 +2,7 @@ require('./styles.css');
 
 import React from 'react';
 import Hero from 'Hero';
-// import Button from 'Button';
+import Button from 'Button';
 
 import data from './data';
 
@@ -15,7 +15,7 @@ class OpenSource extends React.Component {
           <div className="OpenSource-project">
             <strong className="OpenSource-title">{o.name}</strong>
             <p className="OpenSource-description">{o.description}</p>
-            <a className="EventsContent-button" href={o.github}>View on GitHub</a>
+            <Button className="EventsContent-button" href={o.github}>View on GitHub</Button>
           </div>
         ))}
       </div>

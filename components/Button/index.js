@@ -40,4 +40,8 @@ Button.propTypes = {
   children: PropTypes.any.isRequired,
 };
 
+Button.defaultProps = {
+  type: 'secondary',
+};
+
 export default Button;

@@ -18,7 +18,6 @@ class Home extends React.Component {
         <Hero
           title="Skookum"
           color="black"
-          style={{paddingTop: 200, paddingBottom: 300}}
           image="/public/images/mars.png" />
         <div className="Home-content">
           <MajorSectionElement
