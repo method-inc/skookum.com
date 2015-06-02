@@ -1,9 +1,8 @@
 require('./styles.css');
 
 import React from 'react';
-import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
-import Button from 'Button';
+// import Button from 'Button';
 
 import data from './data';
 

@@ -6,10 +6,8 @@ import React from 'react';
 import marked from 'marked';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
-import qs from 'querystring'
+import qs from 'querystring';
 import api from 'api';
-
-var {PropTypes} = React;
 
 const DEFAULT_PARAMS = {
   page: '1',
@@ -56,11 +54,6 @@ ArticlesList.displayName = 'ArticlesList';
 export default Resolver.createContainer(ArticlesList, {
   resolve: {
     articles(props, context) {
-      console.log(
-        'requesting articles with %s',
-        qs.stringify(props.params),
-        props
-      );
       return api(`contentful?${qs.stringify(props.params)}`);
     },
   },

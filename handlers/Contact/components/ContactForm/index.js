@@ -4,7 +4,6 @@ require('./styles.css');
 
 import React from 'react';
 import Button from 'Button';
-var {PropTypes} = React;
 
 class ContactForm extends React.Component {
   render(): ?ReactElement {

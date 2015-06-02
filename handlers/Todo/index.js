@@ -1,5 +1,4 @@
 import React from 'react';
-import {Resolver} from 'react-resolver';
 
 class Todo extends React.Component {
   render(): ?ReactElement {
@@ -11,9 +10,7 @@ class Todo extends React.Component {
   }
 }
 
-Todo.propTypes = {
-  // promise: React.PropTypes.string.isRequired,
-};
+Todo.propTypes = {};
 
 Todo.displayName = 'Todo';
 

@@ -38,9 +38,9 @@ class AppBase extends React.Component {
           <Link to="home">
             <Logo style={{width: 32, margin: '0.25em'}} color={this.state.navVisible && '#fff'} />
           </Link>
-          <Hamburger href="navigation" onClick={this.toggleNav} />
+          <Hamburger target="#navigation" x={this.state.navVisible} onClick={this.toggleNav} />
         </div>
-        <Navigation visible={this.state.navVisible} />
+        <Navigation id="navigation" onClick={this.toggleNav} visible={this.state.navVisible} />
 
         <RouteHandler key={this.getHandlerKey()} />
         <Footer />

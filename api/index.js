@@ -1,4 +1,3 @@
-import __ from 'array.prototype.find';
 import express from 'express';
 import cache from './cache';
 import contentful from './contentful';
@@ -7,13 +6,7 @@ var api = express();
 
 function selectFields(arr: Object|Array, fields: Array): Object|Array {
   if (Array.isArray(arr)) {
-    return arr.map(n => {
-      var o = {};
-      for (var field of fields) {
-        o[field] = n[field];
-      }
-      return o;
-    });
+    return arr.map(n => selectFields(n, fields));
   }
 
   var o = {};
@@ -78,27 +71,31 @@ var capitalize = s => s[0].toUpperCase() + s.slice(1);
 api.get('/contentful', function(req, res) {
   const PER_PAGE = 5;
   const PAGE = req.query.page || 1;
-  var content_type = req.query.content_type || 'blog_post';
+  const contentType = req.query.content_type || 'blog_post';
+
   var query = {};
+  var order = '';
   if (req.query.tag) {
     query['fields.tags[in]'] = capitalize(req.query.tag);
   }
 
-  if (content_type === 'blog_post') {
-    var order =  '-fields.datePublished';
+  if (contentType === 'blog_post') {
+    order = '-fields.datePublished';
   }
 
   return contentful.contentTypes()
-    .then(n => n.filter(n => n.name === content_type)[0].sys.id)
+    .then(n => n.filter(c => c.name === contentType)[0].sys.id)
     .then(id => contentful.entries({
+      /*eslint-disable*/
       content_type: id,
+      /*eslint-enable*/
       limit: req.query.limit || PER_PAGE,
       order: order,
       skip: PER_PAGE * (PAGE - 1),
-      ...query
+      ...query,
     }))
     .then(
-      n => res.send(n.map(n => n.fields)),
+      n => res.send(n.map(r => r.fields)),
       error => res.send(error)
     );
 });
@@ -116,14 +113,16 @@ var patchAuthorWithBamboo = (n, ...fields) => (
 
 api.get('/contentful/featured', function(req, res) {
   return contentful.contentTypes()
-    .then(n => n.filter(n => n.name === 'blog_post')[0].sys.id)
+    .then(n => n.filter(r => r.name === 'blog_post')[0].sys.id)
     .then(id => contentful.entries({
+      /*eslint-disable*/
       content_type: id,
+      /*eslint-enable*/
       limit: 3,
       'fields.featured': true,
     }))
     .then(
-      n => res.send(n.map(n => n.fields)),
+      n => res.send(n.map(r => r.fields)),
       error => res.send(error)
     );
 });

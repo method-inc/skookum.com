@@ -4,7 +4,9 @@ require('./styles.css');
 
 import React from 'react';
 var {PropTypes} = React;
+/*eslint-disable*/
 var EMPTY_OBJECT = {};
+/*eslint-enable*/
 
 class Hero extends React.Component {
   render(): ?ReactElement {
@@ -18,7 +20,7 @@ class Hero extends React.Component {
     return (
       <div className="Hero" style={
         { ...style,
-          backgroundColor: this.props.color
+          backgroundColor: this.props.color,
         }}>
         <h1 className="Hero-title">{title}</h1>
         <p className="Hero-subtitle">{subtitle}</p>

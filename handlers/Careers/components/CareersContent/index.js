@@ -106,6 +106,6 @@ export default Resolver.createContainer(CareersContent, {
       ];
 
       return api(`team?fields=${FIELDS.toString()}`);
-    }
-  }
+    },
+  },
 });
