@@ -1,0 +1,62 @@
+/** @define ImagePopover; use strict */
+.ImagePopover-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.ImagePopover-content-wrapper {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease-out 0.3s, opacity 0.3s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 5;
+  word-wrap: normal;
+  background-color: #eb4e1b;
+  color: #ffffff;
+  padding: auto 0;
+  font-size: 0.8em;
+}
+
+.ImagePopover-content-wrapper.direction-default {
+  left: 100%;
+}
+
+.ImagePopover-content-wrapper.direction-reverse {
+  right: 100%;
+}
+
+.ImagePopover-content-wrapper.is-active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.ImagePopover-content:after {
+  z-index: 5;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.direction-default .ImagePopover-content:after {
+  border-right-color: #eb4e1b;
+  right: 100%;
+}
+
+.direction-reverse .ImagePopover-content:after {
+  border-left-color: #eb4e1b;
+  left: 100%;
+}

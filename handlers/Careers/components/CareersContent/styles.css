@@ -162,6 +162,7 @@
 .CareersContent-people-list {
   list-style: none;
   margin: 1.5em 0;
+  line-height: 0;
   padding: 0;
 }
 
@@ -169,17 +170,37 @@
   box-sizing: border-box;
   display: inline-block;
   width: 33.3333%;
+  position: relative;
+  line-height: normal;
 }
 
 .CareersContent-person-name,
 .CareersContent-person-title {
-  display: none;
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease-out 0.2s, opacity 0.2s ease-out;
+  padding: 0.333em .666em ;
+  width: 90%;
 }
 
-.CareersContent-person-image {
-  display: block;
-  height: 100%;
+.ImagePopover-content-wrapper.is-active .CareersContent-person-name,
+.ImagePopover-content-wrapper.is-active .CareersContent-person-title {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.07s;
+  padding: 0.333em .666em ;
+  width: 90%;
+}
+
+.CareersContent-person .ImagePopover-content {
+  display: flex;
+  position: relative;
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 400px) {

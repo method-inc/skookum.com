@@ -5,6 +5,7 @@ require('./styles.css');
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import MajorSectionElement from 'MajorSectionElement';
+import ImagePopover from 'ImagePopover';
 import api from 'api';
 
 var {PropTypes} = React;
@@ -38,6 +39,29 @@ var BENEFITS = [
 ];
 
 class CareersContent extends React.Component {
+  constructor() {
+      super();
+      this.state = { activePersonIndex: -1 };
+  }
+
+  updateSelectedPopover(i) {
+    var _i = this.state.activePersonIndex === i ? -1 : i;
+    this.setState({ activePersonIndex: _i });
+  }
+
+  closePopover() {
+    this.setState({ activePersonIndex: -1 });
+  }
+
+  createPopoverContent(person) {
+    return (
+      <div>
+        <strong className={cn('person-name')}>{person.displayName}</strong>
+        <div className={cn('person-title')}>{person.jobTitle}</div>
+      </div>
+      );
+  }
+
   render(): ?ReactElement {
     return (
       <div className="CareersContent">
@@ -70,11 +94,16 @@ class CareersContent extends React.Component {
             <hr className={cn('people-hr')} />
           </div>
           <ul className={cn('people-list')}>
-            {this.props.people.map((n, i) => (
-              <li key={i} className={cn('person')}>
-                <strong className={cn('person-name')}>{n.displayName}</strong>
-                <span className={cn('person-title')}>{n.jobTitle}</span>
-                <img className={cn('person-image')} src={n.photoUrl} />
+            {this.props.people.map((person, i) => (
+              <li key={i} className={cn('person')} >
+                <ImagePopover
+                  id={'person-' + i}
+                  data={i}
+                  handleMouseEnter={this.updateSelectedPopover.bind(this)}
+                  handleMouseLeave={this.closePopover.bind(this)}
+                  isActive={this.state.activePersonIndex !== -1 && this.state.activePersonIndex === i}
+                  content={this.createPopoverContent(person)}
+                  imgUrl={person.photoUrl} />
               </li>
             ))}
           </ul>
@@ -102,7 +131,7 @@ export default Resolver.createContainer(CareersContent, {
       var FIELDS = [
         'displayName',
         'jobTitle',
-        'photoUrl',
+        'photoUrl'
       ];
 
       return api(`team?fields=${FIELDS.toString()}`);
