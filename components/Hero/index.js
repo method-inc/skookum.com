@@ -44,7 +44,7 @@ class Hero extends React.Component {
           backgroundColor: BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color],
         }} />
         {image && (
-          <div className="Hero-image" style={{backgroundImage: `url(${image})`,}} />
+          <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />
         )}
       </div>
     );

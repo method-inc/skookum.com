@@ -1,35 +1,24 @@
 require('./styles.css');
 
 import React from 'react';
-import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import Logo from 'Logo';
 import Typography from 'Typography';
 import Icon from 'Icon';
 import Input from 'Input';
 import Button from 'Button';
+import Section from './Section';
 
-const defaultStyles = {boxSizing: 'border-box', display: 'inline-block', verticalAlign: 'top',};
-const subheroStyles = {...defaultStyles, width: '33.333%',};
-const logoStyles = {...defaultStyles, width: '25%', padding: '0.5em',};
-const typographyStyles = {...defaultStyles, width: '50%',};
-const littleTextStyle = {display: 'block', color: '#A7A7A7', fontSize: '0.75em', fontStyle: 'italic', fontWeight: 100, marginTop: '-0.5em',};
+const defaultStyles = {boxSizing: 'border-box', display: 'inline-block', verticalAlign: 'top'};
+const subheroStyles = {...defaultStyles, width: '33.333%'};
+const logoStyles = {...defaultStyles, width: '25%', padding: '0.5em'};
+const typographyStyles = {...defaultStyles, width: '50%'};
+const littleTextStyle = {display: 'block', color: '#A7A7A7', fontSize: '0.75em', fontStyle: 'italic', fontWeight: 100, marginTop: '-0.5em'};
 
 var uppercase = str => str[0].toUpperCase() + str.slice(1);
 
 var titlecase = str =>
   str.split('-').reduce((s, c) => s + ' ' + uppercase(c), '');
-
-class Section extends React.Component {
-  render(): ?ReactElement {
-    return (
-      <div className="StyleGuide-section">
-        <h2 className="StyleGuide-section-title">{this.props.title}</h2>
-        {this.props.children}
-      </div>
-    );
-  }
-}
 
 class StyleGuide extends React.Component {
   render(): ?ReactElement {
@@ -54,15 +43,15 @@ class StyleGuide extends React.Component {
         <Section title="Logo & Colors" />
         {[['#000000', ''], ['#f16521', '#fff'], ['#faab18', '#fff'], ['#ffdd2e', '#000']].map(n => (
           <div style={{background: n[0], ...logoStyles}} key={n[0]}>
-            <div style={{fontSize: '1.875em', color: n[1] || '#fff', fontWeight: 100, textTransform: 'uppercase',}}>{n[0]}</div>
+            <div style={{fontSize: '1.875em', color: n[1] || '#fff', fontWeight: 100, textTransform: 'uppercase'}}>{n[0]}</div>
             <div style={{width: '70%', margin: '1.5em auto'}}><Logo color={n[1]} /></div>
           </div>
         ))}
         <div style={{padding: '3em 1.5em', background: '#f4f4f4'}}>
-          <div style={{fontSize: '1.875em', fontWeight: 100, textTransform: 'uppercase',}}>#f4f4f4</div>
+          <div style={{fontSize: '1.875em', fontWeight: 100, textTransform: 'uppercase'}}>#f4f4f4</div>
         </div>
         <Section title="Typography">
-          <div style={{...typographyStyles, paddingLeft: '5%', paddingRight: '5%',}}>
+          <div style={{...typographyStyles, paddingLeft: '5%', paddingRight: '5%'}}>
             <Typography type={Typography.PAGE_HEADER}>Page Header</Typography>
             <p style={littleTextStyle}>Lato Black. All Caps. 30px</p>
             <Typography type={Typography.PRIMARY_SECTION_HEADER}>Primary Section Header</Typography>
@@ -70,7 +59,7 @@ class StyleGuide extends React.Component {
             <Typography type={Typography.SECONDARY_SECTION_HEADER}>Secondary Section Header</Typography>
             <p style={littleTextStyle}>Lato Black. All Caps. 30px</p>
           </div>
-          <div style={{...typographyStyles, paddingRight: '5%',}}>
+          <div style={{...typographyStyles, paddingRight: '5%'}}>
             <Typography type={Typography.TEXT} element='p'>This is a paragraph of text to play with typography. It’s practical, but let’s see what happens now. This is something we’ve done a few times to really understand the readability and communicate with our readers.</Typography>
             <p style={littleTextStyle}>Lato Regular. 16px. LH 30px</p>
 
@@ -108,7 +97,7 @@ class StyleGuide extends React.Component {
         </Section>
         <Section title="Icons">
           {Icon.ICONS.map(i => (
-            <div style={{display: 'inline-block', margin: '0 0.5em 0.5em 0',}}>
+            <div style={{display: 'inline-block', margin: '0 0.5em 0.5em 0'}}>
               <Icon icon={i} style={{verticalAlign: 'middle'}} />
               <span style={{verticalAlign: 'middle'}}>{titlecase(i)}</span>
             </div>

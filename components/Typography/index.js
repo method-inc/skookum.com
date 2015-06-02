@@ -15,7 +15,7 @@ const classMap = {
   'TINY_CAPTION': 'is-tiny-caption',
   'QUOTE_CITATION': 'is-quote',
   'LINK': 'is-link', // Lato Black. All Caps. 12px. LH 12px
-}
+};
 
 class Typography extends Component {
   render(): ?ReactElement {
