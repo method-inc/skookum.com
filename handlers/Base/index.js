@@ -32,10 +32,13 @@ class AppBase extends React.Component {
   }
 
   render(): ?ReactElement {
+    var logoStyle = {display: 'inline-block'};
+    if (!this.state.navVisible) logoStyle.background = '#000';
+
     return (
       <div className="AppBase">
         <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 5}}>
-          <Link to="home">
+          <Link to="home" style={logoStyle}>
             <Logo style={{width: 32, margin: '0.25em'}} color={this.state.navVisible && '#fff'} />
           </Link>
           <Hamburger target="#navigation" x={this.state.navVisible} onClick={this.toggleNav} />

@@ -9,6 +9,7 @@ var PRIMARY = [
   ['services', 'Services'],
   ['case-studies', 'Case Studies'],
   ['culture', 'Culture'],
+  ['blog', 'blog'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];

@@ -41,6 +41,10 @@
   text-decoration: none;
 }
 
+.Navigation-divider {
+  height: 1.5em;
+}
+
 .Navigation-hr {
   border: 0;
   border-bottom: 1px solid #fff;
