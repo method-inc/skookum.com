@@ -7,11 +7,8 @@ import {Resolver} from 'react-resolver';
 import MajorSectionElement from 'MajorSectionElement';
 import api from 'api';
 
-var {PropTypes} = React;
-
 class CareersContent extends React.Component {
   render(): ?ReactElement {
-    console.log(this.props.careers);
     return (
       <div className="CareersContent">
         <MajorSectionElement

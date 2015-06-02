@@ -4,7 +4,7 @@
 require('./styles.css');
 
 import React from 'react';
-import {RouteHandler, Link} from 'react-router';
+import {RouteHandler} from 'react-router';
 import Navigation from 'Navigation';
 import Footer from 'Footer';
 import Hamburger from 'Hamburger';
