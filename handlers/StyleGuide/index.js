@@ -5,6 +5,7 @@ import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import Logo from 'Logo';
 import Typography from 'Typography';
+import Icon from 'Icon';
 import Input from 'Input';
 import Button from 'Button';
 
@@ -13,6 +14,11 @@ const subheroStyles = {...defaultStyles, width: '33.333%',};
 const logoStyles = {...defaultStyles, width: '25%', padding: '0.5em',};
 const typographyStyles = {...defaultStyles, width: '50%',};
 const littleTextStyle = {display: 'block', color: '#A7A7A7', fontSize: '0.75em', fontStyle: 'italic', fontWeight: 100, marginTop: '-0.5em',};
+
+var uppercase = str => str[0].toUpperCase() + str.slice(1);
+
+var titlecase = str =>
+  str.split('-').reduce((s, c) => s + ' ' + uppercase(c), '');
 
 class Section extends React.Component {
   render(): ?ReactElement {
@@ -101,7 +107,12 @@ class StyleGuide extends React.Component {
           </div>
         </Section>
         <Section title="Icons">
-          TODO
+          {Icon.ICONS.map(i => (
+            <div style={{display: 'inline-block', margin: '0 0.5em 0.5em 0',}}>
+              <Icon icon={i} style={{verticalAlign: 'middle'}} />
+              <span style={{verticalAlign: 'middle'}}>{titlecase(i)}</span>
+            </div>
+          ))}
         </Section>
       </div>
     );
