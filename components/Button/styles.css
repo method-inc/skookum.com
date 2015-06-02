@@ -17,6 +17,12 @@
 .Button.is-primary {
   background: #f16521;
   color: #fff;
+  transition: background 0.1666s ease-in;
+}
+
+.Button.is-primary:hover,
+.Button.is-primary:focus {
+  background: #ce5318;
 }
 
 .Button.is-secondary,
@@ -24,6 +30,15 @@
   background: transparent;
   border: 1px solid #f16521;
   color: #f16521;
+  transition: all 0.1666s ease-in;
+}
+
+.Button.is-secondary:hover,
+.Button.is-secondary:focus,
+.Button.is-more:hover,
+.Button.is-more:focus {
+  border-color: #ce5318;
+  color: #ce5318;
 }
 
 .Button-arrow {
