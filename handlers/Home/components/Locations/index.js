@@ -25,7 +25,7 @@ class Locations extends React.Component {
     return (
       <div className="Locations">
         {LOCATIONS.map(n => (
-          <div className={cn('block')}>
+          <div className={cn('block')} key={n.name}>
             <img className={cn('image')} src={`/public/images/home-${n.name.toLowerCase()}.png`} />
             <div className={cn('content')}>
               <div className={cn('section')}>

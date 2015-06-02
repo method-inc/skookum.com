@@ -16,7 +16,7 @@
 }
 
 .Navigation.is-visible {
-  z-index: 3;
+  z-index: 100;
   opacity: 1;
   transform: scale(1);
   pointer-events: all;

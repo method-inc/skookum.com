@@ -12,7 +12,7 @@ class Clients extends React.Component {
     return (
       <div className="HomeClients">
         {this.props.clients.map(n => (
-          <div className="HomeClients-client">
+          <div className="HomeClients-client" key={n.name}>
             <img className="HomeClients-img" title={n.name} src={n.image.fields.file.url} />
           </div>
         ))}

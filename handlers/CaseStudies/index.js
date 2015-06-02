@@ -8,7 +8,7 @@ class CaseStudies extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="CaseStudies">
-        <Hero color="#000" title="Case Studies" subtitle="A close look at some of our past work." />
+        <Hero color="orange" title="Case Studies" subtitle="A close look at some of our past work." />
         <CaseStudiesContent />
       </div>
     );
