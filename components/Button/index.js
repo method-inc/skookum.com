@@ -9,11 +9,11 @@ var {PropTypes} = React;
 class Button extends React.Component {
   render(): ?ReactElement {
     var {children, className, color, style, type, ...props} = this.props;
-    type = type ? `is-${type}` : '';
-    var className = `Button ${type} ${className || ''}`;
-
     var buttonStyle = color ? {...style, color: color, borderColor: color} : style;
-    var children = type === 'is-more' ? [children, <span key="arrow" className="Button-arrow">〉</span>] : children;
+
+    type = type ? `is-${type}` : '';
+    className = `Button ${type} ${className || ''}`;
+    children = type === 'is-more' ? [children, <span key="arrow" className="Button-arrow">〉</span>] : children;
 
     if (this.props.to) {
       return (
