@@ -3,20 +3,17 @@
 .CaseStudiesContent-item {
   box-sizing: border-box;
   color: #000;
-  display: inline-block;
-  height: 14em;
-  padding: 3.333em 10% 2em 3.333em;
+  display: block;
+  padding: 3.333em 1.5em 1.5em 1.5em;
   position: relative;
   overflow: hidden;
-  vertical-align: top;
-  width: 50%;
   text-decoration: none;
+  transition: color 0.3333s ease-in;
 }
 
 .CaseStudiesContent-title {
   display: block;
-  font-weight: 900;
-  font-size: 1em;
+  font-size: 1.25em;
   margin-bottom: 1em;
   position: relative;
   text-transform: uppercase;
@@ -24,9 +21,10 @@
 }
 
 .CaseStudiesContent-description {
-  font-size: 0.75em;
+  color: #393939;
   line-height: 1.4;
   position: relative;
+  width: 60%;
   z-index: 1;
 }
 
@@ -42,8 +40,17 @@
   z-index: 1;
 }
 
+.CaseStudiesContent-item:hover,
+.CaseStudiesContent-item:hover .CaseStudiesContent-description {
+  color: #fff;
+}
+
 .CaseStudiesContent-item:hover:before {
-  background: rgba(248, 178, 63, 0.5);
+  background: rgba(248, 178, 63, 0);
+}
+
+.CaseStudiesContent-item:hover .CaseStudiesContent-image {
+  opacity: 1;
 }
 
 .CaseStudiesContent-image {
@@ -54,4 +61,15 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   max-width: 300%;
+  min-width: 100%;
+  transition: opacity 0.3333s ease-in;
+}
+
+@media screen and (min-width: 601px) {
+  .CaseStudiesContent-item {
+    display: inline-block;
+    height: 14em;
+    vertical-align: top;
+    width: 50%;
+  }
 }

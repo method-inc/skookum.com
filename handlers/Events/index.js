@@ -8,7 +8,11 @@ class Events extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Events">
-        <Hero title="Events" subtitle="We have some crazy awesome events & we’d love to hangout with you" />
+        <Hero
+          title="Events"
+          subtitle="We have some crazy awesome events & we’d love to hangout with you"
+          color="red"
+          image="/public/images/hero-default-bg.png" />
         <FilterBar items={[
           {to: 'events', text: 'All'},
           {to: 'events-location', params: {location: 'charlotte'}, text: 'Charlotte'},

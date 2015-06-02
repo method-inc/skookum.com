@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import Button from 'Button';
 import api from 'api';
 
 var {PropTypes} = React;
@@ -77,7 +78,7 @@ class EventsContent extends React.Component {
                 <div className="EventsContent-eventName">{e.name}</div>
                 <div className="EventsContent-groupName">{e.group.name}</div>
               </div>
-              <a className="EventsContent-button" href={e.event_url}>RSVP</a>
+              <Button className="EventsContent-button" type="secondary" href={e.event_url}>RSVP</Button>
             </li>
           )) : (
             <li key="¯\_(ツ)_/¯" className="EventsContent-item">

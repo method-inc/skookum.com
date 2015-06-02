@@ -8,31 +8,34 @@ var {PropTypes} = React;
 
 class Button extends React.Component {
   render(): ?ReactElement {
-    var {children, color, type, style, ...props} = this.props;
+    var {children, className, color, style, type, ...props} = this.props;
     type = type ? `is-${type}` : '';
-    var className = `Button ${type}`;
+    var className = `Button ${type} ${className || ''}`;
 
     var buttonStyle = color ? {...style, color: color, borderColor: color} : style;
+    var children = type === 'is-more' ? [children, <span key="arrow" className="Button-arrow">〉</span>] : children;
 
-    if (this.props.to || this.props.href) {
+    if (this.props.to) {
       return (
-        <Link {...props} className={className} style={buttonStyle}>
-          {children}
-          {type === 'is-more' && <span className="Button-arrow">〉</span>}
-        </Link>
+        <Link {...props} className={className} style={buttonStyle}>{children}</Link>
+      );
+    }
+
+    if (this.props.href) {
+      return (
+        <a {...props} className={className} style={buttonStyle}>{children}</a>
       );
     }
 
     return (
-      <button {...props} className={className} style={buttonStyle}>
-        {children}
-        {type === 'is-more' && <span className="Button-arrow">〉</span>}
-      </button>
+      <button {...props} className={className} style={buttonStyle}>{children}</button>
     );
   }
 }
 
 Button.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
   type: PropTypes.oneOf(['primary', 'secondary', 'more']),
   children: PropTypes.any.isRequired,
 };
