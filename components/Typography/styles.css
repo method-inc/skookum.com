@@ -20,15 +20,16 @@
 
 .Typography.is-primary-header {
   color: #f05d22;
+  display: inline-block;
   font-size: 1.25em;
+  font-weight: 900;
 }
 
 .Typography.is-primary-header:after {
   content: ' ';
   display: block;
-  margin-top: 0.333em;
+  margin-top: 0.666em;
   border-bottom: 2px solid #F16521;
-  width: 50%;
 }
 
 .Typography.is-secondary-header {

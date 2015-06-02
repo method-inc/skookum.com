@@ -22,7 +22,7 @@
   pointer-events: all;
 }
 
-.Navigation.isnt-visible {
+.Navigation.is-not-visible {
   opacity: 0;
   transform: scale(0.8);
 }

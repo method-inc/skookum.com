@@ -13,14 +13,12 @@
 }
 
 .HomeCaseStudy-title {
+  font-size: 1.25em;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .HomeCaseStudy-summary {
-  font-size: 0.8125em;
-  font-weight: 100;
-  letter-spacing: 0.05em;
   margin-bottom: 4em;
 }
 

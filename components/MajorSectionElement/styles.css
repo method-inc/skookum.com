@@ -1,32 +1,14 @@
 /** @define MajorSectionElement; use strict */
 
 .MajorSectionElement {
-  padding: 1.5em 0;
+  padding: 3em 0;
 }
 
-.MajorSectionElement-title {
-  color: #eb4e1b;
-  font-weight: 900;
-  font-size: 1.3333em;
-  line-height: 1.16666;
-  text-transform: uppercase;
-  padding: 0 1.5rem;
-}
-
-.MajorSectionElement-title:after {
-  content: ' ';
-  display: block;
-  width: 30%;
-  margin-top: 1em;
-  border-bottom: 1px solid #eb4e1b;
-  margin-bottom: 2em;
-}
-
-.MajorSectionElement-content {
-  color: #313131;
-  font-size: 0.8em;
-  padding: 0 1.5em;
-  line-height: 1.8;
+@media screen and (max-width: 600px) {
+  .MajorSectionElement-title,
+  .MajorSectionElement-content {
+    padding: 0 1.5rem;
+  }
 }
 
 @media screen and (min-width: 601px) {
@@ -36,5 +18,13 @@
     display: inline-block;
     vertical-align: top;
     width: 50%;
+  }
+
+  .MajorSectionElement-title {
+    padding-left: 5%;
+  }
+
+  .MajorSectionElement-content {
+    padding-right: 5%;
   }
 }

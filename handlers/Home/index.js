@@ -6,28 +6,20 @@ import MajorSectionElement from 'MajorSectionElement';
 import FeaturedPosts from 'FeaturedPosts';
 import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
+import Locations from 'Locations';
 import Button from 'Button';
 
 var cn = s => `Home-${s}`;
-
-var LOCATIONS = [
-  { name: 'CLT',
-    addr: '201 S. Tryon St. 15th Floor',
-    location: 'Charlotte, NC 28202',
-    phone: '345.123.2345',
-  },
-  { name: 'DEN',
-    addr: '707 17th St Suite 3275',
-    location: 'Denver, CO 80202',
-    phone: '254.123.1643',
-  },
-];
 
 class Home extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Home">
-        <Hero title="Skookum" color="black" style={{paddingTop: 200, paddingBottom: 300}} />
+        <Hero
+          title="Skookum"
+          color="black"
+          style={{paddingTop: 200, paddingBottom: 300}}
+          image="/public/images/mars.png" />
         <div className="Home-content">
           <MajorSectionElement
             title="We create what’s next."
@@ -40,17 +32,10 @@ class Home extends React.Component {
               <cite className={cn('quote-cite')}>JFK</cite>
             </blockquote>
             <FeaturedPosts />
-            <Button to="blog">More Blog Posts</Button>
+            <Button style={{margin: '3em 5% 1.5em auto', width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
           </div>
         </div>
-        {LOCATIONS.map(n => (
-          <div className={cn('location')}>
-            <div className={cn('location-name')}>{n.name}</div>
-            <div className={cn('location-detail')}>{n.addr}</div>
-            <div className={cn('location-detail')}>{n.location}</div>
-            <div className={cn('location-detail')}>{n.phone}</div>
-          </div>
-        ))}
+        <Locations />
       </div>
     );
   }

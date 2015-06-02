@@ -28,7 +28,7 @@ class CaseStudy extends React.Component {
         <div className="HomeCaseStudy-content">
           <strong className="HomeCaseStudy-title">{slug}</strong>
           <p className="HomeCaseStudy-summary">{summary}</p>
-          <Button to="case-studies">More Case Studies</Button>
+          <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
         </div>
         <img className="HomeCaseStudy-image" src={lookup(image, 'fields.file.url')} />
       </div>

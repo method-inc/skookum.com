@@ -1,0 +1,51 @@
+/** @define Locations; use strict */
+
+.Locations {}
+
+.Locations-section {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1.5em;
+  vertical-align: top;
+  width: 50%;
+}
+
+.Locations-image {
+  min-width: 100%;
+}
+
+.Locations-detail {
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 500px) {
+  .Locations-block {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 50%;
+  }
+
+  .Locations-section {
+    padding: 1.5em 0;
+  }
+
+  .Locations-content {
+    padding-right: 10%;
+  }
+
+  .Locations-content {
+    padding-left: 1.5em;
+  }
+
+  .Locations-block:first-child {
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+
+  .Locations-block:first-child .Locations-content {
+    padding-left: 10%;
+    padding-right: 0;
+  }
+}

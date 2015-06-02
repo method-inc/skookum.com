@@ -21,7 +21,7 @@
 
 .Button.is-secondary,
 .Button.is-more {
-  background: #fff;
+  background: transparent;
   border: 1px solid #f16521;
   color: #f16521;
 }

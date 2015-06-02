@@ -32,7 +32,7 @@ var renderNavigation = (list, props) => (
 class Navigation extends Component {
   render(): ?ReactElement {
     var {visible} = this.props;
-    var className = `Navigation ${visible ? 'is-visible' : 'isnt-visible'}`;
+    var className = `Navigation ${visible ? 'is-visible' : 'is-not-visible'}`;
 
     return (
       <div className={className}>
