@@ -108,18 +108,8 @@ class StyleGuide extends React.Component {
   }
 }
 
-StyleGuide.propTypes = {
-  // promise: React.PropTypes.string.isRequired,
-};
-
+StyleGuide.propTypes = {};
 StyleGuide.displayName = 'StyleGuide';
 
-export default Resolver.createContainer(StyleGuide, {
-  resolve: {
-    /*
-    promise() {
-      return PromiseStore.find(this.getParams().id);
-    }
-    */
-  },
-});
+export default StyleGuide;
+
