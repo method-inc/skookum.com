@@ -4,8 +4,11 @@
   padding: 3em 0;
 }
 
+.MajorSectionElement-title {
+  padding-right: 1.5rem;
+}
+
 @media screen and (max-width: 600px) {
-  .MajorSectionElement-title,
   .MajorSectionElement-content {
     padding: 0 1.5rem;
   }

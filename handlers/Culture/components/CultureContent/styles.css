@@ -1,0 +1,221 @@
+/** @define CultureContent; use strict */
+
+.CultureContent {}
+
+/** INTRODUCTION ================ */
+
+@media screen and (min-width: 601px) {
+  .CultureContent-value {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+}
+
+/** VALUES ================ */
+
+.CultureContent-values {
+  margin-top: 1.5em;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+.CultureContent-values-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CultureContent-values-hr {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 0.5em auto 0;
+  width: 40%;
+}
+
+.CultureContent-values-title,
+.CultureContent-values-value {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 3rem 0.5em;
+  width: 50%;
+}
+
+.CultureContent-values-number {
+  color: #000;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.CultureContent-values-text {
+  color: #666;
+  font-size: 1em;
+  height: 2em;
+}
+
+@media screen and (min-width: 601px) {
+  .CultureContent-values-title {
+    width: 100%;
+  }
+
+  .CultureContent-values-value {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .CultureContent-values {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .CultureContent-values-title {
+    order: 4;
+  }
+
+  .CultureContent-values-title,
+  .CultureContent-values-value {
+    width: 20%;
+  }
+
+  .CultureContent-values-value:nth-child(1) { order: 1; }
+  .CultureContent-values-value:nth-child(2) { order: 2; }
+  .CultureContent-values-value:nth-child(3) { order: 3; }
+  .CultureContent-values-value:nth-child(4) { order: 5; }
+  .CultureContent-values-value:nth-child(5) { order: 6; }
+  .CultureContent-values-value:nth-child(6) { order: 7; }
+  .CultureContent-values-value:nth-child(7) { order: 8; }
+  .CultureContent-values-value:nth-child(8) { order: 9; }
+  .CultureContent-values-value:nth-child(9) { order: 10; }
+  .CultureContent-values-value:nth-child(10) { order: 11; }
+}
+
+/** BENEFITS ================ */
+
+.CultureContent-benefits {
+  background: #eb4e1b;
+  color: #fff;
+  padding: 3em 1.5em;
+}
+
+.CultureContent-benefits-title {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.CultureContent-benefits-list {
+  margin: 0;
+  padding: 0;
+}
+
+.CultureContent-benefits-item {
+  font-size: 0.8em;
+  font-weight: 300;
+  list-style: none;
+  line-height: 1.16666;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 601px) {
+  .CultureContent-benefits-title {
+    text-align: center;
+  }
+
+  .CultureContent-benefits-title,
+  .CultureContent-benefits-list {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+}
+
+/** PEOPLE ================ */
+
+.CultureContent-people {
+  padding: 1.5em 0;
+
+}
+
+.CultureContent-people-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CultureContent-people-hr {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 0.5em auto 0;
+  width: 40%;
+}
+
+.CultureContent-people-list {
+  list-style: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+.CultureContent-person {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33.3333%;
+}
+
+.CultureContent-person-name,
+.CultureContent-person-title {
+  display: none;
+}
+
+.CultureContent-person-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  .CultureContent-people-title {
+    margin: 1.5em 0;
+  }
+
+  .CultureContent-people-hr {
+    width: 15%;
+  }
+
+  .CultureContent-person {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .CultureContent-person {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .CultureContent-person {
+    width: 12.5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .CultureContent-person {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .CultureContent-person {
+    width: 7.5%;
+  }
+}

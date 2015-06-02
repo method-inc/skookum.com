@@ -11,12 +11,12 @@ var PRIMARY = [
   ['case-studies', 'Case Studies'],
   ['culture', 'Culture'],
   ['blog', 'blog'],
+  ['culture', 'Culture'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];
 
 var SECONDARY = [
-  ['careers', 'Careers'],
   ['open-source', 'Open Source'],
   ['events', 'Events'],
 ];

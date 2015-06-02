@@ -51,6 +51,9 @@ var employee = o =>
     n.employees.find(e => e.displayName === o.displayName)
   );
 
+var careers = () =>
+  cache('https://api.greenhouse.io/v1/boards/skookum/embed/jobs?content=true');
+
 api.get('/team', function(req, res) {
   var fields = req.query.fields ? req.query.fields.split(',') : ['displayName'];
 
@@ -143,6 +146,10 @@ api.get('/contentful/:slug', function(req, res) {
   ))
   .then(n => res.send(n))
   .catch(error => res.send({error}));
+});
+
+api.get('/careers', function(req, res) {
+  careers().then(n => res.send(n.jobs));
 });
 
 export default api;
