@@ -1,0 +1,19 @@
+/** @define Icon; use strict*/
+
+.Icon {
+  background: #FFDD2E;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+}
+
+.Icon-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+}
+

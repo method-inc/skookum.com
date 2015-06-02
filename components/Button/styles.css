@@ -5,10 +5,11 @@
   border: 2px solid #fff;
   color: inherit;
   display: block;
-  font-size: 0.75em;
+  font-size: 0.875em;
   font-weight: 700;
   letter-spacing: 0.05em;
-  padding: 1.25rem 1rem;
+  line-height: 3.9285em; /* 55 / 14 */
+  padding: 0 2.1429em; /* 30 / 14 */
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -18,10 +19,16 @@
   color: #fff;
 }
 
+.Button.is-secondary,
+.Button.is-more {
+  background: #fff;
+  border: 1px solid #f16521;
+  color: #f16521;
+}
+
 .Button-arrow {
   font-size: 1.3333em;
   float: right;
-  line-height: 0.875;
   margin-left: 1.5em;
   margin-right: -0.5em;
 }

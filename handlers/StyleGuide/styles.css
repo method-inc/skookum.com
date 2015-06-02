@@ -1,0 +1,27 @@
+/** @define StyleGuide; use strict */
+
+.StyleGuide {}
+
+.StyleGuide-section {
+  padding: 0 2em;
+}
+
+.StyleGuide-section-title {
+  color: #454545;
+  font-size: 2.5em;
+  font-weight: 100;
+  margin-left: -2rem;
+  text-transform: uppercase;
+}
+
+.StyleGuide-section-title:before {
+  border-left: 0.5em solid #F16521;
+  border-top: 0.5em solid #fff;
+  border-bottom: 0.5em solid #fff;
+  content: ' ';
+  display: inline-block;
+  margin-right: 0.25em;
+  position: relative;
+  top: 0.125em;
+}
+

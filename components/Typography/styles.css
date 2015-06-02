@@ -1,0 +1,75 @@
+/** @define Typography; use strict */
+
+.Typography {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.Typography.is-title,
+.Typography.is-primary-header,
+.Typography.is-secondary-header {
+  color: #F16521;
+  display: block;
+  text-transform: uppercase;
+}
+
+.Typography.is-title {
+  font-size: 1.875em;
+  font-weight: 900;
+}
+
+.Typography.is-primary-header {
+  color: #f05d22;
+  font-size: 1.25em;
+}
+
+.Typography.is-primary-header:after {
+  content: ' ';
+  display: block;
+  margin-top: 0.333em;
+  border-bottom: 2px solid #F16521;
+  width: 50%;
+}
+
+.Typography.is-secondary-header {
+  font-size: 1.875em;
+  font-weight: 100;
+}
+
+.Typography.is-text {}
+
+.Typography.is-description {
+  font-weight: 100;
+  line-height: 1.875em;
+}
+
+.Typography.is-emphasized-caption {
+  font-weight: 100;
+  font-size: 1.75em; /* 30 / 16 */
+  line-height: 1.42857; /* 40 / 28 */
+}
+
+.Typography.is-caption {
+  color: #000;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+.Typography.is-tiny-caption {
+  font-size: 0.75em; /* 12 / 16 */
+  line-height: 1.3333; /* 16 / 12 */
+}
+
+.Typography.is-quote {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.Typography.is-link {
+  font-size: 0.75em;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+

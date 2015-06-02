@@ -16,7 +16,7 @@ class Button extends React.Component {
       return (
         <Link {...props} className={className}>
           {children}
-          {type !== 'is-primary' && <span className="Button-arrow">〉</span>}
+          {type === 'is-more' && <span className="Button-arrow">〉</span>}
         </Link>
       );
     }
@@ -24,14 +24,14 @@ class Button extends React.Component {
     return (
       <button {...props} className={className}>
         {children}
-        {type !== 'is-primary' && <span className="Button-arrow">〉</span>}
+        {type === 'is-more' && <span className="Button-arrow">〉</span>}
       </button>
     );
   }
 }
 
 Button.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'secondary', 'more']),
   children: PropTypes.any.isRequired,
 };
 

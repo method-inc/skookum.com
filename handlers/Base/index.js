@@ -33,7 +33,7 @@ class AppBase extends React.Component {
 
   render(): ?ReactElement {
     return (
-      <div>
+      <div className="AppBase">
         <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 5}}>
           <Link to="home">
             <Logo style={{width: 32, margin: '0.25em'}} color={this.state.navVisible && '#fff'} />
