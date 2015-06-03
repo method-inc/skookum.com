@@ -2,10 +2,11 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import Logo from 'Logo';
-var {PropTypes} = React;
+import Hamburger from 'Hamburger';
+
 /*eslint-disable*/
 var EMPTY_OBJECT = {};
 /*eslint-enable*/
@@ -24,7 +25,7 @@ const LOGO_COLOR = {
   yellow: '#000',
 };
 
-class Hero extends React.Component {
+class Hero extends Component {
   render(): ?ReactElement {
     var {
       title,
@@ -41,11 +42,17 @@ class Hero extends React.Component {
       className = className + 'is-light';
     }
 
+    var backgroundColor = BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color];
+
     return (
       <div className="Hero" style={style}>
         <Link to="home">
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
         </Link>
+        <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 101}}>
+          <Hamburger color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+        </div>
+
         <div className="Hero-content">
           {children}
           <h1 className="Hero-title">{title}</h1>
@@ -53,7 +60,7 @@ class Hero extends React.Component {
         </div>
 
         <div className="Hero-overlay" style={{
-          backgroundColor: BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color],
+          backgroundColor: backgroundColor,
         }} />
         {image && (
           <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />

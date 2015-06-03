@@ -5,15 +5,19 @@ import React, {Component, PropTypes} from 'react';
 class Hamburger extends Component {
   render(): ?ReactElement {
     var className = 'Hamburger';
-    var {target, x, onClick} = this.props;
+    var {target, onClick} = this.props;
+    var {topOfViewport, navVisible} = this.context;
 
-    if (x) className = className + ' is-x';
+    if (navVisible) className = className + ' is-x';
+    if (!topOfViewport) className = className + ' is-floating';
 
     return (
-      <a href={target} className={className} onClick={onClick}>
-        <div className="Hamburger-top" />
-        <div className="Hamburger-middle" />
-        <div className="Hamburger-bottom" />
+      <a style={{backgroundColor: !topOfViewport && this.props.color}} href={target} className={className} onClick={this.context.toggleNav}>
+        <div className="Hamburger-icon">
+          <div className="Hamburger-top" />
+          <div className="Hamburger-middle" />
+          <div className="Hamburger-bottom" />
+        </div>
       </a>
     );
   }
@@ -22,7 +26,12 @@ class Hamburger extends Component {
 Hamburger.propTypes = {
   target: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  x: PropTypes.bool,
+};
+
+Hamburger.contextTypes = {
+  navVisible: PropTypes.bool.isRequired,
+  toggleNav: PropTypes.func.isRequired,
+  topOfViewport: PropTypes.bool.isRequired,
 };
 
 export default Hamburger;

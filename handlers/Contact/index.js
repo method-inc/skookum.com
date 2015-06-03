@@ -10,7 +10,7 @@ class Contact extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Contact">
-        <Hero color="#000" title="Contact Us" />
+        <Hero color="black" title="Contact Us" />
         <div className="Contact-flex">
           <ContactForm />
           <GazetteInfo />
@@ -26,4 +26,3 @@ Contact.propTypes = {};
 Contact.displayName = 'Contact';
 
 export default Contact;
-

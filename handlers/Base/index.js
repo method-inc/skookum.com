@@ -3,21 +3,51 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {RouteHandler} from 'react-router';
 import Navigation from 'Navigation';
 import Footer from 'Footer';
-import Hamburger from 'Hamburger';
 
-class AppBase extends React.Component {
-  constructor(props, context) {
+class AppBase extends Component {
+  constructor(props: mixed, context: mixed): void {
     super(props, context);
 
     this.state = {navVisible: false};
     this.toggleNav = this.toggleNav.bind(this);
+    this.topOfViewport = true;
   }
 
-  getHandlerKey() {
+  componentDidMount(): void {
+    if (typeof window === 'undefined') return;
+    window.addEventListener('scroll', _ => {
+      var forceUpdate = false;
+      if (window.scrollY === 0) {
+        if (!this.topOfViewport) {
+          forceUpdate = true;
+        }
+      }
+      else {
+        if (this.topOfViewport) {
+          forceUpdate = true;
+        }
+      }
+
+      if (forceUpdate) {
+        this.topOfViewport = !this.topOfViewport;
+        this.forceUpdate();
+      }
+    }, false);
+  }
+
+  getChildContext(): mixed {
+    return {
+      navVisible: this.state.navVisible,
+      toggleNav: this.toggleNav,
+      topOfViewport: this.topOfViewport,
+    };
+  }
+
+  getHandlerKey(): number {
     var childDepth = 1; // assuming App is top-level route
     var {router} = this.context;
     var key = router.getCurrentRoutes()[childDepth].name;
@@ -26,16 +56,13 @@ class AppBase extends React.Component {
     return key;
   }
 
-  toggleNav() {
+  toggleNav(): void {
     this.setState({navVisible: !this.state.navVisible});
   }
 
-  render(): ?ReactElement {
+  render(): ReactElement {
     return (
       <div className="AppBase">
-        <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 101}}>
-          <Hamburger target="#navigation" x={this.state.navVisible} onClick={this.toggleNav} />
-        </div>
         <Navigation id="navigation" onClick={this.toggleNav} visible={this.state.navVisible} />
 
         <RouteHandler key={this.getHandlerKey()} />
@@ -46,7 +73,13 @@ class AppBase extends React.Component {
 }
 
 AppBase.contextTypes = {
-  router: React.PropTypes.func.isRequired,
+  router: PropTypes.func.isRequired,
+};
+
+AppBase.childContextTypes = {
+  navVisible: PropTypes.bool.isRequired,
+  toggleNav: PropTypes.func.isRequired,
+  topOfViewport: PropTypes.bool.isRequired,
 };
 
 export default AppBase;
