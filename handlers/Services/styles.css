@@ -1,0 +1,43 @@
+/** @define Services; use strict */
+
+.Services {}
+
+.Services-list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.Services-item {}
+
+.Services-link {
+  color: #fff;
+  display: inline-block;
+  padding: 0.666em 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.Services-item-panel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20em;
+  right: 1.5em;
+}
+
+.Services-title {
+  color: #FFDD2E;
+  display: block;
+  margin: 1em 0;
+  text-transform: uppercase;
+}
+
+.Services-item.is-active .Services-link {
+  color: #FFDD2E;
+}
+
+.Services-item.is-active .Services-item-panel {
+  display: block;
+}
+
