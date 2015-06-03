@@ -39,7 +39,7 @@
     "react": "^0.13.3",
     "react-resolver": "iamdustan/react-resolver#expose-client-data-dist",
     "react-router": "^0.13.3",
-    "react-tabs": "^0.1.2",
+    "react-tabs": "iamdustan/react-tabs#33ce42ed79059c24aca6cb25aaa5bc2d47173e9b",
     "react-tap-event-plugin": "^0.1.7",
     "react-tween-state": "0.0.5",
     "rework": "^1.0.1",

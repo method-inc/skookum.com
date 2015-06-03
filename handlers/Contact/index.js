@@ -4,6 +4,7 @@ import React from 'react';
 import Hero from 'Hero';
 import ContactForm from 'ContactForm';
 import GazetteInfo from 'GazetteInfo';
+import Locations from 'Locations';
 
 class Contact extends React.Component {
   render(): ?ReactElement {
@@ -14,7 +15,7 @@ class Contact extends React.Component {
           <ContactForm />
           <GazetteInfo />
         </div>
-        <section></section>
+        <Locations />
       </div>
     );
   }
