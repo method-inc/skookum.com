@@ -3,6 +3,7 @@ require('./styles.css');
 import React from 'react';
 import marked from 'marked';
 import {Resolver} from 'react-resolver';
+import * as fmt from 'fmt';
 
 import api from 'api';
 import Hero from 'Hero';
@@ -23,7 +24,7 @@ class BlogArticle extends React.Component {
       <article className="BlogArticle">
         <Hero
           title={title}
-          subtitle={`By ${author.name} | ${new Date(datePublished).toString()}`} />
+          subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: marked(body)}} />

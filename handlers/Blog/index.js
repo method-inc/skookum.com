@@ -1,3 +1,4 @@
+/* @flow */
 require('./styles.css');
 
 import React from 'react';
@@ -11,7 +12,7 @@ class Blog extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Blog">
-        <Hero color="#000" title="Blog" subtitle="A collection of our team’s writings">
+        <Hero color="black" image="/public/images/hero-blog.png" title="Blog" subtitle="A collection of our team’s writings">
           <FeaturedPosts className="Blog-featured" />
         </Hero>
         <FilterBar items={this.props.tags} />

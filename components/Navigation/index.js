@@ -4,17 +4,19 @@ require('./styles.css');
 
 import React, {PropTypes, Component} from 'react';
 import {Link} from 'react-router';
+import Logo from 'Logo';
 
 var PRIMARY = [
   ['services', 'Services'],
   ['case-studies', 'Case Studies'],
+  ['culture', 'Culture'],
+  ['blog', 'blog'],
   ['culture', 'Culture'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];
 
 var SECONDARY = [
-  ['careers', 'Careers'],
   ['open-source', 'Open Source'],
   ['events', 'Events'],
 ];
@@ -32,10 +34,13 @@ var renderNavigation = (list, props) => (
 class Navigation extends Component {
   render(): ?ReactElement {
     var {visible} = this.props;
-    var className = `Navigation ${visible ? 'is-visible' : 'isnt-visible'}`;
+    var className = `Navigation ${visible ? 'is-visible' : 'is-not-visible'}`;
 
     return (
       <div className={className}>
+        <Link to="home" onClick={this.props.onClick}>
+          <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em'}} color="#fff" />
+        </Link>
         {renderNavigation(PRIMARY, this.props)}
         <div className="Navigation-divider" />
         {renderNavigation(SECONDARY, this.props)}

@@ -6,7 +6,7 @@ class Careers extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Careers">
-        <Hero title="Careers" subtitle="We never do the same thing twice" />
+        <Hero color="red" image="/public/images/hero-culture.png" title="Careers" subtitle="We never do the same thing twice" />
         <CareersContent />
       </div>
     );

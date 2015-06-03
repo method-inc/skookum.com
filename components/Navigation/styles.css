@@ -13,16 +13,16 @@
   transition: 0.1666s all ease-in;
   opacity: 0;
   transform: scale(0.8);
+  z-index: 100;
 }
 
 .Navigation.is-visible {
-  z-index: 3;
   opacity: 1;
   transform: scale(1);
   pointer-events: all;
 }
 
-.Navigation.isnt-visible {
+.Navigation.is-not-visible {
   opacity: 0;
   transform: scale(0.8);
 }
@@ -39,6 +39,10 @@
   padding: 0.6666em 0.6666em 0.6666em 10%;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.Navigation-divider {
+  height: 1.5em;
 }
 
 .Navigation-hr {

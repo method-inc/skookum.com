@@ -8,6 +8,7 @@
 var WHITE_LIST_OF_NODE_MODULES = [
   'react-autodoc',
   'react-router',
+  'react-tabs',
 ];
 
 module.exports = WHITE_LIST_OF_NODE_MODULES;

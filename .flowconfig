@@ -1,0 +1,9 @@
+[include]
+
+[libs]
+
+[options]
+module_name.name_mapper="Input", "components/Input"
+
+[version]
+0.11.0

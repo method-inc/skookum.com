@@ -1,3 +1,6 @@
+// load in polyfills
+require('array.prototype.find');
+
 import express from 'express';
 import cache from './cache';
 import contentful from './contentful';
@@ -42,11 +45,14 @@ var employees = () => (
   })
 );
 
-var employee = (o) => (
-  employees().then(n => (
+var employee = o =>
+  employees().then(n =>
     // TODO: make this smarter
     n.employees.find(e => e.displayName === o.displayName)
-  )));
+  );
+
+var careers = () =>
+  cache('https://api.greenhouse.io/v1/boards/skookum/embed/jobs?content=true');
 
 api.get('/team', function(req, res) {
   var fields = req.query.fields ? req.query.fields.split(',') : ['displayName'];
@@ -136,9 +142,14 @@ api.get('/contentful/:slug', function(req, res) {
     n.length === 0 ?
       res.sendStatus(404) :
       patchAuthorWithBamboo(n[0].fields, 'photoUrl', 'jobTitle')
+        .catch(error => res.send({error, message: 'patchAuthorWithBamboo failed'}))
   ))
   .then(n => res.send(n))
   .catch(error => res.send({error}));
+});
+
+api.get('/careers', function(req, res) {
+  careers().then(n => res.send(n.jobs));
 });
 
 export default api;

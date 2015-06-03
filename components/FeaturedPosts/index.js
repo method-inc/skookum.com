@@ -39,6 +39,10 @@ FeaturedPosts.propTypes = {
 
 export default Resolver.createContainer(FeaturedPosts, {
   resolve: {
+    className(props) {
+      return props.className;
+    },
+
     posts() {
       return api(`contentful/featured`);
     },

@@ -1,0 +1,91 @@
+/** @define ContactLocations */
+
+.ContactLocations {
+  background: #a04316;
+  /* silly hacks to clear margins*/
+  padding: 0 0 1px;
+}
+
+.ContactLocations ul[role=tablist] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ContactLocations li[role=tab] {
+  background: #F16521;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 3em;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.ContactLocations li[role=tab][selected=selected] {
+  background: #FF7532;
+}
+
+.ContactLocations li[role=tab][selected=selected]:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 1.5em solid #ff7532;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  content: ' ';
+}
+
+.ContactLocations li[role=tab][selected=selected]:first-child:after {
+  left: auto;
+  right: 0;
+}
+
+.ContactLocations-panel {
+  background: #fff;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 3em auto;
+  max-width: 600px;
+  padding: 0.666em;
+  overflow: hidden;
+  width: 80%;
+}
+
+.ContactLocations-map {}
+
+.ContactLocations-name {
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+.ContactLocations-nickname {
+  font-size: 0.75em;
+}
+
+.ContactLocations-addr {
+  margin-top: 1em;
+}
+
+.ContactLocations-phone {
+  color: #F16521;
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width: 601px) {
+  .ContactLocations-name,
+  .ContactLocations-nickname,
+  .ContactLocations-addr,
+  .ContactLocations-location,
+  .ContactLocations-phone {}
+
+  .ContactLocations-map {
+    float: left;
+    margin-right: 1.5em;
+    width: 50%;
+  }
+}
+

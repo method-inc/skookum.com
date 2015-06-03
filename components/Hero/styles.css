@@ -13,9 +13,11 @@
 }
 
 .Hero-title {
+  border-bottom: 0.5px solid #fff;
   font-size: 1.875em; /*30 / 16*/
   font-weight: 900;
-  margin: 0 0 0.6666em;
+  margin: 0 0 0.333em;
+  padding-bottom: 0.3333em;
   text-transform: uppercase;
 }
 
@@ -25,7 +27,10 @@
 }
 
 .Hero-content {
-  position: relative;
+  left: 1.5em;
+  right: 0;
+  bottom: 3em;
+  position: absolute;
   z-index: 2;
 }
 
@@ -40,5 +45,12 @@
 
 .Hero-overlay {
   z-index: 1;
+}
+
+@media screen and (min-width: 601px) {
+  .Hero {
+    height: calc(100vw * 0.6346);
+    max-height: 600px;
+  }
 }
 

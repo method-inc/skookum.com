@@ -7,7 +7,9 @@ import marked from 'marked';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
 import qs from 'querystring';
+import Typography from 'Typography';
 import api from 'api';
+import * as fmt from 'fmt';
 
 const DEFAULT_PARAMS = {
   page: '1',
@@ -25,10 +27,10 @@ class ArticlesList extends React.Component {
         {this.props.articles.map(a => (
           <div key={a.slug} className="Blog-article">
             <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
-            <div className="Blog-article-summary" dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.slice(0, 400) + '...'))}} />
+            <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.split('\n')[0]))}} />
             {/*<div className="Blog-article-tags">{a.tags.map(t => <a className="Blog-article-tag" href="#">{t}</a>)}</div>*/}
             <div className="Blog-article-info">
-              <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{new Date(a.datePublished).toString()}</span>
+              <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
             </div>
           </div>
         ))}

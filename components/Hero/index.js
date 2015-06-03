@@ -3,6 +3,8 @@
 require('./styles.css');
 
 import React from 'react';
+import {Link} from 'react-router';
+import Logo from 'Logo';
 var {PropTypes} = React;
 /*eslint-disable*/
 var EMPTY_OBJECT = {};
@@ -13,6 +15,13 @@ const BG_COLOR = {
   red: 'rgba(219, 69, 0, 0.8)',
   orange: 'rgba(245, 151, 0, 0.8)',
   yellow: 'rgba(242, 202, 0, 0.7)',
+};
+
+const LOGO_COLOR = {
+  black: null,
+  red: '#fff',
+  orange: '#fff',
+  yellow: '#000',
 };
 
 class Hero extends React.Component {
@@ -34,10 +43,13 @@ class Hero extends React.Component {
 
     return (
       <div className="Hero" style={style}>
+        <Link to="home">
+          <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
+        </Link>
         <div className="Hero-content">
+          {children}
           <h1 className="Hero-title">{title}</h1>
           <p className="Hero-subtitle">{subtitle}</p>
-          {children}
         </div>
 
         <div className="Hero-overlay" style={{

@@ -1,1 +1,1 @@
-web node  ./scripts/build && node dist/main.js
+web node ./scripts/build && node dist/main.js
