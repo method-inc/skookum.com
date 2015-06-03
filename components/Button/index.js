@@ -7,7 +7,7 @@ import {Link} from 'react-router';
 var {PropTypes} = React;
 
 class Button extends React.Component {
-  render(): ?ReactElement {
+  render(): ReactElement {
     var {children, className, color, style, type, ...props} = this.props;
     var buttonStyle = color ? {...style, color: color, borderColor: color} : style;
 

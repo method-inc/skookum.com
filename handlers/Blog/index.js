@@ -1,3 +1,4 @@
+/* @flow */
 require('./styles.css');
 
 import React from 'react';

@@ -10,17 +10,6 @@ import api from 'api';
 var {PropTypes} = React;
 
 var cn = s => `CultureContent-${s}`;
-var VALUES = [
-  'Think big',
-  'Choose to be happy',
-  'Simplify & go',
-  'Deliver amazing experiences',
-  'Embrace change',
-  'Teach & challenge',
-  'Own it',
-  'Be a team of A-players',
-  'Thirst for growth',
-];
 
 var BENEFITS = [
   '5 weeks paid vacation starting on day one',
@@ -44,19 +33,8 @@ class CultureContent extends React.Component {
         <MajorSectionElement
           title="In order to create real value you must put people at the center of everything"
           content="We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competitive perks." />
-        <div className={cn('values')}>
-          <div className={cn('values-title')}>
-            Our Values
-            <hr className={cn('values-hr')} />
-          </div>
-          {VALUES.map((n, i) => (
-            <div className={cn('values-value')} key={i}>
-              <div className={cn('values-number')}>{i + 1}</div>
-              <div className={cn('values-text')}>{n}</div>
-            </div>
-          ))}
-        </div>
         <div className={cn('benefits')}>
+          <img className={cn('benefits-image')} src="/public/images/culture-benefits.png" />
           <div className={cn('benefits-title')}>Benefits</div>
           <ul className={cn('benefits-list')}>
             {BENEFITS.map((n, i) => (
