@@ -1,0 +1,9 @@
+/** @define Label; use strict */
+
+.Label {}
+
+.Label.is-success {}
+.Label.is-error {}
+.Label.is-info {}
+.Label.is-warning {}
+

@@ -2,12 +2,10 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
-var {PropTypes} = React;
-
-class FilterBar extends React.Component {
+class FilterBar extends Component {
   componentDidMount() {
     var scroller = this.refs.scroller.getDOMNode();
     var width = [...scroller.children].reduce((num, c) => num + c.clientWidth, 0);

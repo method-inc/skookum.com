@@ -15,7 +15,7 @@ class Input extends React.Component {
     return (
       <fieldset className="Input">
         <label className="Input-label">{label}</label>
-        <this.props.element {...props} className="Input-element" />
+        <this.props.element className="Input-element" {...props} />
       </fieldset>
     );
   }
