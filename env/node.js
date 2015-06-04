@@ -50,6 +50,6 @@ var server = app.listen(process.env.PORT || 4444, function () {
   var host = server.address().address;
   var port = server.address().port;
 
-  debug('React-docs listening at http://%s:%s', host, port);
+  debug('%s listening at http://%s:%s', 'The Skookums are', host, port);
 });
 
