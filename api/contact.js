@@ -58,4 +58,3 @@ export default function contact(req, res) {
     err => res.status(500).send(err)
   );
 }
-
