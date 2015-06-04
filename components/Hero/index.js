@@ -58,7 +58,7 @@ class Hero extends Component {
         <Link to="home">
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
         </Link>
-        <Hamburger style={{position: 'fixed', top: 0, right: 0, zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+        <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
 
         <div className="Hero-content" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
