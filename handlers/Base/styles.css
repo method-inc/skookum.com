@@ -6,6 +6,10 @@
   font-family: Lato;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 img {
   display: block;
 }
@@ -14,4 +18,10 @@ p {
   font-size: 1em;
   line-height: 1.875em;
 }
+
+li {
+  line-height: 1.333;
+  margin-bottom: 1em;
+}
+
 

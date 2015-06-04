@@ -51,6 +51,7 @@ class Hero extends Component {
     }
 
     var backgroundColor = BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color];
+    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '3em'} : EMPTY_OBJECT;
 
     return (
       <div className="Hero" style={style}>
@@ -59,7 +60,7 @@ class Hero extends Component {
         </Link>
         <Hamburger style={{position: 'fixed', top: 0, right: 0, zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
 
-        <div className="Hero-content" style={childrenPosition === 'after' ? {bottom: 'auto', top: '3em'}: EMPTY_OBJECT}>
+        <div className="Hero-content" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
           <h1 className="Hero-title">{title}</h1>
           <p className="Hero-subtitle">{subtitle}</p>

@@ -14,6 +14,7 @@ import Home from'./handlers/Home';
 import NotFound from './handlers/NotFound';
 import OpenSource from'./handlers/OpenSource';
 import Services from './handlers/Services';
+import Service from './handlers/Service';
 import StyleGuide from './handlers/StyleGuide';
 import Todo from'./handlers/Todo';
 
@@ -35,6 +36,7 @@ var routes = (
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
     <Route name="services" path="services">
+      <Route name="service" path=":service" handler={Service} />
       <DefaultRoute handler={Services} />
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
