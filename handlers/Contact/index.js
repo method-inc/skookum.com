@@ -3,17 +3,17 @@ require('./styles.css');
 import React from 'react';
 import Hero from 'Hero';
 import ContactForm from 'ContactForm';
-import GazetteInfo from 'GazetteInfo';
+import NewsletterInfo from 'NewsletterInfo';
 import Locations from 'Locations';
 
 class Contact extends React.Component {
-  render(): ?ReactElement {
+  render(): ReactElement {
     return (
       <div className="Contact">
         <Hero color="black" title="Contact Us" />
         <div className="Contact-flex">
           <ContactForm />
-          <GazetteInfo />
+          <NewsletterInfo />
         </div>
         <Locations />
       </div>

@@ -25,9 +25,8 @@ export default function contact(req, res) {
       (typeof body[n] === 'undefined' || body[n] === '') ? missing.concat(n) : missing,
       []);
 
-  console.log(missingFields, req);
   if (missingFields.length > 0) {
-    return res.status(400).send({message: 'You’re missing some required fields.', fields: missingFields});
+    return res.status(400).send({message: 'Oops. It looks like you’re missing some required fields.', fields: missingFields});
   }
 
   var referer = req.headers.referer || req.headers['X-Forwarded-For'];
@@ -46,7 +45,6 @@ export default function contact(req, res) {
   };
 
   var payload = encode(body);
-  console.log('submitting contact with payload: ', payload);
   fetch(endpoint, {
     method: 'POST',
     body: payload,
@@ -58,4 +56,3 @@ export default function contact(req, res) {
     err => res.status(500).send(err)
   );
 }
-

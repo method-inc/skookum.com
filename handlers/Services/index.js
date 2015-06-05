@@ -2,8 +2,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Resolver} from 'react-resolver';
-import {Link} from 'react-router';
 
 import Button from 'Button';
 import Hero from 'Hero';

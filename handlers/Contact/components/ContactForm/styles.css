@@ -10,6 +10,19 @@
   text-transform: uppercase;
 }
 
+.ContactForm-header-icon {
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.ContactForm-header.is-success {
+  color: #ff692c;
+  font-weight: normal;
+  margin-bottom: 2em;
+  text-transform: none;
+}
+
 .ContactForm-divider {
   border: 0;
   border-bottom: 2px solid #111;
