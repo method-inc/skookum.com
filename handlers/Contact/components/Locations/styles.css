@@ -55,7 +55,9 @@
   width: 80%;
 }
 
-.ContactLocations-map {}
+.ContactLocations-map {
+  width: 100%;
+}
 
 .ContactLocations-name {
   margin-top: 1em;
