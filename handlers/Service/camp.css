@@ -27,6 +27,10 @@
     width: 20%;
   }
 
+  .Service-camp-image {
+    margin: 0 auto 1em;
+  }
+
   .Service-camp-item strong {
     display: block;
   }

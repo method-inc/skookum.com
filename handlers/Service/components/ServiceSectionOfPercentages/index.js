@@ -15,7 +15,7 @@ class ServiceSectionOfPercentages extends Component {
     return (
       <ServiceSection {...props} className="ServiceSectionOfPercentages">
         {items.map(i => (
-          <p className="ServiceSectionOfPercentages-item">
+          <p key={i.description} className="ServiceSectionOfPercentages-item">
             <strong className="ServiceSectionOfPercentages-percentage">{i.percentage}%</strong>
             <span className="ServiceSectionOfPercentages-copy">{i.description}</span>
           </p>

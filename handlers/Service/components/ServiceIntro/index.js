@@ -8,7 +8,6 @@ import Typography from 'Typography';
 class ServiceIntro extends Component {
   render(): ReactElement {
     var {service, children} = this.props;
-    console.log(this.props);
 
     return (
       <section className="ServiceIntro">

@@ -3,8 +3,11 @@
 import React from 'react';
 
 import Camp from './Camp';
+import Engineering from './Engineering';
+import Production from './Production';
 import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
+
 import {Link} from 'react-router';
 
 import Todo from '../Todo';
@@ -22,12 +25,16 @@ var last: number = (n: Array) => n[n.length - 1];
 
 var renderService: ReactElement = (service: string) => {
   switch (service) {
+    case 'engineering':
+      return <Engineering color="yellow" />
+    case 'production':
+      return <Production color="yellow" />
+    case 'proof-of-concept':
+      return <ProofOfConcept color="yellow" />
     case 'rapid-innovation':
       return <RapidInnovation color="yellow" />
     case 'innovation-camp':
       return <Camp color="yellow" />
-    case 'proof-of-concept':
-      return <ProofOfConcept color="yellow" />
     default:
       return <Todo />
   }

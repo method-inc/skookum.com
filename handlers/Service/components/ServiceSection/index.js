@@ -18,7 +18,7 @@ class ServiceSection extends Component {
       style = {},
       ...props,
     } = this.props;
-    var className = `ServiceIntro ${className}`;
+    var className = `ServiceSection ${className}`;
 
     if (color) {
       style = Object.assign({backgroundColor: COLORS[color]}, style);
