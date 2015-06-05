@@ -27,17 +27,17 @@ var last: number = (n: Array) => n[n.length - 1];
 var renderService: ReactElement = (service: string) => {
   switch (service) {
     case 'engineering':
-      return <Engineering color="yellow" />
+      return <Engineering color="yellow" />;
     case 'production':
-      return <Production color="yellow" />
+      return <Production color="yellow" />;
     case 'proof-of-concept':
-      return <ProofOfConcept color="yellow" />
+      return <ProofOfConcept color="yellow" />;
     case 'rapid-innovation':
-      return <RapidInnovation color="yellow" />
+      return <RapidInnovation color="yellow" />;
     case 'innovation-camp':
-      return <Camp color="yellow" />
+      return <Camp color="yellow" />;
     default:
-      return <Todo />
+      return <Todo />;
   }
 };
 

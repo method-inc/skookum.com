@@ -38,7 +38,7 @@ class ServiceUnorderedListSection extends Component {
                 <Typography type={Typography.SECONDARY_SECTION_HEADER}>{n.title}</Typography>
                 <p>{n.description}</p>
               </li>
-            )
+            );
           })}
         </ul>
       </ServiceSection>
