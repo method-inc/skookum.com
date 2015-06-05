@@ -5,11 +5,13 @@ require('./styles.css');
 import React, {Component, PropTypes} from 'react';
 
 class Icon extends Component {
-  render(): ?ReactElement {
+  render(): ReactElement {
     var {
       icon,
       ...props,
     } = this.props;
+
+    if (icon === 'innovation-camp') icon = 'placeholder';
 
     return (
       <div className="Icon" {...props}>
@@ -23,6 +25,8 @@ class Icon extends Component {
 
 Icon.ICONS = [
   'engineering',
+  'internet-of-things',
+  'placeholder',
   'production',
   'proof-of-concept',
   'rapid-innovation',
