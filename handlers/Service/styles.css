@@ -1,0 +1,26 @@
+/** @define Service; use strict */
+
+.Service-links {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.Service-link {
+  border-sizing: border-box;
+  color: #333;
+  display: inline-block;
+  font-size: 1.333em;
+  padding: 1.5em;
+  text-decoration: none;
+  vertical-align: top;
+  max-width: 50%;
+}
+
+.Service-link:first-child {
+  float: left;
+  text-align: left;
+}
+
+.Service-link-direction {
+  display: block;
+}

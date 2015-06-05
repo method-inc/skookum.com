@@ -1,4 +1,5 @@
 /** @flow */
+require('./styles.css');
 
 import React from 'react';
 
@@ -61,8 +62,16 @@ class Service extends React.Component {
     return (
       <div>
         {renderService(service)}
-        <Link to="service" params={{service: previous}}>{previous}</Link>
-        <Link to="service" params={{service: next}}>{next}</Link>
+        <div className="Service-links">
+          <Link className="Service-link" to="service" params={{service: previous}}>
+            {previous}
+            <small className="Service-link-direction">‹ Previous</small>
+          </Link>
+          <Link className="Service-link" to="service" params={{service: next}}>
+            {next}
+            <small className="Service-link-direction">Next ›</small>
+          </Link>
+        </div>
       </div>
     );
   }
