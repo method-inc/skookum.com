@@ -1,25 +1,63 @@
 /** @flow */
-require('./styles.css');
 
 import React from 'react';
 
-import RapidInnovation from './RapidInnovation';
 import Camp from './Camp';
+import ProofOfConcept from './ProofOfConcept';
+import RapidInnovation from './RapidInnovation';
+import {Link} from 'react-router';
 
 import Todo from '../Todo';
+
+var services = [
+  'rapid-innovation',
+  'innovation-camp',
+  'proof-of-concept',
+  'engineering',
+  'production',
+];
+
+var first: number = (n: Array) => n[0];
+var last: number = (n: Array) => n[n.length - 1];
+
+var renderService: ReactElement = (service: string) => {
+  switch (service) {
+    case 'rapid-innovation':
+      return <RapidInnovation color="yellow" />
+    case 'innovation-camp':
+      return <Camp color="yellow" />
+    case 'proof-of-concept':
+      return <ProofOfConcept color="yellow" />
+    default:
+      return <Todo />
+  }
+};
+
+var before: string = (service: string) => {
+  var index = services.indexOf(service);
+  if (index === 0) return last(services);
+  return services[index - 1];
+};
+
+var after: string = (service: string) => {
+  var index = services.indexOf(service);
+  if (index === services.length - 1) return first(services);
+  return services[index + 1];
+};
 
 class Service extends React.Component {
   render(): ReactElement {
     var {service} = this.props.params;
+    var previous = before(service);
+    var next = after(service);
 
-    switch (service) {
-      case 'rapid-innovation':
-        return <RapidInnovation color="yellow" />
-      case 'innovation-camp':
-        return <Camp color="yellow" />
-      default:
-        return <Todo />
-    }
+    return (
+      <div>
+        {renderService(service)}
+        <Link to="service" params={{service: previous}}>{previous}</Link>
+        <Link to="service" params={{service: next}}>{next}</Link>
+      </div>
+    );
   }
 }
 

@@ -1,10 +1,6 @@
-/** @define Service */
+/** @define ServiceSectionOfPercentages */
 
-.Service {}
-
-/* STATS ***********/
-
-.Service-percentage {
+.ServiceSectionOfPercentages-percentage {
   font-size: 4em;
   font-weight: 100;
   float: left;
@@ -13,14 +9,14 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Service-stat {
+  .ServiceSectionOfPercentages-item {
     margin: 0;
     padding: 1.5em 0;
   }
 }
 
 @media screen and (min-width: 601px) {
-  .Service-stat {
+  .ServiceSectionOfPercentages-item {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
@@ -28,15 +24,10 @@
     padding-left: 1.5em;
   }
 
-  .Service-stat:first-child {
+  .ServiceSectionOfPercentages-item:first-child {
     padding-right: 1.5em;
     padding-left: 0;
   }
 }
 
-/* HELP YOU ***********/
 
-.Service-help-list {
-  list-style: none;
-  padding: 0;
-}

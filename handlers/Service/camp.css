@@ -1,0 +1,34 @@
+
+/* CAMP */
+.Service-camp-list {
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 719px) {
+  .Service-camp-item {
+    clear: left;
+    text-align: left;
+  }
+
+  .Service-camp-image {
+    float: left;
+    margin-right: 1.5em;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .Service-camp-item {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 0.3333em;
+    vertical-align: top;
+    width: 20%;
+  }
+
+  .Service-camp-item strong {
+    display: block;
+  }
+}
+

@@ -24,12 +24,22 @@ class ServiceUnorderedListSection extends Component {
       <ServiceSection {...props} className="ServiceUnorderedListSection">
         <Typography type={Typography.PAGE_HEADER}>{title}</Typography>
         <ul className="ServiceUnorderedListSection-list">
-          {items.map(n => (
-            <li className="ServiceUnorderedListSection-item">
-              <span style={{color: nameToHex(color)}} className="ServiceUnorderedListSection-bullet">•</span>
-              {n}
-            </li>
-          ))}
+          {items.map(n => {
+            if (typeof n === 'string') {
+              return (
+                <li className="ServiceUnorderedListSection-item">
+                  <span style={{color: nameToHex(color)}} className="ServiceUnorderedListSection-bullet">•</span>
+                  {n}
+                </li>
+              );
+            }
+            return (
+              <li className="ServiceUnorderedListSection-item">
+                <Typography type={Typography.SECONDARY_SECTION_HEADER}>{n.title}</Typography>
+                <p>{n.description}</p>
+              </li>
+            )
+          })}
         </ul>
       </ServiceSection>
     );
