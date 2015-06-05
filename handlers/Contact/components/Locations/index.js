@@ -2,7 +2,7 @@
 
 require('./styles.css');
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import locations from 'locationsData';
 
@@ -26,8 +26,8 @@ class ContactLocations extends Component {
         <Tabs onSelect={this.handleSelected}
           selectedIndex={0}>
           <TabList>
-            <Tab className="hmm">Charlotte</Tab>
-            <Tab className="hmm">Denver</Tab>
+            <Tab>Charlotte</Tab>
+            <Tab>Denver</Tab>
           </TabList>
           {locations.map(renderSegment)}
         </Tabs>

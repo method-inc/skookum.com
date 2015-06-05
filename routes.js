@@ -16,7 +16,6 @@ import OpenSource from'./handlers/OpenSource';
 import Services from './handlers/Services';
 import Service from './handlers/Service';
 import StyleGuide from './handlers/StyleGuide';
-import Todo from'./handlers/Todo';
 
 var routes = (
   <Route path="/" handler={App}>
