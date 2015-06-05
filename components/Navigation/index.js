@@ -7,10 +7,11 @@ import {Link} from 'react-router';
 import Logo from 'Logo';
 
 var PRIMARY = [
+  ['home', 'Home'],
   ['services', 'Services'],
   ['case-studies', 'Case Studies'],
+  ['blog', 'Blog'],
   ['culture', 'Culture'],
-  ['blog', 'blog'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];

@@ -2,29 +2,7 @@
 
 .Service {}
 
-/* INTRO ***********/
-
-.Service-intro {
-  padding: 3em 5%;
-}
-
-.Service-intro .Icon {
-  background: transparent;
-  float: left;
-  height: 6em;
-  padding: 0 0.5em 0 0;
-  margin-bottom: 3em;
-}
-
-.Service-intro .Icon-image img {
-  height: inherit;
-}
-
 /* STATS ***********/
-
-.Service-stats {
-  background: #FFDD2E;
-}
 
 .Service-percentage {
   font-size: 4em;
@@ -35,10 +13,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Service-section {
-    padding: 1.5em;
-  }
-
   .Service-stat {
     margin: 0;
     padding: 1.5em 0;
@@ -46,10 +20,6 @@
 }
 
 @media screen and (min-width: 601px) {
-  .Service-section {
-    padding: 3em 5%;
-  }
-
   .Service-stat {
     box-sizing: border-box;
     display: inline-block;
@@ -66,16 +36,7 @@
 
 /* HELP YOU ***********/
 
-.Service-help-list,
-.Service-sample-list {
+.Service-help-list {
   list-style: none;
   padding: 0;
 }
-
-.Service-sample-item:before {
-  content: '•';
-  color: #FFDD2E;
-  display: inline-block;
-  margin-right: 0.5em;
-}
-

@@ -1,0 +1,19 @@
+/** @define ServiceIntro */
+
+.ServiceIntro {
+  padding: 3em 5%;
+}
+
+.ServiceIntro .Icon {
+  background: transparent;
+  float: left;
+  height: 6em;
+  margin-bottom: 1.5em;
+  padding: 0 1.5em 0 0;
+  width: 6em;
+}
+
+.ServiceIntro img {
+  height: inherit;
+}
+

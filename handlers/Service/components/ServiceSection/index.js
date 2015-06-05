@@ -1,0 +1,42 @@
+/** @flow */
+require('./styles.css');
+
+import React, {Component, PropTypes} from 'react';
+import Icon from 'Icon';
+import Typography from 'Typography';
+
+const COLORS = {
+  yellow: '#FFDD2E',
+};
+
+class ServiceSection extends Component {
+  render(): ReactElement {
+    var {
+      className = '',
+      color,
+      children,
+      style = {},
+      ...props,
+    } = this.props;
+    var className = `ServiceIntro ${className}`;
+
+    if (color) {
+      style = Object.assign({backgroundColor: COLORS[color]}, style);
+    }
+
+    return (
+      <section {...props} style={style} className={className}>
+        {children}
+      </section>
+    );
+  }
+}
+
+ServiceSection.propTypes = {
+  // TODO: share these constants
+  color: PropTypes.oneOf(['black', 'red', 'orange', 'yellow']),
+  children: PropTypes.any.isRequired,
+};
+
+export default ServiceSection;
+
