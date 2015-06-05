@@ -58,7 +58,7 @@ class ContactForm extends React.Component {
         'Content-Type': 'application/json',
       },
     }).then(
-      res => this.setState({message: 'We’ll be in touch!'}),
+      res => this.setState({message: 'Thanks! We’ll be in touch!'}),
       error => this.setState({error: JSON.parse(error.message)})
     );
   }
@@ -72,8 +72,10 @@ class ContactForm extends React.Component {
     if (this.state.message) {
       return (
         <div className="ContactForm">
-          <header className="ContactForm-header">Thanks for reaching out!</header>
-          <Label type="success">{this.state.message}</Label>
+          <header className="ContactForm-header is-success">
+            <img className="ContactForm-header-icon" src="/public/images/sent.svg" />
+            {this.state.message}
+          </header>
         </div>
       );
     }
@@ -90,7 +92,7 @@ class ContactForm extends React.Component {
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">Submit an Inquiry</header>
         <hr className="ContactForm-divider" />
-        {this.state.error && <Label type="error">{this.state.error.message}</Label>}
+        {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
         <Input required onChange={this.handleChange} label="What’s your name? *" name="firstname" />
         <Input required onChange={this.handleChange} label="And how about your email? *" name="email" type="email" />
         <Input onChange={this.handleChange} label="Who do you work for?" name="company" />

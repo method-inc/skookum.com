@@ -1,9 +1,18 @@
 /** @define Label; use strict */
 
-.Label {}
+.Label {
+  display: block;
+  padding: 0.41666em 0.666em;
+}
 
 .Label.is-success {}
-.Label.is-error {}
+
+.Label.is-error {
+  background: #c85128;
+  border-bottom: 1px solid #3a1306;
+  color: #fff;
+}
+
 .Label.is-info {}
 .Label.is-warning {}
 

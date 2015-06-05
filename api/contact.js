@@ -26,7 +26,7 @@ export default function contact(req, res) {
       []);
 
   if (missingFields.length > 0) {
-    return res.status(400).send({message: 'You’re missing some required fields.', fields: missingFields});
+    return res.status(400).send({message: 'Oops. It looks like you’re missing some required fields.', fields: missingFields});
   }
 
   var referer = req.headers.referer || req.headers['X-Forwarded-For'];
