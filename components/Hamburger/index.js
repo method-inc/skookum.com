@@ -12,7 +12,7 @@ class Hamburger extends Component {
     if (!topOfViewport) className = className + ' is-floating';
 
     return (
-      <a style={{backgroundColor: !topOfViewport && this.props.color}} href={target} className={className} onClick={this.context.toggleNav}>
+      <a style={{backgroundColor: !topOfViewport && this.props.color, ...this.props.style}} href={target} className={className} onClick={this.context.toggleNav}>
         <div className="Hamburger-icon">
           <div className="Hamburger-top" />
           <div className="Hamburger-middle" />

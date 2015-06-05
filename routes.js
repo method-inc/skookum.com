@@ -1,12 +1,6 @@
 /** @flow */
 import React from 'react';
-import Router from 'react-router';
-
-const {
-  DefaultRoute,
-  Route,
-  NotFoundRoute,
-} = Router;
+import {DefaultRoute, Route, NotFoundRoute} from 'react-router';
 
 import App from './handlers/Base';
 import Blog from'./handlers/Blog';
@@ -19,12 +13,13 @@ import Events from'./handlers/Events';
 import Home from'./handlers/Home';
 import NotFound from './handlers/NotFound';
 import OpenSource from'./handlers/OpenSource';
+import Services from './handlers/Services';
+import Service from './handlers/Service';
 import StyleGuide from './handlers/StyleGuide';
 import Todo from'./handlers/Todo';
 
 var routes = (
   <Route path="/" handler={App}>
-    <Route name="services" path="services" handler={Todo} />
     <Route name="case-studies" path="case-studies" handler={CaseStudies} />
     <Route path="events">
       <Route name="events-location" path=":location" handler={Events} />
@@ -40,6 +35,10 @@ var routes = (
     <Route name="culture" path="culture" handler={Culture} />
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
+    <Route name="services" path="services">
+      <Route name="service" path=":service" handler={Service} />
+      <DefaultRoute handler={Services} />
+    </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
     <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>

@@ -13,7 +13,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 70px;
-  width: 70px;
+  height: inherit;
+  width: inherit;
 }
 

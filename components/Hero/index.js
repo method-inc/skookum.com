@@ -3,6 +3,7 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
+import invariant from 'react/lib/invariant';
 import {Link} from 'react-router';
 import Logo from 'Logo';
 import Hamburger from 'Hamburger';
@@ -31,11 +32,18 @@ class Hero extends Component {
       title,
       subtitle,
       children,
+      childrenPosition,
       color,
       image = '',
       className = '',
       style = EMPTY_OBJECT,
     } = this.props;
+
+    invariant(
+      !(children && !childrenPosition),
+      'You’ve attempted to render children into Hero without declaring ' +
+      '`childrenPosition` to be `before` or `after`.'
+    );
 
     className = 'Hero ' + className;
     if (color === 'yellow') {
@@ -43,20 +51,20 @@ class Hero extends Component {
     }
 
     var backgroundColor = BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color];
+    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '3em'} : EMPTY_OBJECT;
 
     return (
       <div className="Hero" style={style}>
         <Link to="home">
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
         </Link>
-        <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 101}}>
-          <Hamburger color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
-        </div>
+        <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
 
-        <div className="Hero-content">
-          {children}
+        <div className="Hero-content" style={contentStyle}>
+          {children && childrenPosition === 'before' && children}
           <h1 className="Hero-title">{title}</h1>
           <p className="Hero-subtitle">{subtitle}</p>
+          {children && childrenPosition === 'after' && children}
         </div>
 
         <div className="Hero-overlay" style={{
@@ -75,6 +83,7 @@ Hero.propTypes = {
   subtitle: PropTypes.string,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,
+  childrenPosition: PropTypes.oneOf(['before', 'after']),
   children: PropTypes.node,
   style: PropTypes.object,
 };

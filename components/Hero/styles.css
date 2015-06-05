@@ -26,14 +26,6 @@
   font-weight: 300;
 }
 
-.Hero-content {
-  left: 1.5em;
-  right: 0;
-  bottom: 3em;
-  position: absolute;
-  z-index: 2;
-}
-
 .Hero-overlay,
 .Hero-image {
   position: absolute;
@@ -47,10 +39,27 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 600px) {
+  .Hero-content {
+    padding-top: 3em;
+    position: relative;
+    z-index: 2;
+  }
+}
+
 @media screen and (min-width: 601px) {
   .Hero {
     height: calc(100vw * 0.6346);
     max-height: 600px;
   }
+
+  .Hero-content {
+    left: 1.5em;
+    right: 0;
+    bottom: 3em;
+    position: absolute;
+    z-index: 2;
+  }
+
 }
 

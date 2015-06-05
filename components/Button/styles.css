@@ -26,7 +26,8 @@
 }
 
 .Button.is-secondary,
-.Button.is-more {
+.Button.is-more,
+.Button.is-light{
   background: transparent;
   border: 1px solid #f16521;
   color: #f16521;
@@ -40,6 +41,18 @@
   border-color: #ce5318;
   color: #ce5318;
 }
+
+.Button.is-light {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #fff;
+  color: #fff;
+}
+
+.Button.is-light:focus,
+.Button.is-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 .Button-arrow {
   font-size: 1.3333em;

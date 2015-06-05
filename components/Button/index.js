@@ -36,7 +36,7 @@ class Button extends React.Component {
 Button.propTypes = {
   to: PropTypes.string,
   href: PropTypes.string,
-  type: PropTypes.oneOf(['primary', 'secondary', 'more']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'more', 'light']),
   children: PropTypes.any.isRequired,
 };
 

@@ -88,8 +88,8 @@ module.exports = function(options) {
       loaders: [
         { test: /\.css$/,
           loader: options.env !== 'development' ?
-            ExtractTextPlugin.extract('style', 'rework-webpack') :
-            'style!rework-webpack',
+            ExtractTextPlugin.extract('style', 'rework-webpack!autoprefixer') :
+            'style!rework-webpack!autoprefixer',
         },
         {test: /\.json$/, loader: 'json'},
         {test: /\.jsx?$/,
@@ -142,6 +142,10 @@ module.exports = function(options) {
         reworkLoader.plugins.imports,
         reworkLoader.plugins.urls,
       ],
+    },
+
+    autoprefixer: {
+      browsers: 'last 2 version',
     },
 
     __options: options,

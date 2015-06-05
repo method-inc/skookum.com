@@ -1,11 +1,17 @@
 // load in polyfills
 require('array.prototype.find');
 
+import bodyParser from 'body-parser';
+
 import express from 'express';
 import cache from './cache';
+import contact from './contact';
 import contentful from './contentful';
 import meetup from './meetup';
+
 var api = express();
+api.use(bodyParser.urlencoded());
+api.use(bodyParser.json());
 
 function selectFields(arr: Object|Array, fields: Array): Object|Array {
   if (Array.isArray(arr)) {
@@ -151,6 +157,8 @@ api.get('/contentful/:slug', function(req, res) {
 api.get('/careers', function(req, res) {
   careers().then(n => res.send(n.jobs));
 });
+
+api.post('/contact', contact);
 
 export default api;
 

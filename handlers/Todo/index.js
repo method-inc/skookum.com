@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Hero from 'Hero';
 
-class Todo extends React.Component {
-  render(): ?ReactElement {
+class Todo extends Component {
+  render(): ReactElement {
     return (
       <div className="Todo">
-        Todo
+        <Hero title="Todo" />
       </div>
     );
   }
