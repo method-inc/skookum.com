@@ -1,12 +1,12 @@
-/** @define GazetteInfo; use strict */
+/** @define NewsletterInfo; use strict */
 
-.GazetteInfo {
+.NewsletterInfo {
   background: #f4f4f4;
   color: #333;
   padding: 4em 1.5em
 }
 
-.GazetteInfo-header {
+.NewsletterInfo-header {
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -14,12 +14,12 @@
   text-transform: uppercase;
 }
 
-.GazetteInfo-header-small {
+.NewsletterInfo-header-small {
   display: block;
   font-size: 0.875rem;
 }
 
-.GazetteInfo-content {
+.NewsletterInfo-content {
   font-size: 0.875em;
   line-height: 2;
   margin-bottom: 2em;

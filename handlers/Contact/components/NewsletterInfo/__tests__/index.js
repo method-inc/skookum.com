@@ -3,16 +3,16 @@
 
 jest.dontMock('../index.js');
 
-describe('GazetteInfo', function() {
+describe('NewsletterInfo', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const GazetteInfo = require('../index.js');
+    const NewsletterInfo = require('../index.js');
 
     Renderer.render(
-      <GazetteInfo />
+      <NewsletterInfo />
     );
 
     const REQUIRED_PROP_TYPES = [];
@@ -23,10 +23,10 @@ describe('GazetteInfo', function() {
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const GazetteInfo = require('../index.js');
+    const NewsletterInfo = require('../index.js');
 
     Renderer.render(
-      <GazetteInfo />
+      <NewsletterInfo />
     );
 
     const result = Renderer.getRenderOutput();
