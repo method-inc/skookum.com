@@ -11,11 +11,11 @@ import Typography from 'Typography';
 const SERVICES = [
   ['IOT', 'internet-of-things', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
   ['Innovation Camp', 'innovation-camp', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Rapid Innovation', 'rapid-innovation', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Proof of Concept', 'proof-of-concept', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Engineering', 'engineering', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Production', 'production', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Support', 'support', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
+  ['Rapid Innovation', 'rapid-innovation', 'Problems cannot be solved with the same thinking that created them. We give you fresh, technological ideas to help push the bounds of what is possible.'],
+  ['Proof of Concept', 'proof-of-concept', 'You’ve got to show them something. Your boss, the executives -- they need more than your opinion. Cut meeting time in half with a working prototype.'],
+  ['Engineering', 'engineering', 'Knowing what to build can be more important than how you build it. Don’t waste a second solving the wrong problem.'],
+  ['Production', 'production', 'Development projects can often become bloated without an end in sight. We give you new functionality every three weeks, not once a year.'],
+  ['Support', 'support', 'We understand that your success goes well beyond launch day. Our dedicated support model lets you focus on the broader operation.'],
 ];
 
 class Services extends React.Component {
