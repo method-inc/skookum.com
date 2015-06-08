@@ -2,23 +2,23 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
 import api from 'api';
+import lookup from 'lookup';
 
-var {PropTypes} = React;
-
-class CaseStudiesContent extends React.Component {
-  render(): ?ReactElement {
+class CaseStudiesContent extends Component {
+  render(): ReactElement {
     return (
       <div className="CaseStudiesContent">
-        {this.props.caseStudies.map(f => (
+        {this.props.caseStudies.map((f, imageUrl) => (
+          (imageUrl = lookup(f.image, 'fields.file.url')),
           <Link key={f.slug} to="article" params={{slug: f.slug}} className="CaseStudiesContent-item">
             <span className="CaseStudiesContent-title">{f.title}</span>
             <span className="CaseStudiesContent-description">{f.summary}</span>
-            {f.image.fields && (
-              <img src={f.image.fields.file.url + '?w=400'} className="CaseStudiesContent-image" />
+            {imageUrl && (
+              <img src={imageUrl + '?w=400'} className="CaseStudiesContent-image" />
             )}
           </Link>
         ))}

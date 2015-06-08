@@ -2,18 +2,17 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import api from 'api';
-var {PropTypes} = React;
 
-class Clients extends React.Component {
+class Clients extends Component {
   render(): ?ReactElement {
     return (
       <div className="HomeClients">
         {this.props.clients.map(n => (
           <div className="HomeClients-client" key={n.name}>
-            <img className="HomeClients-img" title={n.name} src={n.image.fields.file.url} />
+            <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
           </div>
         ))}
       </div>
