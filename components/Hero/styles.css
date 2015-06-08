@@ -35,6 +35,12 @@
   right: 0;
 }
 
+.Hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .Hero-overlay {
   z-index: 1;
 }

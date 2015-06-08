@@ -2,23 +2,24 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
 import api from 'api';
+import lookup from 'lookup';
 
-var {PropTypes} = React;
-
-class FeaturedPosts extends React.Component {
-  render(): ?ReactElement {
+class FeaturedPosts extends Component {
+  render(): ReactElement {
+    console.log(this.props.posts);
     return (
       <div className={`FeaturedPosts ${this.props.className}`}>
-        {this.props.posts.slice(0, 3).map(f => (
+        {this.props.posts.slice(0, 3).map((f, imageUrl) => (
+          (imageUrl = lookup(f, 'poster.fields.file.url')),
           <Link key={f.slug} to="article" params={{slug: f.slug}} className="FeaturedPosts-featured">
             <span className="FeaturedPosts-title">{f.title}</span>
             <span className="FeaturedPosts-author">{f.author.fields.name}</span>
-            {f.poster && f.poster.fields && (
-              <img src={f.poster.fields.file.url + '?w=400'} className="FeaturedPosts-image" />
+            {imageUrl && (
+              <img src={imageUrl + '?w=400'} className="FeaturedPosts-image" />
             )}
           </Link>
         ))}
