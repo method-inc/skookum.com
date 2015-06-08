@@ -8,23 +8,12 @@ import {Link} from 'react-router';
 import Logo from 'Logo';
 import Hamburger from 'Hamburger';
 
+import {nameToRgba, nameToBinary} from 'nameToColor';
+
 /*eslint-disable*/
 var EMPTY_OBJECT = {};
 /*eslint-enable*/
 
-const BG_COLOR = {
-  black: 'rgba(0, 0, 0, 0.75)',
-  red: 'rgba(219, 69, 0, 0.8)',
-  orange: 'rgba(245, 151, 0, 0.8)',
-  yellow: 'rgba(242, 202, 0, 0.7)',
-};
-
-const LOGO_COLOR = {
-  black: null,
-  red: '#fff',
-  orange: '#fff',
-  yellow: '#000',
-};
 
 class Hero extends Component {
   render(): ?ReactElement {
@@ -50,13 +39,13 @@ class Hero extends Component {
       className = className + 'is-light';
     }
 
-    var backgroundColor = BG_COLOR[color] || BG_COLOR[Hero.defaultProps.color];
-    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '3em'} : EMPTY_OBJECT;
+    var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
+    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '4.5em'} : EMPTY_OBJECT;
 
     return (
       <div className="Hero" style={style}>
         <Link to="home">
-          <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em', zIndex: 5}} color={LOGO_COLOR[color]} />
+          <Logo style={{position: 'absolute', top: '1em', left: '1em', width: 32, margin: '0.25em', zIndex: 5}} color={nameToBinary(color)} />
         </Link>
         <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
 

@@ -1,0 +1,17 @@
+/** @define ServiceUnorderedListSection */
+
+.ServiceUnorderedListSection {}
+
+.ServiceUnorderedListSection-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ServiceUnorderedListSection-item {}
+
+.ServiceUnorderedListSection-bullet {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+

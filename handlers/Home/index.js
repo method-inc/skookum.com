@@ -1,3 +1,4 @@
+/** @flow */
 require('./styles.css');
 
 import React from 'react';
@@ -12,7 +13,7 @@ import Button from 'Button';
 var cn = s => `Home-${s}`;
 
 class Home extends React.Component {
-  render(): ?ReactElement {
+  render(): ReactElement {
     return (
       <div className="Home">
         <Hero

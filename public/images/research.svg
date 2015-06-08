@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="81px" height="92px" viewBox="0 0 81 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>research</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="research" sketch:type="MSArtboardGroup">
+            <g id="Oval-8-Copy-5-+-Group-Copy-2" sketch:type="MSLayerGroup">
+                <circle id="Oval-8-Copy-5" fill="#FFDD2E" sketch:type="MSShapeGroup" cx="40.5" cy="50.625" r="40.5"></circle>
+                <g id="Group-Copy-2" transform="translate(5.250000, 0.000000)" stroke="#000000" stroke-width="1.5" sketch:type="MSShapeGroup">
+                    <path d="M10.8431434,39.6534898 C10.8431434,30.1237041 18.5567791,22.3982863 28.0975712,22.3982863 L35.9830037,22.3982863 L35.9260499,32.4396495 L29.1739983,32.5894129 C25.02993,32.6813301 21.6933714,36.1138193 21.7215405,40.2493871 L21.9004121,66.5099023 C21.9286016,70.6484721 25.3087343,74.0153101 29.4442668,74.0299249 L46.847184,74.0914258 C49.3302338,74.1002008 51.3124299,76.1238248 51.274664,78.6033698 L51.2523289,80.0697923 C51.2145088,82.5528952 49.1695456,84.5658478 46.6931351,84.5658478 L28.0975149,84.5658478 C18.5681887,84.5658478 10.8431434,76.8492818 10.8431434,67.3106443 L10.8431434,39.6534898 Z" id="Rectangle-5" fill="#FFFFFF" transform="translate(31.059169, 53.482067) rotate(-22.000000) translate(-31.059169, -53.482067) "></path>
+                    <rect id="Rectangle-4" fill="#FFFFFF" x="5.25" y="78.75" width="60.75" height="9"></rect>
+                    <rect id="Rectangle-7" fill="#FFFFFF" transform="translate(36.750000, 57.375000) rotate(-22.000000) translate(-36.750000, -57.375000) " x="18" y="55.5" width="37.5" height="3.75"></rect>
+                    <circle id="Oval-1" fill="#FFFFFF" cx="19.5" cy="64.5" r="11.25"></circle>
+                    <g id="Group" transform="translate(27.000000, 27.000000) rotate(-22.000000) translate(-27.000000, -27.000000) translate(18.000000, 2.250000)">
+                        <rect id="Rectangle-9" fill="#FFFFFF" x="3" y="1.5" width="11.25" height="16.5"></rect>
+                        <path d="M0.075,15 L17.325,15 L17.325,45 L12.7924805,49.5 L4.62890625,49.5 L0.075,45 L0.075,15 Z" id="Rectangle-6" fill="#FFFFFF"></path>
+                        <rect id="Rectangle-6-Copy" fill="#FFFFFF" x="0.075" y="-2.26485497e-14" width="17.25" height="6.75"></rect>
+                        <path d="M1.875,41.25 L15.3958168,41.25" id="Line" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

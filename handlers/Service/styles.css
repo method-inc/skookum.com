@@ -1,81 +1,26 @@
-/** @define Service */
+/** @define Service; use strict */
 
-.Service {}
-
-/* INTRO ***********/
-
-.Service-intro {
-  padding: 3em 5%;
+.Service-links {
+  text-align: right;
+  text-transform: uppercase;
 }
 
-.Service-intro .Icon {
-  background: transparent;
-  float: left;
-  height: 6em;
-  padding: 0 0.5em 0 0;
-  margin-bottom: 3em;
-}
-
-.Service-intro .Icon-image img {
-  height: inherit;
-}
-
-/* STATS ***********/
-
-.Service-stats {
-  background: #FFDD2E;
-}
-
-.Service-percentage {
-  font-size: 4em;
-  font-weight: 100;
-  float: left;
-  margin: 0 0.25em 0 0;
-  line-height: 1.116;
-}
-
-@media screen and (max-width: 600px) {
-  .Service-section {
-    padding: 1.5em;
-  }
-
-  .Service-stat {
-    margin: 0;
-    padding: 1.5em 0;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  .Service-section {
-    padding: 3em 5%;
-  }
-
-  .Service-stat {
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    padding-left: 1.5em;
-  }
-
-  .Service-stat:first-child {
-    padding-right: 1.5em;
-    padding-left: 0;
-  }
-}
-
-/* HELP YOU ***********/
-
-.Service-help-list,
-.Service-sample-list {
-  list-style: none;
-  padding: 0;
-}
-
-.Service-sample-item:before {
-  content: '•';
-  color: #FFDD2E;
+.Service-link {
+  border-sizing: border-box;
+  color: #333;
   display: inline-block;
-  margin-right: 0.5em;
+  font-size: 1.333em;
+  padding: 1.5em;
+  text-decoration: none;
+  vertical-align: top;
+  max-width: 50%;
 }
 
+.Service-link:first-child {
+  float: left;
+  text-align: left;
+}
+
+.Service-link-direction {
+  display: block;
+}
