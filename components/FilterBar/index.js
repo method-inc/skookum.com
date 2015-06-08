@@ -21,7 +21,7 @@ class FilterBar extends Component {
       <div className="FilterBar">
         <div ref="scroller" className="FilterBar-content">
           {this.props.items.map(n => (
-            <Link key={n.text} to={n.to} params={n.params} className="FilterBar-link" activeClassName="is-active">
+            <Link key={n.text} {...n} className="FilterBar-link" activeClassName="is-active">
               {n.text}
             </Link>
           ))}

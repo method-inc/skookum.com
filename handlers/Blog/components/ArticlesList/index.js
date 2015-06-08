@@ -2,7 +2,7 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import marked from 'marked';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
@@ -11,16 +11,21 @@ import Typography from 'Typography';
 import api from 'api';
 import * as fmt from 'fmt';
 
-const DEFAULT_PARAMS = {
+const DEFAULT_QUERY = {
   page: '1',
 };
 
-class ArticlesList extends React.Component {
-  render(): ?ReactElement {
-    var params = Object.assign(
-      {}, DEFAULT_PARAMS,
-      this.context.router.getCurrentParams()
+class ArticlesList extends Component {
+  render(): ReactElement {
+    var {router} = this.context;
+    var params = router.getCurrentParams();
+    var query = Object.assign(
+      {}, DEFAULT_QUERY,
+      router.getCurrentQuery()
     );
+
+    var linkTo = router.getRouteAtDepth(router.getCurrentRoutes().length - 1);
+    linkTo = linkTo ? linkTo.name : 'blog';
 
     return (
       <div className="ArticlesList">
@@ -28,15 +33,14 @@ class ArticlesList extends React.Component {
           <div key={a.slug} className="Blog-article">
             <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
             <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: marked(a.summary || (a.body.split('\n')[0]))}} />
-            {/*<div className="Blog-article-tags">{a.tags.map(t => <a className="Blog-article-tag" href="#">{t}</a>)}</div>*/}
             <div className="Blog-article-info">
               <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
             </div>
           </div>
         ))}
         <div className="Blog-pager">
-          {params.page > 1 && <Link className="Blog-article-pager" to="blog-paged" params={{page: params.page - 1}}>Previous Page</Link>}
-          {this.props.articles.length === 5 && <Link className="Blog-article-pager" to="blog-paged" params={{page: +params.page + 1}}>Next Page</Link>}
+          {query.page > 1 && <Link className="Blog-article-pager" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
+          {this.props.articles.length === 5 && <Link className="Blog-article-pager" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
         </div>
       </div>
     );
@@ -44,19 +48,23 @@ class ArticlesList extends React.Component {
 }
 
 ArticlesList.contextTypes = {
-  router: React.PropTypes.func.isRequired,
+  router: PropTypes.func.isRequired,
 };
 
 ArticlesList.propTypes = {
-  // id: PropTypes.any.isRequired,
+  articles: PropTypes.array.isRequired,
 };
 
 ArticlesList.displayName = 'ArticlesList';
 
 export default Resolver.createContainer(ArticlesList, {
+  contextTypes: ArticlesList.contextTypes,
+
   resolve: {
     articles(props, context) {
-      return api(`contentful?${qs.stringify(props.params)}`);
+      var params = context.router.getCurrentParams();
+      var query = context.router.getCurrentQuery();
+      return api(`contentful?${qs.stringify(params)}&${qs.stringify(query)}`);
     },
   },
 });

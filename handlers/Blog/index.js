@@ -1,15 +1,15 @@
 /* @flow */
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import Hero from 'Hero';
 import FilterBar from 'FilterBar';
 import FeaturedPosts from 'FeaturedPosts';
 import ArticlesList from 'ArticlesList';
 
-class Blog extends React.Component {
-  render(): ?ReactElement {
+class Blog extends Component {
+  render(): ReactElement {
     return (
       <div className="Blog">
         <Hero childrenPosition="before" color="black" image="/public/images/hero-blog.png" title="Blog" subtitle="A collection of our team’s writings">
@@ -22,13 +22,8 @@ class Blog extends React.Component {
   }
 }
 
-Blog.contextTypes = {
-  router: React.PropTypes.func.isRequired,
-};
-
 Blog.propTypes = {
-  articles: React.PropTypes.array.isRequired,
-  tags: React.PropTypes.array.isRequired,
+  tags: PropTypes.array.isRequired,
 };
 
 Blog.defaultProps = {
