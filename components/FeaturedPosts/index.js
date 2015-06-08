@@ -17,7 +17,7 @@ class FeaturedPosts extends React.Component {
           <Link key={f.slug} to="article" params={{slug: f.slug}} className="FeaturedPosts-featured">
             <span className="FeaturedPosts-title">{f.title}</span>
             <span className="FeaturedPosts-author">{f.author.fields.name}</span>
-            {f.poster.fields && (
+            {f.poster && f.poster.fields && (
               <img src={f.poster.fields.file.url + '?w=400'} className="FeaturedPosts-image" />
             )}
           </Link>
