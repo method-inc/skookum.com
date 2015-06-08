@@ -7,6 +7,7 @@ import marked from 'marked';
 import {Resolver} from 'react-resolver';
 import {Link} from 'react-router';
 import qs from 'querystring';
+import {scrollTo} from 'FilterBar';
 import Typography from 'Typography';
 import api from 'api';
 import * as fmt from 'fmt';
@@ -39,8 +40,8 @@ class ArticlesList extends Component {
           </div>
         ))}
         <div className="Blog-pager">
-          {query.page > 1 && <Link className="Blog-article-pager" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
-          {this.props.articles.length === 5 && <Link className="Blog-article-pager" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
+          {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
+          {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
         </div>
       </div>
     );
