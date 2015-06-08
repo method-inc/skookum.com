@@ -2,7 +2,6 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import Icon from 'Icon';
 import ServiceSection from 'ServiceSection';
 import Typography from 'Typography';
 import {nameToHex} from 'nameToColor';
@@ -54,4 +53,3 @@ ServiceUnorderedListSection.propTypes = {
 };
 
 export default ServiceUnorderedListSection;
-

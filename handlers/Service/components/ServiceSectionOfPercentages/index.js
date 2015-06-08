@@ -3,7 +3,6 @@ require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
 import ServiceSection from 'ServiceSection';
-import Typography from 'Typography';
 
 class ServiceSectionOfPercentages extends Component {
   render(): ReactElement {
@@ -31,4 +30,3 @@ ServiceSectionOfPercentages.propTypes = {
 };
 
 export default ServiceSectionOfPercentages;
-
