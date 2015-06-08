@@ -59,14 +59,31 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 600px) {
+.Navigation-header {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 601px) {
+  .Navigation-header {
+    position: absolute;
+    left: 10%;
+    width: 20%;
+  }
+
+  .Navigation-item {
+    padding-left: 30%;
+
+  }
+
   .Navigation-sublink {
     display: inline-block;
     padding: 0.666em;
   }
 
-  .Navigation-sublink {
-  }
+  .Navigation-sublink {}
 
   .Navigation-sublink:first-child {
     margin-left: -0.666em;
@@ -83,6 +100,12 @@
     padding: 1.5em;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .Navigation-header {
+    position: static;
+    text-align: center;
+    margin-bottom: 0.666em;
   }
 
   .Navigation-hr {
