@@ -6,6 +6,7 @@
  **/
 
 var WHITE_LIST_OF_NODE_MODULES = [
+  'markdown-react',
   'react-autodoc',
   'react-router',
   'react-tabs',

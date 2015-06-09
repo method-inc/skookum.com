@@ -1,7 +1,7 @@
 require('./styles.css');
 
 import React from 'react';
-import marked from 'marked';
+import markdown from 'markdown';
 import {Resolver} from 'react-resolver';
 import * as fmt from 'fmt';
 
@@ -19,6 +19,7 @@ class BlogArticle extends React.Component {
       datePublished,
       body,
     } = this.props.article;
+    var jobTitle = author.title || author.jobTitle;
 
     return (
       <article className="BlogArticle">
@@ -27,13 +28,16 @@ class BlogArticle extends React.Component {
           subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
         <div
           className="BlogArticle-content"
-          dangerouslySetInnerHTML={{__html: marked(body)}} />
+          dangerouslySetInnerHTML={{__html: markdown(body)}} />
         <div className="BlogArticle-author">
           <div className="BlogArticle-author-image">
             <img className="BlogArticle-author-img" src={author.photoUrl} />
           </div>
           <div className="BlogArticle-author-details">
-            <div><span className="BlogArticle-author-name">{author.name}</span> | <span className="BlogArticle-author-name">{author.title || author.jobTitle || 'Guest Author'}</span></div>
+            <div>
+              <span className="BlogArticle-author-name">{author.name}</span>
+              {jobTitle && <span className="BlogArticle-author-title">{jobTitle}</span>}
+            </div>
             {author.twitter && <span className="BlogArticle-author-twitter">{author.twitter}</span>}
           </div>
         </div>

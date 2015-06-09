@@ -10,7 +10,6 @@ import lookup from 'lookup';
 
 class FeaturedPosts extends Component {
   render(): ReactElement {
-    console.log(this.props.posts);
     return (
       <div className={`FeaturedPosts ${this.props.className}`}>
         {this.props.posts.slice(0, 3).map((f, imageUrl) => (

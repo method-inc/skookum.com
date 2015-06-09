@@ -41,10 +41,8 @@ class Navigation extends Component {
         <Link to="home" onClick={this.props.onClick}>
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em'}} color="#fff" />
         </Link>
-        <strong className="Navigation-header">About Skookum</strong>
         {renderNavigation(PRIMARY, this.props)}
         <div className="Navigation-divider" />
-        <strong className="Navigation-header">Community</strong>
         {renderNavigation(SECONDARY, this.props)}
         <hr className="Navigation-hr" />
         <div className="Navigation-socials">

@@ -47,8 +47,8 @@ FilterBar.propTypes = {
   items: PropTypes.array.isRequired,
 };
 
-FilterBar.scrollTo = _ => setTimeout(_ => {
-  _renderedFilterBar && _renderedFilterBar.scrollIntoView(true);
+FilterBar.scrollTo = _ => setTimeout(__ => {
+  if (_renderedFilterBar) _renderedFilterBar.scrollIntoView(true);
 });
 
 export default FilterBar;
