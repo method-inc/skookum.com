@@ -83,7 +83,7 @@ class EventsContent extends React.Component {
           )) : (
             <li key="¯\_(ツ)_/¯" className="EventsContent-item">
               <div className="EventsContent-item-segment">
-                <div className="EventsContent-eventName">There are no currently scheduled events at this time.</div>
+                <div className="EventsContent-eventName">There are no scheduled events at this time.</div>
               </div>
             </li>
           )}

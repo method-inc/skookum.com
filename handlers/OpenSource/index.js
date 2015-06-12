@@ -13,9 +13,9 @@ class OpenSource extends React.Component {
         <Hero title="Open Source" subtitle="A few things we’re up to." />
         {data.map(o => (
           <div className="OpenSource-project">
-            <strong className="OpenSource-title">{o.name}</strong>
-            <p className="OpenSource-description">{o.description}</p>
-            <Button className="EventsContent-button" href={o.github}>View on GitHub</Button>
+            <div className="OpenSource-title">{o.name}</div>
+            <div className="OpenSource-description">{o.description}</div>
+            <Button className="OpenSource-button" href={o.github}>View on GitHub</Button>
           </div>
         ))}
       </div>

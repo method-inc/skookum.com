@@ -127,6 +127,9 @@ module.exports = function(options) {
             ('http://localhost:' + serverPort) :
             options.API_URL
         ),
+
+        // FEATURE FLAGS
+        'process.features.WALL_OF_FACES': false,
       }),
 
       new webpack.optimize.DedupePlugin(),

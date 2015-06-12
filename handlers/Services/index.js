@@ -63,8 +63,10 @@ class Services extends React.Component {
               <li ref={s[1]} className={`Services-item ${s[1] === this.state.target ? 'is-active' : ''}`} key={s[0]}>
                 <a className="Services-link" href={`#${s[1]}`} onClick={this.handleSelectSegment}>{s[0]}</a>
                 <div className="Services-item-panel">
-                  <div><Icon icon={s[1]} /></div>
-                  <div className="Services-title">Value</div>
+                  <div className="Services-title">
+                    <Icon style={{verticalAlign: 'middle', marginRight: '1em'}} icon={s[1]} />
+                    Value
+                  </div>
                   <Typography type={Typography.DESCRIPTION_TEXT}>{s[2]}</Typography>
                   <Button type="light" to="service" params={{service: s[1]}}>Learn More</Button>
                 </div>

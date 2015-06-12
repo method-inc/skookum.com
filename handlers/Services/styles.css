@@ -21,6 +21,7 @@
 .Services-item-panel {
   display: none;
   padding: 1.5em 1.5em 3em 0;
+  max-width: 500px;
 }
 
 .Services-title {

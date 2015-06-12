@@ -40,7 +40,7 @@ class Hero extends Component {
     }
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
-    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '4.5em'} : EMPTY_OBJECT;
+    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
 
     return (
       <div className="Hero" style={style}>

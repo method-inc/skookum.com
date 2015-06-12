@@ -2,12 +2,12 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import MajorSectionElement from 'MajorSectionElement';
 import api from 'api';
-
-var {PropTypes} = React;
+import WallOfFaces from 'WallOfFaces';
+console.log('process.features.WALL_OF_FACES', process.features.WALL_OF_FACES);
 
 var cn = s => `CultureContent-${s}`;
 
@@ -26,8 +26,8 @@ var BENEFITS = [
   'And other things we’d rather surprise you with',
 ];
 
-class CultureContent extends React.Component {
-  render(): ?ReactElement {
+class CultureContent extends Component {
+  render(): ReactElement {
     return (
       <div className="CultureContent">
         <MajorSectionElement
@@ -42,48 +42,12 @@ class CultureContent extends React.Component {
             ))}
           </ul>
         </div>
-        <div className={cn('people')}>
-          <div className={cn('people-title')}>
-            Our People
-            <hr className={cn('people-hr')} />
-          </div>
-          <ul className={cn('people-list')}>
-            {this.props.people.map((n, i) => (
-              <li key={i} className={cn('person')}>
-                <strong className={cn('person-name')}>{n.displayName}</strong>
-                <span className={cn('person-title')}>{n.jobTitle}</span>
-                <img className={cn('person-image')} src={n.photoUrl} />
-              </li>
-            ))}
-          </ul>
-        </div>
+
+        {process.features.WALL_OF_FACES && <WallOfFaces />}
       </div>
     );
   }
 }
 
-CultureContent.propTypes = {
-  people: PropTypes.arrayOf(
-    PropTypes.shape({
-      displayName: PropTypes.string.isRequired,
-      jobTitle: PropTypes.string.isRequired,
-      photoUrl: PropTypes.string.isRequired,
-    })
-  ),
-};
+export default CultureContent;
 
-CultureContent.displayName = 'CultureContent';
-
-export default Resolver.createContainer(CultureContent, {
-  resolve: {
-    people() {
-      var FIELDS = [
-        'displayName',
-        'jobTitle',
-        'photoUrl',
-      ];
-
-      return api(`team?fields=${FIELDS.toString()}`);
-    },
-  },
-});

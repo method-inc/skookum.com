@@ -5,16 +5,44 @@
 .OpenSource-project {
   box-sizing: border-box;
   display: block;
-  padding: 1.5em 12em 1.5em 1.5em;
+  padding: 2.25em 1.5em;
   position: relative;
   border-bottom: 1px solid #eee;
 }
 
 .OpenSource-title {}
+
 .OpenSource-description {
   color: #aaa;
   font-size: 0.666em;
   margin-top: 0.333em;
   text-transform: uppercase;
+}
+
+.OpenSource-button {
+  line-height: 3;
+}
+
+@media screen and (max-width: 660px) {
+  .OpenSource-button {
+    margin-top: 1.5em;
+    text-align: center
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .OpenSource-project {
+    padding: 2.25em 14em 2.25em 1.5em;
+  }
+
+  .OpenSource-project {
+    padding-left: 5%;
+  }
+
+  .OpenSource-button {
+    position: absolute;
+    right: 1.5rem;
+    top: 2.25rem;
+  }
 }
 

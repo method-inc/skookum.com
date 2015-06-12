@@ -32,16 +32,18 @@ class ArticlesList extends Component {
       <div className="ArticlesList">
         {this.props.articles.map(a => (
           <div key={a.slug} className="Blog-article">
-            <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
-            <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || (a.body.split('\n')[0]))}} />
-            <div className="Blog-article-info">
-              <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
+            <div className="Blog-article-content">
+              <Link className="Blog-article-title" to="article" params={{slug: a.slug}}>{a.title}</Link>
+              <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || (a.body.split('\n')[0]))}} />
+              <div className="Blog-article-info">
+                <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
+              </div>
             </div>
           </div>
         ))}
         <div className="Blog-pager">
-          {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
-          {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
+          {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
+          {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
         </div>
       </div>
     );
