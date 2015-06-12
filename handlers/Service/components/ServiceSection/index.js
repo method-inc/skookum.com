@@ -2,8 +2,6 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import Icon from 'Icon';
-import Typography from 'Typography';
 
 const COLORS = {
   yellow: '#FFDD2E',
@@ -40,4 +38,3 @@ ServiceSection.propTypes = {
 };
 
 export default ServiceSection;
-

@@ -25,7 +25,6 @@ var routes = (
       <DefaultRoute name="events" handler={Events} />
     </Route>
     <Route path="blog">
-      <Route name="blog-paged" path="page/:page" handler={Blog} />
       <Route name="tag" path="tags/:tag" handler={Blog} />
       <Route name="article" path=":slug" handler={BlogArticle} />
       <DefaultRoute name="blog" handler={Blog} />

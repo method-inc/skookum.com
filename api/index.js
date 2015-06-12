@@ -125,14 +125,14 @@ var patchAuthorWithBamboo = (n, ...fields) => (
 
 api.get('/contentful/featured', function(req, res) {
   return contentful.contentTypes()
-    .then(n => n.filter(r => r.name === 'blog_post')[0].sys.id)
+    .then(n => n.filter(r => r.name === 'featured_posts')[0].sys.id)
     .then(id => contentful.entries({
       /*eslint-disable*/
       content_type: id,
       /*eslint-enable*/
       limit: 3,
-      'fields.featured': true,
     }))
+    .then(n => n[0].fields.article)
     .then(
       n => res.send(n.map(r => r.fields)),
       error => res.send(error)

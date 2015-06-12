@@ -2,35 +2,25 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {Component} from 'react';
 import {Resolver} from 'react-resolver';
 import Button from 'Button';
 import api from 'api';
-
-function lookup(o, s) {
-  if (!o) return null;
-
-  var path = s.split('.');
-  for (var p in path) {
-    if (!o[p]) return null;
-    o = o[p];
-  }
-  return o[p];
-}
+import lookup from 'lookup';
 
 var {PropTypes} = React;
 
-class CaseStudy extends React.Component {
-  render(): ?ReactElement {
-    var {slug, summary, image} = this.props.study;
+class CaseStudy extends Component {
+  render(): ReactElement {
+    var {slug, client, summary, image} = this.props.study;
     return (
       <div className="HomeCaseStudy">
         <div className="HomeCaseStudy-content">
-          <strong className="HomeCaseStudy-title">{slug}</strong>
+          <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
           <p className="HomeCaseStudy-summary">{summary}</p>
           <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
         </div>
-        <img className="HomeCaseStudy-image" src={lookup(image, 'fields.file.url')} />
+        <img className="HomeCaseStudy-image" src={lookup(image, 'image[0].fields.file.url')} />
       </div>
     );
   }

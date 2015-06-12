@@ -36,6 +36,7 @@
 .Navigation-link {
   color: #fff;
   display: inline-block;
+  font-weight: 900;
   padding: 0.6666em 0.6666em 0.6666em 10%;
   text-transform: uppercase;
   text-decoration: none;
