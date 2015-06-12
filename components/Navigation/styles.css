@@ -16,6 +16,7 @@
   z-index: 100;
 }
 
+
 .Navigation.is-visible {
   opacity: 1;
   transform: scale(1);
@@ -33,11 +34,18 @@
   padding: 0;
 }
 
+.Navigation-header {
+  font-size: 1.75em; /* 30 / 16 */
+  font-weight: 100;
+  line-height: 1.42857; /* 40 / 28 */
+  text-transform: uppercase;
+}
+
 .Navigation-link {
   color: #fff;
   display: inline-block;
   font-weight: 900;
-  padding: 0.6666em 0.6666em 0.6666em 10%;
+  padding: 0.6666em 10%;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -59,7 +67,40 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+  .Navigation {
+    padding: 1.5em;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .Navigation-hr {
+    width: 100%;
+  }
+
+  .Navigation-header {
+    margin-bottom: 0.666em;
+    text-align: center;
+  }
+
+  .Navigation-header:after {
+    border-bottom: 1px solid #fff;
+    content: ' ';
+    display: block;
+    margin: 0.5em auto;
+    width: 5em;
+  }
+
+  .Navigation-link,
+  .Navigation-sublink {
+    display: block;
+    padding: 0.666em 0;
+    text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 601px) {
   .Navigation-sublink {
     display: inline-block;
     padding: 0.666em;
@@ -76,24 +117,14 @@
     padding: 0 5.5%;
   }
 
-}
-
-@media screen and (max-width: 600px) {
-  .Navigation {
-    padding: 1.5em;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+  .Navigation-list {
+    margin-left: 35%;
   }
 
-  .Navigation-hr {
-    width: 100%;
-  }
-
-  .Navigation-link,
-  .Navigation-sublink {
-    display: block;
-    padding: 0.666em 0;
-    text-align: center;
+  .Navigation-header {
+    margin-left: 5%;
+    float: left;
+    width: 30%;
   }
 }
 

@@ -16,6 +16,7 @@ img {
 
 p {
   font-size: 1em;
+  font-weight: 300;
   line-height: 1.875em;
 }
 
@@ -24,4 +25,11 @@ li {
   margin-bottom: 1em;
 }
 
+blockquote {
+  font-size: 1.75em;
+}
+
+blockquote p {
+  font-size: inherit;
+}
 

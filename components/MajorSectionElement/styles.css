@@ -1,7 +1,7 @@
 /** @define MajorSectionElement; use strict */
 
 .MajorSectionElement {
-  padding: 3em 0;
+  padding: 5.625em 0; /* 90 / 16 */
 }
 
 .MajorSectionElement-title {

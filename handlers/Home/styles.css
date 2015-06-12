@@ -15,7 +15,7 @@
 }
 
 .Home-quote {
-  padding: 3em 5%;
+  padding: 3rem 5%;
   margin: 0 auto;
   max-width: 500px;
   text-align: center;
@@ -31,12 +31,12 @@
 .Home-quote-quote:before,
 .Home-quote-quote:after {
   color: rgba(255, 255, 255, 0.1666);
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 900;
   position: relative;
   top: 0.18em;
   line-height: 0;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .Home-quote-quote:before {
@@ -49,6 +49,7 @@
 
 .Home-quote-cite {
   color: #fff;
+  font-size: 1rem;
   font-style: italic;
   font-weight: bold;
 }

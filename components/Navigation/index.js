@@ -10,13 +10,13 @@ var PRIMARY = [
   ['home', 'Home'],
   ['services', 'Services'],
   ['case-studies', 'Case Studies'],
-  ['blog', 'Blog'],
   ['culture', 'Culture'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];
 
 var SECONDARY = [
+  ['blog', 'Blog'],
   ['open-source', 'Open Source'],
   ['events', 'Events'],
 ];
@@ -41,8 +41,10 @@ class Navigation extends Component {
         <Link to="home" onClick={this.props.onClick}>
           <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em'}} color="#fff" />
         </Link>
+        <div className="Navigation-header">About Skookum</div>
         {renderNavigation(PRIMARY, this.props)}
         <div className="Navigation-divider" />
+        <div className="Navigation-header">Community</div>
         {renderNavigation(SECONDARY, this.props)}
         <hr className="Navigation-hr" />
         <div className="Navigation-socials">

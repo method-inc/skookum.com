@@ -13,7 +13,7 @@
 }
 
 .Hero-title {
-  border-bottom: 0.5px solid #fff;
+  border-bottom: 1px solid #fff;
   font-size: 1.875em; /*30 / 16*/
   font-weight: 900;
   margin: 0 0 0.333em;
@@ -60,7 +60,7 @@
   }
 
   .Hero-content {
-    left: 1.5em;
+    left: 5%;
     right: 0;
     bottom: 3em;
     position: absolute;

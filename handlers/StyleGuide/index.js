@@ -47,7 +47,7 @@ class StyleGuide extends React.Component {
             <div style={{width: '70%', margin: '1.5em auto'}}><Logo color={n[1]} /></div>
           </div>
         ))}
-        <div style={{padding: '3em 1.5em', background: '#f4f4f4'}}>
+        <div style={{padding: '5.625em 1.5em', background: '#f4f4f4'}}>
           <div style={{fontSize: '1.875em', fontWeight: 100, textTransform: 'uppercase'}}>#f4f4f4</div>
         </div>
         <Section title="Typography">

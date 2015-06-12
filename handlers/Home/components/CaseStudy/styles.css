@@ -2,7 +2,7 @@
 
 .HomeCaseStudy {
   color: #fff;
-  padding: 3em 1.5em;
+  padding: 5.625em 1.5em;
   position: relative;
   overflow: hidden;
 }
@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 600px) {
   .HomeCaseStudy {
-    padding: 3em 5% 3em 50%;
+    padding: 5.625em 5% 5.625em 50%;
   }
 
   .HomeCaseStudy:after {

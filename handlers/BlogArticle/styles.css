@@ -21,6 +21,25 @@
   padding: 0 5%;
 }
 
+.BlogArticle-content blockquote {
+  font-weight: 300;
+  margin: 0 auto 2.333rem;
+  max-width: 600px;
+  text-transform: uppercase;
+}
+
+.BlogArticle-content blockquote p {
+  line-height: 1.16666;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.BlogArticle-content cite {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
 .BlogArticle-content iframe {
   height: 600px;
   width: 100%;

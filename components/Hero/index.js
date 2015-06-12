@@ -16,7 +16,7 @@ var EMPTY_OBJECT = {};
 
 
 class Hero extends Component {
-  render(): ?ReactElement {
+  render(): ReactElement {
     var {
       title,
       subtitle,
@@ -45,7 +45,7 @@ class Hero extends Component {
     return (
       <div className="Hero" style={style}>
         <Link to="home">
-          <Logo style={{position: 'absolute', top: '1em', left: '1em', width: 40, margin: '0.25em', zIndex: 5}} color={nameToBinary(color)} />
+          <Logo style={{position: 'absolute', top: '1em', left: '1em', height: 40, margin: '0.25em', zIndex: 5}} color={nameToBinary(color)} />
         </Link>
         <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
 
