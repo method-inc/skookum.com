@@ -135,7 +135,12 @@ module.exports = function(options) {
       new webpack.optimize.DedupePlugin(),
 
       // TODO: optimize this by build
-      (options.env !== 'development' && new ExtractTextPlugin('styles.css'))
+      (options.env !== 'development' && new ExtractTextPlugin('styles.css')),
+      (options.env !== 'development' && new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      }))
     ),
 
     devtool: 'sourcemap',
