@@ -13,6 +13,7 @@ loosely so that you can change it if you so desire.
 Requires node.
 
 * `npm install`
+* Ensure you have `CONTENTFUL_SPACE` and `CONTENTFUL_TOKEN` are set.
 * `npm start`
 * `open localhost:4444`
 
