@@ -39,7 +39,7 @@ class Gist extends Component {
   render(): ReactElement {
     // Ensure that the content is rendered on the client, but don’t delay
     // the page render call, but don’t set this timeout on the server
-    if (typeof document === 'undefined') {
+    if (typeof document !== 'undefined') {
       setTimeout(_ => this._updateIframeContent(), 1000);
     }
 
