@@ -27,6 +27,10 @@
   line-height: 1.6;
 }
 
+.Blog-article-summary a {
+  color: inherit;
+}
+
 .Blog-article-info {
   font-size: 0.666em;
   letter-spacing: 0.05em;

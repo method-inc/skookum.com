@@ -67,8 +67,9 @@
 }
 
 .BlogArticle-content li {
+  font-weight: 300;
   line-height: 1.22222;
-  margin-bottom: 0.444rem;
+  margin-bottom: 0.653rem;
 }
 
 .BlogArticle-content a {
