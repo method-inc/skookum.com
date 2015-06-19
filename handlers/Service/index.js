@@ -5,6 +5,7 @@ import React from 'react';
 
 import Camp from './Camp';
 import Engineering from './Engineering';
+import InternetOfThings from './InternetOfThings';
 import Production from './Production';
 import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
@@ -14,6 +15,7 @@ import {Link} from 'react-router';
 import Todo from '../Todo';
 
 var services = [
+  'internet-of-things',
   'rapid-innovation',
   'innovation-camp',
   'proof-of-concept',
@@ -28,14 +30,16 @@ var renderService: ReactElement = (service: string) => {
   switch (service) {
     case 'engineering':
       return <Engineering color="yellow" />;
+    case 'innovation-camp':
+      return <Camp color="yellow" />;
+    case 'internet-of-things':
+      return <InternetOfThings color="yellow" />;
     case 'production':
       return <Production color="yellow" />;
     case 'proof-of-concept':
       return <ProofOfConcept color="yellow" />;
     case 'rapid-innovation':
       return <RapidInnovation color="yellow" />;
-    case 'innovation-camp':
-      return <Camp color="yellow" />;
     default:
       return <Todo />;
   }
