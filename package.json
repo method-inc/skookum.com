@@ -3,6 +3,9 @@
   "description": "An amazing, rich, isomorphic website created with skookum-react",
   "private": true,
   "version": "0.1.0",
+  "engines": {
+    "iojs": "2.0.x"
+  },
   "scripts": {
     "lint": "npm run eslint && npm run suit",
     "eslint": "eslint .",
