@@ -11,6 +11,7 @@ if (!process.env.CDN_LOCATION) {
   throw new Error('process.env.CDN_LOCATION must be set for built files location.');
 }
 
+console.log('Building client binding to %s', process.env.PORT);
 webpack(
   baseConfig({
     cdn: process.env.CDN_LOCATION,
@@ -27,6 +28,7 @@ webpack(
   write(OUTPUT_STATS_FILE, JSON.stringify(stats.toJson(), null, 2), 'utf8');
 });
 
+console.log('Building server binding to %s', process.env.PORT);
 // build server code
 webpack(
   baseConfig({

@@ -140,15 +140,19 @@ api.get('/contentful/featured', function(req, res) {
 });
 
 api.get('/contentful/:slug', function(req, res) {
+  var bestFit = options => options.find(o => o.fields.slug === req.params.slug);
+
   contentful.entries({
     query: req.params.slug,
   })
   .then(n => (
-    // promises can make some things pretty ugly
-    n.length === 0 ?
-      res.sendStatus(404) :
-      patchAuthorWithBamboo(n[0].fields, 'photoUrl', 'jobTitle')
-        .catch(error => res.send({error, message: 'patchAuthorWithBamboo failed'}))
+    n.length === 0 ? res.sendStatus(404) :
+    n.length === 1 ? n[0] : bestFit(n)
+  ))
+  .then(n => (
+    n.length === 0 ? res.sendStatus(404) :
+    patchAuthorWithBamboo(n.fields, 'photoUrl', 'jobTitle')
+      .catch(error => res.send({error, message: 'patchAuthorWithBamboo failed'}))
   ))
   .then(n => res.send(n))
   .catch(error => res.send({error}));
