@@ -29,21 +29,23 @@ var BENEFITS = [
 class CultureContent extends Component {
   render(): ReactElement {
     return (
-      <div className="CultureContent">
-        <MajorSectionElement
-          title="In order to create real value you must put people at the center of everything"
-          content="We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competitive perks." />
-        <div className={cn('benefits')}>
-          <img className={cn('benefits-image')} src="/public/images/culture-benefits.png" />
-          <div className={cn('benefits-title')}>Benefits</div>
-          <ul className={cn('benefits-list')}>
-            {BENEFITS.map((n, i) => (
-              <li key={i} className={cn('benefits-item')}>{n}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="InnerMax">
+        <div className="CultureContent">
+          <MajorSectionElement
+            title="In order to create real value you must put people at the center of everything"
+            content="We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competitive perks." />
+          <div className={cn('benefits')}>
+            <img className={cn('benefits-image')} src="/public/images/culture-benefits.png" />
+            <div className={cn('benefits-title')}>Benefits</div>
+            <ul className={cn('benefits-list')}>
+              {BENEFITS.map((n, i) => (
+                <li key={i} className={cn('benefits-item')}>{n}</li>
+              ))}
+            </ul>
+          </div>
 
-        {process.features.WALL_OF_FACES && <WallOfFaces />}
+          {process.features.WALL_OF_FACES && <WallOfFaces />}
+        </div>
       </div>
     );
   }

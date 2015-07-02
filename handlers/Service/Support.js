@@ -14,7 +14,7 @@ class Support extends React.Component {
 
     return (
       <div className="Support">
-        <Hero color={color} title="Support" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Support" />
         <ServiceIntro color={color} service={service}>Support intro here.</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}

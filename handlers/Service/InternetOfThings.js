@@ -14,7 +14,7 @@ class InternetOfThings extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Internet Of Things" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" />
         <ServiceIntro color={color} service={service}>TODO: we need Internet of Things content</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}

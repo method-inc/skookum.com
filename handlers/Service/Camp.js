@@ -21,7 +21,7 @@ class Camp extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color="yellow" title="Innovation Camp" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Innovation Camp" />
 
         <div className="InnerMax">
 
@@ -38,7 +38,6 @@ class Camp extends React.Component {
               ))}
             </ol>
           </ServiceSection>
-
 
         </div>
 
