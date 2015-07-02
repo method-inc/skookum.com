@@ -47,6 +47,12 @@ class Hero extends Component {
       innerCap = React.DOM.img({src:'/public/images/wordmark.svg', alt:title});
     }
 
+    if(this.props.title == 'Contact Us' || this.props.title == 'Innovation Camp'){
+      style.height = 90;
+    }else{
+      delete style.height;
+    }
+
     return (
       <div className="Hero" style={style}>
         <div className="InnerMax">
