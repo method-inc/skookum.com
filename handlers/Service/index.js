@@ -9,6 +9,7 @@ import InternetOfThings from './InternetOfThings';
 import Production from './Production';
 import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
+import Support from './Support';
 
 import {Link} from 'react-router';
 
@@ -21,6 +22,7 @@ var services = [
   'proof-of-concept',
   'engineering',
   'production',
+  'support',
 ];
 
 var first: number = (n: Array) => n[0];
@@ -66,16 +68,22 @@ class Service extends React.Component {
     return (
       <div>
         {renderService(service)}
-        <div className="Service-links">
-          <Link className="Service-link" to="service" params={{service: previous}}>
-            {previous}
-            <small className="Service-link-direction">‹ Previous</small>
-          </Link>
-          <Link className="Service-link" to="service" params={{service: next}}>
-            {next}
-            <small className="Service-link-direction">Next ›</small>
-          </Link>
+
+
+
+        <div className="InnerMax">
+          <div className="Service-links">
+            <Link className="Service-link" to="service" params={{service: previous}}>
+              {previous}
+              <small className="Service-link-direction">‹ Previous</small>
+            </Link>
+            <Link className="Service-link" to="service" params={{service: next}}>
+              {next}
+              <small className="Service-link-direction">Next ›</small>
+            </Link>
+          </div>
         </div>
+
       </div>
     );
   }

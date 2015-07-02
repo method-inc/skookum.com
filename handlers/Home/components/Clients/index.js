@@ -9,7 +9,7 @@ import api from 'api';
 class Clients extends Component {
   render(): ?ReactElement {
     return (
-      <div className="HomeClients">
+      <div className="HomeClients InnerMax">
         {this.props.clients.map(n => (
           <div className="HomeClients-client" key={n.name}>
             <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />

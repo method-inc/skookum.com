@@ -15,10 +15,12 @@ class CaseStudy extends Component {
     var {slug, client, summary, image} = this.props.study;
     return (
       <div className="HomeCaseStudy">
-        <div className="HomeCaseStudy-content">
-          <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
-          <p className="HomeCaseStudy-summary">{summary}</p>
-          <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
+        <div className="HomeCaseStudy-content InnerMax">
+          <div className="HomeCaseStudyInner">
+            <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
+            <p className="HomeCaseStudy-summary">{summary}</p>
+            <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
+          </div>
         </div>
         <img className="HomeCaseStudy-image" src={lookup(image, 'image[0].fields.file.url')} />
       </div>

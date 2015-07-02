@@ -8,7 +8,9 @@ class Footer extends React.Component {
   render(): ?ReactElement {
     return (
       <footer className="Footer">
-        <p className="Footer-legal">Ⓒ 2015 Skookum. All Rights Reserved.</p>
+        <div className="InnerMax">
+          <p className="Footer-legal">Ⓒ 2015 Skookum. All Rights Reserved.</p>
+        </div>
       </footer>
     );
   }

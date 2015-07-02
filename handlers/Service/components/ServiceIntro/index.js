@@ -10,7 +10,7 @@ class ServiceIntro extends Component {
     var {service, children} = this.props;
 
     return (
-      <section className="ServiceIntro">
+      <section className="ServiceIntro InnerMax">
         <Icon icon={service} />
         <Typography type={Typography.DESCRIPTION_TEXT}>{children}</Typography>
       </section>

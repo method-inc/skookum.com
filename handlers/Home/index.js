@@ -18,7 +18,7 @@ class Home extends React.Component {
       <div className="Home">
         <Hero
           title="Skookum"
-          color="black"
+          color="blacklight"
           image="/public/images/mars.png" />
         <div className="Home-content">
           <MajorSectionElement
@@ -31,8 +31,11 @@ class Home extends React.Component {
               <p className={cn('quote-quote')}>Man and his quest for knowledge and progress is determined and can not be deterred.</p>
               <cite className={cn('quote-cite')}>JFK</cite>
             </blockquote>
-            <FeaturedPosts />
-            <Button style={{margin: '3em 5% 1.5em auto', width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
+            <div className="InnerMax">
+              <FeaturedPosts />
+              <Button style={{margin: '3em 5% 1.5em auto', width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
+            </div>
+            
           </div>
         </div>
         <Locations />
