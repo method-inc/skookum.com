@@ -48,7 +48,7 @@ class Hero extends Component {
     }
 
     return (
-      <div className="Hero" style={heroStyle}>
+      <div className="Hero" style={style}>
         <div className="InnerMax">
           <Link to="home">
             <Logo style={{position: 'absolute', top: '-2em', height: 40, margin: '0', zIndex: 5}} color={nameToBinary(color)} />
