@@ -18,7 +18,9 @@ class Events extends React.Component {
           {to: 'events-location', params: {location: 'charlotte'}, text: 'Charlotte'},
           {to: 'events-location', params: {location: 'denver'}, text: 'Denver'},
         ]} />
-        <EventsContent />
+        <div className="InnerMax">
+          <EventsContent />
+        </div>
       </div>
     );
   }
