@@ -41,10 +41,14 @@ class ArticlesList extends Component {
             </div>
           </div>
         ))}
-        <div className="Blog-pager">
-          {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
-          {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
+
+        <div className="InnerMax">
+          <div className="Blog-pager">
+            {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
+            {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
+          </div>
         </div>
+
       </div>
     );
   }
