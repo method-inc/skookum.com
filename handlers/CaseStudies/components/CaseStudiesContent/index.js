@@ -21,6 +21,7 @@ class CaseStudiesContent extends Component {
               {imageUrl && (
                 <img src={imageUrl + '?w=400'} className="CaseStudiesContent-image" />
               )}
+              <div>{imageUrl}</div>
             </Link>
           ))}
         </div>
