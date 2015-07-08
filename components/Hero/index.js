@@ -41,11 +41,6 @@ class Hero extends Component {
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
     var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
-    var innerCap = title;
-
-    if(this.props.title == 'Skookum'){
-      innerCap = React.DOM.img({src:'/public/images/wordmark.svg', alt:title});
-    }
 
     if(this.props.title == 'Contact Us' || this.props.title == 'Innovation Camp'){
       style.height = 90;
@@ -65,7 +60,7 @@ class Hero extends Component {
 
         <div className="Hero-content InnerMax" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
-          <h1 className="Hero-title">{innerCap}</h1>
+          <h1 className="Hero-title">{title}</h1>
           <p className="Hero-subtitle">{subtitle}</p>
           {children && childrenPosition === 'after' && children}
         </div>
