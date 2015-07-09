@@ -34,14 +34,7 @@ class RapidInnovation extends React.Component {
             {title: 'Inspire a Vision', description: 'Selling new ideas through an established organization is challenging. While innovation is riddled with risk, you know that the consequence of inaction may represent the bigger liability. We help quantify the value of each opportunity and arm you with the right creative to tell your story.'},
           ]}
           color={color} />
-        <ServiceUnorderedListSection
-          title="Sample Innovation Projects"
-          items={[
-            'A large CPG looks to reinvent couponing in an outdated point-of-sale environment.',
-            'A national movie chain wants to increase revenue without raising ticket prices.',
-            'An automative pioneer explores the viability of using cell phones to control cars.',
-          ]}
-          color={color} />
+
       </div>
     );
   };

@@ -11,13 +11,13 @@ class Contact extends React.Component {
     return (
       <div className="Contact">
         <Hero color="black" image="/public/images/contact.png" title="Contact Us" />
-        <div className="InnerMax">
+        
           <div className="Contact-flex">
             <ContactForm />
             <NewsletterInfo />
           </div>
           <Locations />
-        </div>
+        
       </div>
     );
   }
