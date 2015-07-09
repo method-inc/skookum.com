@@ -12,7 +12,7 @@ class Clients extends Component {
       <div className="HomeClients InnerMax">
         {this.props.clients.map(n => (
           <div className="HomeClients-client" key={n.name}>
-            <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
+              <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
           </div>
         ))}
       </div>
