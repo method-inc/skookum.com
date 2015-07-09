@@ -18,7 +18,7 @@ import Todo from '../Todo';
 var services = [
   'internet-of-things',
   'rapid-innovation',
-  'innovation-camp',
+  //'innovation-camp',
   'proof-of-concept',
   'engineering',
   'production',

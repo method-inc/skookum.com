@@ -63,7 +63,7 @@ class Hero extends Component {
         <div className="Hero-content InnerMax" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
           <h1 className="Hero-title">{title}</h1>
-          <p className="Hero-subtitle">{subtitle}</p>
+          
           {children && childrenPosition === 'after' && children}
         </div>
 
