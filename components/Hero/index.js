@@ -42,8 +42,8 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
     var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
 
-    if(true){
-      style.height = 300;
+    if(false){
+      style.height = 90;
     }else{
       delete style.height;
     }
@@ -54,7 +54,6 @@ class Hero extends Component {
           <Link to="home">
             <Logo style={{position: 'absolute', top: '-2em', height: 40, margin: '0', zIndex: 5}} color={nameToBinary(color)} />
           </Link>
-          
             <Hamburger color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
           
           
