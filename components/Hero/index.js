@@ -43,7 +43,7 @@ class Hero extends Component {
     var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
 
     if(true){
-      style.height = 90;
+      style.height = 300;
     }else{
       delete style.height;
     }
