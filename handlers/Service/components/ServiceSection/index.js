@@ -25,7 +25,9 @@ class ServiceSection extends Component {
 
     return (
       <section {...props} style={style} className={className}>
-        {children}
+        <div className="InnerMax">
+          {children}
+        </div>
       </section>
     );
   }

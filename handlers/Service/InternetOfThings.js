@@ -14,7 +14,7 @@ class InternetOfThings extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Internet Of Things" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" />
         <ServiceIntro color={color} service={service}>TODO: we need Internet of Things content</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}
@@ -32,12 +32,7 @@ class InternetOfThings extends React.Component {
           ]}
           color={color} />
 
-        <ServiceSection color={color}>
-          <blockquote>
-            <p>“If I had an hour to solve a problem, I’d spend 55 minutes thinking about the problem and 5 minutes thinking about solutions”</p>
-            <cite>Albert Einstein</cite>
-          </blockquote>
-        </ServiceSection>
+        
       </div>
     );
   };

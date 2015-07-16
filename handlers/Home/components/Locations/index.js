@@ -10,7 +10,7 @@ import locations from 'locationsData';
 class Locations extends React.Component {
   render(): ?ReactElement {
     return (
-      <div className="Locations">
+      <div className="Locations InnerMax">
         {locations.map(n => (
           <div className={cn('block')} key={n.name}>
             <img className={cn('image')} src={`/public/images/home-${n.name.toLowerCase()}.png`} />

@@ -21,20 +21,25 @@ class Camp extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color="yellow" title="Innovation Camp" />
-        <ServiceIntro service={service}>Space Camp is a one week program to help propel innovative ideas forward. Nursing a technology wishlist? Ambitious goals but unsure how to get started? Lacking buy-in for a bigger initiative? Come see what we can do in a week. Our innovation SWAT team of software engineers, hardware hackers, product strategists and UX desigers can take you from concept to prototype in 5 days.</ServiceIntro>
-        <ServiceSection style={{textAlign: 'center'}}>
-          <Typography type={Typography.PRIMARY_SECTION_HEADER}>The Schedule</Typography>
-          <ol className="Service-camp-list">
-            {SCHEDULE.map((n, i) => (
-              <li key={i} className="Service-camp-item">
-                <img className="Service-camp-image" src={`/public/images/${n.title.toLowerCase()}.svg`} />
-                <strong>Day {i + 1}</strong> <strong>{n.title}</strong>
-                <p>{n.description}</p>
-              </li>
-            ))}
-          </ol>
-        </ServiceSection>
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Innovation Camp" />
+
+        <div className="InnerMax">
+
+          <ServiceIntro service={service}>Space Camp is a one week program to help propel innovative ideas forward. Nursing a technology wishlist? Ambitious goals but unsure how to get started? Lacking buy-in for a bigger initiative? Come see what we can do in a week. Our innovation SWAT team of software engineers, hardware hackers, product strategists and UX desigers can take you from concept to prototype in 5 days.</ServiceIntro>
+          <ServiceSection style={{textAlign: 'center'}}>
+            <Typography type={Typography.PRIMARY_SECTION_HEADER}>The Schedule</Typography>
+            <ol className="Service-camp-list">
+              {SCHEDULE.map((n, i) => (
+                <li key={i} className="Service-camp-item">
+                  <img className="Service-camp-image" src={`/public/images/${n.title.toLowerCase()}.svg`} />
+                  <strong>Day {i + 1}</strong> <strong>{n.title}</strong>
+                  <p>{n.description}</p>
+                </li>
+              ))}
+            </ol>
+          </ServiceSection>
+
+        </div>
 
         <ServiceSection color="yellow" style={{textAlign: 'center'}}>
           <strong style={{display: 'block', fontSize: '1.875em', fontWeight: 'normal', marginBottom: '1rem'}}>Send your team to camp</strong>
@@ -42,6 +47,7 @@ class Camp extends React.Component {
           <span style={{marginRight: '1em'}}>start@skookum.com</span>
           <span>(704) 930-7444</span>
         </ServiceSection>
+
       </div>
     );
   };

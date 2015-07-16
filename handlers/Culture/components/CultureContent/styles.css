@@ -98,6 +98,9 @@
   .CultureContent-benefits {
     overflow: hidden;
     padding: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom:20px;
   }
 
   .CultureContent-benefits-image {
@@ -113,7 +116,7 @@
   }
 
   .CultureContent-benefits-list {
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   .CultureContent-benefits-title,

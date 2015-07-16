@@ -10,7 +10,7 @@ import Typography from 'Typography';
 
 const SERVICES = [
   ['IOT', 'internet-of-things', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
-  ['Innovation Camp', 'innovation-camp', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
+  //['Innovation Camp', 'innovation-camp', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
   ['Rapid Innovation', 'rapid-innovation', 'Problems cannot be solved with the same thinking that created them. We give you fresh, technological ideas to help push the bounds of what is possible.'],
   ['Proof of Concept', 'proof-of-concept', 'You’ve got to show them something. Your boss, the executives -- they need more than your opinion. Cut meeting time in half with a working prototype.'],
   ['Engineering', 'engineering', 'Knowing what to build can be more important than how you build it. Don’t waste a second solving the wrong problem.'],
@@ -39,7 +39,8 @@ class Services extends React.Component {
     this.setState({target}, _ => {
       // TODO: sync this with the breakpoints in ./styles.css
       if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
-        setTimeout(__ => this.refs[target].getDOMNode().scrollIntoView(true));
+        //setTimeout(__ => this.refs[target].getDOMNode().scrollIntoView(true));
+        window.location = '/services/' + target;
       }
     });
   }
@@ -65,7 +66,7 @@ class Services extends React.Component {
                 <div className="Services-item-panel">
                   <div className="Services-title">
                     <Icon style={{verticalAlign: 'middle', marginRight: '1em'}} icon={s[1]} />
-                    Value
+                    
                   </div>
                   <Typography type={Typography.DESCRIPTION_TEXT}>{s[2]}</Typography>
                   <Button type="light" to="service" params={{service: s[1]}}>Learn More</Button>

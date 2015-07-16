@@ -14,8 +14,11 @@ class RapidInnovation extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Rapid Innovation" />
-        <ServiceIntro color={color} service={service}>All you need is an idea, and sometimes not even that. If you have an inkling that your business could run better, be more efficient, generate more profits, or make a competitive statement with modern technology, we can handle the rest. Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritized concepts for further investment.</ServiceIntro>
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Rapid Innovation" />
+
+        <div className="InnerMax">
+          <ServiceIntro color={color} service={service}>All you need is an idea, and sometimes not even that. If you have an inkling that your business could run better, be more efficient, generate more profits, or make a competitive statement with modern technology, we can handle the rest. Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritized concepts for further investment.</ServiceIntro>
+        </div>
         <ServiceSectionOfPercentages
           color={color}
           items={[
@@ -31,14 +34,7 @@ class RapidInnovation extends React.Component {
             {title: 'Inspire a Vision', description: 'Selling new ideas through an established organization is challenging. While innovation is riddled with risk, you know that the consequence of inaction may represent the bigger liability. We help quantify the value of each opportunity and arm you with the right creative to tell your story.'},
           ]}
           color={color} />
-        <ServiceUnorderedListSection
-          title="Sample Innovation Projects"
-          items={[
-            'A large CPG looks to reinvent couponing in an outdated point-of-sale environment.',
-            'A national movie chain wants to increase revenue without raising ticket prices.',
-            'An automative pioneer explores the viability of using cell phones to control cars.',
-          ]}
-          color={color} />
+
       </div>
     );
   };

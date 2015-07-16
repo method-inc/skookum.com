@@ -20,7 +20,7 @@ class ServiceUnorderedListSection extends Component {
     } = this.props;
 
     return (
-      <ServiceSection {...props} className="ServiceUnorderedListSection">
+      <ServiceSection {...props} className="ServiceUnorderedListSection InnerMax">
         <Typography type={Typography.PAGE_HEADER}>{title}</Typography>
         <ul className="ServiceUnorderedListSection-list">
           {items.map(n => {

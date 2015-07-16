@@ -42,17 +42,28 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
     var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
 
+    if(false){
+      style.height = 90;
+    }else{
+      delete style.height;
+    }
+
     return (
       <div className="Hero" style={style}>
-        <Link to="home">
-          <Logo style={{position: 'absolute', top: '1em', left: '1em', height: 40, margin: '0.25em', zIndex: 5}} color={nameToBinary(color)} />
-        </Link>
-        <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+        <div className="InnerMax">
+          <Link to="home">
+            <Logo style={{position: 'absolute', top: '-2em', height: 40, margin: '0', zIndex: 5}} color={nameToBinary(color)} />
+          </Link>
+            <Hamburger color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+          
+          
+        </div>
+        
 
-        <div className="Hero-content" style={contentStyle}>
+        <div className="Hero-content InnerMax" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
           <h1 className="Hero-title">{title}</h1>
-          <p className="Hero-subtitle">{subtitle}</p>
+          
           {children && childrenPosition === 'after' && children}
         </div>
 

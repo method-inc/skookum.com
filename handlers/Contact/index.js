@@ -10,12 +10,14 @@ class Contact extends React.Component {
   render(): ReactElement {
     return (
       <div className="Contact">
-        <Hero color="black" title="Contact Us" />
-        <div className="Contact-flex">
-          <ContactForm />
-          <NewsletterInfo />
-        </div>
-        <Locations />
+        <Hero color="black" image="/public/images/contact.png" title="Contact Us" />
+        
+          <div className="Contact-flex">
+            <ContactForm />
+            <NewsletterInfo />
+          </div>
+          <Locations />
+        
       </div>
     );
   }

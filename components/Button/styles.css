@@ -1,10 +1,10 @@
 /** @define Button; use strict */
 
 .Button {
-  border-radius: 0.333rem;
+  border-radius: 3px;
   border: 2px solid #fff;
   color: inherit;
-  display: block;
+  display: inline-block;
   font-size: 0.875em;
   font-weight: 700;
   letter-spacing: 0.05em;

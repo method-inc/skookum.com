@@ -14,7 +14,7 @@ class Engineering extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Engineering" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Engineering" />
         <ServiceIntro color={color} service={service}>In order to maximize productivity and minimize risk during development, all custom technology projects begin with an Engineering phase. Engineering teams produce user stories, technical strategies and UX designs to inform subsequent Production phases. We interview, observe, hack, sketch and prototype to ensure we’re solving the problem in the most effective way.</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}
@@ -32,12 +32,7 @@ class Engineering extends React.Component {
           ]}
           color={color} />
 
-        <ServiceSection color={color}>
-          <blockquote>
-            <p>“If I had an hour to solve a problem, I’d spend 55 minutes thinking about the problem and 5 minutes thinking about solutions”</p>
-            <cite>Albert Einstein</cite>
-          </blockquote>
-        </ServiceSection>
+
       </div>
     );
   };

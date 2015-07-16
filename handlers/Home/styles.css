@@ -58,3 +58,13 @@
   content: '– ';
 }
 
+.More-blogs{
+  position: relative;
+  overflow: hidden;
+  padding-right: 5%;
+}
+
+.More-blogs a{
+  float: right;
+}
+
