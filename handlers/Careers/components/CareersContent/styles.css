@@ -11,6 +11,7 @@
   border-top: 1px solid #ccc;
   padding: 1.5em;
   position: relative;
+  list-style: none;
 }
 
 .CareersContent-job-title {

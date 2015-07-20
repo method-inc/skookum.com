@@ -2,9 +2,13 @@
 
 .HomeCaseStudy {
   color: #fff;
+  /*
   padding: 5.625em 1.5em;
+  */
   position: relative;
   overflow: hidden;
+  background-image:url('/public/images/cokebg.png');
+  background-size: cover;
 }
 
 .HomeCaseStudy-content {
@@ -16,6 +20,14 @@
   font-size: 1.25em;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.HomeCaseStudy-inner {
+  width:inherit;
+  padding: 1.5em;
+  padding-left:5%;
+  padding-right:5%;
+  float:none;
 }
 
 .HomeCaseStudy-summary {
@@ -47,7 +59,16 @@
 
 @media screen and (min-width: 600px) {
   .HomeCaseStudy {
+    /*
     padding: 5.625em 5% 5.625em 50%;
+    */
+  }
+
+  .HomeCaseStudy-inner {
+    width: 50%;
+    float: right;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .HomeCaseStudy:after {

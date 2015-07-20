@@ -10,7 +10,7 @@ class OpenSource extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="OpenSource">
-        <Hero title="Open Source" subtitle="A few things we’re up to." />
+        <Hero title="Open Source" image="/public/images/hero-default-bg.png" subtitle="A few things we’re up to." />
         {data.map(o => (
           <div className="OpenSource-project">
             <div className="OpenSource-title">{o.name}</div>

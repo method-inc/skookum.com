@@ -17,7 +17,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Hero
-          title="Skookum"
+          title={<img src="/public/images/wordmark.svg" alt="Skookum" />}
           color="black"
           image="/public/images/mars.png" />
         <div className="Home-content">
@@ -32,7 +32,9 @@ class Home extends React.Component {
               <cite className={cn('quote-cite')}>JFK</cite>
             </blockquote>
             <FeaturedPosts />
-            <Button style={{margin: '3em 5% 1.5em auto', width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
+            <div className="Home-featuredButton">
+              <Button style={{width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
+            </div>
           </div>
         </div>
         <Locations />

@@ -10,7 +10,7 @@ var _renderedFilterBar = null;
 class FilterBar extends Component {
   componentDidMount(): void {
     var scroller = this.refs.scroller.getDOMNode();
-    var width = [...scroller.children].reduce((num, c) => num + c.clientWidth, 0);
+    var width = [...scroller.children].reduce((num, c) => num + c.clientWidth, 0) + 50;
     // if this ever needs to take a change it’s
     // number of children after first render, then refactor this
     // into state with a componentDidUpdate method to recalc childrens width

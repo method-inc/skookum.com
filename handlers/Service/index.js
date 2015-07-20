@@ -9,6 +9,7 @@ import InternetOfThings from './InternetOfThings';
 import Production from './Production';
 import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
+import Support from './Support';
 
 import {Link} from 'react-router';
 
@@ -17,10 +18,11 @@ import Todo from '../Todo';
 var services = [
   'internet-of-things',
   'rapid-innovation',
-  'innovation-camp',
+ // 'innovation-camp',
   'proof-of-concept',
   'engineering',
   'production',
+  'support',
 ];
 
 var first: number = (n: Array) => n[0];
@@ -40,6 +42,8 @@ var renderService: ReactElement = (service: string) => {
       return <ProofOfConcept color="yellow" />;
     case 'rapid-innovation':
       return <RapidInnovation color="yellow" />;
+      case 'support':
+      return <Support color="yellow" />;
     default:
       return <Todo />;
   }
