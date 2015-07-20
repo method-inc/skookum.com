@@ -128,3 +128,10 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .Navigation-header {
+    font-size: 1.3em;
+    line-height: 1.7;
+  }
+}
+
