@@ -42,7 +42,7 @@ var renderService: ReactElement = (service: string) => {
       return <ProofOfConcept color="yellow" />;
     case 'rapid-innovation':
       return <RapidInnovation color="yellow" />;
-      case 'support':
+    case 'support':
       return <Support color="yellow" />;
     default:
       return <Todo />;
