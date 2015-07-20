@@ -24,3 +24,11 @@
 .Service-link-direction {
   display: block;
 }
+
+
+
+@media screen and (max-width: 600px) {
+  .Service-link-description {
+    display: none; 
+  }
+}

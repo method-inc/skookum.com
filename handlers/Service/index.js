@@ -68,11 +68,11 @@ class Service extends React.Component {
         {renderService(service)}
         <div className="Service-links">
           <Link className="Service-link" to="service" params={{service: previous}}>
-            {previous}
+            <span className="Service-link-description">{previous}</span>
             <small className="Service-link-direction">‹ Previous</small>
           </Link>
           <Link className="Service-link" to="service" params={{service: next}}>
-            {next}
+            <span className="Service-link-description">{next}</span>
             <small className="Service-link-direction">Next ›</small>
           </Link>
         </div>
