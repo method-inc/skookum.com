@@ -47,11 +47,11 @@
     margin-left: -2em;
     padding-left: 2em;
     display: none;
-    overflow:hidden;
-    height:1px;
-    width:1px;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
     position: absolute;
-    left:-9999px;
+    left: -9999px;
   }
 }
 

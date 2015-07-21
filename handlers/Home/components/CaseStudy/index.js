@@ -14,7 +14,7 @@ class CaseStudy extends Component {
   render(): ReactElement {
     var {slug, client, summary, image} = this.props.study;
     return (
-      <div className="HomeCaseStudy">
+      <div className="HomeCaseStudy" style={{backgroundImage: 'url(' + image + ')'}}>
         <div className="HomeCaseStudy-content">
           <div className="HomeCaseStudy-inner">
             <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>

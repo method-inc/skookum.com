@@ -27,8 +27,8 @@ class Support extends React.Component {
           title="We Help You"
           items={[
             {title: 'Keep your focus on the business', description: 'While Gantt charts and status reports are important communication tools, we believe that the best way to convey progress is to show it. Product demos are held every three weeks to put context around the project plan. You have direct insight into our work in order to keep internal teams fully informed.'},
-            {title: 'RESOLVE ISSUES IN A TIMELY MANNER', description: 'We operate in fast-paced environments. A flexible product development process is necessary when cost, time and scope trade-offs inevitably arise. We refine our estimates at the end of each sprint so that you have the information necessary to prioritize upcoming activities.'},
-            {title: 'EVOLVE THE PRODUCT WITH PRECISION', description: 'All too often, quality assurance is an afterthought, which can lead to costly revisions. Our testers work alongside developers in order to minimize surprises later in the process. This ensures the final product aligns with requirements and provides a satisfying user experience.'},
+            {title: 'Resolve issues in a timely manner', description: 'We operate in fast-paced environments. A flexible product development process is necessary when cost, time and scope trade-offs inevitably arise. We refine our estimates at the end of each sprint so that you have the information necessary to prioritize upcoming activities.'},
+            {title: 'Evolve the product with precision', description: 'All too often, quality assurance is an afterthought, which can lead to costly revisions. Our testers work alongside developers in order to minimize surprises later in the process. This ensures the final product aligns with requirements and provides a satisfying user experience.'},
           ]}
           color={color} />
       </div>

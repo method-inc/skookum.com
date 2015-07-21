@@ -7,7 +7,6 @@
   */
   position: relative;
   overflow: hidden;
-  background-image:url('/public/images/cokebg.png');
   background-size: cover;
 }
 
@@ -23,11 +22,11 @@
 }
 
 .HomeCaseStudy-inner {
-  width:inherit;
+  width: inherit;
   padding: 1.5em;
-  padding-left:5%;
-  padding-right:5%;
-  float:none;
+  padding-left: 5%;
+  padding-right: 5%;
+  float: none;
 }
 
 .HomeCaseStudy-summary {

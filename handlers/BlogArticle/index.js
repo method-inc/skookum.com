@@ -18,14 +18,19 @@ class BlogArticle extends React.Component {
       author,
       datePublished,
       body,
+      image,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
+
+    if (!image || typeof image === 'undefined') {
+      image = '/public/images/blog-post.png'
+    }
 
     return (
       <article className="BlogArticle">
         <Hero
           title={title}
-          image="/public/images/blog-post.png"
+          image={image}
           subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
         <div
           className="BlogArticle-content"
