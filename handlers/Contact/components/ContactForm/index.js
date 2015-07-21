@@ -63,8 +63,8 @@ class ContactForm extends React.Component {
     );
   }
 
-  handleChange(event: mixed): void {
-    var {name, value} = event.target;
+  handleChange(target): void {
+    var {name, value} = target;
     this.setState({[name]: value});
   }
 
@@ -93,16 +93,16 @@ class ContactForm extends React.Component {
         <header className="ContactForm-header">Submit an Inquiry</header>
         <hr className="ContactForm-divider" />
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
-        <Input required onChange={this.handleChange} label="What’s your name? *" name="firstname" />
-        <Input required onChange={this.handleChange} label="And how about your email? *" name="email" type="email" />
-        <Input onChange={this.handleChange} label="Who do you work for?" name="company" />
-        <Input onChange={this.handleChange} label="Phone numbers are optional" name="phone" type="phone"/>
-        <Input required onChange={this.handleChange} element="textarea" label="Submit your message here *" name="how_can_we_help_you_" />
-        <Input onChange={this.handleChange} label="How did you hear about us?" name="how_did_you_hear_about_us_" />
+        <Input required handleChange={this.handleChange} label="What’s your name? *" name="firstname" />
+        <Input required handleChange={this.handleChange} label="And how about your email? *" name="email" type="email" />
+        <Input handleChange={this.handleChange} label="Who do you work for?" name="company" />
+        <Input handleChange={this.handleChange} label="Phone numbers are optional" name="phone" type="phone"/>
+        <Input required handleChange={this.handleChange} element="textarea" label="Submit your message here *" name="how_can_we_help_you_" />
+        <Input handleChange={this.handleChange} label="How did you hear about us?" name="how_did_you_hear_about_us_" />
         <fieldset className="ContactForm-fieldset">
           <label className="ContactForm-label is-checkbox">
             <input onChange={this.handleChange} className="ContactForm-checkbox" type="checkbox" name="newsletter_subscription" />
-            Sign me up to the Skookum Files
+            Sign me up to recieve the skookum gazette
           </label>
         </fieldset>
         <Button type="primary">Send</Button>
