@@ -53,18 +53,11 @@
 }
 
 .Hero-links--fixed {
+  pointer-events: none;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 101;
-}
-
-.Hero-home {
-  display: inline-block;
-  height: 40px;
-  position: relative;
-  width: 45px;
-  z-index: 102;
 }
 
 @media screen and (max-width: 600px) {
