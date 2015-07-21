@@ -30,3 +30,16 @@
     display: none; 
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .Service-links {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Service-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

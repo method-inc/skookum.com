@@ -16,3 +16,12 @@
   height: inherit;
 }
 
+@media screen and (min-width: 1024px) {
+  .ServiceIntro {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

@@ -7,12 +7,8 @@
 
 .Home-featuredButton {
   text-align: right;
-  padding-right: 5%;
-}
-
-.Home-featured .FeaturedPosts {
-  margin-bottom: 1.5em;
-  padding-left: 5%;
+  margin-right: 5%;
+  margin-top: 1.5em;
 }
 
 .Home-featured .HomeButton {
@@ -61,5 +57,13 @@
 
 .Home-quote-cite:before {
   content: '– ';
+}
+
+@media screen and (min-width: 1024px) {
+  .Home-featuredButton {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 

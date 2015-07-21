@@ -83,4 +83,16 @@
   .HomeCaseStudy-image {
     right: 50%;
   }
+
+  .HomeCaseStudy-summary {
+    padding-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .HomeCaseStudy-content {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

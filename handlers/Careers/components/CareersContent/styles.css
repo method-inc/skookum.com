@@ -29,3 +29,11 @@
     padding-right: 5%;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .CareersContent {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

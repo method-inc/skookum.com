@@ -18,7 +18,7 @@ class Home extends React.Component {
       <div className="Home">
         <Hero
           title={<img src="/public/images/wordmark.svg" alt="Skookum" />}
-          color="black"
+          color="blacklight"
           image="/public/images/mars.png" />
         <div className="Home-content">
           <MajorSectionElement
