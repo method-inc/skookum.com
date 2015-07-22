@@ -11,19 +11,45 @@ import Hero from 'Hero';
 var {PropTypes} = React;
 
 class BlogArticle extends React.Component {
+
+  constructor(props: mixed, context: mixed): void {
+    super(props, context);
+
+    this.state = {
+      defaultImages: {
+        all: '/public/images/blogimg_all.png',
+        development: '/public/images/blogimg_dev.png',
+        product: '/public/images/blogimg_pro.png',
+        business: '/public/images/blogimg_biz.png',
+        culture: '/public/images/blogimg_cult.png',
+      },
+    };
+
+    this.getDefaultImage = this.getDefaultImage.bind(this);
+  }
+
+  getDefaultImage(tags: Array): String {
+    var defaultImages = this.state.defaultImages;
+
+    if (tags.length > 0) {
+      return this.state.defaultImages[tags[0].toLowerCase()];
+    }
+    return this.state.defaultImages.all;
+  }
+
   render(): ?ReactElement {
     var {
       title,
-      // tags,
+      tags,
       author,
       datePublished,
       body,
       image,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
-    console.log("THIS IS A CONTENTFUL IMAGE", image);
+
     if (!image || typeof image === 'undefined') {
-      image = '/public/images/blog-post.png';
+      image = this.getDefaultImage(tags);
     } else {
       image = image.fields.file.url;
     }
