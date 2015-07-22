@@ -36,19 +36,19 @@ class Services extends React.Component {
   }
 
   selectSegment(target: string): void {
-    this.setState({target}, _ => {
-      // TODO: sync this with the breakpoints in ./styles.css
-      if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
-        //setTimeout(__ => this.refs[target].getDOMNode().scrollIntoView(true));
-        window.location = '/services/' + target;
-      }
-    });
+    this.setState({target});
   }
 
   handleSelectSegment(event: mixed): void {
+    // TODO: sync this with the breakpoints in ./styles.css
+    var segment = event.target.getAttribute('href').replace('#', '')
+    if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
+      window.location = `/services/${segment}`;
+      return;
+    }
+
     if (event) event.preventDefault();
-    var {target} = event;
-    this.selectSegment(target.getAttribute('href').replace('#', ''));
+    this.selectSegment(segment);
   }
 
   render(): ReactElement {
