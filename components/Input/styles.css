@@ -19,7 +19,7 @@
   font-size: 0.75em;
 }
 
-.Input-label.has-content {
+.Input-label.is-visible {
   display: block;
   font-size: 0.7em;
   opacity: 1;

@@ -17,9 +17,9 @@ class Hamburger extends Component {
     return (
       <a style={{backgroundColor: !topOfViewport && backgroundColor, ...this.props.style}} href={target} className={className} onClick={this.context.toggleNav}>
         <div className="Hamburger-icon">
-          <div className={"Hamburger-top" + hamburgerClass} />
-          <div className={"Hamburger-middle" + hamburgerClass} />
-          <div className={"Hamburger-bottom" + hamburgerClass} />
+          <div className={'Hamburger-top' + hamburgerClass} />
+          <div className={'Hamburger-middle' + hamburgerClass} />
+          <div className={'Hamburger-bottom' + hamburgerClass} />
         </div>
       </a>
     );

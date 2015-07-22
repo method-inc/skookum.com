@@ -32,13 +32,13 @@ class Input extends React.Component {
       ...props,
     } = this.props;
 
-    var labelClass = this.state.hasContent ? " has-content" : "";
-    var inputClass = this.props.element === "textarea" ? " is-textarea" : ""
+    var labelClass = this.state.hasContent ? ' is-visible' : '';
+    var inputClass = this.props.element === 'textarea' ? ' is-textarea' : '';
 
     return (
       <fieldset className="Input">
-        <label htmlFor={this.props.id || this.props.name} className={"Input-label" + labelClass}>{label}</label>
-        <this.props.element onChange={this.handleChange} id={this.props.id || this.props.name} className={"Input-element" + inputClass} placeholder={label} {...props} />
+        <label htmlFor={this.props.id || this.props.name} className={'Input-label' + labelClass}>{label}</label>
+        <this.props.element onChange={this.handleChange} id={this.props.id || this.props.name} className={'Input-element' + inputClass} placeholder={label} {...props} />
       </fieldset>
     );
   }

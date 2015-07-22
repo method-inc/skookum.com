@@ -41,7 +41,7 @@ class Services extends React.Component {
 
   handleSelectSegment(event: mixed): void {
     // TODO: sync this with the breakpoints in ./styles.css
-    var segment = event.target.getAttribute('href').replace('#', '')
+    var segment = event.target.getAttribute('href').replace('#', '');
     if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
       window.location = `/services/${segment}`;
       return;
