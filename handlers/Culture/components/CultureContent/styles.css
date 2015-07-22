@@ -16,7 +16,7 @@
 /** BENEFITS ================ */
 
 .CultureContent-benefits {
-  background: #eb4e1b;
+  background: #F16521;
   color: #fff;
   padding: 3em 1.5em;
 }
@@ -43,7 +43,7 @@
 
 .CultureContent-benefits-item:before {
   content: '•';
-  color: rgba(0, 0, 0, 0.5);
+  color: #E8530B;
   font-weight: bold;
   position: absolute;
   left: 0;
