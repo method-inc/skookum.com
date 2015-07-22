@@ -81,7 +81,7 @@
   .Hero-content {
     left: 5%;
     right: 0;
-    bottom: 3em;
+    bottom: 10em;
     position: absolute;
     z-index: 2;
     max-width: 1024px;
