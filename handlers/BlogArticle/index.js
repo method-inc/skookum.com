@@ -35,6 +35,11 @@ class BlogArticle extends React.Component {
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
+        <div className="BlogArticle-share">
+          <img className="BlogArticle-share-link" src="/public/images/linkedin-icon.svg" />
+          <img className="BlogArticle-share-link" src="/public/images/twitter-icon.svg" />
+          <img className="BlogArticle-share-link" src="/public/images/facebook-icon.svg" />
+        </div>
         <div className="BlogArticle-author">
           <div className="BlogArticle-author-image">
             <img className="BlogArticle-author-img" src={author.photoUrl} />
