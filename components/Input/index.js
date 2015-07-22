@@ -18,8 +18,12 @@ class Input extends React.Component {
   }
 
   handleChange(event: mixed): void {
+    var {value} = event.target;
     this.props.handleChange(event.target);
-    this.setState({hasContent: true});
+    if (value.length > 1 && !this.state.hasContent) {
+      this.setState({hasContent: true});
+    }
+    
   }
 
   render(): ?ReactElement {
