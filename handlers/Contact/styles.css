@@ -12,5 +12,6 @@
   .NewsletterInfo {
     flex: 0.333;
     padding-right: 15%;
+    padding-left: 5%;
   }
 }
