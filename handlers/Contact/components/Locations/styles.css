@@ -18,7 +18,9 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  padding: 3em;
+  font-size: 1.1em;
+  padding-bottom: 3em;
+  padding-top: 3em;
   position: relative;
   text-align: center;
   text-transform: uppercase;
