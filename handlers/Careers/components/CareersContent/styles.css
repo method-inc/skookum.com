@@ -2,21 +2,33 @@
 
 .CareersContent {}
 
+.CareersContent-title {
+  color: #F16521;
+  font-size: 1.8em;
+  padding: 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .CareersContent-list {
   list-style: none;
   padding: 0;
 }
 
 .CareersContent-item {
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 1.5em;
   position: relative;
   list-style: none;
 }
 
+.CareersContent-item:last-child {
+  border-bottom: 0;
+}
+
 .CareersContent-job-title {
   font-size: 1.875em;
-  font-weight: 900;
+  font-weight: 300;
 }
 
 .CareersContent-list p {
