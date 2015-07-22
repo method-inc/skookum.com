@@ -21,9 +21,11 @@ class BlogArticle extends React.Component {
       image,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
-
+    console.log("THIS IS A CONTENTFUL IMAGE", image);
     if (!image || typeof image === 'undefined') {
-      image = '/public/images/blog-post.png'
+      image = '/public/images/blog-post.png';
+    } else {
+      image = image.fields.file.url;
     }
 
     return (
