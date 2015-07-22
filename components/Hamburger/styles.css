@@ -54,6 +54,12 @@
   border-radius: 2px;
 }
 
+.Hamburger-top.is-black,
+.Hamburger-middle.is-black,
+.Hamburger-bottom.is-black {
+  background-color: #000;
+}
+
 /* on activation */
 .Hamburger.is-x .Hamburger-middle {
   background-color: transparent;
