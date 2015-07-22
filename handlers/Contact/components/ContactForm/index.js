@@ -105,7 +105,7 @@ class ContactForm extends React.Component {
             Sign me up to recieve the skookum gazette
           </label>
         </fieldset>
-        <Button type="primary">Send</Button>
+        <Button className="ContactForm-submit" type="primary">Send</Button>
       </form>
     );
   }

@@ -1,7 +1,7 @@
 /** @define ContactForm; use strict */
 
 .ContactForm {
-  padding: 4em 1.5em 1.5em;
+  padding: 4em 3em 1.5em;
 }
 
 .ContactForm-header {
@@ -32,7 +32,7 @@
 
 .ContactForm-fieldset {
   border: 0;
-  padding: 0 0 1em;
+  padding: 1em 0 1.5em;
 }
 
 .ContactForm-label {
@@ -68,3 +68,11 @@
   margin-right: 0.5em;
 }
 
+@media screen and (max-width: 600px) {
+  .ContactForm {
+    padding: 4em 1em 1.5em;
+  }
+  .ContactForm-submit {
+    width: 100%
+  }
+}
