@@ -12,9 +12,9 @@ var {PropTypes} = React;
 
 class CaseStudy extends Component {
   render(): ReactElement {
-    var {slug, client, summary, image} = this.props.study;
+    var {slug, client, summary, homepageImage} = this.props.study;
     return (
-      <div className="HomeCaseStudy" style={{backgroundImage: 'url(' + image.fields.file.url + ')'}}>
+      <div className="HomeCaseStudy" style={{backgroundImage: 'url(' + homepageImage.fields.file.url + ')'}}>
         <div className="HomeCaseStudy-content">
           <div className="HomeCaseStudy-inner">
             <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
@@ -22,7 +22,6 @@ class CaseStudy extends Component {
             <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
           </div>
         </div>
-        <img className="HomeCaseStudy-image" src={lookup(image, 'image[0].fields.file.url')} />
       </div>
     );
   }
