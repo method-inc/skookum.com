@@ -1,13 +1,11 @@
 /** @define HomeCaseStudy; use strict */
 
 .HomeCaseStudy {
+  background-size: cover;
   color: #fff;
-  /*
-  padding: 5.625em 1.5em;
-  */
+  padding: 4em 0;
   position: relative;
   overflow: hidden;
-  background-size: cover;
 }
 
 .HomeCaseStudy-content {
