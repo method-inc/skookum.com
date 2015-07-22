@@ -13,7 +13,7 @@ class CaseStudiesContent extends Component {
     return (
       <div className="CaseStudiesContent">
         {this.props.caseStudies.map((f, imageUrl) => (
-          (imageUrl = lookup(f.image, 'fields.file.url')),
+          (imageUrl = lookup(f.caseStudyGridImage, 'fields.file.url')),
           <Link key={f.slug} to="article" params={{slug: f.slug}} className="CaseStudiesContent-item">
             <span className="CaseStudiesContent-title">{f.title}</span>
             <span className="CaseStudiesContent-description">{f.summary}</span>
