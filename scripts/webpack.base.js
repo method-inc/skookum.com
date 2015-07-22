@@ -124,8 +124,7 @@ module.exports = function(options) {
         'process.env.PORT': JSON.stringify(serverPort),
         'process.env.API_URL': JSON.stringify(
           typeof options.API_URL === 'undefined' ?
-            ('http://localhost:' + serverPort) :
-            options.API_URL
+          'http://localhost:' + serverPort : options.API_URL
         ),
 
         // FEATURE FLAGS
@@ -138,8 +137,8 @@ module.exports = function(options) {
       (options.env !== 'development' && new ExtractTextPlugin('styles.css')),
       (options.env !== 'development' && new webpack.optimize.UglifyJsPlugin({
         compress: {
-          warnings: false
-        }
+          warnings: false,
+        },
       }))
     ),
 

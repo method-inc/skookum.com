@@ -60,7 +60,7 @@ CareersContent.propTypes = {
       /* eslint-enable */
       departments: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string
+        name: PropTypes.string,
       })),
     })
   ),

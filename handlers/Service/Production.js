@@ -14,7 +14,7 @@ class Engineering extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Production" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Production" />
         <ServiceIntro color={color} service={service}>The problem may be complex, but the development process does not have to be. We operate in three-week sprints, a unique configuration that we have refined over the years for maximum productivity. New functionality is delivered in small increments at a continuous pace. This allows for rapid feedback, accelerated user training and continual quality control.</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}

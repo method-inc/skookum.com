@@ -14,7 +14,7 @@ class InternetOfThings extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Internet Of Things" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Internet Of Things" />
         <ServiceIntro color={color} service={service}>TODO: we need Internet of Things content</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}
@@ -31,13 +31,6 @@ class InternetOfThings extends React.Component {
             {title: 'Avoid Technical Lock-in', description: 'Your ability to adapt is paramount in today’s dynamic, digital climate. We have no proprietary platforms to sell. We find the right technology for the job, implement component-driven architectures, and utilize open source software. We plan for extensibility from the beginning so that you can pivot. Fast.'},
           ]}
           color={color} />
-
-        <ServiceSection color={color}>
-          <blockquote>
-            <p>“If I had an hour to solve a problem, I’d spend 55 minutes thinking about the problem and 5 minutes thinking about solutions”</p>
-            <cite>Albert Einstein</cite>
-          </blockquote>
-        </ServiceSection>
       </div>
     );
   };

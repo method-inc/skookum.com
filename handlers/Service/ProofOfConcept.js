@@ -14,7 +14,7 @@ class ProofOfConcept extends React.Component {
 
     return (
       <div className="Service">
-        <Hero color={color} title="Proof of Concept" />
+        <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Proof of Concept" />
         <ServiceIntro color={color} service={service}>All you need is an idea, and sometimes not even that. If you have an inkling that your business could run better, be more efficient, generate more profits, or make a competitive statement with modern technology, we can handle the rest. Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritized concepts for further investment.</ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}

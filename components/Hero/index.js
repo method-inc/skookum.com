@@ -44,15 +44,17 @@ class Hero extends Component {
 
     return (
       <div className="Hero" style={style}>
-        <Link to="home">
-          <Logo style={{position: 'absolute', top: '1em', left: '1em', height: 40, margin: '0.25em', zIndex: 5}} color={nameToBinary(color)} />
-        </Link>
-        <Hamburger style={{position: 'fixed', top: '1em', right: '1em', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
-
+        <div className="Hero-links">
+          <Link to="home">
+            <Logo style={{position: 'absolute', top: '0', left: '0', height: 40, margin: '0', zIndex: 5}} color={nameToBinary(color)} />
+          </Link>
+        </div>
+        <div className="Hero-links Hero-links--fixed">
+          <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+        </div>
         <div className="Hero-content" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
           <h1 className="Hero-title">{title}</h1>
-          <p className="Hero-subtitle">{subtitle}</p>
           {children && childrenPosition === 'after' && children}
         </div>
 

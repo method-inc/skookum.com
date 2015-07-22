@@ -2,11 +2,13 @@
 
 .Footer {
   background: #000;
+  bottom: 0;
   color: #fff;
   font-size: 0.666em;
   padding: 1.5em 0;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .Footer-legal {

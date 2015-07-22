@@ -10,7 +10,7 @@ var PRIMARY = [
   ['home', 'Home'],
   ['services', 'Services'],
   ['case-studies', 'Case Studies'],
-  ['culture', 'Culture'],
+  //['culture', 'Culture'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
 ];
@@ -49,7 +49,7 @@ class Navigation extends Component {
         <hr className="Navigation-hr" />
         <div className="Navigation-socials">
           <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
-          <a className="Navigation-sublink" href="https://www.linkedin.com">LinkedIn</a>
+          <a className="Navigation-sublink" href="https://www.linkedin.com/company/skookum-digital-works">LinkedIn</a>
           <a className="Navigation-sublink" href="https://www.github.com/skookum">GitHub</a>
         </div>
       </div>

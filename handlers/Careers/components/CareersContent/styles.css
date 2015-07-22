@@ -11,6 +11,7 @@
   border-top: 1px solid #ccc;
   padding: 1.5em;
   position: relative;
+  list-style: none;
 }
 
 .CareersContent-job-title {
@@ -26,5 +27,13 @@
   .CareersContent-item {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .CareersContent {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

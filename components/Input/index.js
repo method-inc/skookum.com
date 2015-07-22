@@ -14,8 +14,8 @@ class Input extends React.Component {
 
     return (
       <fieldset className="Input">
-        <label className="Input-label">{label}</label>
-        <this.props.element className="Input-element" {...props} />
+        <label htmlFor={this.props.id || this.props.name} className="Input-label">{label}</label>
+        <this.props.element id={this.props.id || this.props.name} className="Input-element" {...props} />
       </fieldset>
     );
   }

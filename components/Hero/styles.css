@@ -3,7 +3,7 @@
 .Hero {
   background: #eb4e1b;
   color: #fff;
-  padding: 4.5em 0 4.5em 5%;
+  padding: 4.5em 0 4.5em 0;
   position: relative;
   overflow: hidden;
 }
@@ -45,6 +45,21 @@
   z-index: 1;
 }
 
+.Hero-links {
+  position: relative;
+  max-width: 1024px;
+  height: 40px;
+  margin-top: -45px;
+}
+
+.Hero-links--fixed {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}
+
 @media screen and (max-width: 600px) {
   .Hero {
     padding-left: 1.5em;
@@ -69,7 +84,24 @@
     bottom: 3em;
     position: absolute;
     z-index: 2;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
+  .Hero-links {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .Hero-content {
+    left: 0;
+  }
+  .Hero-links {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 

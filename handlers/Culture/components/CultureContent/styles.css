@@ -83,9 +83,9 @@
   .CultureContent-benefits-title {
     background: rgba(0, 0, 0, 0.25);
     text-align: center;
-    padding: 13rem 3rem;
+    padding-top: 15rem;
     margin: 0;
-    vertical-align: middle;
+    width: 300px;
   }
 
   .CultureContent-benefits-list {
@@ -98,6 +98,7 @@
   .CultureContent-benefits {
     overflow: hidden;
     padding: 0 5%;
+    margin-bottom: 20px;
   }
 
   .CultureContent-benefits-image {
@@ -114,6 +115,7 @@
 
   .CultureContent-benefits-list {
     padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   .CultureContent-benefits-title,

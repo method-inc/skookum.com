@@ -14,11 +14,13 @@ class CaseStudy extends Component {
   render(): ReactElement {
     var {slug, client, summary, image} = this.props.study;
     return (
-      <div className="HomeCaseStudy">
+      <div className="HomeCaseStudy" style={{backgroundImage: 'url(' + image + ')'}}>
         <div className="HomeCaseStudy-content">
-          <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
-          <p className="HomeCaseStudy-summary">{summary}</p>
-          <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
+          <div className="HomeCaseStudy-inner">
+            <strong className="HomeCaseStudy-title">{lookup(client, 'fields.name')}</strong>
+            <p className="HomeCaseStudy-summary">{summary}</p>
+            <Button to="case-studies" type="more" color="#eee">More Case Studies</Button>
+          </div>
         </div>
         <img className="HomeCaseStudy-image" src={lookup(image, 'image[0].fields.file.url')} />
       </div>
