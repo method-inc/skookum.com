@@ -30,8 +30,8 @@ Blog.defaultProps = {
   tags: [
     {to: 'blog', text: 'All'},
     {to: 'tag', params: {tag: 'development'}, text: 'Development'},
-    {to: 'tag', params: {tag: 'innovation'}, text: 'Innovation'},
     {to: 'tag', params: {tag: 'product'}, text: 'Product'},
+    {to: 'tag', params: {tag: 'business'}, text: 'Business'},
     {to: 'tag', params: {tag: 'culture'}, text: 'Culture'},
   ],
 };
