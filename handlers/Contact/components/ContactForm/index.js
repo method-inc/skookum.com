@@ -102,7 +102,7 @@ class ContactForm extends React.Component {
         <fieldset className="ContactForm-fieldset">
           <label className="ContactForm-label is-checkbox">
             <input onChange={this.handleChange} className="ContactForm-checkbox" type="checkbox" name="newsletter_subscription" />
-            Sign me up to recieve the skookum gazette
+            Sign me up to receive the Skookum Gazette
           </label>
         </fieldset>
         <Button className="ContactForm-submit" type="primary">Send</Button>
