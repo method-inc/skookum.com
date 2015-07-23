@@ -10,33 +10,23 @@ import Hero from 'Hero';
 
 var {PropTypes} = React;
 
+const IMAGES = {
+  all: '/public/images/blogimg_all.png',
+  development: '/public/images/blogimg_dev.png',
+  product: '/public/images/blogimg_pro.png',
+  business: '/public/images/blogimg_biz.png',
+  culture: '/public/images/blogimg_cult.png',
+};
+
+function getDefaultImage(tags: Array): String {
+  if (tags.length > 0 && IMAGES.hasOwnProperty(tags[0].toLowerCase())) {
+    return IMAGES[tags[0].toLowerCase()];
+  }
+  return IMAGES.all;
+}
+
+
 class BlogArticle extends React.Component {
-
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {
-      defaultImages: {
-        all: '/public/images/blogimg_all.png',
-        development: '/public/images/blogimg_dev.png',
-        product: '/public/images/blogimg_pro.png',
-        business: '/public/images/blogimg_biz.png',
-        culture: '/public/images/blogimg_cult.png',
-      },
-    };
-
-    this.getDefaultImage = this.getDefaultImage.bind(this);
-  }
-
-  getDefaultImage(tags: Array): String {
-    var defaultImages = this.state.defaultImages;
-
-    if (tags.length > 0) {
-      return this.state.defaultImages[tags[0].toLowerCase()];
-    }
-    return this.state.defaultImages.all;
-  }
-
   render(): ?ReactElement {
     var {
       title,
@@ -49,7 +39,7 @@ class BlogArticle extends React.Component {
     var jobTitle = author.title || author.jobTitle;
 
     if (!image || typeof image === 'undefined') {
-      image = this.getDefaultImage(tags);
+      image = getDefaultImage(tags);
     } else {
       image = image.fields.file.url;
     }
