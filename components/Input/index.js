@@ -7,46 +7,29 @@ var {PropTypes} = React;
 
 class Input extends React.Component {
 
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {
-      hasContent: false,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event: mixed): void {
-    var {value} = event.target;
-    this.props.handleChange(event.target);
-    if (value.length > 1 && !this.state.hasContent) {
-      this.setState({hasContent: true});
-    }
-    
-  }
-
   render(): ?ReactElement {
     var {
       label,
+      value,
       ...props,
     } = this.props;
 
-    var labelClass = this.state.hasContent ? ' is-visible' : '';
+    var labelClass = value ? ' is-visible' : '';
     var inputClass = this.props.element === 'textarea' ? ' is-textarea' : '';
 
     return (
       <fieldset className="Input">
         <label htmlFor={this.props.id || this.props.name} className={'Input-label' + labelClass}>{label}</label>
-        <this.props.element onChange={this.handleChange} id={this.props.id || this.props.name} className={'Input-element' + inputClass} placeholder={label} {...props} />
+        <this.props.element onChange={this.props.onChange} id={this.props.id || this.props.name} className={'Input-element' + inputClass} placeholder={label} {...props} />
       </fieldset>
     );
   }
 }
 
 Input.propTypes = {
-  label: PropTypes.string.isRequired,
   element: PropTypes.oneOf(['input', 'textarea']),
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 Input.defaultProps = {
