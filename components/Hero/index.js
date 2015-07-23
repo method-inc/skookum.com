@@ -42,6 +42,8 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
     var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
 
+    var titleStyle = color === 'yellow' ? {color: '#000', borderColor: '#000'} : EMPTY_OBJECT;
+
     return (
       <div className="Hero" style={style}>
         <div className="Hero-links">
@@ -50,11 +52,11 @@ class Hero extends Component {
           </Link>
         </div>
         <div className="Hero-links Hero-links--fixed">
-          <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: 101}} color={backgroundColor} target="#navigation" onClick={this.toggleNav} />
+          <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: 101}} color={color} target="#navigation" onClick={this.toggleNav} />
         </div>
         <div className="Hero-content" style={contentStyle}>
           {children && childrenPosition === 'before' && children}
-          <h1 className="Hero-title">{title}</h1>
+          <h1 className="Hero-title" style={titleStyle}>{title}</h1>
           {children && childrenPosition === 'after' && children}
         </div>
 

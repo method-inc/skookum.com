@@ -15,7 +15,7 @@ class Support extends React.Component {
     return (
       <div className="Support">
         <Hero color="yellow" image="/public/images/sputnick-engineer.png" title="Support" />
-        <ServiceIntro color={color} service={service}>It is a reality that most deployed technology is going to need ongoing, ever-watchful eyes. Our support team will keepy your maintenance issues organized, manage your historical bug/feature tracking, and assist with all technical questions and issues that are beyond your expertise. Our offering is organized so you have access to the right tools, information, and people at SKOOKUM® to be successful. </ServiceIntro>
+        <ServiceIntro color={color} service={service}>It is a reality that most deployed technology is going to need ongoing, ever-watchful eyes. Our support team will keep your maintenance issues organized, manage your historical bug/feature tracking, and assist with all technical questions and issues that are beyond your expertise. Our offering is organized so you have access to the right tools, information, and people at SKOOKUM® to be successful. </ServiceIntro>
         <ServiceSectionOfPercentages
           color={color}
           items={[

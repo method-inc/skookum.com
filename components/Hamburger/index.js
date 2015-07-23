@@ -1,22 +1,25 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
+import {nameToRgba, nameToBinary} from 'nameToColor';
 
 class Hamburger extends Component {
   render(): ?ReactElement {
     var className = 'Hamburger';
-    var {target, onClick} = this.props;
+    var {target, onClick, color} = this.props;
     var {topOfViewport, navVisible} = this.context;
+    var hamburgerClass = this.props.color === 'yellow' ? ' is-black' : '';
+    var backgroundColor = nameToRgba(this.props.color);
 
     if (navVisible) className = className + ' is-x';
     if (!topOfViewport) className = className + ' is-floating';
 
     return (
-      <a style={{backgroundColor: !topOfViewport && this.props.color, ...this.props.style}} href={target} className={className} onClick={this.context.toggleNav}>
+      <a style={{backgroundColor: !topOfViewport && backgroundColor, ...this.props.style}} href={target} className={className} onClick={this.context.toggleNav}>
         <div className="Hamburger-icon">
-          <div className="Hamburger-top" />
-          <div className="Hamburger-middle" />
-          <div className="Hamburger-bottom" />
+          <div className={'Hamburger-top' + hamburgerClass} />
+          <div className={'Hamburger-middle' + hamburgerClass} />
+          <div className={'Hamburger-bottom' + hamburgerClass} />
         </div>
       </a>
     );

@@ -3,17 +3,29 @@
 .Input {
   border: 0;
   padding: 0 0 1em;
+  position: relative;
 }
 
 .Input-label {
+  position: absolute;
   color: #333;
-  display: block;
   font-size: 0.875em;
+  opacity: 0;
   text-transform: uppercase;
+  top: 22px;
+  transition: 0.5s ease top, 0.5s ease opacity;
 }
 
 .Input-label.is-checkbox {
   font-size: 0.75em;
+}
+
+.Input-label.is-visible {
+  display: block;
+  font-size: 0.7em;
+  opacity: 1;
+  top: 8px;
+  margin-bottom: 0;
 }
 
 .Input-element {
@@ -22,6 +34,11 @@
   width: 100%;
   border: 0;
   border-bottom: 1px solid #e1e1e1;
-  padding-top: 0.5em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  outline: none;
 }
 
+.Input-element.is-textarea {
+  min-height: 118px;
+}

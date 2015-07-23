@@ -76,6 +76,17 @@
   color: inherit;
 }
 
+.BlogArticle-share {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 0 5%;
+}
+
+.BlogArticle-share-link {
+  display: inline-block;
+  margin-right: 15px;
+}
+
 .BlogArticle-author {}
 .BlogArticle-author-image {
   border-radius: 50%;
@@ -83,7 +94,7 @@
   margin-right: 2.5%;
   overflow: hidden;
   vertical-align: top;
-  width: 10%;
+  width: 15%;
 }
 
 .BlogArticle-author-details {
@@ -111,9 +122,19 @@
   margin-top: 0.2em;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 600px) {
+  .BlogArticle-share {
+    display: none;
+  }
+
   .BlogArticle-author-image {
-    margin-left: -12.5%;
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+  }
+
+  .BlogArticle-author {
+    text-align: center;
   }
 }
 

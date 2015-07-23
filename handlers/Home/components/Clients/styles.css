@@ -3,22 +3,30 @@
 .HomeClients {}
 
 .HomeClients-client {
+  border: 1px solid #eee;
   box-sizing: border-box;
   display: inline-block;
   height: 10em;
-  padding: 5%;
+  margin-bottom: -3px;
   overflow: hidden;
-  border: 1px solid #eee;
+  position: relative;
   width: 50%;
 }
 
 .HomeClients-img {
-  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85%;
 }
 
 @media screen and (min-width: 601px) {
   .HomeClients-client {
     width: 25%;
+    height: 14em;
   }
 }
 

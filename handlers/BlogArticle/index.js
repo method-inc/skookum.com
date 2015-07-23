@@ -10,11 +10,27 @@ import Hero from 'Hero';
 
 var {PropTypes} = React;
 
+const IMAGES = {
+  all: '/public/images/blogimg_all.png',
+  development: '/public/images/blogimg_dev.png',
+  product: '/public/images/blogimg_pro.png',
+  business: '/public/images/blogimg_biz.png',
+  culture: '/public/images/blogimg_cult.png',
+};
+
+function getDefaultImage(tags: Array): String {
+  if (tags.length > 0 && IMAGES.hasOwnProperty(tags[0].toLowerCase())) {
+    return IMAGES[tags[0].toLowerCase()];
+  }
+  return IMAGES.all;
+}
+
+
 class BlogArticle extends React.Component {
   render(): ?ReactElement {
     var {
       title,
-      // tags,
+      tags,
       author,
       datePublished,
       body,
@@ -23,7 +39,9 @@ class BlogArticle extends React.Component {
     var jobTitle = author.title || author.jobTitle;
 
     if (!image || typeof image === 'undefined') {
-      image = '/public/images/blog-post.png'
+      image = getDefaultImage(tags);
+    } else {
+      image = image.fields.file.url;
     }
 
     return (
@@ -35,6 +53,11 @@ class BlogArticle extends React.Component {
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
+        <div className="BlogArticle-share">
+          <img className="BlogArticle-share-link" src="/public/images/linkedin-icon.svg" />
+          <img className="BlogArticle-share-link" src="/public/images/twitter-icon.svg" />
+          <img className="BlogArticle-share-link" src="/public/images/facebook-icon.svg" />
+        </div>
         <div className="BlogArticle-author">
           <div className="BlogArticle-author-image">
             <img className="BlogArticle-author-img" src={author.photoUrl} />

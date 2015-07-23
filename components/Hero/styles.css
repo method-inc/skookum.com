@@ -6,6 +6,8 @@
   padding: 4.5em 0 4.5em 0;
   position: relative;
   overflow: hidden;
+  height: calc(100vw * 0.6346);
+  max-height: 600px;
 }
 
 .Hero.is-light {
@@ -66,22 +68,22 @@
   }
 
   .Hero-content {
-    padding-top: 3em;
+    padding-top: 35%;
     position: relative;
     z-index: 2;
+  }
+
+  .Hero-links {
+    margin-right: 4%;
   }
 }
 
 @media screen and (min-width: 601px) {
-  .Hero {
-    height: calc(100vw * 0.6346);
-    max-height: 600px;
-  }
 
   .Hero-content {
     left: 5%;
     right: 0;
-    bottom: 3em;
+    bottom: 10em;
     position: absolute;
     z-index: 2;
     max-width: 1024px;

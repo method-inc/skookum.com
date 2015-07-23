@@ -25,3 +25,7 @@
   margin-bottom: 2em;
 }
 
+.NewsletterInfo-content--uppercase {
+  text-transform: uppercase;
+}
+

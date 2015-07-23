@@ -9,7 +9,7 @@ import Icon from 'Icon';
 import Typography from 'Typography';
 
 const SERVICES = [
-  ['IOT', 'internet-of-things', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
+  ['Internet Of Things', 'internet-of-things', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
 //  ['Innovation Camp', 'innovation-camp', 'Through interviews, joint ideation, storyboards and estimation, we give you an informed, fresh perspective to help you prioritize concepts for further investment.'],
   ['Rapid Innovation', 'rapid-innovation', 'Problems cannot be solved with the same thinking that created them. We give you fresh, technological ideas to help push the bounds of what is possible.'],
   ['Proof of Concept', 'proof-of-concept', 'You’ve got to show them something. Your boss, the executives -- they need more than your opinion. Cut meeting time in half with a working prototype.'],
@@ -41,7 +41,7 @@ class Services extends React.Component {
 
   handleSelectSegment(event: mixed): void {
     // TODO: sync this with the breakpoints in ./styles.css
-    var segment = event.target.getAttribute('href').replace('#', '')
+    var segment = event.target.getAttribute('href').replace('#', '');
     if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
       window.location = `/services/${segment}`;
       return;

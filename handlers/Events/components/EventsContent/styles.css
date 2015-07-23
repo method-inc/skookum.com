@@ -80,7 +80,7 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 661px) {
   .EventsContent-item-segment {
     display: block;
     min-width: none;
@@ -102,6 +102,10 @@
   .EventsContent-time {
     display: inline-block;
     margin-right: 0.5em;
+  }
+
+  .EventsContent-button {
+    display: block;
   }
 }
 
@@ -135,4 +139,5 @@
   }
 
 }
+
 

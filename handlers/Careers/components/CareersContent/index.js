@@ -11,12 +11,12 @@ import api from 'api';
 var renderCareer: ReactElement = pos => (
   <li className="CareersContent-item">
     <div className="CareersContent-item-segment">
-      <div className="CareersContent-meta">{pos.departments[0].name} in {pos.location.name}</div>
       <div className="CareersContent-job-title">{pos.title}</div>
       <p className="CareersContent-description">
         {pos.content.split('&lt;/p&gt;')[0].slice(9).replace(/\&nbsp;/g, '’')}
       </p>
-      <Button className="EventsContent-button" href={pos.absolute_url}>Apply Now</Button>
+      <div className="CareersContent-meta">{pos.location.name}</div>
+      <Button style={{border: '0', padding: '0'}} href={pos.absolute_url}>Read More and Apply</Button>
     </div>
   </li>
 );
@@ -42,7 +42,12 @@ class CareersContent extends Component {
     }
 
     return (
-      <div className="CareersContent">{careers.map(renderCareer)}</div>
+      <div className="CareersContent">
+        <div className="CareersContent-title">
+          Available Positions
+        </div>
+        {careers.map(renderCareer)}
+      </div>
     );
   }
 }
