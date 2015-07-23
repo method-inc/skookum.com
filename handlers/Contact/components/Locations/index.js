@@ -9,7 +9,7 @@ import locations from 'locationsData';
 var renderSegment: ReactElement = (segment: Location) => (
   <TabPanel key={segment.name}>
     <div className="ContactLocations-panel">
-      <a href={`http://maps.google.com/?q=${segment.addr + ' ' + segment.location}`} target="_blank">
+      <a href={`http://maps.google.com/?q=${segment.addr + ' ' + segment.location}`}>
         <img className="ContactLocations-map" src={`https://maps.googleapis.com/maps/api/staticmap?center=${segment.addr + ' ' + segment.location}&markers=label:Skookum%7C${segment.addr}&zoom=12&size=400x400`} />
       </a>
       <div className="ContactLocations-name">{`${segment.name} Office`}</div>
