@@ -7,6 +7,7 @@ import * as fmt from 'fmt';
 
 import api from 'api';
 import Hero from 'Hero';
+import ShareLinks from 'ShareLinks';
 
 var {PropTypes} = React;
 
@@ -54,9 +55,7 @@ class BlogArticle extends React.Component {
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
         <div className="BlogArticle-share">
-          <img className="BlogArticle-share-link" src="/public/images/linkedin-icon.svg" />
-          <img className="BlogArticle-share-link" src="/public/images/twitter-icon.svg" />
-          <img className="BlogArticle-share-link" src="/public/images/facebook-icon.svg" />
+          <ShareLinks title={title} />
         </div>
         <div className="BlogArticle-author">
           <div className="BlogArticle-author-image">
