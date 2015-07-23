@@ -10,10 +10,11 @@ class Input extends React.Component {
   render(): ?ReactElement {
     var {
       label,
+      value,
       ...props,
     } = this.props;
 
-    var labelClass = this.props.value ? ' is-visible' : '';
+    var labelClass = value ? ' is-visible' : '';
     var inputClass = this.props.element === 'textarea' ? ' is-textarea' : '';
 
     return (
@@ -26,8 +27,9 @@ class Input extends React.Component {
 }
 
 Input.propTypes = {
-  label: PropTypes.string.isRequired,
   element: PropTypes.oneOf(['input', 'textarea']),
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 Input.defaultProps = {
