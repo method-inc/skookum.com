@@ -38,19 +38,19 @@ class Navigation extends Component {
 
     return (
       <div className={className}>
-        <Link to="home" onClick={this.props.onClick}>
-          <Logo style={{position: 'absolute', top: '0.5em', left: '0.5em', width: 32, margin: '0.25em'}} color="#fff" />
-        </Link>
-        <div className="Navigation-header">About Skookum</div>
-        {renderNavigation(PRIMARY, this.props)}
-        <div className="Navigation-divider" />
-        <div className="Navigation-header">Community</div>
-        {renderNavigation(SECONDARY, this.props)}
-        <hr className="Navigation-hr" />
-        <div className="Navigation-socials">
-          <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
-          <a className="Navigation-sublink" href="https://www.linkedin.com/company/skookum-digital-works">LinkedIn</a>
-          <a className="Navigation-sublink" href="https://www.github.com/skookum">GitHub</a>
+        <div className="Navigation-content">
+          <div className="Navigation-header">About Skookum</div>
+          {renderNavigation(PRIMARY, this.props)}
+          <div className="Navigation-divider" />
+          <div className="Navigation-header">Community</div>
+          {renderNavigation(SECONDARY, this.props)}
+          <hr className="Navigation-hr" />
+          <div className="Navigation-socials">
+            <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
+            <a className="Navigation-sublink" href="https://www.linkedin.com/company/skookum-digital-works">LinkedIn</a>
+            <a className="Navigation-sublink" href="https://www.facebook.com/SkookumDigitalWorks">Facebook</a>
+            <a className="Navigation-sublink" href="https://www.github.com/skookum">GitHub</a>
+          </div>
         </div>
       </div>
     );
