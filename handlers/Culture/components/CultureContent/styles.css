@@ -35,8 +35,8 @@
 .CultureContent-benefits-item {
   font-weight: 300;
   list-style: none;
-  line-height: 1.16666;
-  margin-bottom: 1em;
+  line-height: 2;
+  margin-bottom: 0;
   padding-left: 2em;
   position: relative;
 }
