@@ -7,6 +7,7 @@ import Blog from'./handlers/Blog';
 import BlogArticle from'./handlers/BlogArticle';
 import Careers from'./handlers/Careers';
 import CaseStudies from'./handlers/CaseStudies';
+import CaseStudyArticle from'./handlers/CaseStudyArticle';
 import Contact from'./handlers/Contact';
 import Culture from'./handlers/Culture';
 import Events from'./handlers/Events';
@@ -19,14 +20,17 @@ import StyleGuide from './handlers/StyleGuide';
 
 var routes = (
   <Route path="/" handler={App}>
-    <Route name="case-studies" path="case-studies" handler={CaseStudies} />
+    <Route path="case-studies">
+      <Route name="study-article" path=":slug" handler={CaseStudyArticle} />
+      <DefaultRoute name="case-studies" handler={CaseStudies} />
+    </Route>
     <Route path="events">
       <Route name="events-location" path=":location" handler={Events} />
       <DefaultRoute name="events" handler={Events} />
     </Route>
     <Route path="blog">
       <Route name="tag" path="tags/:tag" handler={Blog} />
-      <Route name="article" path=":slug" handler={BlogArticle} />
+      <Route name="blog-article" path=":slug" handler={BlogArticle} />
       <DefaultRoute name="blog" handler={Blog} />
     </Route>
     <Route name="careers" path="careers" handler={Careers} />

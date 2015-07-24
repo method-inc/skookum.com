@@ -7,7 +7,7 @@ class Video extends Component {
 
   render(): ReactElement {
     return (
-      <iframe src={this.props.src} style={{width: '100%', height: '450px'}} frameBorder={0} webkitallowfullscreen mozallowfullscreen allowfullscreen />
+      <iframe src={this.props.src} style={{width: '100%', height: '450px'}} frameBorder={0} allowFullScreen />
     );
   }
 }

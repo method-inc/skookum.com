@@ -36,7 +36,7 @@ class FeaturedPosts extends Component {
           }
 
           return (
-            <Link key={f.slug} to="article" params={{slug: f.slug}} className="FeaturedPosts-featured">
+            <Link key={f.slug} to="blog-article" params={{slug: f.slug}} className="FeaturedPosts-featured">
               <span className="FeaturedPosts-title">{f.title}</span>
               <span className="FeaturedPosts-author">{f.author.fields.name}</span>
               {imageUrl && (
