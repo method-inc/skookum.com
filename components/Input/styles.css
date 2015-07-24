@@ -9,7 +9,7 @@
 .Input-label {
   position: absolute;
   color: #333;
-  font-size: 0.875em;
+  font-size: 0.7em;
   opacity: 0;
   text-transform: uppercase;
   top: 22px;
@@ -22,7 +22,6 @@
 
 .Input-label.is-visible {
   display: block;
-  font-size: 0.7em;
   opacity: 1;
   top: 8px;
   margin-bottom: 0;
