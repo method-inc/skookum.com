@@ -9,9 +9,14 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   line-height: 3.9285em; /* 55 / 14 */
-  padding: 0 2.1429em; /* 30 / 14 */
+  padding: 0 5em; /* 30 / 14 */
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.Button:hover .Button-arrow {
+  right: 10px;
 }
 
 .Button.is-primary {
@@ -55,9 +60,10 @@
 
 
 .Button-arrow {
+  position: absolute;
+  top: 0;
+  right: 20px;
   font-size: 1.3333em;
-  float: right;
-  margin-left: 1.5em;
-  margin-right: -0.5em;
+  transition: all 1s ease;
 }
 
