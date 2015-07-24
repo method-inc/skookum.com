@@ -35,21 +35,21 @@ class BlogArticle extends React.Component {
       author,
       datePublished,
       body,
-      image,
+      poster,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
-
-    if (!image || typeof image === 'undefined') {
-      image = getDefaultImage(tags);
+    console.log(this.props);
+    if (!poster || typeof poster === 'undefined') {
+      poster = getDefaultImage(tags);
     } else {
-      image = image.fields.file.url;
+      poster = poster.fields.file.url;
     }
 
     return (
       <article className="BlogArticle">
         <Hero
           title={title}
-          image={image}
+          image={poster}
           subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
         <div
           className="BlogArticle-content"
