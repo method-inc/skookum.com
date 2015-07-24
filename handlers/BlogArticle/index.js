@@ -38,7 +38,7 @@ class BlogArticle extends React.Component {
       poster,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
-    console.log(this.props);
+
     if (!poster || typeof poster === 'undefined') {
       poster = getDefaultImage(tags);
     } else {
