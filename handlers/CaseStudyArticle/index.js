@@ -11,22 +11,6 @@ import ShareLinks from 'ShareLinks';
 
 var {PropTypes} = React;
 
-const IMAGES = {
-  all: '/public/images/blogimg_all.png',
-  development: '/public/images/blogimg_dev.png',
-  product: '/public/images/blogimg_pro.png',
-  business: '/public/images/blogimg_biz.png',
-  culture: '/public/images/blogimg_cult.png',
-};
-
-function getDefaultImage(tags: Array): String {
-  if (tags.length > 0 && IMAGES.hasOwnProperty(tags[0].toLowerCase())) {
-    return IMAGES[tags[0].toLowerCase()];
-  }
-  return IMAGES.all;
-}
-
-
 class CaseStudyArticle extends React.Component {
   render(): ?ReactElement {
     var {
@@ -38,12 +22,6 @@ class CaseStudyArticle extends React.Component {
       image,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
-
-    if (!image || typeof image === 'undefined') {
-      image = getDefaultImage(tags);
-    } else {
-      image = image.fields.file.url;
-    }
 
     return (
       <article className="CaseStudyArticle">
