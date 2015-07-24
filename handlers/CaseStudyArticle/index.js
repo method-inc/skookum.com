@@ -54,21 +54,6 @@ class CaseStudyArticle extends React.Component {
         <div
           className="CaseStudyArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
-        <div className="CaseStudyArticle-share">
-          <ShareLinks title={title} />
-        </div>
-        <div className="CaseStudyArticle-author">
-          <div className="CaseStudyArticle-author-image">
-            <img className="CaseStudyArticle-author-img" src={author.photoUrl} />
-          </div>
-          <div className="CaseStudyArticle-author-details">
-            <div>
-              <span className="CaseStudyArticle-author-name">{author.name}</span>
-              {jobTitle && <span className="CaseStudyArticle-author-title">{jobTitle}</span>}
-            </div>
-            {author.twitter && <span className="CaseStudyArticle-author-twitter">{author.twitter}</span>}
-          </div>
-        </div>
       </article>
     );
   }
