@@ -13,7 +13,7 @@ var {PropTypes} = React;
 function popUpWindow(event: mixed): void {
   event.preventDefault();
   var target = event.target.closest('a');
-  window.open(target.href,'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=500px, height=500px');
+  window.open(target.href, 'targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=500px, height=500px');
 }
 
 class ShareLinks extends React.Component {

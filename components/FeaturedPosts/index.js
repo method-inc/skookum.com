@@ -29,7 +29,7 @@ class FeaturedPosts extends Component {
     return (
       <div className={`FeaturedPosts ${this.props.className}`}>
         {this.props.posts.slice(0, 3).map((f, imageUrl) => {
-          imageUrl =  lookup(f, 'poster.fields.file.url');
+          imageUrl = lookup(f, 'poster.fields.file.url');
 
           if (!imageUrl || typeof imageUrl === 'undefined') {
             imageUrl = getDefaultImage(f.tags);
