@@ -33,7 +33,7 @@ class Home extends React.Component {
             </blockquote>
             <FeaturedPosts />
             <div className="Home-featuredButton">
-              <Button style={{width: '14em'}} color="#eee" type="more" to="blog">More Blog Posts</Button>
+              <Button color="#eee" type="more" to="blog">More Blog Posts</Button>
             </div>
           </div>
         </div>

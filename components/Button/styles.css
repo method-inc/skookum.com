@@ -3,13 +3,14 @@
 .Button {
   border-radius: 3px;
   border: 2px solid #fff;
+  box-sizing: border-box;
   color: inherit;
   display: inline-block;
   font-size: 0.875em;
   font-weight: 700;
   letter-spacing: 0.05em;
   line-height: 3.9285em; /* 55 / 14 */
-  padding: 0 5em; /* 30 / 14 */
+  padding: 0 4em; /* 30 / 14 */
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
