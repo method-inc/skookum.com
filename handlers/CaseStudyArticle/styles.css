@@ -1,0 +1,140 @@
+/** @define CaseStudyArticle */
+
+.CaseStudyArticle {}
+
+.CaseStudyArticle-content {
+  line-height: 1.666;
+  padding-top: 2.3333rem;
+}
+
+.CaseStudyArticle-content h2,
+.CaseStudyArticle-content h3,
+.CaseStudyArticle-content h4,
+.CaseStudyArticle-content h5,
+.CaseStudyArticle-content h6,
+.CaseStudyArticle-content ul,
+.CaseStudyArticle-content ol,
+.CaseStudyArticle-content p,
+.CaseStudyArticle-author {
+  max-width: 600px;
+  margin: 0 auto 2.333rem;
+  padding: 0 5%;
+}
+
+.CaseStudyArticle-content blockquote {
+  font-weight: 300;
+  margin: 0 auto 2.333rem;
+  max-width: 600px;
+  text-transform: uppercase;
+}
+
+.CaseStudyArticle-content blockquote p {
+  line-height: 1.16666;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.CaseStudyArticle-content cite {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.CaseStudyArticle-content iframe {
+  height: 600px;
+  width: 100%;
+}
+
+.CaseStudyArticle-content h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.CaseStudyArticle-content h3 {
+  color: #313131;
+  margin-bottom: 1.3333rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.CaseStudyArticle-content ul,
+.CaseStudyArticle-content ol {
+  max-width: 500px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.CaseStudyArticle-content li {
+  font-weight: 300;
+  line-height: 1.22222;
+  margin-bottom: 0.653rem;
+}
+
+.CaseStudyArticle-content a {
+  color: inherit;
+}
+
+.CaseStudyArticle-share {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 0 5%;
+}
+
+.CaseStudyArticle-share-link {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.CaseStudyArticle-author {}
+.CaseStudyArticle-author-image {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 2.5%;
+  overflow: hidden;
+  vertical-align: top;
+  width: 15%;
+}
+
+.CaseStudyArticle-author-details {
+  display: inline-block;
+  font-size: 0.91666em;
+  padding: 0.875rem 0;
+  vertical-align: top;
+}
+
+.CaseStudyArticle-author-image img {
+  max-width: 100%;
+}
+
+.CaseStudyArticle-author-name {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.CaseStudyArticle-author-title:before {
+  content: ' | ';
+}
+
+.CaseStudyArticle-author-twitter {
+  display: block;
+  margin-top: 0.2em;
+}
+
+@media screen and (max-width: 600px) {
+  .CaseStudyArticle-share {
+    display: none;
+  }
+
+  .CaseStudyArticle-author-image {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+  }
+
+  .CaseStudyArticle-author {
+    text-align: center;
+  }
+}
+

@@ -33,12 +33,13 @@
 
 .ContactLocations li[role=tab][selected=selected]:after {
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   border-top: 1.5em solid #ff7532;
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   content: ' ';
+  z-index: 2;
 }
 
 .ContactLocations li[role=tab][selected=selected]:first-child:after {
@@ -46,13 +47,31 @@
   right: 0;
 }
 
+.ContactLocations-background {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  margin-top: -1.2em;
+  padding: 5em 0;
+}
+
+.ContactLocations-overlay {
+  background-color: rgba(219, 69, 0, 0.75);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
 .ContactLocations-panel {
   background: #fff;
   box-sizing: border-box;
   line-height: 1.5;
-  margin: 3em auto;
+  margin: 0 auto;
   max-width: 600px;
   padding: 0.666em;
+  position: relative;
   overflow: hidden;
   width: 80%;
 }

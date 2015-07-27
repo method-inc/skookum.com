@@ -2,7 +2,7 @@
 .Home-featured {
   background: #000;
   color: #fff;
-  padding: 0 0 4em;
+  padding: 5.625em 0;
 }
 
 .Home-featuredButton {
@@ -16,9 +16,9 @@
 }
 
 .Home-quote {
-  padding: 3rem 5%;
+  padding: 0 5% 3rem;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 1024px;
   text-align: center;
 }
 

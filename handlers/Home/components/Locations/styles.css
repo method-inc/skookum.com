@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.Locations-content {
+  padding: 3em 0;
+}
+
 .Locations-section {
   box-sizing: border-box;
   display: inline-block;
@@ -34,7 +38,7 @@
   }
 
   .Locations-content {
-    padding: 1em 10% 1em 1.5em;
+    padding: 3em 10% 3em 1.5em;
   }
 
   .Locations-block:first-child {

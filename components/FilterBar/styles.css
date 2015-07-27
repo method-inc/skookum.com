@@ -9,6 +9,7 @@
   /* arbitrary width to make sure everything is visible */
   margin: 0 auto;
   min-width: 24em;
+  padding: 1.25em 0;
 }
 
 .FilterBar-link {

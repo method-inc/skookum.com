@@ -7,6 +7,7 @@ import * as fmt from 'fmt';
 
 import api from 'api';
 import Hero from 'Hero';
+import ShareLinks from 'ShareLinks';
 
 var {PropTypes} = React;
 
@@ -34,29 +35,27 @@ class BlogArticle extends React.Component {
       author,
       datePublished,
       body,
-      image,
+      poster,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
 
-    if (!image || typeof image === 'undefined') {
-      image = getDefaultImage(tags);
+    if (!poster || typeof poster === 'undefined') {
+      poster = getDefaultImage(tags);
     } else {
-      image = image.fields.file.url;
+      poster = poster.fields.file.url;
     }
 
     return (
       <article className="BlogArticle">
         <Hero
           title={title}
-          image={image}
+          image={poster}
           subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
         <div className="BlogArticle-share">
-          <img className="BlogArticle-share-link" src="/public/images/linkedin-icon.svg" />
-          <img className="BlogArticle-share-link" src="/public/images/twitter-icon.svg" />
-          <img className="BlogArticle-share-link" src="/public/images/facebook-icon.svg" />
+          <ShareLinks title={title} />
         </div>
         <div className="BlogArticle-author">
           <div className="BlogArticle-author-image">

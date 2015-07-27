@@ -1,7 +1,7 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import {nameToRgba, nameToBinary} from 'nameToColor';
+import {nameToHex} from 'nameToColor';
 
 class Hamburger extends Component {
   render(): ?ReactElement {
@@ -9,7 +9,7 @@ class Hamburger extends Component {
     var {target, onClick, color} = this.props;
     var {topOfViewport, navVisible} = this.context;
     var hamburgerClass = this.props.color === 'yellow' ? ' is-black' : '';
-    var backgroundColor = nameToRgba(this.props.color);
+    var backgroundColor = nameToHex(this.props.color);
 
     if (navVisible) className = className + ' is-x';
     if (!topOfViewport) className = className + ' is-floating';

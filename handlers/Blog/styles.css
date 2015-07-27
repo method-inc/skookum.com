@@ -4,13 +4,13 @@
 }
 
 .Blog-article {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #efefef;
   padding: 3em 5% 3em 0;
   margin-left: 5%;
 }
 
 .Blog-article-content {
-  max-width: 500px;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .Blog-article-summary {
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -79,6 +79,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .Blog-article {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .Blog-page {
     max-width: 1024px;
     margin-left: auto;

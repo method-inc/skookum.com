@@ -28,6 +28,12 @@
   transform: scale(0.8);
 }
 
+.Navigation-content {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .Navigation-list {
   list-style: none;
   margin: 0;
@@ -57,7 +63,8 @@
 .Navigation-hr {
   border: 0;
   border-bottom: 1px solid #fff;
-  width: 90%;
+  margin-top: 90px;
+  width: 100%;
 }
 
 .Navigation-sublink {
@@ -74,8 +81,8 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .Navigation-hr {
-    width: 100%;
+  .Navigation-content {
+    margin-top: 5px;
   }
 
   .Navigation-header {
@@ -122,7 +129,6 @@
   }
 
   .Navigation-header {
-    margin-left: 5%;
     float: left;
     width: 30%;
   }

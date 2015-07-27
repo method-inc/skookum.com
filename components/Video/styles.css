@@ -1,0 +1,8 @@
+/** @define Video; use strict */
+
+.Video {}
+
+.Video-child {}
+
+.Video-child.is-state {}
+

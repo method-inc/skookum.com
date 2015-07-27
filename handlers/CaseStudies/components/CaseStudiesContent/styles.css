@@ -16,6 +16,7 @@
   display: block;
   font-size: 1.25em;
   margin-bottom: 1em;
+  max-width: 400px;
   position: relative;
   text-transform: uppercase;
   z-index: 1;
@@ -23,9 +24,10 @@
 
 .CaseStudiesContent-description {
   color: #393939;
+  display: block;
   line-height: 1.4;
+  max-width: 400px;
   position: relative;
-  width: 60%;
   z-index: 1;
 }
 

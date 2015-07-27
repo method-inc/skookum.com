@@ -1,0 +1,13 @@
+/** @define ShareLinks; use strict */
+
+.ShareLinks-Icon {
+  margin-right: 15px;
+}
+
+.ShareLinks-Icon:hover .ShareLinks-circle {
+  fill: black;
+}
+
+.ShareLinks-Icon:hover .ShareLinks-path {
+  fill: white;
+}
