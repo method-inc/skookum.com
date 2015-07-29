@@ -9,6 +9,7 @@ import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
 import Locations from 'Locations';
 import Button from 'Button';
+import Services from 'Services';
 
 var cn = s => `Home-${s}`;
 
@@ -37,6 +38,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <Services />
         <Locations />
       </div>
     );
