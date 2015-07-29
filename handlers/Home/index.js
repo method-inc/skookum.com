@@ -18,9 +18,22 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Hero
-          title={<img src="/public/images/wordmark.svg" alt="Skookum" />}
+          childrenPosition="before"
           color="black"
-          image="/public/images/hero-case-studies.png" />
+          image="/public/images/hero-case-studies.png">
+          <div className="Home-banner">
+            <div className="Home-bannerTitle">
+              Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.
+            </div>
+            <div className="Home-wordmark">
+              <img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />
+            </div>
+          </div>
+        </Hero>
+        <div className="Home-statement">
+          Skookum is a full service software development shop.
+        </div>
+        <Services />
         <div className="Home-content">
           <MajorSectionElement
             title="We create what’s next."
@@ -38,7 +51,6 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <Services />
         <Locations />
       </div>
     );

@@ -55,13 +55,10 @@ class Hero extends Component {
           <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: 101}} color={color} target="#navigation" onClick={this.toggleNav} />
         </div>
         <div className="Hero-content" style={contentStyle}>
-          {children && childrenPosition === 'before' && children}
-          <h1 className="Hero-title" style={titleStyle}>{title}</h1>
-          {children && childrenPosition === 'after' && children}
+          {children}
         </div>
-
         <div className="Hero-overlay" style={{
-          backgroundColor: backgroundColor,
+          background: backgroundColor,
         }} />
         {image && (
           <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />

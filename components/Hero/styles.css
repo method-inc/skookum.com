@@ -3,11 +3,18 @@
 .Hero {
   background: #eb4e1b;
   color: #fff;
-  padding: 4.5em 0 4.5em 0;
   position: relative;
   overflow: hidden;
-  height: calc(100vw * 0.6346);
-  max-height: 600px;
+  height: 786px;
+}
+
+.Hero-content {
+  box-sizing: border-box;
+  height: 100%;
+  padding-left: 5%;
+  padding-top: 190px;
+  position: relative;
+  z-index: 2;
 }
 
 .Hero.is-light {
@@ -15,7 +22,6 @@
 }
 
 .Hero-title {
-  border-bottom: 1px solid #fff;
   font-size: 1.875em; /*30 / 16*/
   font-weight: 900;
   margin: 0 0 0.333em;
@@ -45,6 +51,7 @@
 
 .Hero-overlay {
   z-index: 1;
+  right: 35%;
 }
 
 .Hero-links {
@@ -62,48 +69,16 @@
   z-index: 101;
 }
 
+
 @media screen and (max-width: 600px) {
   .Hero {
-    padding-left: 1.5em;
+    height: 600px;
   }
-
-  .Hero-content {
-    padding-top: 35%;
-    position: relative;
-    z-index: 2;
-  }
-
-  .Hero-links {
-    margin-right: 4%;
-  }
-}
-
-@media screen and (min-width: 601px) {
-
-  .Hero-content {
-    left: 5%;
+  .Hero-overlay {
     right: 0;
-    bottom: 10em;
-    position: absolute;
-    z-index: 2;
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-
-  .Hero-links {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-}
-
-@media screen and (min-width: 1024px) {
-  .Hero-content {
-    left: 0;
-  }
-  .Hero-links {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
+
+
+
 
