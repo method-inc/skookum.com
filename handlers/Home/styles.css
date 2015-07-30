@@ -1,10 +1,12 @@
 .Home-banner {
+  box-sizing: border-box;
+  padding-left: 5%;
   width: 65%;
 }
 
 .Home-bannerTitle {
   font-size: 4em;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 530px;
   padding-right: 5%;
 }
@@ -18,8 +20,9 @@
   background-color: #DADADA;
   font-size: 2em;
   font-weight: 300;
-  padding: 1.5em 0;
-  text-align: center
+  padding: 1.5em 1em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .Home-featured {
@@ -100,9 +103,14 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .Home-bannerTitle {
     font-size: 3em;
+  }
+
+  .Home-statement {
+    font-size: 1.8em;
+    text-align: left;
   }
 }
 
@@ -114,6 +122,10 @@
 
   .Home-bannerTitle {
     font-size: 2.3em;
+  }
+
+  .Home-wordmark {
+    bottom: 10%;
   }
   
 }

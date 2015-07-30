@@ -34,11 +34,11 @@ class Home extends React.Component {
           Skookum is a full service software development shop.
         </div>
         <Services />
+        <CaseStudy />
         <div className="Home-content">
           <MajorSectionElement
             title="We create what’s next."
             content="Skookum® is a digital innovation shop for the web, mobile, and the internet of things. We help business leaders create meaningful new revenue, realize new efficiencies, and improve the quality of life for employees and customers." />
-          <CaseStudy />
           <Clients />
           <div className="Home-featured">
             <blockquote className={cn('quote')}>
