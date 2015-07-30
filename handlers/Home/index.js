@@ -36,22 +36,17 @@ class Home extends React.Component {
         <Services />
         <CaseStudy />
         <div className="Home-content">
-          <MajorSectionElement
-            title="We create what’s next."
-            content="Skookum® is a digital innovation shop for the web, mobile, and the internet of things. We help business leaders create meaningful new revenue, realize new efficiencies, and improve the quality of life for employees and customers." />
-          <Clients />
-          <div className="Home-featured">
-            <blockquote className={cn('quote')}>
-              <p className={cn('quote-quote')}>Man and his quest for knowledge and progress is determined and can not be deterred.</p>
-              <cite className={cn('quote-cite')}>JFK</cite>
-            </blockquote>
-            <FeaturedPosts />
-            <div className="Home-featuredButton">
-              <Button color="#eee" type="more" to="blog">More Blog Posts</Button>
+          <div className="Home-content-container">
+            <div className="Home-content-title">
+              There is no limit.
             </div>
+            <div className="Home-content-description">
+              We’re a technically diverse bunch of strategists, designers and engineers. We have no proprietary platforms to sell. Your business needs determine our technology–not the other way around.
+            </div>
+            <Button className="Home-content-button" to="blog" style={{color:'#393939', backgroundColor:'#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
           </div>
         </div>
-        <Locations />
+        <Clients />
       </div>
     );
   }
