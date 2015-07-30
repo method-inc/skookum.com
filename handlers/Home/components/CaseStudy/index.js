@@ -11,7 +11,31 @@ import {Link} from 'react-router';
 
 var {PropTypes} = React;
 
+const words = ['business', 'design', 'technical'];
+
 class CaseStudy extends Component {
+
+  constructor(props: mixed, context: mixed): void {
+    super(props, context);
+
+    this.state = {
+      word: 'business'
+    };
+
+    this.wordInterval = this.wordInterval.bind(this);
+  }
+
+  componentDidMount(): void {
+    setInterval(this.wordInterval, 3000);
+  }
+
+  wordInterval(): void {
+    var currentWord = this.state.word,
+        index = words.indexOf(this.state.word) + 1,
+        word = index < words.length ? words[index] : words[0];
+    this.setState({word});
+  }
+
   render(): ReactElement {
     var {slug, client, summary, image} = this.props.study;
     return (
@@ -21,7 +45,7 @@ class CaseStudy extends Component {
         image={lookup(image, 'fields.file.url')}>
         <div className="HomeCaseStudy-banner">
           <div className="HomeCaseStudy-title">
-            We solve hard business problems
+            We solve hard <i>{this.state.word}</i> problems
           </div>
           <div className="HomeCaseStudy-description">
             For our clients, this means new revenue streams, substantial efficiency gains and a better quality of life for employees and customers.
