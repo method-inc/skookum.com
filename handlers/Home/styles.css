@@ -60,65 +60,6 @@
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 
-.Home-featured {
-  background: #000;
-  color: #fff;
-  padding: 5.625em 0;
-}
-
-.Home-featuredButton {
-  text-align: right;
-  margin-right: 5%;
-  margin-top: 1.5em;
-}
-
-.Home-featured .HomeButton {
-  margin: 0 5%;
-}
-
-.Home-quote {
-  padding: 0 5% 3rem;
-  margin: 0 auto;
-  max-width: 1024px;
-  text-align: center;
-}
-
-.Home-quote-quote {
-  color: #aaa;
-  font-weight: 100;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.Home-quote-quote:before,
-.Home-quote-quote:after {
-  color: rgba(255, 255, 255, 0.1666);
-  font-size: 3em;
-  font-weight: 900;
-  position: relative;
-  top: 0.18em;
-  line-height: 0;
-  vertical-align: middle;
-}
-
-.Home-quote-quote:before {
-  content: '“';
-}
-
-.Home-quote-quote:after {
-  content: '”';
-}
-
-.Home-quote-cite {
-  color: #fff;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.Home-quote-cite:before {
-  content: '– ';
-}
 
 @media screen and (min-width: 1024px) {
   .Home-featuredButton {
