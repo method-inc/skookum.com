@@ -19,7 +19,7 @@
   color: #fff;
   font-size: 1.2em;
   font-weight: 600;
-  padding-right: 2.5em;
+  margin-right: 2.5em;
   text-decoration: none;
 }
 
@@ -40,6 +40,6 @@
     display: inline-block;
     width: 50%;
     padding-bottom: 1.5em;
-    padding-right: 0;
+    margin-right: 0;
   }
 }
