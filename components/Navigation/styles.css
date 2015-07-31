@@ -1,6 +1,22 @@
 /** @define Navigation; use strict */
 
-.Navigation {
+.Navigation-main {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  z-index: 3;
+}
+
+.Navigation-main-link {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  margin-right: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.Navigation-mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,13 +33,13 @@
 }
 
 
-.Navigation.is-visible {
+.Navigation-mobile.is-visible {
   opacity: 1;
   transform: scale(1);
   pointer-events: all;
 }
 
-.Navigation.is-not-visible {
+.Navigation-mobile.is-not-visible {
   opacity: 0;
   transform: scale(0.8);
 }
@@ -75,7 +91,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .Navigation {
+  .Navigation-mobile {
     padding: 1.5em;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -107,7 +123,42 @@
 
 }
 
+@media screen and (max-width: 810px) {
+  .Navigation-main-link {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Navigation-main {
+    left: 3%;
+    top: 1%;
+  }
+
+  .Navigation-main-link {
+    display: none;
+  }
+
+  .Navigation-hamburger {
+    position: fixed;
+    right: 3%;
+    top: 1%;
+    z-index: 4;
+  }
+}
+
+
+
 @media screen and (min-width: 601px) {
+
+  .Navigation-hamburger {
+    display: none;
+  }
+
+  .Navigation-mobile {
+    display: none;
+  }
+
   .Navigation-sublink {
     display: inline-block;
     padding: 0.666em;

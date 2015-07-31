@@ -64,7 +64,6 @@ class AppBase extends Component {
     return (
       <div className="AppBase">
         <Navigation id="navigation" onClick={this.toggleNav} visible={this.state.navVisible} />
-
         <RouteHandler key={this.getHandlerKey()} />
         <Footer />
       </div>
