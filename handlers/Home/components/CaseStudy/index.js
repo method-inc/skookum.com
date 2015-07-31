@@ -22,12 +22,18 @@ class CaseStudy extends Component {
       word: 'business'
     };
 
+    this._interval = null;
     this.wordInterval = this.wordInterval.bind(this);
   }
 
   componentDidMount(): void {
-    setInterval(this.wordInterval, 2000);
+    this._interval = setInterval(this.wordInterval, 2000);
   }
+
+  componentWillUnmount(): void {
+    clearInterval(this._interval);
+  }
+
 
   wordInterval(): void {
     var currentWord = this.state.word,

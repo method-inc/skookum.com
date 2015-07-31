@@ -40,9 +40,10 @@ class Hero extends Component {
     }
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
+    var skinny = typeof children === 'undefined' ? 'is-skinny': '';
 
     return (
-      <div className="Hero" style={style}>
+      <div className={`Hero ${skinny}`} style={style}>
         <div className="Hero-content">
           <div className="Hero-title">
               {title}

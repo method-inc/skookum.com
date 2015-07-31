@@ -3,9 +3,15 @@
 .Hero {
   background: #eb4e1b;
   color: #fff;
-  height: 786px;
+  height: 100vh;
+  min-height: 375px;
+  max-height: 768px;
   position: relative;
   overflow: hidden;
+}
+
+.Hero.is-skinny {
+  height: 34vh;
 }
 
 .Hero-content {
@@ -52,6 +58,10 @@
 .Hero-overlay {
   right: 35%;
   z-index: 1;
+}
+
+.Hero.is-skinny .Hero-overlay {
+  right: 0;
 }
 
 .Hero-links {
