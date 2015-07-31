@@ -3,17 +3,17 @@
 .Hero {
   background: #eb4e1b;
   color: #fff;
+  height: 786px;
   position: relative;
   overflow: hidden;
-  height: 786px;
 }
 
 .Hero-content {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 2;
 }
 
@@ -22,11 +22,12 @@
 }
 
 .Hero-title {
-  font-size: 1.875em; /*30 / 16*/
-  font-weight: 900;
-  margin: 0 0 0.333em;
-  padding-bottom: 0.3333em;
-  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  display: inline-block;
+  font-size: 3em; /*30 / 16*/
+  font-weight: 300;
+  padding-top: 190px;
+  margin-left: 5%;  
 }
 
 .Hero-subtitle {
@@ -50,8 +51,8 @@
 }
 
 .Hero-overlay {
-  z-index: 1;
   right: 35%;
+  z-index: 1;
 }
 
 .Hero-links {
@@ -76,6 +77,11 @@
   }
   .Hero-overlay {
     right: 0;
+  }
+
+  .Hero-title {
+    padding-top: 110px;
+    margin-left: 2%;
   }
 }
 

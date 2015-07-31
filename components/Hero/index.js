@@ -48,6 +48,9 @@ class Hero extends Component {
       <div className="Hero" style={style}>
         <div className="Hero-content" style={contentStyle}>
           {children}
+          <div className="Hero-title" style={titleStyle}>
+            {title}
+          </div>
         </div>
         <div className="Hero-overlay" style={{
           background: backgroundColor,

@@ -55,11 +55,9 @@ class EventsContent extends React.Component {
     var year = _date.getFullYear();
     var startTime = fmtTime(_date.getHours());
 
-    return [
-      <div key="date" className="EventsContent-date">{date}</div>,
-      <div key="month" className="EventsContent-month-year">{month} {year}</div>,
-      <div key="time" className="EventsContent-time">{startTime}</div>,
-    ];
+    return (
+      <div className="EventsContent-date">{month} {date}, {year} | {startTime}</div> 
+    );
   }
 
   render(): ?ReactElement {
@@ -71,14 +69,10 @@ class EventsContent extends React.Component {
         <ol className="EventsContent-list">
           {events.length > 0 ? events.map(e => (
             <li key={e.event_url} className="EventsContent-item">
-              <div className="EventsContent-item-segment">
-                {this.renderDate(e.time)}
-              </div>
-              <div className="EventsContent-item-segment">
-                <div className="EventsContent-eventName">{e.name}</div>
-                <div className="EventsContent-groupName">{e.group.name}</div>
-              </div>
-              <Button className="EventsContent-button" type="secondary" href={e.event_url}>RSVP</Button>
+              <div className="EventsContent-eventName">{e.name}</div>
+              {this.renderDate(e.time)}
+              <div className="EventsContent-groupName">{e.group.name}</div>
+              <Button className="EventsContent-button" type="secondary" href={e.event_url} style={{color:'#393939', backgroundColor:'#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>View More Deatils & RSVP</Button>
             </li>
           )) : (
             <li key="¯\_(ツ)_/¯" className="EventsContent-item">

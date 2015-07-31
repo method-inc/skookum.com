@@ -26,7 +26,7 @@ class CaseStudy extends Component {
   }
 
   componentDidMount(): void {
-    setInterval(this.wordInterval, 3000);
+    setInterval(this.wordInterval, 2000);
   }
 
   wordInterval(): void {
