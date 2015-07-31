@@ -2,6 +2,7 @@
 
 .Footer {
   background: #393939;
+  box-sizing: border-box;
   bottom: 0;
   color: #fff;
   font-size: 0.666em;
