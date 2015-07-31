@@ -88,7 +88,6 @@ class ContactForm extends React.Component {
         noValidate={true}
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">Submit an Inquiry</header>
-        <hr className="ContactForm-divider" />
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
         <Input required onChange={this.handleChange} value={this.state.firstname} label="What’s your name?" name="firstname" />
         <Input required onChange={this.handleChange} value={this.state.email} label="And how about your email?" name="email" type="email" />

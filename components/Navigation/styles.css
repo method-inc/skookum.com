@@ -149,7 +149,7 @@
   .Navigation-hamburger {
     position: fixed;
     right: 5%;
-    top: 2em;
+    top: 1em;
     z-index: 101;
   }
 }

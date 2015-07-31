@@ -13,7 +13,6 @@ class Contact extends React.Component {
         <Hero color="black" image="/public/images/contact.png" title="Contact Us" />
         <div className="Contact-flex">
           <ContactForm />
-          <NewsletterInfo />
         </div>
         <Locations />
       </div>
