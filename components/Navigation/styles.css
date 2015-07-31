@@ -5,7 +5,7 @@
   position: absolute;
   left: 5%;
   right: 5%;
-  top: 3%;
+  top: 1em;
   padding-bottom: 2em;
   z-index: 3;
 }
@@ -139,9 +139,7 @@
 @media screen and (max-width: 600px) {
   .Navigation-main {
     border-bottom: 0;
-    left: 3%;
     padding-bottom: 0;
-    top: 1%;
   }
 
   .Navigation-main-link {
@@ -150,8 +148,8 @@
 
   .Navigation-hamburger {
     position: fixed;
-    right: 3%;
-    top: 1%;
+    right: 5%;
+    top: 2em;
     z-index: 101;
   }
 }

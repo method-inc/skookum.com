@@ -20,13 +20,11 @@ class Home extends React.Component {
         <Hero
           childrenPosition="before"
           color="black"
-          image="/public/images/hero-case-studies.png">
+          image="/public/images/hero-case-studies.png"
+          title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}>
           <div className="Home-banner">
             <div className="Home-bannerTitle">
               Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.
-            </div>
-            <div className="Home-wordmark">
-              <img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />
             </div>
           </div>
         </Hero>

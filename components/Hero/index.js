@@ -40,17 +40,14 @@ class Hero extends Component {
     }
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
-    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
-
-    var titleStyle = color === 'yellow' ? {color: '#000', borderColor: '#000'} : EMPTY_OBJECT;
 
     return (
       <div className="Hero" style={style}>
-        <div className="Hero-content" style={contentStyle}>
-          {children}
-          <div className="Hero-title" style={titleStyle}>
-            {title}
+        <div className="Hero-content">
+          <div className="Hero-title">
+              {title}
           </div>
+          {children}
         </div>
         <div className="Hero-overlay" style={{
           background: backgroundColor,

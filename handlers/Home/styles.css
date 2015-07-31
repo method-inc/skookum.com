@@ -1,6 +1,8 @@
 .Home-banner {
+  bottom: 4em;
   box-sizing: border-box;
   padding-left: 5%;
+  position: absolute;
   width: 65%;
 }
 
@@ -9,12 +11,16 @@
   font-weight: 300;
   max-width: 530px;
   padding-right: 5%;
-  padding-top: 190px;
 }
 
 .Home-wordmark {
   position: absolute;
   bottom: 6%;
+}
+
+.Home-wordmark-image {
+  height: 22px;
+  padding-top: 10px;
 }
 
 .Home-statement {
@@ -64,10 +70,6 @@
 @media screen and (max-width: 1025px) {
   .Home-bannerTitle {
     font-size: 3.5em;
-  }
-
-  .Home-wordmark-image {
-    height: 30px;
   }
 }
 
