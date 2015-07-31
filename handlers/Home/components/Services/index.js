@@ -13,32 +13,17 @@ const SERVICES = [
 ];
 
 class Services extends React.Component {
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {target: null};
-    this.handleSelectSegment = this.handleSelectSegment.bind(this);
-  }
-
-  handleSelectSegment(event: mixed): void {
-    if (event) event.preventDefault();
-    var target = event.target.closest('a').getAttribute('href').replace('#', '');
-    this.setState({target});
-  }
-
   render(): ReactElement {
     return (
       <div className="HomeServices">
         <ul className="HomeServices-list">
           {SERVICES.map(s => (
-            <li ref={s[1]} style={{backgroundImage: `url(${s[2]})`}}className={`HomeServices-item ${s[1] === this.state.target ? 'is-active' : ''}`} key={s[0]}>
-              <a className="HomeServices-link" href={`#${s[1]}`} onClick={this.handleSelectSegment}>
-                <div className="HomeServices-overlay"></div>
-                <div className="HomeServices-content">
-                  <div className="HomeServices-title">{s[0]}</div>
-                  <span className="HomeServices-description">{s[3]}</span>
-                </div>
-              </a>
+            <li ref={s[1]} style={{backgroundImage: `url(${s[2]})`}}className="HomeServices-item" key={s[0]}>
+              <div className="HomeServices-overlay"></div>
+              <div className="HomeServices-content">
+                <div className="HomeServices-title">{s[0]}</div>
+                <span className="HomeServices-description">{s[3]}</span>
+              </div>
             </li>
           ))}
         </ul>
