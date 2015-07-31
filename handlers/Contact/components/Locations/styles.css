@@ -19,8 +19,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 1.1em;
-  padding-bottom: 3em;
-  padding-top: 3em;
+  padding: 2em 0;
   position: relative;
   margin-bottom: 0;
   text-align: center;
@@ -75,22 +74,25 @@
 
 .ContactLocations-contact {
   font-weight: 300;
-  line-height: 6em;
-  padding-left: 5%;
+  padding: 3em 5%;
 }
 
 .ContactLocations-name {
   display: inline-block;
   font-size: 1.2em;
   font-weight: 600;
-  margin-right: 4em;
+  margin-right: 8%;
 }
 
 .ContactLocations-addr,
 .ContactLocations-phone {
   font-size: 1em;
   display: inline-block;
-  margin-right: 4em;
+  margin-right: 8%;
+}
+
+.ContactLocations-phone {
+  margin-right: 0;
 }
 
 .ContactLocations-map {
