@@ -15,7 +15,7 @@ var renderSegment: ReactElement = (segment: Location) => (
         <div className="ContactLocations-phone">{segment.phone}</div>
       </div>
        <a href={`http://maps.google.com/?q=${segment.addr + ' ' + segment.location}`}>
-        <img className="ContactLocations-map" src={`https://maps.googleapis.com/maps/api/staticmap?center=${segment.addr + ' ' + segment.location}&markers=label:Skookum%7C${segment.addr}&zoom=12&size=400x400`} />
+        <div className={`ContactLocations-map is-${segment.name}`} style={{backgroundImage: `url(${segment.photo})`}}/>
       </a>
     </div>
   </TabPanel>

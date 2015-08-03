@@ -81,6 +81,7 @@
   display: inline-block;
   font-size: 1.2em;
   font-weight: 600;
+  margin-bottom: 6px;
   margin-right: 8%;
 }
 
@@ -97,6 +98,21 @@
 
 .ContactLocations-map {
   width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  .ContactLocations-map.is-Charlotte {
+    background-size: 300%;
+    background-position: -180px -110px;
+  }
+
+  .ContactLocations-map.is-Denver {
+    background-size: 300%;
+    background-position: -380px -150px;
+  }
 }
 
 
