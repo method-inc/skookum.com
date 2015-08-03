@@ -30,11 +30,16 @@ class CultureContent extends Component {
   render(): ReactElement {
     return (
       <div className="CultureContent">
-        <MajorSectionElement
-          title="In order to create real value you must put people at the center of everything"
-          content="We never do the same thing twice. We build business critical applications. We tackle problems we don’t always know how to solve. Every day, every project is a new challenge to conquer. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competitive perks." />
+        <div className={cn('culture')}>
+          <div className={cn('culture-image')} style={{backgroundImage: "url(/public/images/culture-benefits.png)"}}>
+          </div>
+          <div className={cn('culture-statement')}>
+            <span style={{color: '#FAAB18', fontSize: '64px', marginLeft: '-7px'}}>W</span>e build business critical applications. We tackle problems we don’t always know how to solve. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competive perks.
+          </div>
+        </div>
         <div className={cn('benefits')}>
-          <img className={cn('benefits-image')} src="/public/images/culture-benefits.png" />
+          <div className={cn('benefits-image')} style={{backgroundImage: "url(/public/images/hero-culture.png)"}} />
+          <div className={cn('benefits-overlay')}/>
           <div className={cn('benefits-title')}>Benefits</div>
           <ul className={cn('benefits-list')}>
             {BENEFITS.map((n, i) => (

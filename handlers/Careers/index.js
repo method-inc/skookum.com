@@ -7,9 +7,11 @@ class Careers extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="Careers">
-        <Hero color="red" image="/public/images/hero-culture.png" title="Careers" childrenPosition="after">
-          In order to create real value you must put people at the center of everything.
-        </Hero>
+        <Hero 
+          color="black"
+          image="/public/images/hero-culture.png"
+          title="Careers"
+          subtitle={<span>In order to create real value you must put <span style={{color: '#FAAB18'}}>people</span> at the center of everything</span>}/>   
         <CultureContent />
         <CareersContent />
       </div>
