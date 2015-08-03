@@ -10,7 +10,7 @@ class Contact extends React.Component {
   render(): ReactElement {
     return (
       <div className="Contact">
-        <Hero color="black" image="/public/images/contact.png" title="Contact Us" />
+        <Hero color="black" image="/public/images/home-charlotte2.png" title="Contact Us" />
         <div className="Contact-flex">
           <ContactForm />
         </div>
