@@ -34,7 +34,7 @@ class CultureContent extends Component {
           <div className={cn('culture-image')} style={{backgroundImage: "url(/public/images/culture-benefits.png)"}}>
           </div>
           <div className={cn('culture-statement')}>
-            <span style={{color: '#FAAB18', fontSize: '64px', marginLeft: '-7px'}}>W</span>e build business critical applications. We tackle problems we don’t always know how to solve. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competive perks.
+            <span style={{color: '#FAAB18', fontSize: '64px', marginRight: '-7px'}}>W</span>e build business critical applications. We tackle problems we don’t always know how to solve. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competive perks.
           </div>
         </div>
         <div className={cn('benefits')}>

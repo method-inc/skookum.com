@@ -41,7 +41,7 @@
   font-size: 1.2em;
   height: 100%;
   line-height: 1.7em;
-  padding: 160px 5% 0;
+  padding: 10% 5% 0;
   width: 35%;
 }
 
@@ -94,7 +94,8 @@
   list-style: none;
   line-height: 1.6;
   margin-bottom: 0;
-  padding-left: 5em;
+  padding-left: 11%;
+  padding-right: 5%;
   position: relative;
 }
 
@@ -104,54 +105,58 @@
   font-size: 14px;
   font-weight: bold;
   position: absolute;
-  left: 62px;
+  left: 5%;
   top: 5px;
 }
 
 
 @media screen and (max-width: 600px) {
-  .CultureContent-benefits {
-    padding-top: 0;
+
+  .CultureContent-culture {
+    height: 760px;
+    padding-bottom: 1em;
   }
 
-  .CultureContent-benefits-image {
-    display: none;
+  .CultureContent-benefits {
+    height: 100%;
+    max-height: 100%;
+    padding-bottom: 4em;
   }
 
   .CultureContent-benefits-title {
-    background: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 3rem 0;
-    margin: 0 -1.5rem;
-    margin-bottom: 3rem;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1020px) {
-  .CultureContent-benefits {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    max-height: 630px;
-  }
-
-  .CultureContent-benefits-image {
-    display: none;
-  }
-
-
-  .CultureContent-benefits-title {
-    background: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding-top: 15rem;
-    margin: 0;
-    width: 300px;
+    padding: 1em 0 0.5em;
   }
 
   .CultureContent-benefits-list {
-    padding: 3rem 0;
-    margin: 0 5% 0 1.5em;
+    columns: 1;
+  }
+
+  .CultureContent-benefits-item {
+    padding-left: 5%;
+  }
+
+  .CultureContent-benefits-item:before {
+    left: -4px;
+  }
+
+  .CultureContent-culture-image {
+    background-size: cover;
+    display: block;
+    height: 50%;
+    position: relative;
+    width: 100%;  
+  }
+
+  .CultureContent-culture-statement {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    height: 50%;
+    padding: 3em 5% 0;
+    width: 100%;
   }
 }
+
+
 
 
