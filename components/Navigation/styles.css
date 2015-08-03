@@ -138,8 +138,7 @@
 
 @media screen and (max-width: 600px) {
   .Navigation-main {
-    border-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 1.2em;
   }
 
   .Navigation-main-link {

@@ -31,8 +31,9 @@
   display: inline-block;
   font-size: 2.5em; /*30 / 16*/
   font-weight: 300;
+  margin-left: 5%;
   padding-top: 2.8em;
-  margin-left: 5%;  
+  text-transform: uppercase;
 }
 
 .Hero-subtitle {
@@ -85,25 +86,6 @@
   z-index: 101;
 }
 
-
-@media screen and (max-width: 600px) {
-  .Hero {
-    height: 600px;
-  }
-  .Hero-overlay {
-    right: 0;
-  }
-
-  .Hero-title {
-    padding-top: 120px;
-  }
-
-  .Hero-subtitle {
-    font-size: 2.3em;
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 1025px) {
   .Hero-subtitle {
     font-size: 3.5em;
@@ -116,7 +98,22 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .Hero {
+    height: 600px;
+  }
+  .Hero-overlay {
+    right: 0;
+  }
 
+  .Hero-title {
+    font-size: 2em;
+    padding-top: 85px;
+  }
 
-
-
+  .Hero-subtitle {
+    bottom: 12%;
+    font-size: 2.3em;
+    width: 100%;
+  }
+}
