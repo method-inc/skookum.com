@@ -54,7 +54,7 @@ class CaseStudy extends Component {
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-title">
-              {lookup(client,'fields.name')}
+              {lookup(client, 'fields.name')}
             </div>
             <div className="HomeCaseStudy-feature-description">
               {summary}
