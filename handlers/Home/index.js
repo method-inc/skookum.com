@@ -36,7 +36,7 @@ class Home extends React.Component {
             <div className="Home-content-description">
               We’re a technically diverse bunch of strategists, designers and engineers. We have no proprietary platforms to sell. Your business needs determine our technology–not the other way around.
             </div>
-            <Button className="Home-content-button" to="blog" style={{color:'#393939', backgroundColor:'#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
+            <Button className="Home-content-button" to="blog" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
           </div>
         </div>
         <Clients />
