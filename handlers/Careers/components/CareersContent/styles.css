@@ -3,11 +3,10 @@
 .CareersContent {}
 
 .CareersContent-title {
-  color: #F16521;
-  font-size: 1.8em;
-  padding: 2em 0;
+  font-weight: 300;
+  font-size: 3em;
+  padding: 2em 0 1.2em;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .CareersContent-list {
@@ -16,36 +15,67 @@
 }
 
 .CareersContent-item {
-  border-bottom: 1px solid #efefef;
-  padding: 1.5em;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 3em;
+  padding: 0 5%;
   position: relative;
-  list-style: none;
+  width: 50%;
 }
 
-.CareersContent-item:last-child {
-  border-bottom: 0;
+.CareersContent-item-segment {
+  border-bottom: 1px solid #efefef;
+  max-width: 382px;
+  padding-bottom: 2em;
+}
+
+.CareersContent-button {
+  margin-top: 1.4em;
+}
+
+.CareersContent-button:hover {
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
+  padding: 0 4em;
+}
+
+.CareersContent-item:nth-child(even) {
+  padding-left: 13%;
 }
 
 .CareersContent-job-title {
   font-size: 1.875em;
-  font-weight: 300;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .CareersContent-list p {
   max-width: 40em;
 }
 
-@media screen and (min-width: 601px) {
-  .CareersContent-item {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+.CareersContent-meta {
+  font-size: 2em;
+  font-weight: 300;
 }
+
 
 @media screen and (min-width: 1024px) {
   .CareersContent {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .CareersContent-title {
+    font-size: 2.2em;
+  }
+  .CareersContent-item {
+    width: 100%;
+  }
+
+  .CareersContent-item:nth-child(even) {
+    padding-left: 5%;
   }
 }
