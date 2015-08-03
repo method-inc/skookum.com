@@ -21,32 +21,32 @@ class Hero extends Component {
       title,
       subtitle,
       children,
-      childrenPosition,
       color,
       image = '',
       className = '',
       style = EMPTY_OBJECT,
     } = this.props;
 
-    invariant(
-      !(children && !childrenPosition),
-      'You’ve attempted to render children into Hero without declaring ' +
-      '`childrenPosition` to be `before` or `after`.'
-    );
-
     className = 'Hero ' + className;
     if (color === 'yellow') {
       className = className + 'is-light';
     }
 
+    var titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : EMPTY_OBJECT;
+    var subtitleStyle = typeof subtitle === 'undefined' ? subtitleStyle = {display: 'none'} : EMPTY_OBJECT;
+
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
-    var skinny = typeof children === 'undefined' ? 'is-skinny': '';
+
+    var skinny = typeof children === 'undefined' && typeof subtitle === 'undefined' ? 'is-skinny': '';
 
     return (
       <div className={`Hero ${skinny}`} style={style}>
         <div className="Hero-content">
-          <div className="Hero-title">
+          <div className="Hero-title" style={titleStyle}>
               {title}
+          </div>
+          <div className="Hero-subtitle" style={subtitleStyle}>
+            {subtitle}
           </div>
           {children}
         </div>
@@ -65,7 +65,6 @@ Hero.propTypes = {
   subtitle: PropTypes.string,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,
-  childrenPosition: PropTypes.oneOf(['before', 'after']),
   children: PropTypes.node,
   style: PropTypes.object,
 };

@@ -21,13 +21,8 @@ class Home extends React.Component {
           childrenPosition="before"
           color="black"
           image="/public/images/hero-case-studies.png"
-          title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}>
-          <div className="Home-banner">
-            <div className="Home-bannerTitle">
-              Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.
-            </div>
-          </div>
-        </Hero>
+          title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
+          subtitle={<span>Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.</span>} />
         <div className="Home-statement">
           Skookum is a full service software development shop.
         </div>

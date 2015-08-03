@@ -36,8 +36,14 @@
 }
 
 .Hero-subtitle {
-  font-size: 0.875em; /*14 / 16*/
+  box-sizing: border-box;
+  bottom: 8%;
+  font-size: 4em; /*14 / 16*/
   font-weight: 300;
+  max-width: 720px;
+  padding: 0 5%;
+  position: absolute;
+  width: 65%;
 }
 
 .Hero-overlay,
@@ -91,7 +97,25 @@
   .Hero-title {
     padding-top: 120px;
   }
+
+  .Hero-subtitle {
+    font-size: 2.3em;
+    width: 100%;
+  }
 }
+
+@media screen and (max-width: 1025px) {
+  .Hero-subtitle {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .Hero-subtitle {
+    font-size: 3em;
+  }
+}
+
 
 
 
