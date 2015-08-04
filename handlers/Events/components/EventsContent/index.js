@@ -72,7 +72,7 @@ class EventsContent extends React.Component {
               <div className="EventsContent-eventName">{e.name}</div>
               {this.renderDate(e.time)}
               <div className="EventsContent-groupName">{e.group.name}</div>
-              <Button className="EventsContent-button" type="secondary" href={e.event_url} style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>View More Deatils & RSVP</Button>
+              <Button className="EventsContent-button" type="secondary" href={e.event_url} style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}}>View More Deatils & RSVP</Button>
             </li>
           )) : (
             <li key="¯\_(ツ)_/¯" className="EventsContent-item">
