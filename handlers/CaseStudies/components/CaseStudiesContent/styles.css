@@ -2,23 +2,37 @@
 
 .CaseStudiesContent-item {
   box-sizing: border-box;
+  border-bottom: 1px solid #DEDEDE;
   color: #000;
   display: block;
-  min-height: 300px;
-  padding: 2em 4em 4em 2em;
+  padding: 0;
+  margin-left: 5%;
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  background-size: cover;
+}
+
+.CaseStudiesContent-item:hover .CaseStudiesContent-title {
+  color: #FAAB18;
+}
+
+.CaseStudiesContent-item:hover .CaseStudiesContent-overlay {
+  background-color: rgba(250, 171, 24, 0.6);
+}
+
+.CaseStudiesContent-text {
+  margin-right: 400px;
+  padding: 5em 5% 5em 0;
 }
 
 .CaseStudiesContent-title {
   display: block;
   font-size: 1.25em;
   margin-bottom: 1em;
-  max-width: 400px;
+  max-width: 480px;
   position: relative;
   text-transform: uppercase;
+  transition: color 300ms ease-out;
   z-index: 1;
 }
 
@@ -26,54 +40,22 @@
   color: #393939;
   display: block;
   line-height: 1.4;
-  max-width: 400px;
+  max-width: 480px;
   position: relative;
   z-index: 1;
 }
 
-.CaseStudiesContent-item:before {
-  content: ' ';
-  transition: background 0.3333s ease-in;
-  background: rgba(255, 255, 255, 0.6);
+.CaseStudiesContent-image,
+.CaseStudiesContent-overlay {
+  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  top: 0;
+  width: 400px;
+}
+
+.CaseStudiesContent-overlay {
+  background-color: transparent;
   z-index: 1;
-}
-
-.CaseStudiesContent-item:hover .CaseStudiesContent-title,
-.CaseStudiesContent-item:hover .CaseStudiesContent-description {
-  color: #fff;
-  transition: color 0.3333s ease-in;
-}
-
-.CaseStudiesContent-item:hover:before {
-  background: rgba(18, 18, 18, 0.3);
-}
-
-.CaseStudiesContent-item:hover .CaseStudiesContent-image {
-  opacity: 1;
-}
-
-.CaseStudiesContent-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  max-width: 300%;
-  min-width: 100%;
-  /*transition: opacity 0.3333s ease-in;*/
-}
-
-@media screen and (min-width: 601px) {
-  .CaseStudiesContent-item {
-    display: inline-block;
-    height: calc(60vw * 0.5);
-    vertical-align: top;
-    width: 50%;
-  }
+  transition: background-color 300ms ease-out;
 }

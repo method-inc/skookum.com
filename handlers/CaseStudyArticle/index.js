@@ -26,9 +26,10 @@ class CaseStudyArticle extends React.Component {
     return (
       <article className="CaseStudyArticle">
         <Hero
-          title={title}
-          image={image}
-          subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
+          title="Work"
+          image={image.fields.file.url}
+          color="black"
+          subtitle={title} />
         <div
           className="CaseStudyArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
