@@ -48,9 +48,10 @@ class BlogArticle extends React.Component {
     return (
       <article className="BlogArticle">
         <Hero
-          title={title}
+          title="Blog"
           image={poster}
-          subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
+          color="black"
+          subtitle={title} />
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
