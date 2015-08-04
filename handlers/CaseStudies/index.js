@@ -9,9 +9,8 @@ class CaseStudies extends React.Component {
       <div className="CaseStudies">
         <Hero
           color="black"
-          title="Case Studies"
-          subtitle="A close look at some of our past work."
-          image="/public/images/hero-case-studies.png" />
+          title="Work"
+          image="/public/images/home-charlotte2.png" />
         <CaseStudiesContent />
       </div>
     );
