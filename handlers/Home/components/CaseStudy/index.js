@@ -43,7 +43,7 @@ class CaseStudy extends Component {
   }
 
   render(): ReactElement {
-    var {slug, client, summary, image} = this.props.study;
+    var {slug, client, summary, image} = this.props.study.items[0];
     return (
       <Hero
         childrenPosition="before"
@@ -84,7 +84,7 @@ CaseStudy.propTypes = {
 export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
-      return api(`contentful?content_type=case_study&limit=1`).then(n => n[0]);
+      return api(`contentful?content_type=case_study&limit=1`);
     },
   },
 });

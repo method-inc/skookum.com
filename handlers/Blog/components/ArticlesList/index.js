@@ -30,7 +30,7 @@ class ArticlesList extends Component {
 
     return (
       <div className="ArticlesList">
-        {this.props.articles.map(a => (
+        {this.props.articles.items.map(a => (
           <div key={a.slug} className="Blog-article">
             <div className="Blog-article-content">
               <Link className="Blog-article-title" to="blog-article" params={{slug: a.slug}}>{a.title}</Link>

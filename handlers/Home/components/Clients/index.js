@@ -19,7 +19,7 @@ class Clients extends Component {
           </div>
         </div>
         <div className="HomeClients-clients">
-          {this.props.clients.map(n => (
+          {this.props.clients.items.map(n => (
             <div className="HomeClients-client" key={n.name}>
               <div className="HomeClients-context">
                 Mobile streaming video backend for employee training

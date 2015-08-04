@@ -107,7 +107,7 @@ api.get('/contentful', function(req, res) {
       ...query,
     }))
     .then(
-      n => res.send(n.map(r => r.fields)),
+      n => res.send({items: n.map(r => r.fields), total: n.total}),
       error => res.send(error)
     );
 });
