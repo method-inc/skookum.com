@@ -15,11 +15,14 @@
 }
 
 .Blog-article-title {
-  color: #000;
+  color: #393939;
   font-size: 1.1666em;
   font-weight: 900;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.Blog-article-title:hover {
+  color: #FAAB18;
 }
 
 .Blog-article-summary {
@@ -34,11 +37,10 @@
 .Blog-article-info {
   font-size: 0.666em;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .Blog-article-author {
-  color: inherit;
+  color: #393939;
   text-decoration: none;
 }
 
