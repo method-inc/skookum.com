@@ -90,7 +90,7 @@ class EventsContent extends React.Component {
 EventsContent.displayName = 'EventsContent';
 
 EventsContent.propTypes = {
-  events: PropTypes.array.isRequired,
+  events: PropTypes.object.isRequired,
 };
 
 EventsContent.contextTypes = {

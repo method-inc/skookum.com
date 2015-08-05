@@ -55,7 +55,7 @@ ArticlesList.contextTypes = {
 };
 
 ArticlesList.propTypes = {
-  articles: PropTypes.array.isRequired,
+  articles: PropTypes.object.isRequired,
 };
 
 ArticlesList.displayName = 'ArticlesList';

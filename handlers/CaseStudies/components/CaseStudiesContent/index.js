@@ -31,7 +31,7 @@ class CaseStudiesContent extends Component {
 CaseStudiesContent.displayName = 'CaseStudiesContent';
 
 CaseStudiesContent.propTypes = {
-  caseStudies: PropTypes.array.isRequired,
+  caseStudies: PropTypes.object.isRequired,
 };
 
 export default Resolver.createContainer(CaseStudiesContent, {

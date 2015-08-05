@@ -9,7 +9,7 @@ import Button from 'Button';
 import api from 'api';
 
 var renderCareer: ReactElement = pos => (
-  <li className="CareersContent-item">
+  <li key={pos.id} className="CareersContent-item">
     <div className="CareersContent-item-segment">
       <div className="CareersContent-job-title">{pos.title}</div>
       <div className="CareersContent-meta">{pos.location.name}</div>
