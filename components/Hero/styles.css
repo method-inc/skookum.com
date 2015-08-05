@@ -62,6 +62,16 @@
   background-size: cover;
 }
 
+.Hero-video {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 1107px;
+}
+
 .Hero-overlay {
   right: 35%;
   z-index: 1;
