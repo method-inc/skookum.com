@@ -10,12 +10,12 @@ class OpenSource extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="OpenSource">
-        <Hero title="Open Source" image="/public/images/hero-default-bg.png" subtitle="A few things we’re up to." />
+        <Hero title="Open Source" color="black" image="/public/images/hero-default-bg.png" />
         {data.map(o => (
           <div className="OpenSource-project">
             <div className="OpenSource-title">{o.name}</div>
             <div className="OpenSource-description">{o.description}</div>
-            <Button className="OpenSource-button" href={o.github}>View on GitHub</Button>
+            <Button className="OpenSource-button" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}} href={o.github}>View on GitHub</Button>
           </div>
         ))}
       </div>
