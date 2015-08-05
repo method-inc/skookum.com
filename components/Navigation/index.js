@@ -40,11 +40,13 @@ class Navigation extends Component {
     return (
       <div>
         <div className="Navigation-main">
-          <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
-          <Link to="case-studies" className="Navigation-main-link">Work</Link>
-          <Link to="services" className="Navigation-main-link">Capabilities</Link>
-          <Link to="events" className="Navigation-main-link">Events</Link>
-          <Link to="contact" className="Navigation-main-link">Contact</Link>
+          <div className="Navigation-main-links">
+            <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
+            <Link to="case-studies" className="Navigation-main-link">Work</Link>
+            <Link to="services" className="Navigation-main-link">Capabilities</Link>
+            <Link to="events" className="Navigation-main-link">Events</Link>
+            <Link to="contact" className="Navigation-main-link">Contact</Link>
+          </div>
         </div>
         <div className="Navigation-hamburger">
           <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: '101'}} color="black" target="#navigation" />

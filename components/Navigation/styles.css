@@ -1,13 +1,17 @@
 /** @define Navigation; use strict */
 
 .Navigation-main {
-  border-bottom: 1px solid white;
   position: absolute;
-  left: 5%;
-  right: 5%;
+  left: 0;
+  right: 0;
   top: 1em;
-  padding-bottom: 2em;
   z-index: 3;
+}
+
+.Navigation-main-links {
+  border-bottom: 1px solid white;
+  margin: 0 5%;
+  padding-bottom: 2em;
 }
 
 .Navigation-main-link {
