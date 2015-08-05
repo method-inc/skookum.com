@@ -5,7 +5,8 @@
 .OpenSource-project {
   box-sizing: border-box;
   display: block;
-  padding: 2.25em 5%;
+  padding: 2.25em;
+  margin: 0 5%;
   position: relative;
   border-bottom: 1px solid #eee;
 }
