@@ -72,10 +72,19 @@
     font-size: 2.2em;
   }
   .CareersContent-item {
+    text-align: center;
     width: 100%;
+  }
+
+  .CareersContent-item-segment {
+    max-width: 100%;
   }
 
   .CareersContent-item:nth-child(even) {
     padding-left: 5%;
+  }
+
+  .CareersContent-button {
+    width: 100%;
   }
 }
