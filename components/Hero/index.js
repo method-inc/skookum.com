@@ -55,11 +55,14 @@ class Hero extends Component {
           background: backgroundColor,
         }} />
         {video && (
-          <video autoPlay muted loop className="Hero-video" >
-            <source src={video} />
-          </video>
+          <div>
+            <video autoPlay muted loop className="Hero-video" >
+              <source src={video} />
+            </video>
+            <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
+          </div>
         )}
-        {image && (
+        {image && !video && (
           <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />
         )}
       </div>
@@ -70,7 +73,7 @@ class Hero extends Component {
 Hero.propTypes = {
   subtitle: PropTypes.object,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
-  image: PropTypes.string,
+  image: PropTypes.string.isRequired,
   video: PropTypes.string,
   children: PropTypes.node,
   style: PropTypes.object,

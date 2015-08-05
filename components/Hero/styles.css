@@ -62,6 +62,10 @@
   background-size: cover;
 }
 
+.Hero-image--mobile {
+  display: none;
+}
+
 .Hero-video {
   margin: auto;
   position: absolute;
@@ -99,6 +103,14 @@
 @media screen and (max-width: 1025px) {
   .Hero-subtitle {
     font-size: 3.5em;
+  }
+
+  .Hero-video {
+    display: none;
+  }
+
+  .Hero-image--mobile {
+    display: block;
   }
 }
 

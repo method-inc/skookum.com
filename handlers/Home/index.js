@@ -20,6 +20,7 @@ class Home extends React.Component {
         <Hero
           childrenPosition="before"
           color="black"
+          image="/public/images/hero-case-studies.png"
           video="/public/videos/home-mov.MOV"
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.</span>} />
