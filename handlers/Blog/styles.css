@@ -6,11 +6,10 @@
 .Blog-article {
   border-bottom: 1px solid #efefef;
   padding: 3em 5% 3em 0;
-  margin-left: 5%;
+  margin: 0 5%;
 }
 
 .Blog-article-content {
-  padding: 0 5%;
   margin: 0 auto;
 }
 
