@@ -18,7 +18,9 @@ class Services extends React.Component {
       <div className="HomeServices">
         <ul className="HomeServices-list">
           {SERVICES.map(s => (
-            <li ref={s[1]} style={{backgroundImage: `url(${s[2]})`}}className="HomeServices-item" key={s[0]}>
+            <li ref={s[1]} 
+                style={{backgroundImage: `url(${s[2]})`}}
+                className="HomeServices-item" key={s[0]}>
               <div className="HomeServices-overlay"></div>
               <div className="HomeServices-content">
                 <div className="HomeServices-title">{s[0]}</div>

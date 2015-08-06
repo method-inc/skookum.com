@@ -10,6 +10,7 @@ import CaseStudy from 'CaseStudy';
 import Locations from 'Locations';
 import Button from 'Button';
 import Services from 'Services';
+import {nameToRgba} from 'nameToColor';
 
 var cn = s => `Home-${s}`;
 
@@ -22,7 +23,7 @@ class Home extends React.Component {
           color="black"
           image="/public/images/hero-case-studies.png"
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software solutions for companies and the <span style={{color: '#FAAB18'}}>people</span> they serve.</span>} />
+          subtitle={<span>Custom software solutions for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they serve.</span>} />
         <div className="Home-statement">
           Skookum is a full service software development shop.
         </div>
