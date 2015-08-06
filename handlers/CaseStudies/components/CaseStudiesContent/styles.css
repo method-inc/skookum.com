@@ -2,77 +2,80 @@
 
 .CaseStudiesContent-item {
   box-sizing: border-box;
-  border-bottom: 1px solid #DEDEDE;
-  color: #000;
+  border-top: 2px solid white;
+  color: #393939;
   display: block;
   padding: 0;
-  margin-left: 5%;
   position: relative;
   overflow: hidden;
   text-decoration: none;
 }
 
-.CaseStudiesContent-item:hover .CaseStudiesContent-title,
-.CaseStudiesContent-item:focus .CaseStudiesContent-title {
-  color: #FAAB18;
-}
-
-.CaseStudiesContent-item:hover .CaseStudiesContent-overlay,
-.CaseStudiesContent-item:focus .CaseStudiesContent-overlay {
-  background-color: rgba(250, 171, 24, 0.6);
-}
-
 .CaseStudiesContent-text {
-  margin-right: 400px;
-  padding: 5em 5% 5em 0;
+  padding: 8em 5%;
+  position: relative;
+  text-align: center;
+  z-index: 3;
 }
 
 .CaseStudiesContent-title {
   display: block;
-  font-size: 1.25em;
-  margin-bottom: 1em;
-  max-width: 480px;
+  font-size: 3em;
+  font-weight: 600;
   position: relative;
-  text-transform: uppercase;
-  transition: color 300ms ease-out;
+  transform: translate3d(0, 75%, 0);
+  transition: transform 150ms ease-out;
   z-index: 1;
 }
 
 .CaseStudiesContent-description {
   color: #393939;
   display: block;
+  opacity: 0;
+  font-size: 1.5em;
+  font-weight: 300;
   line-height: 1.4;
-  max-width: 480px;
+  max-width: 700px;
+  margin: 2em auto 0;
   position: relative;
+  transform: translate3d(0, 50%, 0);
+  transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275) , opacity 350ms ease;
   z-index: 1;
 }
 
 .CaseStudiesContent-image,
 .CaseStudiesContent-overlay {
+  bottom: 0;
   height: 100%;
+  left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 400px;
+}
+
+.CaseStudiesContent-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1;
 }
 
+.CaseStudiesContent-overlay {
+  background-color: rgba(239, 239, 239, 0.6);
+  z-index: 2;
+}
+
 .CaseStudiesContent-item:hover .CaseStudiesContent-title,
+.CaseStudiesContent-item:focus .CaseStudiesContent-title {
+  transition-delay: 100ms;
+  transform: translate3d(0, -48%, 0);
+}
+
 .CaseStudiesContent-item:hover .CaseStudiesContent-description,
-.CaseStudiesContent-item:focus .CaseStudiesContent-title,
 .CaseStudiesContent-item:focus .CaseStudiesContent-description {
-  color: #fff;
-  transition: color 0.3333s ease-in;
-}
-
-.CaseStudiesContent-item:hover:before,
-.CaseStudiesContent-item:focus:before {
-  background: rgba(18, 18, 18, 0.3);
-}
-
-.CaseStudiesContent-item:hover .CaseStudiesContent-image,
-.CaseStudiesContent-item:focus .CaseStudiesContent-image {
   opacity: 1;
+  transition-delay: 200ms;
+  transform: translate3d(0, -40%, 0);
 }
 
 .CaseStudiesContent-image {
@@ -84,11 +87,4 @@
   transform: translate(-50%, -50%);
   max-width: 300%;
   min-width: 100%;
-  /*transition: opacity 0.3333s ease-in;*/
-}
-
-.CaseStudiesContent-overlay {
-  background-color: transparent;
-  z-index: 1;
-  transition: background-color 300ms ease-out;
 }
