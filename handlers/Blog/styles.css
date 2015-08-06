@@ -22,7 +22,8 @@
   text-decoration: none;
 }
 
-.Blog-article-title:hover {
+.Blog-article-title:hover,
+.Blog-article-title:focus {
   color: #FAAB18;
 }
 

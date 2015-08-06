@@ -46,7 +46,8 @@
   text-transform: uppercase;
 }
 
-.Navigation-main-link:hover, .Navigation-main-link.active {
+.Navigation-main-link:hover, .Navigation-main-link.active,
+.Navigation-main-link:focus, .Navigation-main-link.active {
   color: #FAAB18;
 }
 

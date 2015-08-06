@@ -27,7 +27,8 @@
   margin-top: 2em;
 }
 
-.OpenSource-button:hover {
+.OpenSource-button:hover,
+.OpenSource-button:focus {
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 

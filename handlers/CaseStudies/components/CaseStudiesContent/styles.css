@@ -12,11 +12,13 @@
   text-decoration: none;
 }
 
-.CaseStudiesContent-item:hover .CaseStudiesContent-title {
+.CaseStudiesContent-item:hover .CaseStudiesContent-title,
+.CaseStudiesContent-item:focus .CaseStudiesContent-title {
   color: #FAAB18;
 }
 
-.CaseStudiesContent-item:hover .CaseStudiesContent-overlay {
+.CaseStudiesContent-item:hover .CaseStudiesContent-overlay,
+.CaseStudiesContent-item:focus .CaseStudiesContent-overlay {
   background-color: rgba(250, 171, 24, 0.6);
 }
 
