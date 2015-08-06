@@ -4,10 +4,12 @@
   margin-right: 15px;
 }
 
-.ShareLinks-Icon:hover .ShareLinks-circle {
+.ShareLinks-Icon:hover .ShareLinks-circle,
+.ShareLinks-Icon:focus .ShareLinks-circle {
   fill: black;
 }
 
-.ShareLinks-Icon:hover .ShareLinks-path {
+.ShareLinks-Icon:hover .ShareLinks-path,
+.ShareLinks-Icon:focus .ShareLinks-path {
   fill: white;
 }

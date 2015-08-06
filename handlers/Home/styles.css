@@ -46,7 +46,8 @@
   max-width: 1024px;
 }
 
-.Home-content-button:hover {
+.Home-content-button:hover,
+.Home-content-button:focus {
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 

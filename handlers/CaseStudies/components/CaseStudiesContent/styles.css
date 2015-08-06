@@ -52,6 +52,37 @@
   right: 0;
   top: 0;
   width: 400px;
+  z-index: 1;
+}
+
+.CaseStudiesContent-item:hover .CaseStudiesContent-title,
+.CaseStudiesContent-item:hover .CaseStudiesContent-description,
+.CaseStudiesContent-item:focus .CaseStudiesContent-title,
+.CaseStudiesContent-item:focus .CaseStudiesContent-description {
+  color: #fff;
+  transition: color 0.3333s ease-in;
+}
+
+.CaseStudiesContent-item:hover:before,
+.CaseStudiesContent-item:focus:before {
+  background: rgba(18, 18, 18, 0.3);
+}
+
+.CaseStudiesContent-item:hover .CaseStudiesContent-image,
+.CaseStudiesContent-item:focus .CaseStudiesContent-image {
+  opacity: 1;
+}
+
+.CaseStudiesContent-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 300%;
+  min-width: 100%;
+  /*transition: opacity 0.3333s ease-in;*/
 }
 
 .CaseStudiesContent-overlay {
