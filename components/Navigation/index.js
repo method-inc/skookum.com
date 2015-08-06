@@ -86,7 +86,7 @@ class Navigation extends Component {
     var mobileClassName = `Navigation-mobile ${this.state.overlayVisible ? 'is-visible' : 'is-not-visible'}`;
     var mainClass = `Navigation-main ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
     mainClass += this.state.atTop ? ' is-top' : '';
-    var hamburgerClass = `Navigation-hamburger ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`
+    var hamburgerClass = `Navigation-hamburger ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
 
     return (
       <div>

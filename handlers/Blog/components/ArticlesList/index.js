@@ -43,7 +43,7 @@ class ArticlesList extends Component {
         ))}
         <div className="Blog-pager">
           {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
-          <div className="Blog-page">Page {query.page} / {Math.round(this.props.articles.total/5)}</div>
+          <div className="Blog-page">Page {query.page} / {Math.round(this.props.articles.total / 5)}</div>
           {this.props.articles.items.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
         </div>
       </div>
