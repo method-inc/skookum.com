@@ -37,7 +37,8 @@
   line-height: 4;
 }
 
-.EventsContent-button:hover {
+.EventsContent-button:hover,
+.EventsContent-button:focus {
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 

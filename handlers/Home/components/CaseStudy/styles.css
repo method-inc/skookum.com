@@ -57,11 +57,13 @@
   padding-top: 1em;
 }
 
-.HomeCaseStudy-feature:hover {
+.HomeCaseStudy-feature:hover,
+.HomeCaseStudy-feature:focus {
   padding-bottom: 3em;
 }
 
-.HomeCaseStudy-feature:hover .HomeCaseStudy-feature-learn {
+.HomeCaseStudy-feature:hover .HomeCaseStudy-feature-learn,
+.HomeCaseStudy-feature:focus .HomeCaseStudy-feature-learn {
   text-decoration: underline;
 }
 
