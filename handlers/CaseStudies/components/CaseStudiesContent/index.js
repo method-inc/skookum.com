@@ -20,7 +20,7 @@ class CaseStudiesContent extends Component {
               <span className="CaseStudiesContent-description">{f.summary}</span>
             </div>
             <div className="CaseStudiesContent-overlay" />
-            <img className="CaseStudiesContent-image" src={imageUrl}/>
+            <div className="CaseStudiesContent-image" style={{backgroundImage: `url(${imageUrl})`}}/>
           </Link>
         ))}
       </div>
