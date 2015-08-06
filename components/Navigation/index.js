@@ -33,13 +33,45 @@ var renderNavigation = (list, props) => (
 );
 
 class Navigation extends Component {
+
+  constructor(props: mixed, context: mixed): void {
+    super(props, context);
+
+    this.state = {showNav: true, atTop: true};
+    this.previousScrollPos = 0;
+  }
+
+  componentDidMount(): void {
+    if (typeof window === 'undefined') return;
+    window.addEventListener('scroll', _ => {
+      var showNav = true;
+      var atTop = false;
+
+      if (this.previousScrollPos - window.scrollY < 0) {
+        showNav = false;
+      } else {
+        showNav = true;
+      }
+
+      if (window.scrollY < 100) {
+        showNav = true;
+        atTop = true;
+      }
+
+      this.previousScrollPos = window.scrollY;
+      this.setState({showNav: showNav, atTop: atTop});
+
+    }, false);
+  }
   render(): ?ReactElement {
     var {visible} = this.props;
     var className = `Navigation-mobile ${visible ? 'is-visible' : 'is-not-visible'}`;
+    var scrollClass = `Navigation-main ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
+    scrollClass += this.state.atTop ? ' is-top' : '';
 
     return (
       <div>
-        <div className="Navigation-main">
+        <div className={scrollClass}>
           <div className="Navigation-main-links">
             <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
             <Link to="case-studies" className="Navigation-main-link">Work</Link>

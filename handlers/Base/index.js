@@ -63,7 +63,7 @@ class AppBase extends Component {
   render(): ReactElement {
     return (
       <div className="AppBase">
-        <Navigation id="navigation" onClick={this.toggleNav} visible={this.state.navVisible} />
+        <Navigation id="navigation" onClick={this.toggleNav} visible={this.state.navVisible} showNav={this.state.showNav} />
         <RouteHandler key={this.getHandlerKey()} />
         <Footer />
       </div>
