@@ -10,14 +10,15 @@
 }
 
 .EventsContent-item {
+  color: #393939;
   display: block;
+  font-weight: 300;
   padding: 2em 0;
   position: relative;
   border-bottom: 1px solid #eee;
 }
 
 .EventsContent-date {
-  color: #aaa;
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 6px;
@@ -25,12 +26,12 @@
 
 .EventsContent-eventName {
   font-size: 2em;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 .EventsContent-groupName {
-  color: #aaa;
-  font-size: 0.666em;
+  font-size: 1em;
   margin-bottom: 10px;
   text-transform: uppercase;
 }

@@ -46,7 +46,19 @@
 .Blog-pager {
   margin: 1.5em 5%;
   text-align: right;
+  position: relative;
   /* padding-bottom: 2.333em; */
+}
+
+.Blog-page {
+  color: #aaa;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .Blog-article-pager.is-previous {
@@ -61,6 +73,7 @@
   margin-left: -0.416666em;
   margin-right: 0.416666em;
   padding: 0.416666em;
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
 }
