@@ -68,6 +68,11 @@ class Navigation extends Component {
     }, false);
   }
 
+  componentWillUnmount(): void {
+    if (typeof window === 'undefined') return;
+    window.removeEventListener('scroll');
+  }
+
   toggleOverlay(): void {
     this.setState({overlayVisible: !this.state.overlayVisible});
   }
