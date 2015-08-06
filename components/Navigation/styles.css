@@ -22,7 +22,7 @@
 .Navigation-main.is-top {
   box-shadow: none;
   background-color: transparent;
-  transition: background-color 500ms linear;
+  transition: transform 700ms linear, background-color 500ms linear;
 }
 
 .Navigation-main-links {
@@ -48,6 +48,22 @@
 
 .Navigation-main-link:hover, .Navigation-main-link.active {
   color: #FAAB18;
+}
+
+.Navigation-hamburger {
+  position: fixed;
+  right: 5%;
+  top: 0;
+  transition: transform 700ms linear;
+  z-index: 101;
+}
+
+.Navigation-hamburger.is-visible {
+  transform: translateY(0px);
+}
+
+.Navigation-hamburger.is-not-visible {
+  transform: translateY(-100px);
 }
 
 .Navigation-mobile {
@@ -170,13 +186,6 @@
 
   .Navigation-main-link {
     display: none;
-  }
-
-  .Navigation-hamburger {
-    position: fixed;
-    right: 5%;
-    top: 1em;
-    z-index: 101;
   }
 }
 

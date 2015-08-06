@@ -6,16 +6,13 @@ import {nameToHex} from 'nameToColor';
 class Hamburger extends Component {
   render(): ?ReactElement {
     var className = 'Hamburger';
-    var {target, onClick, color} = this.props;
-    var {topOfViewport, navVisible} = this.context;
+    var {target, onClick, color, overlayVisible} = this.props;
     var hamburgerClass = this.props.color === 'yellow' ? ' is-black' : '';
-    var backgroundColor = nameToHex(this.props.color);
 
-    if (navVisible) className = className + ' is-x';
-    if (!topOfViewport) className = className + ' is-floating';
+    if (overlayVisible) className = className + ' is-x';
 
     return (
-      <a style={{backgroundColor: !topOfViewport && backgroundColor, ...this.props.style}} href={target} className={className} onClick={this.context.toggleNav}>
+      <a href={target} className={className} onClick={this.props.onClick}>
         <div className="Hamburger-icon">
           <div className={'Hamburger-top' + hamburgerClass} />
           <div className={'Hamburger-middle' + hamburgerClass} />
@@ -29,12 +26,6 @@ class Hamburger extends Component {
 Hamburger.propTypes = {
   target: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-};
-
-Hamburger.contextTypes = {
-  navVisible: PropTypes.bool.isRequired,
-  toggleNav: PropTypes.func.isRequired,
-  topOfViewport: PropTypes.bool.isRequired,
 };
 
 export default Hamburger;

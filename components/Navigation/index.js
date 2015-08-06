@@ -22,11 +22,11 @@ var SECONDARY = [
   ['events', 'Events'],
 ];
 
-var renderNavigation = (list, props) => (
+var renderNavigation = (list, scope) => (
   <ul className="Navigation-list">
     {list.map(n => (
       <li className="Navigation-item" key={n[0]}>
-        <Link className="Navigation-link" to={n[0]} onClick={props.onClick}>{n[1]}</Link>
+        <Link className="Navigation-link" to={n[0]} onClick={scope.toggleOverlay}>{n[1]}</Link>
       </li>
     ))}
   </ul>
@@ -36,13 +36,17 @@ class Navigation extends Component {
 
   constructor(props: mixed, context: mixed): void {
     super(props, context);
-
-    this.state = {showNav: true, atTop: true};
+    this.state = {showNav: true, atTop: true, overlayVisible: false};
     this.previousScrollPos = 0;
+
+    this.toggleOverlay = this.toggleOverlay.bind(this);
   }
 
   componentDidMount(): void {
     if (typeof window === 'undefined') return;
+    if (window.scrollY) {
+      this.setState({atTop: false});
+    }
     window.addEventListener('scroll', _ => {
       var showNav = true;
       var atTop = false;
@@ -53,7 +57,7 @@ class Navigation extends Component {
         showNav = true;
       }
 
-      if (window.scrollY < 100) {
+      if (window.scrollY < 10) {
         showNav = true;
         atTop = true;
       }
@@ -63,15 +67,20 @@ class Navigation extends Component {
 
     }, false);
   }
+
+  toggleOverlay(): void {
+    this.setState({overlayVisible: !this.state.overlayVisible});
+  }
+
   render(): ?ReactElement {
-    var {visible} = this.props;
-    var className = `Navigation-mobile ${visible ? 'is-visible' : 'is-not-visible'}`;
-    var scrollClass = `Navigation-main ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
-    scrollClass += this.state.atTop ? ' is-top' : '';
+    var mobileClassName = `Navigation-mobile ${this.state.overlayVisible ? 'is-visible' : 'is-not-visible'}`;
+    var mainClass = `Navigation-main ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
+    mainClass += this.state.atTop ? ' is-top' : '';
+    var hamburgerClass = `Navigation-hamburger ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`
 
     return (
       <div>
-        <div className={scrollClass}>
+        <div className={mainClass}>
           <div className="Navigation-main-links">
             <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
             <Link to="case-studies" className="Navigation-main-link">Work</Link>
@@ -80,16 +89,16 @@ class Navigation extends Component {
             <Link to="contact" className="Navigation-main-link">Contact</Link>
           </div>
         </div>
-        <div className="Navigation-hamburger">
-          <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: '101'}} color="black" target="#navigation" />
+        <div className={hamburgerClass}>
+          <Hamburger onClick={this.toggleOverlay} overlayVisible={this.state.overlayVisible} color="black" target="#navigation" />
         </div>
-        <div className={className}>
+        <div className={mobileClassName}>
           <div className="Navigation-content">
             <div className="Navigation-header">About Skookum</div>
-            {renderNavigation(PRIMARY, this.props)}
+            {renderNavigation(PRIMARY, this)}
             <div className="Navigation-divider" />
             <div className="Navigation-header">Community</div>
-            {renderNavigation(SECONDARY, this.props)}
+            {renderNavigation(SECONDARY, this)}
             <hr className="Navigation-hr" />
             <div className="Navigation-socials">
               <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
@@ -103,9 +112,5 @@ class Navigation extends Component {
     );
   }
 }
-
-Navigation.propTypes = {
-  onClick: PropTypes.func.isRequired,
-};
 
 export default Navigation;
