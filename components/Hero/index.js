@@ -46,22 +46,11 @@ class Hero extends Component {
 
     return (
       <div className="Hero" style={style}>
-        <div className="Hero-links">
-          <Link to="home">
-            <Logo style={{position: 'absolute', top: '0', left: '0', height: 40, margin: '0', zIndex: 5}} color={nameToBinary(color)} />
-          </Link>
-        </div>
-        <div className="Hero-links Hero-links--fixed">
-          <Hamburger style={{position: 'absolute', top: '0', right: '0', zIndex: 101}} color={color} target="#navigation" onClick={this.toggleNav} />
-        </div>
         <div className="Hero-content" style={contentStyle}>
-          {children && childrenPosition === 'before' && children}
-          <h1 className="Hero-title" style={titleStyle}>{title}</h1>
-          {children && childrenPosition === 'after' && children}
+          {children}
         </div>
-
         <div className="Hero-overlay" style={{
-          backgroundColor: backgroundColor,
+          background: backgroundColor,
         }} />
         {image && (
           <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />
@@ -72,7 +61,6 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,

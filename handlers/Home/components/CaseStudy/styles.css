@@ -8,15 +8,98 @@
   overflow: hidden;
 }
 
-.HomeCaseStudy-content {
-  position: relative;
-  z-index: 2;
+.HomeCaseStudy-banner {
+  box-sizing: border-box;
+  padding: 0 4%;
+  max-width: 670px;
+  width: 65%;
 }
 
 .HomeCaseStudy-title {
-  font-size: 1.25em;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 300;
+  padding-top: 190px;
+}
+
+.HomeCaseStudy-description {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-top: 140px;
+}
+
+.HomeCaseStudy-feature {
+  background-color: rgba(250, 171, 24, .60);
+  box-sizing: border-box;
+  color: #393939;
+  font-weight: 300;
+  padding: 1.5em 2%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  text-decoration: none;
+  transition: padding-bottom ease 200ms;
+}
+
+.HomeCaseStudy-feature-title {
+  font-size: 2em;
+}
+
+.HomeCaseStudy-feature-description {
+  font-size: 1em;
+  line-height: 1.8em;
+  padding-top: 1em;
+}
+
+.HomeCaseStudy-feature-learn {
+  font-weight: 600;
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+.HomeCaseStudy-feature:hover {
+  padding-bottom: 3em;
+}
+
+.HomeCaseStudy-feature:hover .HomeCaseStudy-feature-learn {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+
+  .HomeCaseStudy-banner {
+    margin-top: -130px;
+    width: 100%;
+  }
+
+  .HomeCaseStudy-title {
+    font-size: 3em;
+  }
+
+  .HomeCaseStudy-description {
+    font-size: 1.5em;
+    padding-top: 40px;
+  }
+
+  .HomeCaseStudy-feature {
+    width: 100%;
+    padding: 1em 5%;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+
+  .HomeCaseStudy-title {
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+
+  .HomeCaseStudy-description {
+    font-size: 1.2em;
+    padding-top: 35px;
+  }
+
 }
 
 .HomeCaseStudy-inner {
@@ -43,53 +126,4 @@
     rgba(235, 66, 8, 1),
     rgba(235, 66, 8, 0.5)
   );
-}
-
-.HomeCaseStudy-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-}
-
-@media screen and (min-width: 600px) {
-  .HomeCaseStudy {
-    /*
-    padding: 5.625em 5% 5.625em 50%;
-    */
-  }
-
-  .HomeCaseStudy-inner {
-    width: 50%;
-    float: right;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .HomeCaseStudy:after {
-    background: linear-gradient(
-      90deg,
-      rgba(235, 66, 8, 0.5),
-      rgba(235, 66, 8, 0.5) 30%,
-      rgba(235, 66, 8, 1) 45%
-    );
-  }
-
-  .HomeCaseStudy-image {
-    right: 50%;
-  }
-
-  .HomeCaseStudy-summary {
-    padding-right: 5%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .HomeCaseStudy-content {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }

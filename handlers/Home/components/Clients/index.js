@@ -10,11 +10,26 @@ class Clients extends Component {
   render(): ?ReactElement {
     return (
       <div className="HomeClients">
-        {this.props.clients.map(n => (
-          <div className="HomeClients-client" key={n.name}>
-            <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
+        <div className="HomeClients-content">
+          <div className="HomeClients-title">
+            For Over a decade
           </div>
-        ))}
+          <div className="HomeClients-description">
+            we have produced mission critical technology for some of the largest brands and organizations on the planet.
+          </div>
+        </div>
+        <div className="HomeClients-clients">
+          {this.props.clients.map(n => (
+            <div className="HomeClients-client" key={n.name}>
+              <div className="HomeClients-context">
+                Mobile streaming video backend for employee training
+              </div>
+              <div className="HomeClients-image-container">
+                <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

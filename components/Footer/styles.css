@@ -1,17 +1,46 @@
 /** @define Footer; use strict */
 
 .Footer {
-  background: #000;
+  background: #393939;
+  box-sizing: border-box;
   bottom: 0;
   color: #fff;
   font-size: 0.666em;
-  padding: 1.5em 0;
-  text-align: center;
+  padding: 3em 5% 1.5em;
+  text-align: left;
   text-transform: uppercase;
   width: 100%;
 }
 
-.Footer-legal {
-  color: #fff;
+.Footer-links {
+  padding-bottom: 5em;
 }
 
+.Footer-link {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-right: 2.5em;
+  text-decoration: none;
+}
+
+
+.Footer-brag {
+  font-size: 1.4em;
+  font-weight: 300;
+  text-transform: none;
+  padding-bottom: 3em;
+}
+
+.Footer-legal {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .Footer-link {
+    display: inline-block;
+    width: 50%;
+    padding-bottom: 1.5em;
+    margin-right: 0;
+  }
+}

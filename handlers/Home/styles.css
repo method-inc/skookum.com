@@ -1,69 +1,121 @@
-
-.Home-featured {
-  background: #000;
-  color: #fff;
-  padding: 5.625em 0;
+.Home-banner {
+  box-sizing: border-box;
+  padding-left: 5%;
+  width: 65%;
 }
 
-.Home-featuredButton {
-  text-align: right;
-  margin-right: 5%;
-  margin-top: 1.5em;
+.Home-bannerTitle {
+  font-size: 4em;
+  font-weight: 400;
+  max-width: 530px;
+  padding-right: 5%;
+  padding-top: 190px;
 }
 
-.Home-featured .HomeButton {
-  margin: 0 5%;
+.Home-wordmark {
+  position: absolute;
+  bottom: 6%;
 }
 
-.Home-quote {
-  padding: 0 5% 3rem;
-  margin: 0 auto;
-  max-width: 1024px;
+.Home-statement {
+  background-color: #DADADA;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 1.5em 1em;
   text-align: center;
-}
-
-.Home-quote-quote {
-  color: #aaa;
-  font-weight: 100;
-  line-height: 1.5;
   text-transform: uppercase;
 }
 
-.Home-quote-quote:before,
-.Home-quote-quote:after {
-  color: rgba(255, 255, 255, 0.1666);
-  font-size: 3em;
-  font-weight: 900;
+
+.Home-content {
+  background-image: url(/public/images/blogimg_dev.png);
+  background-size: cover;
+  background-position: center;
+  color: #393939;
+  font-weight: 300;
+  height: 786px;
+  padding: 0 5%;
   position: relative;
-  top: 0.18em;
-  line-height: 0;
-  vertical-align: middle;
+  text-align: center;
 }
 
-.Home-quote-quote:before {
-  content: '“';
+.Home-content-container {
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
 }
 
-.Home-quote-quote:after {
-  content: '”';
+.Home-content-title {
+  font-size: 4em;
+  margin-bottom: 70px;
 }
 
-.Home-quote-cite {
-  color: #fff;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: bold;
+.Home-content-description {
+  font-size: 2em;
+  margin: 0 auto 70px;
+  max-width: 1024px;
 }
 
-.Home-quote-cite:before {
-  content: '– ';
+.Home-content-button:hover {
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 
-@media screen and (min-width: 1024px) {
-  .Home-featuredButton {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+
+@media screen and (max-width: 1025px) {
+  .Home-bannerTitle {
+    font-size: 3.5em;
   }
+
+  .Home-wordmark-image {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .Home-bannerTitle {
+    font-size: 3em;
+  }
+
+  .Home-statement {
+    font-size: 1.8em;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .Home-banner {
+    width: 100%;
+  }
+
+  .Home-bannerTitle {
+    font-size: 2.3em;
+  }
+
+  .Home-wordmark {
+    bottom: 10%;
+  }
+
+  .Home-content {
+    height: 608px;
+    text-align: left;
+  }
+
+  .Home-content-title {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+  }
+
+  .Home-content-description {
+    font-size: 1.8em;
+    margin-bottom: 35px;
+  }
+
+  .Home-content-button {
+    padding: 0;
+    text-align: center;
+    width: 100%
+  }
+  
 }
 

@@ -9,6 +9,8 @@ import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
 import Locations from 'Locations';
 import Button from 'Button';
+import Services from 'Services';
+import {nameToRgba} from 'nameToColor';
 
 var cn = s => `Home-${s}`;
 
@@ -17,27 +19,35 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Hero
-          title={<img src="/public/images/wordmark.svg" alt="Skookum" />}
+          childrenPosition="before"
           color="black"
-          image="/public/images/hero-case-studies.png" />
-        <div className="Home-content">
-          <MajorSectionElement
-            title="We create what’s next."
-            content="Skookum® is a digital innovation shop for the web, mobile, and the internet of things. We help business leaders create meaningful new revenue, realize new efficiencies, and improve the quality of life for employees and customers." />
-          <CaseStudy />
-          <Clients />
-          <div className="Home-featured">
-            <blockquote className={cn('quote')}>
-              <p className={cn('quote-quote')}>Man and his quest for knowledge and progress is determined and can not be deterred.</p>
-              <cite className={cn('quote-cite')}>JFK</cite>
-            </blockquote>
-            <FeaturedPosts />
-            <div className="Home-featuredButton">
-              <Button color="#eee" type="more" to="blog">More Blog Posts</Button>
+          image="/public/images/hero-case-studies.png">
+          <div className="Home-banner">
+            <div className="Home-bannerTitle">
+              Custom software solutions for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they serve.
+            </div>
+            <div className="Home-wordmark">
+              <img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />
             </div>
           </div>
+        </Hero>
+        <div className="Home-statement">
+          Skookum is a full service software development shop.
         </div>
-        <Locations />
+        <Services />
+        <CaseStudy />
+        <div className="Home-content">
+          <div className="Home-content-container">
+            <div className="Home-content-title">
+              There is no limit.
+            </div>
+            <div className="Home-content-description">
+              We’re a technically diverse bunch of strategists, designers and engineers. We have no proprietary platforms to sell. Your business needs determine our technology–not the other way around.
+            </div>
+            <Button className="Home-content-button" to="blog" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
+          </div>
+        </div>
+        <Clients />
       </div>
     );
   }
