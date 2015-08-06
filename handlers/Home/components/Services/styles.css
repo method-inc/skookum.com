@@ -7,9 +7,9 @@
 }
 
 .HomeServices-list:after {
+  clear: both;
   content:'';
   display:block;
-  clear: both;
 }
 
 .HomeServices-item {
@@ -25,26 +25,28 @@
   background-size: cover;
 }
 
-.HomeServices-item:after, .HomeServices-item:before {
+.HomeServices-item:after,
+.HomeServices-item:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
 }
 
-.HomeServices-item:nth-child(3), .HomeServices-item:nth-child(6) {
+.HomeServices-item:nth-child(3),
+.HomeServices-item:nth-child(6) {
   border-right: 0;
 }
 
 .HomeServices-link {
-  text-decoration: none;
   color: #393939;
+  text-decoration: none;
 }
 
 .HomeServices-overlay {
-  position: absolute;
   bottom: 0;
   left: 0;
+  position: absolute;
   right: 0;
   top: 0;
   z-index: 2;
@@ -67,20 +69,20 @@
 
 .HomeServices-description {
   display: block;
-  opacity: 0;
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.4em;
+  opacity: 0;
   transform: translate3d(0, 0, 0);
 }
 
 .HomeServices-item.is-active .HomeServices-content {
-  background-color: rgba(255,255,255,0.92);
-  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.23);
   transition: all ease-out 350ms;
 }
 
-.HomeServices-item.is-active  .HomeServices-title {
+.HomeServices-item.is-active .HomeServices-title {
   /*padding-top: 12%;*/
   color: #FAAB18;
   transition: all ease-out 150ms;
@@ -89,7 +91,7 @@
 
 }
 
-.HomeServices-item.is-active  .HomeServices-description {
+.HomeServices-item.is-active .HomeServices-description {
   display: block;
   opacity: 1;
   transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms, opacity ease 400ms;

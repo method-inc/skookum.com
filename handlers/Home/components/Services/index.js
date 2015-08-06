@@ -31,7 +31,10 @@ class Services extends React.Component {
       <div className="HomeServices">
         <ul className="HomeServices-list">
           {SERVICES.map(s => (
-            <li ref={s[1]} style={{backgroundImage: `url(${s[2]})`}}className={`HomeServices-item ${s[1] === this.state.target ? 'is-active' : ''}`} key={s[0]}>
+            <li ref={s[1]} 
+                style={{backgroundImage: `url(${s[2]})`}}
+                className={`HomeServices-item ${s[1] === this.state.target ? 'is-active' : ''}`} 
+                key={s[0]}>
               <a className="HomeServices-link" href={`#${s[1]}`} onClick={this.handleSelectSegment}>
                 <div className="HomeServices-overlay"></div>
                 <div className="HomeServices-content">
