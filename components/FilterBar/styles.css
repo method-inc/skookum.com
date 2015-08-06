@@ -9,7 +9,6 @@
   /* arbitrary width to make sure everything is visible */
   margin: 0 auto;
   min-width: 24em;
-  padding: 1.25em 0;
 }
 
 .FilterBar-link {
@@ -17,7 +16,7 @@
   color: #333;
   display: inline-block;
   font-size: 0.75em;
-  padding: 1em;
+  padding: 1.3em 1em;
   text-decoration: none;
   text-transform: uppercase;
 }

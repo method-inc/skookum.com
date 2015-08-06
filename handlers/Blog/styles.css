@@ -5,8 +5,10 @@
 
 .Blog-article {
   border-bottom: 1px solid #efefef;
-  padding: 3em 5% 3em 0;
+  color: #393939;
+  font-weight: 300;
   margin: 0 5%;
+  padding: 3em 5% 3em 0;
 }
 
 .Blog-article-content {
@@ -15,7 +17,7 @@
 
 .Blog-article-title {
   color: #393939;
-  font-size: 1.1666em;
+  font-size: 2em;
   font-weight: 900;
   text-decoration: none;
 }
@@ -25,7 +27,7 @@
 }
 
 .Blog-article-summary {
-  font-size: 1rem;
+  font-size: 1.1em;
   line-height: 1.6;
 }
 
@@ -34,7 +36,7 @@
 }
 
 .Blog-article-info {
-  font-size: 0.666em;
+  font-size: 1em;
   letter-spacing: 0.05em;
 }
 
@@ -44,14 +46,13 @@
 }
 
 .Blog-pager {
+  color: #393939;
   margin: 1.5em 5%;
-  text-align: right;
   position: relative;
-  /* padding-bottom: 2.333em; */
+  text-align: right;
 }
 
 .Blog-page {
-  color: #aaa;
   font-weight: 300;
   position: absolute;
   top: 0;
