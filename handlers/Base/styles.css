@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 img {
   display: block;
 }

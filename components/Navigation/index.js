@@ -74,6 +74,11 @@ class Navigation extends Component {
   }
 
   toggleOverlay(): void {
+    if (!this.state.overlayVisible) {
+      document.getElementsByTagName('body')[0].className = 'noscroll';
+    } else {
+      document.getElementsByTagName('body')[0].className = '';
+    }
     this.setState({overlayVisible: !this.state.overlayVisible});
   }
 
