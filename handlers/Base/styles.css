@@ -4,6 +4,7 @@
 
 .AppBase {
   font-family: Lato;
+  position: relative;
 }
 
 body {

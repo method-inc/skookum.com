@@ -12,11 +12,8 @@ var renderCareer: ReactElement = pos => (
   <li className="CareersContent-item">
     <div className="CareersContent-item-segment">
       <div className="CareersContent-job-title">{pos.title}</div>
-      <p className="CareersContent-description">
-        {pos.content.split('&lt;/p&gt;')[0].slice(9).replace(/\&nbsp;/g, '’')}
-      </p>
       <div className="CareersContent-meta">{pos.location.name}</div>
-      <Button style={{border: '0', padding: '0'}} href={pos.absolute_url}>Read More and Apply</Button>
+      <Button className="CareersContent-button" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}} href={pos.absolute_url}>View Details & Apply</Button>
     </div>
   </li>
 );
@@ -46,7 +43,9 @@ class CareersContent extends Component {
         <div className="CareersContent-title">
           Available Positions
         </div>
-        {careers.map(renderCareer)}
+        <ul className="CareersContent-list">
+          {careers.map(renderCareer)}
+        </ul>
       </div>
     );
   }

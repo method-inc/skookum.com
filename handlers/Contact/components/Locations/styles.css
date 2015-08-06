@@ -13,29 +13,29 @@
 }
 
 .ContactLocations li[role=tab] {
-  background: #F16521;
+  background: #F5A40E;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 1.1em;
-  padding-bottom: 3em;
-  padding-top: 3em;
+  padding: 2em 0;
   position: relative;
+  margin-bottom: 0;
   text-align: center;
   text-transform: uppercase;
   width: 50%;
 }
 
 .ContactLocations li[role=tab][selected=selected] {
-  background: #FF7532;
+  background: #FAAB2A;
 }
 
 .ContactLocations li[role=tab][selected=selected]:after {
   position: absolute;
   top: 99%;
   left: 0;
-  border-top: 1.5em solid #ff7532;
+  border-top: 1.5em solid #FAAB2A;
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   content: ' ';
@@ -68,47 +68,51 @@
   background: #fff;
   box-sizing: border-box;
   line-height: 1.5;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0.666em;
   position: relative;
   overflow: hidden;
-  width: 80%;
+}
+
+.ContactLocations-contact {
+  font-weight: 300;
+  padding: 3em 5%;
+}
+
+.ContactLocations-name {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-right: 8%;
+}
+
+.ContactLocations-addr,
+.ContactLocations-phone {
+  font-size: 1em;
+  display: inline-block;
+  margin-right: 8%;
+}
+
+.ContactLocations-phone {
+  margin-right: 0;
 }
 
 .ContactLocations-map {
   width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
-.ContactLocations-name {
-  margin-top: 1em;
-  text-transform: uppercase;
-}
+@media screen and (max-width: 600px) {
+  .ContactLocations-map.is-Charlotte {
+    background-size: 300%;
+    background-position: -180px -110px;
+  }
 
-.ContactLocations-nickname {
-  font-size: 0.75em;
-}
-
-.ContactLocations-addr {
-  margin-top: 1em;
-}
-
-.ContactLocations-phone {
-  color: #F16521;
-  margin-bottom: 3em;
-}
-
-@media screen and (min-width: 601px) {
-  .ContactLocations-name,
-  .ContactLocations-nickname,
-  .ContactLocations-addr,
-  .ContactLocations-location,
-  .ContactLocations-phone {}
-
-  .ContactLocations-map {
-    float: left;
-    margin-right: 1.5em;
-    width: 50%;
+  .ContactLocations-map.is-Denver {
+    background-size: 300%;
+    background-position: -380px -150px;
   }
 }
+
 

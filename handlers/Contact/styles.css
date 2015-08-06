@@ -3,12 +3,6 @@
     display: flex;
   }
 
-  .ContactForm {
-    flex: 0.6666;
-    padding-left: 15%;
-    width: 66%;
-  }
-
   .NewsletterInfo {
     flex: 0.333;
     padding-right: 15%;

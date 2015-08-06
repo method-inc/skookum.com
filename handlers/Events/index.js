@@ -9,10 +9,10 @@ class Events extends React.Component {
     return (
       <div className="Events">
         <Hero
-          title="Events"
-          subtitle="We have some crazy awesome events & we’d love to hangout with you"
-          color="red"
-          image="/public/images/hero-default-bg.png" />
+          childrenPosition="after"
+          color="black"
+          image="/public/images/hero-default-bg.png"
+          title="Events"/>
         <EventsContent />
       </div>
     );

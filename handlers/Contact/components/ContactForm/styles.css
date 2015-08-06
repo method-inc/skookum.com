@@ -1,13 +1,16 @@
 /** @define ContactForm; use strict */
 
 .ContactForm {
-  padding: 4em 3em 1.5em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 4em;
+  width: 100%;
 }
 
 .ContactForm-header {
   font-weight: 900;
   font-size: 1.3333em;
-  text-transform: uppercase;
 }
 
 .ContactForm-header-icon {
@@ -70,7 +73,7 @@
 
 @media screen and (max-width: 600px) {
   .ContactForm {
-    padding: 4em 1em 1.5em;
+    padding: 2em;
   }
   .ContactForm-submit {
     width: 100%

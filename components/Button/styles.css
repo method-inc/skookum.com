@@ -21,22 +21,22 @@
 }
 
 .Button.is-primary {
-  background: #f16521;
+  background: #FAAB18;
   color: #fff;
   transition: background 0.1666s ease-in;
 }
 
 .Button.is-primary:hover,
 .Button.is-primary:focus {
-  background: #ce5318;
+  background: #F5A40E;
 }
 
 .Button.is-secondary,
 .Button.is-more,
 .Button.is-light{
   background: transparent;
-  border: 1px solid #f16521;
-  color: #f16521;
+  border: 1px solid #FAAB18;
+  color: #FAAB18;
   transition: all 0.1666s ease-in;
 }
 

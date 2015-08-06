@@ -14,37 +14,32 @@
   border-bottom: 1px solid #eee;
 }
 
-.EventsContent-item-segment {
-  display: inline-block;
-  min-width: 120px;
-  vertical-align: top;
-}
-
 .EventsContent-date {
-  color: #eb4e1b;
-  float: left;
-  font-size: 2.25em;
-  margin-right: 0.3333em
+  color: #aaa;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 6px;
 }
 
-.EventsContent-month-year,
-.EventsContent-time {
-  font-size: 0.666em;
-  margin: 0.333em 0;
-  text-transform: uppercase;
+.EventsContent-eventName {
+  font-size: 2em;
+  margin-bottom: 6px;
 }
-
-.EventsContent-eventName {}
 
 .EventsContent-groupName {
   color: #aaa;
   font-size: 0.666em;
-  margin-top: 0.333em;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .EventsContent-button {
-  line-height: 3;
+  line-height: 4;
+}
+
+.EventsContent-button:hover,
+.EventsContent-button:focus {
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 
 @media screen and (max-width: 660px) {
@@ -53,71 +48,23 @@
   }
 
   .EventsContent-button {
-    right: 1.5rem;
-  }
-
-
-  .EventsContent-item-segment {
-    min-width: 100px;
-  }
-
-  .EventsContent-date {
-    font-size: 1.75em;
-    margin-top: 0.0.555em;
-    margin-right: 0.1666em
-  }
-
-  .EventsContent-month-year,
-  .EventsContent-time {
-    font-size: 0.666em;
-    margin: 0.333em 0;
-    text-transform: uppercase;
-  }
-
-  .EventsContent-button {
     margin-top: 1.5em;
     text-align: center
-  }
-}
-
-@media screen and (max-width: 661px) {
-  .EventsContent-item-segment {
-    display: block;
-    min-width: none;
-  }
-
-  .EventsContent-date {
-    font-size: 3.75em;
-  }
-
-  .EventsContent-list {
-    margin-left: 0;
   }
 
   .EventsContent-item {
     padding-left: 1.5em;
   }
 
-  .EventsContent-month-year,
-  .EventsContent-time {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
-
   .EventsContent-button {
     display: block;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 661px) {
   .EventsContent-item {
     padding-right: 10%;
-  }
-
-  .EventsContent-button {
-    position: absolute;
-    right: 1.5rem;
-    top: 2rem;
   }
 
   .EventsContent-list {

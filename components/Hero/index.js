@@ -21,32 +21,33 @@ class Hero extends Component {
       title,
       subtitle,
       children,
-      childrenPosition,
       color,
       image = '',
       className = '',
       style = EMPTY_OBJECT,
     } = this.props;
 
-    invariant(
-      !(children && !childrenPosition),
-      'You’ve attempted to render children into Hero without declaring ' +
-      '`childrenPosition` to be `before` or `after`.'
-    );
-
     className = 'Hero ' + className;
     if (color === 'yellow') {
       className = className + 'is-light';
     }
 
-    var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
-    var contentStyle = childrenPosition === 'after' ? {bottom: 'auto', top: '10em'} : EMPTY_OBJECT;
+    var titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : EMPTY_OBJECT;
+    var subtitleStyle = typeof subtitle === 'undefined' ? subtitleStyle = {display: 'none'} : EMPTY_OBJECT;
 
-    var titleStyle = color === 'yellow' ? {color: '#000', borderColor: '#000'} : EMPTY_OBJECT;
+    var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
+
+    var skinny = typeof children === 'undefined' && typeof subtitle === 'undefined' ? 'is-skinny' : '';
 
     return (
-      <div className="Hero" style={style}>
-        <div className="Hero-content" style={contentStyle}>
+      <div className={`Hero ${skinny}`} style={style}>
+        <div className="Hero-content">
+          <div className="Hero-title" style={titleStyle}>
+              {title}
+          </div>
+          <div className="Hero-subtitle" style={subtitleStyle}>
+            {subtitle}
+          </div>
           {children}
         </div>
         <div className="Hero-overlay" style={{
@@ -61,10 +62,9 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.object,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,
-  childrenPosition: PropTypes.oneOf(['before', 'after']),
   children: PropTypes.node,
   style: PropTypes.object,
 };

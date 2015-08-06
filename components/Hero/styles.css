@@ -3,17 +3,23 @@
 .Hero {
   background: #eb4e1b;
   color: #fff;
+  height: 100vh;
+  min-height: 375px;
+  max-height: 768px;
   position: relative;
   overflow: hidden;
-  height: 786px;
+}
+
+.Hero.is-skinny {
+  height: 34vh;
 }
 
 .Hero-content {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 2;
 }
 
@@ -22,16 +28,23 @@
 }
 
 .Hero-title {
-  font-size: 1.875em; /*30 / 16*/
-  font-weight: 900;
-  margin: 0 0 0.333em;
-  padding-bottom: 0.3333em;
+  display: inline-block;
+  font-size: 2.5em; /*30 / 16*/
+  font-weight: 300;
+  margin-left: 5%;
+  padding-top: 2.8em;
   text-transform: uppercase;
 }
 
 .Hero-subtitle {
-  font-size: 0.875em; /*14 / 16*/
+  box-sizing: border-box;
+  bottom: 8%;
+  font-size: 4em; /*14 / 16*/
   font-weight: 300;
+  max-width: 720px;
+  padding: 0 5%;
+  position: absolute;
+  width: 65%;
 }
 
 .Hero-overlay,
@@ -50,8 +63,12 @@
 }
 
 .Hero-overlay {
-  z-index: 1;
   right: 35%;
+  z-index: 1;
+}
+
+.Hero.is-skinny .Hero-overlay {
+  right: 0;
 }
 
 .Hero-links {
@@ -69,6 +86,17 @@
   z-index: 101;
 }
 
+@media screen and (max-width: 1025px) {
+  .Hero-subtitle {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .Hero-subtitle {
+    font-size: 3em;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .Hero {
@@ -77,8 +105,15 @@
   .Hero-overlay {
     right: 0;
   }
+
+  .Hero-title {
+    font-size: 2em;
+    padding-top: 85px;
+  }
+
+  .Hero-subtitle {
+    bottom: 12%;
+    font-size: 2.3em;
+    width: 100%;
+  }
 }
-
-
-
-

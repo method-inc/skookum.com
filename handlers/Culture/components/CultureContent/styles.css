@@ -13,117 +13,150 @@
   }
 }
 
+.CultureContent-culture {
+  background-color: #EFEFEF;
+  height: 100vh;
+  min-height: 375px;
+  max-height: 768px;
+  position: relative;
+}
+
+
+.CultureContent-culture-image {
+  background-size: cover;
+  bottom: 0;
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65%;  
+}
+
+.CultureContent-culture-statement {
+  box-sizing: border-box;
+  display: inline-block;
+  float: right;
+  font-weight: 300;
+  font-size: 1.2em;
+  height: 100%;
+  line-height: 1.7em;
+  padding: 10% 5% 0;
+  width: 35%;
+}
+
 /** BENEFITS ================ */
 
 .CultureContent-benefits {
-  background: #F16521;
-  color: #fff;
-  padding: 3em 1.5em;
+  font-weight: 300;
+  height: 100vh;
+  min-height: 375px;
+  max-height: 768px;
+  position: relative;
+}
+
+.CultureContent-benefits-image {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.CultureContent-benefits-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(250, 171, 24, 0.6);
 }
 
 .CultureContent-benefits-title {
-  font-size: 2em;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  font-size: 3em;
+  padding: 2em 0;
+  position: relative;
+  text-align: center;
 }
 
 .CultureContent-benefits-list {
-  margin: 0;
+  columns: 2;
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 0;
 }
 
 .CultureContent-benefits-item {
+  font-size: 1.2em;
   font-weight: 300;
   list-style: none;
-  line-height: 2;
+  line-height: 1.6;
   margin-bottom: 0;
-  padding-left: 2em;
+  padding-left: 11%;
+  padding-right: 5%;
   position: relative;
 }
 
 .CultureContent-benefits-item:before {
   content: '•';
-  color: #E8530B;
+  color: #FAAB18;
+  font-size: 14px;
   font-weight: bold;
   position: absolute;
-  left: 0;
+  left: 5%;
+  top: 5px;
 }
 
 
 @media screen and (max-width: 600px) {
-  .CultureContent-benefits {
-    padding-top: 0;
+
+  .CultureContent-culture {
+    height: 760px;
+    padding-bottom: 1em;
   }
 
-  .CultureContent-benefits-image {
-    display: none;
+  .CultureContent-benefits {
+    height: 100%;
+    max-height: 100%;
+    padding-bottom: 4em;
   }
 
   .CultureContent-benefits-title {
-    background: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 3rem 0;
-    margin: 0 -1.5rem;
-    margin-bottom: 3rem;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1020px) {
-  .CultureContent-benefits {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    max-height: 630px;
-  }
-
-  .CultureContent-benefits-image {
-    display: none;
-  }
-
-
-  .CultureContent-benefits-title {
-    background: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding-top: 15rem;
-    margin: 0;
-    width: 300px;
+    padding: 1em 0 0.5em;
   }
 
   .CultureContent-benefits-list {
-    padding: 3rem 0;
-    margin: 0 5% 0 1.5em;
-  }
-}
-
-@media screen and (min-width: 1021px) {
-  .CultureContent-benefits {
-    overflow: hidden;
-    padding: 0 5%;
-    margin-bottom: 20px;
-    max-height: 630px;
+    columns: 1;
   }
 
-  .CultureContent-benefits-image {
-    float: left;
-    margin-left: -7.5%;
-    margin-right: 5%;
-    width: 45%;
+  .CultureContent-benefits-item {
+    padding-left: 5%;
   }
 
-  .CultureContent-benefits-title {
-    padding-top: 4rem;
+  .CultureContent-benefits-item:before {
+    left: -4px;
   }
 
-  .CultureContent-benefits-list {
-    padding-bottom: 3rem;
-    padding-bottom: 0;
+  .CultureContent-culture-image {
+    background-size: cover;
+    display: block;
+    height: 50%;
+    position: relative;
+    width: 100%;  
   }
 
-  .CultureContent-benefits-title,
-  .CultureContent-benefits-list {
+  .CultureContent-culture-statement {
     box-sizing: border-box;
-    margin-left: 50%;
-    padding-right: 1.5em;
+    display: block;
+    float: none;
+    height: 50%;
+    padding: 3em 5% 0;
+    width: 100%;
   }
 }
+
+
+
 

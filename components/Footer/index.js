@@ -17,7 +17,6 @@ class Footer extends React.Component {
           <a href="https://www.linkedin.com/company/skookum-digital-works" className="Footer-link">Linkedin</a>
           <a href="https://www.facebook.com/SkookumDigitalWorks" className="Footer-link">Facebook</a>
         </div>
-        <div className="Footer-brag">We've got this software thing on lock</div>
         <p className="Footer-legal">Ⓒ 2015 Skookum. All Rights Reserved.</p>
       </footer>
     );

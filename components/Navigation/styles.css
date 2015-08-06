@@ -1,9 +1,12 @@
 /** @define Navigation; use strict */
 
 .Navigation-main {
+  border-bottom: 1px solid white;
   position: absolute;
   left: 5%;
-  top: 3%;
+  right: 5%;
+  top: 1em;
+  padding-bottom: 2em;
   z-index: 3;
 }
 
@@ -135,8 +138,7 @@
 
 @media screen and (max-width: 600px) {
   .Navigation-main {
-    left: 3%;
-    top: 1%;
+    padding-bottom: 1.2em;
   }
 
   .Navigation-main-link {
@@ -145,8 +147,8 @@
 
   .Navigation-hamburger {
     position: fixed;
-    right: 3%;
-    top: 1%;
+    right: 5%;
+    top: 1em;
     z-index: 101;
   }
 }
