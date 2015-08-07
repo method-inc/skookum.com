@@ -95,7 +95,7 @@ class Navigation extends Component {
             <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
             <Link to="case-studies" className="Navigation-main-link">Work</Link>
             <Link to="services" className="Navigation-main-link">Capabilities</Link>
-            <Link to="events" className="Navigation-main-link">Events</Link>
+            <Link to="blog" className="Navigation-main-link">Blog</Link>
             <Link to="contact" className="Navigation-main-link">Contact</Link>
           </div>
         </div>

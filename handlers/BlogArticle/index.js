@@ -48,10 +48,9 @@ class BlogArticle extends React.Component {
     return (
       <article className="BlogArticle">
         <Hero
-          title="Blog"
+          title={title}
           image={poster}
-          color="black"
-          subtitle={title} />
+          color="black" />
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />

@@ -24,6 +24,11 @@
   text-decoration: none;
 }
 
+.Footer-link:hover,
+.Footer-link.active {
+  color: #FAAB18;
+}
+
 .Footer-legal {
   font-size: 1em;
 }
