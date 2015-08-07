@@ -75,18 +75,19 @@ class Navigation extends Component {
 
   toggleOverlay(): void {
     if (!this.state.overlayVisible) {
-      document.getElementsByTagName('body')[0].className = 'noscroll';
+      document.body.className = 'noscroll';
     } else {
-      document.getElementsByTagName('body')[0].className = '';
+      document.body.className = '';
     }
     this.setState({overlayVisible: !this.state.overlayVisible});
   }
 
   render(): ?ReactElement {
     var mobileClassName = `Navigation-mobile ${this.state.overlayVisible ? 'is-visible' : 'is-not-visible'}`;
-    var mainClass = `Navigation-main ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
-    mainClass += this.state.atTop ? ' is-top' : '';
-    var hamburgerClass = `Navigation-hamburger ${this.state.showNav ? 'is-visible' : 'is-not-visible'}`;
+
+    var navVisible = this.state.showNav ? 'is-visible' : 'is-not-visible';
+    var mainClass = `Navigation-main ${navVisible} ${this.state.atTop ? 'is-top' : ''}`;
+    var hamburgerClass = `Navigation-hamburger ${navVisible}`;
 
     return (
       <div>

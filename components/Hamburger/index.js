@@ -13,9 +13,9 @@ class Hamburger extends Component {
     return (
       <a href={target} className={className} onClick={this.props.onClick}>
         <div className="Hamburger-icon">
-          <div className={'Hamburger-top is-black'} />
-          <div className={'Hamburger-middle is-black'} />
-          <div className={'Hamburger-bottom is-black'} />
+          <div className="Hamburger-top" />
+          <div className="Hamburger-middle" />
+          <div className="Hamburger-bottom" />
         </div>
       </a>
     );
@@ -23,7 +23,7 @@ class Hamburger extends Component {
 }
 
 Hamburger.propTypes = {
-  overlayVisible: PropTypes.boolean.isRequired,
+  overlayVisible: PropTypes.bool.isRequired,
   target: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
