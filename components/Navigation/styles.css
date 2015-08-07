@@ -93,6 +93,7 @@
 .Navigation-mobile.is-not-visible {
   opacity: 0;
   transform: scale(0.8);
+  z-index: 0;
 }
 
 .Navigation-content {

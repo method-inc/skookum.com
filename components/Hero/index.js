@@ -26,6 +26,8 @@ class Hero extends Component {
       image = '',
       className = '',
       style = EMPTY_OBJECT,
+      titleStyle,
+      subtitleStyle,
     } = this.props;
 
     className = 'Hero ' + className;
@@ -33,8 +35,8 @@ class Hero extends Component {
       className = className + 'is-light';
     }
 
-    var titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : EMPTY_OBJECT;
-    var subtitleStyle = typeof subtitle === 'undefined' ? subtitleStyle = {display: 'none'} : EMPTY_OBJECT;
+    titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : titleStyle;
+    subtitleStyle = typeof subtitle === 'undefined' ? subtitleStyle = {display: 'none'} : subtitleStyle;
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
 

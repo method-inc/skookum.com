@@ -20,6 +20,7 @@
   margin-bottom: 3em;
   padding: 0 5%;
   position: relative;
+  text-align: center;
   width: 50%;
 }
 
@@ -37,10 +38,6 @@
 .CareersContent-button:focus {
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
   padding: 0 4em;
-}
-
-.CareersContent-item:nth-child(even) {
-  padding-left: 13%;
 }
 
 .CareersContent-job-title {

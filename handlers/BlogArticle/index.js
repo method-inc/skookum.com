@@ -50,6 +50,7 @@ class BlogArticle extends React.Component {
         <Hero
           title={title}
           image={poster}
+          titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
           color="black" />
         <div
           className="BlogArticle-content"

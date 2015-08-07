@@ -12,7 +12,7 @@ class Clients extends Component {
       <div className="HomeClients">
         <div className="HomeClients-content">
           <div className="HomeClients-title">
-            For Over a decade
+            For over a decade
           </div>
           <div className="HomeClients-description">
             we have produced mission critical technology for some of the largest brands and organizations on the planet.
