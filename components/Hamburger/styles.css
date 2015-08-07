@@ -4,7 +4,7 @@
   display: inline-block;
   pointer-events: auto;
   position: fixed;
-  top: 2em;
+  top: 1.2em;
   right: 5%;
   z-index: 3;
   transition: all 0.333s ease-in;
@@ -73,4 +73,5 @@
   background-color: #fff;
   transform: rotate(-45deg) translate(7px, -8px);
 }
+
 
