@@ -5,25 +5,30 @@
 
 .Blog-article {
   border-bottom: 1px solid #efefef;
+  color: #393939;
+  font-weight: 300;
+  margin: 0 5%;
   padding: 3em 5% 3em 0;
-  margin-left: 5%;
 }
 
 .Blog-article-content {
-  padding: 0 5%;
   margin: 0 auto;
 }
 
 .Blog-article-title {
-  color: #000;
-  font-size: 1.1666em;
+  color: #393939;
+  font-size: 2em;
   font-weight: 900;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.Blog-article-title:hover,
+.Blog-article-title:focus {
+  color: #FAAB18;
 }
 
 .Blog-article-summary {
-  font-size: 1rem;
+  font-size: 1.1em;
   line-height: 1.6;
 }
 
@@ -32,20 +37,30 @@
 }
 
 .Blog-article-info {
-  font-size: 0.666em;
+  font-size: 1em;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .Blog-article-author {
-  color: inherit;
+  color: #393939;
   text-decoration: none;
 }
 
 .Blog-pager {
+  color: #393939;
   margin: 1.5em 5%;
+  position: relative;
   text-align: right;
-  /* padding-bottom: 2.333em; */
+}
+
+.Blog-page {
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .Blog-article-pager.is-previous {
@@ -60,6 +75,7 @@
   margin-left: -0.416666em;
   margin-right: 0.416666em;
   padding: 0.416666em;
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
 }

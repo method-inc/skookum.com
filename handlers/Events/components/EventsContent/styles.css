@@ -1,21 +1,24 @@
 /** @define EventsContent; use strict */
 
-.EventsContent {}
+.EventsContent {
+  padding: 5%;
+}
 
 .EventsContent-list {
-  margin: 1em 0 0 1.5em;
-  padding: 0 1.5em 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 .EventsContent-item {
+  color: #393939;
   display: block;
+  font-weight: 300;
   padding: 2em 0;
   position: relative;
   border-bottom: 1px solid #eee;
 }
 
 .EventsContent-date {
-  color: #aaa;
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 6px;
@@ -23,14 +26,13 @@
 
 .EventsContent-eventName {
   font-size: 2em;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 .EventsContent-groupName {
-  color: #aaa;
-  font-size: 0.666em;
+  font-size: 1em;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
 .EventsContent-button {
@@ -43,33 +45,11 @@
 }
 
 @media screen and (max-width: 660px) {
-  .EventsContent-list {
-    margin-left: 1.5em;
-  }
-
   .EventsContent-button {
     margin-top: 1.5em;
-    text-align: center
-  }
-
-  .EventsContent-item {
-    padding-left: 1.5em;
-  }
-
-  .EventsContent-button {
     display: block;
     padding: 0;
-  }
-}
-
-@media screen and (min-width: 661px) {
-  .EventsContent-item {
-    padding-right: 10%;
-  }
-
-  .EventsContent-list {
-    margin-left: 5%;
-    padding-right: 0;
+    text-align: center;
   }
 }
 
@@ -78,11 +58,6 @@
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .EventsContent-list {
-    margin-left: 0;
-    padding-right: 0;
   }
 
 }

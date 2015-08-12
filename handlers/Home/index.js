@@ -22,6 +22,7 @@ class Home extends React.Component {
           childrenPosition="before"
           color="black"
           image="/public/images/hero-case-studies.png"
+          video="/public/videos/home-mov.MOV"
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software solutions for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they serve.</span>} />
         <div className="Home-statement">

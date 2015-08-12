@@ -12,11 +12,15 @@ class CaseStudiesContent extends Component {
   render(): ReactElement {
     return (
       <div className="CaseStudiesContent">
-        {this.props.caseStudies.map((f, imageUrl) => (
-          (imageUrl = lookup(f.caseStudyGridImage, 'fields.file.url')),
-          <Link key={f.slug} to="study-article" params={{slug: f.slug}} className="CaseStudiesContent-item" style={{backgroundImage: 'url(' + imageUrl + ')'}}>
-            <span className="CaseStudiesContent-title">{f.title}</span>
-            <span className="CaseStudiesContent-description">{f.summary}</span>
+        {this.props.caseStudies.items.map((f, imageUrl) => (
+          (imageUrl = lookup(f.image, 'fields.file.url')),
+          <Link key={f.slug} to="study-article" params={{slug: f.slug}} className="CaseStudiesContent-item">
+            <div className="CaseStudiesContent-text">
+              <span className="CaseStudiesContent-title">{lookup(f.client, 'fields.name')}</span>
+              <span className="CaseStudiesContent-description">{f.summary}</span>
+            </div>
+            <div className="CaseStudiesContent-overlay" />
+            <div className="CaseStudiesContent-image" style={{backgroundImage: `url(${imageUrl})`}}/>
           </Link>
         ))}
       </div>
@@ -27,7 +31,7 @@ class CaseStudiesContent extends Component {
 CaseStudiesContent.displayName = 'CaseStudiesContent';
 
 CaseStudiesContent.propTypes = {
-  caseStudies: PropTypes.array.isRequired,
+  caseStudies: PropTypes.object.isRequired,
 };
 
 export default Resolver.createContainer(CaseStudiesContent, {

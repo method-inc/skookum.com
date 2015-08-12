@@ -12,14 +12,14 @@ class Clients extends Component {
       <div className="HomeClients">
         <div className="HomeClients-content">
           <div className="HomeClients-title">
-            For Over a decade
+            For over a decade
           </div>
           <div className="HomeClients-description">
             we have produced mission critical technology for some of the largest brands and organizations on the planet.
           </div>
         </div>
         <div className="HomeClients-clients">
-          {this.props.clients.map(n => (
+          {this.props.clients.items.map(n => (
             <div className="HomeClients-client" key={n.name}>
               <div className="HomeClients-context">
                 Mobile streaming video backend for employee training

@@ -5,45 +5,41 @@
 .OpenSource-project {
   box-sizing: border-box;
   display: block;
-  padding: 2.25em 1.5em;
+  padding: 2.25em;
+  margin: 0 5%;
   position: relative;
   border-bottom: 1px solid #eee;
 }
 
-.OpenSource-title {}
+.OpenSource-title {
+  font-size: 2em;
+}
 
 .OpenSource-description {
   color: #aaa;
-  font-size: 0.666em;
+  font-size: 1em;
+  font-weight: 300;
   margin-top: 0.333em;
-  text-transform: uppercase;
 }
 
 .OpenSource-button {
   line-height: 3;
+  margin-top: 2em;
+}
+
+.OpenSource-button:hover,
+.OpenSource-button:focus {
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
 }
 
 @media screen and (max-width: 660px) {
-  .OpenSource-button {
-    display: block;
-    margin-top: 1.5em;
+  .OpenSource-project {
     text-align: center;
   }
-}
-
-@media screen and (min-width: 601px) {
-  .OpenSource-project {
-    padding: 2.25em 14em 2.25em 1.5em;
-  }
-
-  .OpenSource-project {
-    padding-left: 5%;
-  }
 
   .OpenSource-button {
-    position: absolute;
-    right: 1.5rem;
-    top: 2.25rem;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -52,8 +48,6 @@
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 

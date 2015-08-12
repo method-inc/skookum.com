@@ -44,7 +44,7 @@
   max-width: 720px;
   padding: 0 5%;
   position: absolute;
-  width: 65%;
+  width: 66.666%;
 }
 
 .Hero-overlay,
@@ -62,8 +62,22 @@
   background-size: cover;
 }
 
+.Hero-image--mobile {
+  display: none;
+}
+
+.Hero-video {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 1107px;
+}
+
 .Hero-overlay {
-  right: 35%;
+  right: 33.333%;
   z-index: 1;
 }
 
@@ -89,6 +103,14 @@
 @media screen and (max-width: 1025px) {
   .Hero-subtitle {
     font-size: 3.5em;
+  }
+
+  .Hero-video {
+    display: none;
+  }
+
+  .Hero-image--mobile {
+    display: block;
   }
 }
 

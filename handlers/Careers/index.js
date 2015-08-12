@@ -11,7 +11,7 @@ class Careers extends React.Component {
           color="black"
           image="/public/images/hero-culture2.png"
           title="Careers"
-          subtitle={<span>In order to create real value you must put <span style={{color: '#FAAB18'}}>people</span> at the center of everything</span>}/>   
+          subtitle="In order to create real value you must put at the center of everything" />
         <CultureContent />
         <CareersContent />
       </div>

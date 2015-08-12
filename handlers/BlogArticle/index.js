@@ -50,7 +50,8 @@ class BlogArticle extends React.Component {
         <Hero
           title={title}
           image={poster}
-          subtitle={`By ${author.name} | ${fmt.date(new Date(datePublished))}`} />
+          titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
+          color="black" />
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />

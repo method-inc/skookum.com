@@ -30,7 +30,7 @@ class ArticlesList extends Component {
 
     return (
       <div className="ArticlesList">
-        {this.props.articles.map(a => (
+        {this.props.articles.items.map(a => (
           <div key={a.slug} className="Blog-article">
             <div className="Blog-article-content">
               <Link className="Blog-article-title" to="blog-article" params={{slug: a.slug}}>{a.title}</Link>
@@ -43,7 +43,8 @@ class ArticlesList extends Component {
         ))}
         <div className="Blog-pager">
           {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
-          {this.props.articles.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
+          <div className="Blog-page">Page {query.page} / {Math.round(this.props.articles.total / 5)}</div>
+          {this.props.articles.items.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
         </div>
       </div>
     );
@@ -55,7 +56,7 @@ ArticlesList.contextTypes = {
 };
 
 ArticlesList.propTypes = {
-  articles: PropTypes.array.isRequired,
+  articles: PropTypes.object.isRequired,
 };
 
 ArticlesList.displayName = 'ArticlesList';
