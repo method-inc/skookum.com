@@ -1,45 +1,112 @@
 /** @define Service; use strict */
 
-.Service-links {
-  text-align: right;
-  text-transform: uppercase;
+.Service {
+  font-weight: 100;
 }
 
-.Service-link {
-  border-sizing: border-box;
-  color: #333;
-  display: inline-block;
-  font-size: 1.333em;
-  padding: 1.5em;
-  text-decoration: none;
-  vertical-align: top;
-  max-width: 50%;
+
+.Service-statement {
+  background-size: cover;
+  background-position: center;
+  color: #393939;
+  font-weight: 300;
+  height: 786px;
+  padding: 0 5%;
+  position: relative;
 }
 
-.Service-link:first-child {
-  float: left;
-  text-align: left;
+.Service-statement-container {
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
 }
 
-.Service-link-direction {
-  display: block;
+.Service-statement-title {
+  font-size: 2em;
+  margin-bottom: 70px;
+  max-width: 920px;
 }
 
-@media screen and (max-width: 600px) {
-  .Service-link-description {
-    display: none; 
+.Service-statement-description {
+  font-size: 1.5em;
+  max-width: 850px;
+}
+
+.Service-title {
+  font-size: 4em;
+  text-align: center;
+  max-width: 920px;
+  margin: 1.5em auto;
+  padding: 0 5%;
+}
+
+.Service-highlight {
+  position: relative;
+  height: 321px;
+  margin-bottom: 3em;
+}
+
+.Service-highlight-container {
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
+  margin-right: 400px;
+  padding: 0 5em;
+}
+
+.Service-highlight-title {
+  font-size: 2.2em;
+}
+
+.Service-highlight-description {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.Service-highlight-image {
+  background-size: cover;
+  background-position: center;
+  height: 321px;
+  width: 321px;
+  position: absolute;
+  right: 80px;
+  top: 0;
+}
+
+@media screen and (min-width: 851px) {
+
+  .Service-highlight:nth-child(odd) .Service-highlight-image {
+    right: 0;
+    left: 80px;
+  }
+
+  .Service-highlight:nth-child(odd) .Service-highlight-container {
+    margin-right: 0;
+    margin-left: 400px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .Service-links {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (max-width: 850px) {
+  .Service-highlight {
+    height: 100%;
   }
 
-  .Service-link {
-    padding-left: 0;
-    padding-right: 0;
+  .Service-highlight-image {
+    height: 189px;
+    width: 189px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 1em auto;
+  }
+
+  .Service-highlight-container {
+    top:  0;
+    transform: translateY(0);
+    padding: 0 5%;
+    margin: 0;
   }
 }
+
+

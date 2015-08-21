@@ -10,6 +10,7 @@ import Production from './Production';
 import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
 import Support from './Support';
+import Hero from 'Hero';
 
 import {Link} from 'react-router';
 
@@ -68,17 +69,53 @@ class Service extends React.Component {
     var next = after(service);
 
     return (
-      <div>
-        {renderService(service)}
-        <div className="Service-links">
-          <Link className="Service-link" to="service" params={{service: previous}}>
-            <span className="Service-link-description">{previous}</span>
-            <small className="Service-link-direction">‹ Previous</small>
-          </Link>
-          <Link className="Service-link" to="service" params={{service: next}}>
-            <span className="Service-link-description">{next}</span>
-            <small className="Service-link-direction">Next ›</small>
-          </Link>
+      <div className="Service">
+        <Hero childrenPosition="before" color="black" image="/public/images/hero-blog.png" title="Enterprise" />
+        <div className="Service-statement" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}} >
+          <div className="Service-statement-container">
+            <div className="Service-statement-title">
+              You know there’s a better way, and nothing off-the-shelf suits you.
+            </div>
+            <div className="Service-statement-description">
+              Sure, you might have some processes in common with your competitors, but your workflows might be more or less complex. We enjoy transforming businesses by building exactly what you need. Imagine your enterprise software free from licensing fees, proprietary hardware, and bloated features you pay for but don’t use. 
+            </div>
+          </div>
+        </div>
+        <div className="Service-title">
+          We can help build you a better business.
+        </div>
+        <div className="Service-highlight">
+          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+          <div className="Service-highlight-container">
+            <div className="Service-highlight-title">
+              New Software Applications
+            </div>
+            <div className="Service-highlight-description">
+              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+            </div>
+          </div>
+        </div>
+        <div className="Service-highlight">
+          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+          <div className="Service-highlight-container">
+            <div className="Service-highlight-title">
+              New Software Applications
+            </div>
+            <div className="Service-highlight-description">
+              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+            </div>
+          </div>
+        </div>
+        <div className="Service-highlight">
+          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+          <div className="Service-highlight-container">
+            <div className="Service-highlight-title">
+              New Software Applications
+            </div>
+            <div className="Service-highlight-description">
+              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+            </div>
+          </div>
         </div>
       </div>
     );
