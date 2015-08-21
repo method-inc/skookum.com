@@ -10,12 +10,12 @@ import Typography from 'Typography';
 import {Link} from 'react-router';
 
 const SERVICES = [
-  ['Enterprise', 'internet-of-things', '/public/images/blogimg_all.png'],
-  ['Consumer', 'rapid-innovation', '/public/images/blogimg_all.png'],
-  ['Mobile', 'proof-of-concept', '/public/images/blogimg_all.png'],
-  ['Cloud', 'engineering', '/public/images/blogimg_all.png'],
-  ['Internet Of Things', 'production', '/public/images/blogimg_all.png'],
-  ['Wearables', 'support', '/public/images/blogimg_all.png'],
+  ['Enterprise', 'enterprise', '/public/images/blogimg_all.png'],
+  ['Consumer', 'consumer', '/public/images/blogimg_all.png'],
+  ['Mobile', 'mobile', '/public/images/blogimg_all.png'],
+  ['Cloud', 'cloud', '/public/images/blogimg_all.png'],
+  ['Internet Of Things', 'internet-of-things', '/public/images/blogimg_all.png'],
+  ['Wearables', 'wearables', '/public/images/blogimg_all.png'],
 ];
 
 class Services extends React.Component {
@@ -24,31 +24,6 @@ class Services extends React.Component {
 
     this.state = {target: SERVICES[0][1]};
     this.handleSelectSegment = this.handleSelectSegment.bind(this);
-  }
-
-  // TODO: move this hash to a query param so the server can render correctly
-  componentDidMount(): void {
-    var hash = window.location.hash.replace('#', '');
-    if (!hash) return;
-    var needle = null;
-    SERVICES.some(s => s[1] === hash && (needle = s[1]));
-    if (needle) this.selectSegment(needle);
-  }
-
-  selectSegment(target: string): void {
-    this.setState({target});
-  }
-
-  handleSelectSegment(event: mixed): void {
-    // TODO: sync this with the breakpoints in ./styles.css
-    var segment = event.target.getAttribute('href').replace('#', '');
-    if (typeof matchMedia === 'function' && matchMedia('screen and (max-width: 600px').matches) {
-      window.location = `/services/${segment}`;
-      return;
-    }
-
-    if (event) event.preventDefault();
-    this.selectSegment(segment);
   }
 
   render(): ReactElement {
