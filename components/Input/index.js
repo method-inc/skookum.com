@@ -11,6 +11,8 @@ class Input extends React.Component {
     var {
       label,
       value,
+      labelStyle,
+      inputStyle,
       ...props,
     } = this.props;
 
@@ -19,8 +21,8 @@ class Input extends React.Component {
 
     return (
       <fieldset className="Input">
-        <label htmlFor={this.props.id || this.props.name} className={'Input-label' + labelClass}>{label}</label>
-        <this.props.element onChange={this.props.onChange} id={this.props.id || this.props.name} className={'Input-element' + inputClass} placeholder={label} {...props} />
+        <label style={labelStyle} htmlFor={this.props.id || this.props.name} className={'Input-label' + labelClass}>{label}</label>
+        <this.props.element style={inputStyle} onChange={this.props.onChange} id={this.props.id || this.props.name} className={'Input-element' + inputClass} placeholder={label} {...props} />
       </fieldset>
     );
   }

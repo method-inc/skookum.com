@@ -11,6 +11,7 @@ import ProofOfConcept from './ProofOfConcept';
 import RapidInnovation from './RapidInnovation';
 import Support from './Support';
 import Hero from 'Hero';
+import ServiceContact from 'ServiceContact';
 
 import {Link} from 'react-router';
 
@@ -117,6 +118,7 @@ class Service extends React.Component {
             </div>
           </div>
         </div>
+        <ServiceContact />
       </div>
     );
   }
