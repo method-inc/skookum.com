@@ -45,3 +45,19 @@
 .ServiceContact-submit {
   margin-top: 20px;
 }
+
+@media screen and (max-width: 850px) {
+  .ServiceContact-info {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .ServiceContact-description {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .ServiceContact-submit {
+    width: 100%;
+  }
+}
