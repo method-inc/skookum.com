@@ -85,40 +85,52 @@ class Service extends React.Component {
         <div className="Service-title">
           We can help build you a better business.
         </div>
-        <div className="Service-highlight">
-          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
-          <div className="Service-highlight-container">
-            <div className="Service-highlight-title">
-              New Software Applications
+          <div className="Service-highlights">
+          <div className="Service-highlight">
+            <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+            <div className="Service-highlight-container">
+              <div className="Service-highlight-title">
+                New Software Applications
+              </div>
+              <div className="Service-highlight-description">
+                Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+              </div>
             </div>
-            <div className="Service-highlight-description">
-              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+          </div>
+          <div className="Service-highlight">
+            <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+            <div className="Service-highlight-container">
+              <div className="Service-highlight-title">
+                New Software Applications
+              </div>
+              <div className="Service-highlight-description">
+                Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+              </div>
+            </div>
+          </div>
+          <div className="Service-highlight">
+            <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
+            <div className="Service-highlight-container">
+              <div className="Service-highlight-title">
+                New Software Applications
+              </div>
+              <div className="Service-highlight-description">
+                Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
+              </div>
             </div>
           </div>
         </div>
-        <div className="Service-highlight">
-          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
-          <div className="Service-highlight-container">
-            <div className="Service-highlight-title">
-              New Software Applications
-            </div>
-            <div className="Service-highlight-description">
-              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
-            </div>
+        <div className="Service-footer">
+          <div className="Service-footer-links">
+            <Link to="service" params={{service: "internet-of-things"}} className="Service-footer-link">Enterprise</Link>
+            <Link to="careers" className="Service-footer-link">Consumer</Link>
+            <Link to="open-source" className="Service-footer-link">Mobile</Link>
+            <Link to="events" className="Service-footer-link">Cloud</Link>
+            <Link to="careers" className="Service-footer-link">Internet of things</Link>
+            <Link to="open-source" className="Service-footer-link">Wearables</Link>
           </div>
+          <ServiceContact />
         </div>
-        <div className="Service-highlight">
-          <div className="Service-highlight-image" style={{backgroundImage: `url(/public/images/blogimg_dev.png)`}}/>
-          <div className="Service-highlight-container">
-            <div className="Service-highlight-title">
-              New Software Applications
-            </div>
-            <div className="Service-highlight-description">
-              Built from the ground up to your unique specs. We interview your employees and customers, review existing processes and design software that your people actually enjoy using.
-            </div>
-          </div>
-        </div>
-        <ServiceContact />
       </div>
     );
   }
