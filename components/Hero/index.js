@@ -73,7 +73,7 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  subtitle: PropTypes.object,
+  subtitle: PropTypes.any,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,
   video: PropTypes.string,

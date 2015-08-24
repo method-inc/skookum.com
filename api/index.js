@@ -177,6 +177,7 @@ api.get('/contentful/capabilities', function(req, res) {
       /*eslint-disable*/
       content_type: id,
       /*eslint-enable*/
+      order: 'fields.order',
     }))
     .then(
       n => res.send(n.map(r => r.fields)),
