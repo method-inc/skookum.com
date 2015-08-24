@@ -14,7 +14,7 @@ class Services extends React.Component {
       <div className="HomeServices">
         <ul className="HomeServices-list">
           {services.items.map((s, imageUrl) => (
-            (imageUrl = lookup(s.image, 'fields.file.url') || '/public/images/blogimg_all.png'),
+            (imageUrl = lookup(s.image, 'fields.file.url') || '/public/images/services-default.png'),
             <li ref={s[1]} 
                 style={{backgroundImage: `url(${imageUrl})`}}
                 className="HomeServices-item" key={s.name}>

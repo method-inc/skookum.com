@@ -22,7 +22,7 @@ class Services extends React.Component {
           image="/public/images/hero-default-bg.png" />
         <ul className="Services-list">
           {capabilities.map((s, imageUrl) => (
-            (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/blogimg_all.png'),
+            (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/services-default.png'),
             <li style={{backgroundImage: `url(${imageUrl})`}}
                 className="Services-item" key={s.slug}>
               <Link className="Services-link" to='service' params={{service: s.slug}}>
