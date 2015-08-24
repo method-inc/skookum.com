@@ -84,7 +84,7 @@ api.get('/contentful', function(req, res) {
   const PER_PAGE = 5;
   const PAGE = req.query.page || 1;
   const contentType = req.query.content_type || 'blog_post';
-
+  console.log("THIS IS THE QUERY!!!!!!!!!!", req.query)
   var query = {};
   var order = '';
   if (req.query.tag) {
@@ -93,6 +93,10 @@ api.get('/contentful', function(req, res) {
 
   if (contentType === 'blog_post') {
     order = '-fields.datePublished';
+  }
+
+  if (contentType === 'service') {
+    order = 'fields.order';
   }
 
   return contentful.contentTypes()
