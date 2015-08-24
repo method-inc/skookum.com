@@ -2,17 +2,21 @@ import React from 'react';
 import Hero from 'Hero';
 import EventsContent from 'EventsContent';
 import FilterBar from 'FilterBar';
+import {Resolver} from 'react-resolver';
+import api from 'api';
+import lookup from 'lookup';
 var {PropTypes} = React;
 
 class Events extends React.Component {
   render(): ?ReactElement {
+    var heroInfo = this.props.heroInfo[0];
     return (
       <div className="Events">
-        <Hero
-          childrenPosition="after"
-          color="black"
-          image="/public/images/hero-default-bg.png"
-          title="Events"/>
+        <Hero color="black" 
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
+          title={heroInfo.title} 
+          subtitle={lookup(heroInfo, 'subtitle')} />
         <EventsContent />
       </div>
     );
@@ -23,4 +27,13 @@ Events.contextTypes = {
   router: PropTypes.func.isRequired,
 };
 
-export default Events;
+Events.displayName = 'Events';
+
+export default Resolver.createContainer(Events, {
+  resolve: {
+    heroInfo() {
+      return api(`contentful/hero/events`);
+    },
+  },
+});
+

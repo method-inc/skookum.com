@@ -35,12 +35,13 @@ class Hero extends Component {
       className = className + 'is-light';
     }
 
+
     titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : titleStyle;
-    subtitleStyle = typeof subtitle === 'undefined' ? subtitleStyle = {display: 'none'} : subtitleStyle;
+    subtitleStyle = (typeof subtitle === 'undefined' || !subtitle) ? subtitleStyle = {display: 'none'} : subtitleStyle;
 
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
 
-    var skinny = typeof children === 'undefined' && typeof subtitle === 'undefined' ? 'is-skinny' : '';
+    var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
 
     return (
       <div className={`Hero ${skinny}`} style={style}>

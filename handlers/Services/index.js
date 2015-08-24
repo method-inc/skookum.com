@@ -11,15 +11,15 @@ import api from 'api';
 
 class Services extends React.Component {
   render(): ReactElement {
-    var {capabilities} = this.props;
+    var {capabilities, heroInfo} = this.props;
+    heroInfo = heroInfo[0];
     return (
       <div className="Services">
-        <Hero
-          childrenPosition="after"
-          color="black"
-          title="Capabilities"
-          subtitle="We offer strategy, design, and development services across a range of domains."
-          image="/public/images/hero-default-bg.png" />
+        <Hero color="black" 
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
+          title={heroInfo.title} 
+          subtitle={lookup(heroInfo, 'subtitle')} />
         <ul className="Services-list">
           {capabilities.map((s, imageUrl) => (
             (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/services-default.png'),
@@ -48,6 +48,9 @@ export default Resolver.createContainer(Services, {
   resolve: {
     capabilities(props, context) {
       return api(`contentful/capabilities`);
+    },
+    heroInfo() {
+      return api(`contentful/hero/capabilities`);
     },
   },
 });
