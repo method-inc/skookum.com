@@ -38,10 +38,10 @@
 
 .Hero-subtitle {
   box-sizing: border-box;
-  bottom: 8%;
+  bottom: 15%;
   font-size: 4em; /*14 / 16*/
   font-weight: 300;
-  max-width: 720px;
+  max-width: 830px;
   padding: 0 5%;
   position: absolute;
   width: 66.666%;
