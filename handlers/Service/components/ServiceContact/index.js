@@ -89,7 +89,7 @@ class ServiceContact extends React.Component {
             name="firstname" />
           <Input  
             inputStyle={{paddingTop: '39px', paddingBottom: '1.5em'}}
-            labelStyle={{color: '#e1e1e1', top:'18px'}}
+            labelStyle={{color: '#e1e1e1', top: '18px'}}
             required
             onChange={this.handleChange}
             value={this.state.email}
@@ -101,7 +101,7 @@ class ServiceContact extends React.Component {
           <label className="ServiceContact-label">How can we help you?</label>
           <textarea className="ServiceContact-textarea" onChange={this.handleChange} value={this.state.how_can_we_help_you_} name="how_can_we_help_you_"></textarea>
         </div>
-        <Button style={{border: '0', borderRadius:'0'}} className="ServiceContact-submit" type="primary">Send</Button>
+        <Button style={{border: '0', borderRadius: '0'}} className="ServiceContact-submit" type="primary">Send</Button>
       </form>
     );
   }
