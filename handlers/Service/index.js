@@ -1,84 +1,63 @@
 /** @flow */
 require('./styles.css');
 
-import React from 'react';
-
-import Camp from './Camp';
-import Engineering from './Engineering';
-import InternetOfThings from './InternetOfThings';
-import Production from './Production';
-import ProofOfConcept from './ProofOfConcept';
-import RapidInnovation from './RapidInnovation';
-import Support from './Support';
-
+import React, {PropTypes, Component} from 'react';
+import {Resolver} from 'react-resolver';
+import Hero from 'Hero';
+import ServiceContact from 'ServiceContact';
+import api from 'api';
+import lookup from 'lookup';
 import {Link} from 'react-router';
 
-import Todo from '../Todo';
-
-var services = [
-  'internet-of-things',
-  'rapid-innovation',
- // 'innovation-camp',
-  'proof-of-concept',
-  'engineering',
-  'production',
-  'support',
-];
-
-var first: number = (n: Array) => n[0];
-var last: number = (n: Array) => n[n.length - 1];
-
-var renderService: ReactElement = (service: string) => {
-  switch (service) {
-    case 'engineering':
-      return <Engineering color="yellow" />;
-    case 'innovation-camp':
-      return <Camp color="yellow" />;
-    case 'internet-of-things':
-      return <InternetOfThings color="yellow" />;
-    case 'production':
-      return <Production color="yellow" />;
-    case 'proof-of-concept':
-      return <ProofOfConcept color="yellow" />;
-    case 'rapid-innovation':
-      return <RapidInnovation color="yellow" />;
-    case 'support':
-      return <Support color="yellow" />;
-    default:
-      return <Todo />;
-  }
-};
-
-var before: string = (service: string) => {
-  var index = services.indexOf(service);
-  if (index === 0) return last(services);
-  return services[index - 1];
-};
-
-var after: string = (service: string) => {
-  var index = services.indexOf(service);
-  if (index === services.length - 1) return first(services);
-  return services[index + 1];
-};
 
 class Service extends React.Component {
   render(): ReactElement {
-    var {service} = this.props.params;
-    var previous = before(service);
-    var next = after(service);
+    var {service} = this.context.router.getCurrentParams();
+    var {capability, capabilityHighlights, capabilities} = this.props;
+    capability = capability[0];
+
+    var heroImage = lookup(capability.heroImage, 'fields.file.url') || '/public/images/hero-default.png';
+    var headlineImage = lookup(capability.headlineImage, 'fields.file.url') || '/public/images/headline-default.png';
 
     return (
-      <div>
-        {renderService(service)}
-        <div className="Service-links">
-          <Link className="Service-link" to="service" params={{service: previous}}>
-            <span className="Service-link-description">{previous}</span>
-            <small className="Service-link-direction">‹ Previous</small>
-          </Link>
-          <Link className="Service-link" to="service" params={{service: next}}>
-            <span className="Service-link-description">{next}</span>
-            <small className="Service-link-direction">Next ›</small>
-          </Link>
+      <div className="Service">
+        <Hero childrenPosition="before" color="black" image={heroImage} title={capability.name} />
+        <div className="Service-statement" style={{backgroundImage: `url(${headlineImage})`}} >
+          <div className="Service-statement-container">
+            <div className="Service-statement-title">
+              {capability.headline}
+            </div>
+            <div className="Service-statement-description">
+              {capability.description}
+            </div>
+          </div>
+        </div>
+        <div className="Service-title">
+          {capability.slogan}
+        </div>
+        <div className="Service-highlights">
+          {capabilityHighlights.map((n, imageUrl) =>(
+            (imageUrl = lookup(n.image, 'fields.file.url') || '/public/images/capability-highlight-default.png'),
+            <div className="Service-highlight">
+              <div className="Service-highlight-image" style={{backgroundImage: `url(${imageUrl})`}}/>
+              <div className="Service-highlight-container">
+                <div className="Service-highlight-title">
+                  {n.title}
+                </div>
+                <div className="Service-highlight-description">
+                  {n.description}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="Service-footer">
+          <div className="Service-footer-links">
+            {capabilities.map(n => (
+              <Link to="service" params={{service: n.slug}} className="Service-footer-link">{n.name}</Link>  
+            ))}
+          </div>
+          <ServiceContact />
         </div>
       </div>
     );
@@ -89,4 +68,27 @@ Service.propTypes = {};
 
 Service.displayName = 'Service';
 
-export default Service;
+
+Service.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
+
+
+export default Resolver.createContainer(Service, {
+  contextTypes: Service.contextTypes,
+
+  resolve: {
+    capabilityHighlights(props, context) {
+      var {service} = context.router.getCurrentParams();
+      return api(`contentful/capability_highlights/${service}`);
+    },
+    capability(props, context) {
+      var {service} = context.router.getCurrentParams();
+      return api(`contentful/capability/${service}`);
+    },
+    capabilities(props, context) {
+      return api(`contentful/capabilities`);
+    },
+  },
+});
+

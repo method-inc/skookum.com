@@ -3,28 +3,29 @@ require('./styles.css');
 
 import React from 'react';
 import Hero from 'Hero';
-import MajorSectionElement from 'MajorSectionElement';
-import FeaturedPosts from 'FeaturedPosts';
 import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
-import Locations from 'Locations';
 import Button from 'Button';
 import Services from 'Services';
 import {nameToRgba} from 'nameToColor';
+import {Resolver} from 'react-resolver';
+import api from 'api';
+import lookup from 'lookup';
 
 var cn = s => `Home-${s}`;
 
 class Home extends React.Component {
   render(): ReactElement {
+    var heroInfo = this.props.heroInfo[0];
     return (
       <div className="Home">
         <Hero
           childrenPosition="before"
           color="black"
-          image="/public/images/hero-case-studies.png"
-          video="/public/videos/home-mov.MOV"
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software solutions for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they serve.</span>} />
+          subtitle={<span>Custom software for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they empower.</span>} />
         <div className="Home-statement">
           Skookum is a full service software development shop.
         </div>
@@ -51,4 +52,12 @@ Home.propTypes = {};
 
 Home.displayName = 'Home';
 
-export default Home;
+export default Resolver.createContainer(Home, {
+  resolve: {
+    heroInfo() {
+      return api(`contentful/hero/home`);
+    },
+  },
+});
+
+

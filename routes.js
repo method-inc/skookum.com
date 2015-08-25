@@ -20,9 +20,9 @@ import StyleGuide from './handlers/StyleGuide';
 
 var routes = (
   <Route path="/" handler={App}>
-    <Route path="case-studies">
+    <Route path="work">
       <Route name="study-article" path=":slug" handler={CaseStudyArticle} />
-      <DefaultRoute name="case-studies" handler={CaseStudies} />
+      <DefaultRoute name="work" handler={CaseStudies} />
     </Route>
     <Route path="events">
       <Route name="events-location" path=":location" handler={Events} />
@@ -37,7 +37,7 @@ var routes = (
     <Route name="culture" path="culture" handler={Culture} />
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
-    <Route name="services" path="services">
+    <Route name="capabilities" path="capabilities">
       <Route name="service" path=":service" handler={Service} />
       <DefaultRoute handler={Services} />
     </Route>

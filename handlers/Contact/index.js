@@ -5,12 +5,20 @@ import Hero from 'Hero';
 import ContactForm from 'ContactForm';
 import NewsletterInfo from 'NewsletterInfo';
 import Locations from 'Locations';
+import {Resolver} from 'react-resolver';
+import api from 'api';
+import lookup from 'lookup';
 
 class Contact extends React.Component {
   render(): ReactElement {
+    var heroInfo = this.props.heroInfo[0];
     return (
       <div className="Contact">
-        <Hero color="black" image="/public/images/home-charlotte2.png" title="Contact Us" />
+        <Hero color="black" 
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
+          title={heroInfo.title} 
+          subtitle={lookup(heroInfo, 'subtitle')} />
         <div className="Contact-flex">
           <ContactForm />
         </div>
@@ -24,4 +32,10 @@ Contact.propTypes = {};
 
 Contact.displayName = 'Contact';
 
-export default Contact;
+export default Resolver.createContainer(Contact, {
+  resolve: {
+    heroInfo() {
+      return api(`contentful/hero/contact`);
+    },
+  },
+});

@@ -95,6 +95,10 @@ api.get('/contentful', function(req, res) {
     order = '-fields.datePublished';
   }
 
+  if (contentType === 'service') {
+    order = 'fields.order';
+  }
+
   return contentful.contentTypes()
     .then(n => n.filter(c => c.name === contentType)[0].sys.id)
     .then(id => contentful.entries({
@@ -138,6 +142,68 @@ api.get('/contentful/featured', function(req, res) {
       error => res.send(error)
     );
 });
+
+api.get('/contentful/capability_highlights/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'capability_highlights')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.capability': req.params.slug,
+      order: 'fields.order',
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/capability/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'capability')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.slug': req.params.slug,
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/capabilities', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'capability')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      order: 'fields.order',
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/hero/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'hero')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.slug': req.params.slug,
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
 
 api.get('/contentful/:slug', function(req, res) {
   var bestFit = options => options.find(o => o.fields.slug === req.params.slug);

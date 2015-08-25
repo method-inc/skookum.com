@@ -51,7 +51,7 @@ class CaseStudy extends Component {
         image={lookup(image, 'fields.file.url')}>
         <div className="HomeCaseStudy-banner">
           <div className="HomeCaseStudy-title">
-            We solve hard <i>{this.state.word}</i> problems
+            We help businesses evolve.
           </div>
           <div className="HomeCaseStudy-description">
             For our clients, this means new revenue streams, substantial efficiency gains and a better quality of life for employees and customers.

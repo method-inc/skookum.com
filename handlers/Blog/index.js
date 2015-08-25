@@ -7,12 +7,20 @@ import Hero from 'Hero';
 import FilterBar from 'FilterBar';
 import FeaturedPosts from 'FeaturedPosts';
 import ArticlesList from 'ArticlesList';
+import {Resolver} from 'react-resolver';
+import api from 'api';
+import lookup from 'lookup';
 
 class Blog extends Component {
   render(): ReactElement {
+    var heroInfo = this.props.heroInfo[0];
     return (
       <div className="Blog">
-        <Hero childrenPosition="before" color="black" image="/public/images/hero-blog.png" title="Blog" />
+        <Hero color="black" 
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
+          title={heroInfo.title} 
+          subtitle={lookup(heroInfo, 'subtitle')} />
         <FilterBar items={this.props.tags} />
         <ArticlesList />
       </div>
@@ -36,4 +44,10 @@ Blog.defaultProps = {
 
 Blog.displayName = 'Blog';
 
-export default Blog;
+export default Resolver.createContainer(Blog, {
+  resolve: {
+    heroInfo() {
+      return api(`contentful/hero/blog`);
+    },
+  },
+});

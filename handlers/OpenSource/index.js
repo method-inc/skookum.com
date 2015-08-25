@@ -3,20 +3,28 @@ require('./styles.css');
 import React from 'react';
 import Hero from 'Hero';
 import Button from 'Button';
+import {Resolver} from 'react-resolver';
+import api from 'api';
+import lookup from 'lookup';
 
 import data from './data';
 
 class OpenSource extends React.Component {
   render(): ?ReactElement {
+    var heroInfo = this.props.heroInfo[0];
     return (
       <div className="OpenSource">
-        <Hero title="Open Source" color="black" image="/public/images/hero-default-bg.png" />
+        <Hero color="black" 
+          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
+          video={lookup(heroInfo.video, 'fields.file.url')}
+          title={heroInfo.title} 
+          subtitle={lookup(heroInfo, 'subtitle')} />
         {data.map(o => (
-          <div className="OpenSource-project">
+          <a href={o.github} className="OpenSource-project">
             <div className="OpenSource-title">{o.name}</div>
             <div className="OpenSource-description">{o.description}</div>
-            <Button className="OpenSource-button" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}} href={o.github}>View on GitHub</Button>
-          </div>
+            <div className="OpenSource-view">View on GitHub</div>
+          </a>
         ))}
       </div>
     );
@@ -25,5 +33,13 @@ class OpenSource extends React.Component {
 
 OpenSource.propTypes = {};
 
-export default OpenSource;
+OpenSource.displayName = 'OpenSource';
+
+export default Resolver.createContainer(OpenSource, {
+  resolve: {
+    heroInfo() {
+      return api(`contentful/hero/open-source`);
+    },
+  },
+});
 
