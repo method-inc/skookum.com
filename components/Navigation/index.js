@@ -9,8 +9,8 @@ import Hamburger from 'Hamburger';
 
 var PRIMARY = [
   ['home', 'Home'],
-  ['services', 'Services'],
-  ['case-studies', 'Case Studies'],
+  ['capabilities', 'capabilities'],
+  ['work', 'Case Studies'],
   //['culture', 'Culture'],
   ['careers', 'Careers'],
   ['contact', 'Contact'],
@@ -94,8 +94,8 @@ class Navigation extends Component {
         <div className={mainClass}>
           <div className="Navigation-main-links">
             <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
-            <Link to="case-studies" className="Navigation-main-link">Work</Link>
-            <Link to="services" className="Navigation-main-link">Capabilities</Link>
+            <Link to="work" className="Navigation-main-link">Work</Link>
+            <Link to="capabilities" className="Navigation-main-link">Capabilities</Link>
             <Link to="blog" className="Navigation-main-link">Blog</Link>
             <Link to="contact" className="Navigation-main-link">Contact</Link>
           </div>
