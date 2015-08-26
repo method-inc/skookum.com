@@ -43,7 +43,8 @@ class CaseStudy extends Component {
   }
 
   render(): ReactElement {
-    var {slug, client, summary, image} = this.props.study.items[0];
+    var {slug, clientname, summary, image} = this.props.study.items[0];
+
     return (
       <Hero
         childrenPosition="before"
@@ -60,7 +61,7 @@ class CaseStudy extends Component {
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-title">
-              {lookup(client, 'fields.name')}
+              {clientname}
             </div>
             <div className="HomeCaseStudy-feature-description">
               {summary}
