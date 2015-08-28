@@ -25,6 +25,10 @@ p {
   line-height: 1.6em;
 }
 
+p img {
+  width: 100%;
+}
+
 li {
   line-height: 1.333;
   margin-bottom: 1em;
