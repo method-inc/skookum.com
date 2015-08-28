@@ -22,6 +22,9 @@ class ShareLinks extends React.Component {
       title,
     } = this.props;
 
+    if (typeof window === 'undefined') {
+      return (<span/>);
+    }
     var url = window.location.href;
 
     return (

@@ -20,6 +20,7 @@ import StyleGuide from './handlers/StyleGuide';
 
 var routes = (
   <Route path="/" handler={App}>
+    <DefaultRoute name="home" handler={Home} />
     <Route path="work">
       <Route name="study-article" path=":slug" handler={CaseStudyArticle} />
       <DefaultRoute name="work" handler={CaseStudies} />
@@ -42,7 +43,6 @@ var routes = (
       <DefaultRoute handler={Services} />
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
-    <DefaultRoute name="home" handler={Home} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
