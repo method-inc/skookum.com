@@ -7,7 +7,7 @@ import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
 import Button from 'Button';
 import Services from 'Services';
-import {nameToRgba} from 'nameToColor';
+import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
@@ -25,7 +25,7 @@ class Home extends React.Component {
           image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
           video={lookup(heroInfo.video, 'fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software for companies and the <span style={{color: nameToRgba('orange')}}>people</span> they empower.</span>} />
+          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} />
         <div className="Home-statement">
           Skookum is a full service software development shop.
         </div>
