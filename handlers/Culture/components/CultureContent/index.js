@@ -38,7 +38,7 @@ class CultureContent extends Component {
           </div>
         </div>
         <div className={cn('benefits')}>
-          <div className={cn('benefits-image')} style={{backgroundImage: 'url(/public/images/hero-culture.png)'}} />
+          <div className={cn('benefits-image')} style={{backgroundImage: 'url(/public/images/culture-benefits.png)'}} />
           <div className={cn('benefits-overlay')}/>
           <div className={cn('benefits-title')}>Benefits</div>
           <ul className={cn('benefits-list')}>

@@ -13,9 +13,10 @@ class Footer extends React.Component {
           <Link to="events" className="Footer-link">Events</Link>
           <Link to="careers" className="Footer-link">Careers</Link>
           <Link to="open-source" className="Footer-link">Open Source</Link>
-          <a href="https://www.twitter.com/skookum" className="Footer-link">Twitter</a>
-          <a href="https://www.linkedin.com/company/skookum-digital-works" className="Footer-link">Linkedin</a>
-          <a href="https://www.facebook.com/SkookumDigitalWorks" className="Footer-link">Facebook</a>
+          <a href="https://www.twitter.com/skookum" target="_blank" className="Footer-link">Twitter</a>
+          <a href="https://www.linkedin.com/company/skookum-digital-works" target="_blank" className="Footer-link">Linkedin</a>
+          <a href="https://www.facebook.com/SkookumDigitalWorks" target="_blank" className="Footer-link">Facebook</a>
+          <a href="https://instagram.com/explore/locations/280696113/" target="_blank" className="Footer-link">Instagram</a>
         </div>
         <p className="Footer-legal">Ⓒ 2015 Skookum. All Rights Reserved.</p>
       </footer>
