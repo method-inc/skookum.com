@@ -24,7 +24,7 @@
     "babel-runtime": "^5.4.7",
     "body-parser": "^1.12.4",
     "btoa": "^1.1.2",
-    "contentful": "^1.1.1",
+    "contentful": "1.1.1",
     "css-loader": "^0.14.4",
     "debug": "^2.2.0",
     "es6-promise": "^2.1.1",
