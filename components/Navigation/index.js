@@ -9,17 +9,10 @@ import Hamburger from 'Hamburger';
 
 var PRIMARY = [
   ['home', 'Home'],
+  ['work', 'Work'],
   ['capabilities', 'capabilities'],
-  ['work', 'Case Studies'],
-  //['culture', 'Culture'],
-  ['careers', 'Careers'],
-  ['contact', 'Contact'],
-];
-
-var SECONDARY = [
   ['blog', 'Blog'],
-  ['open-source', 'Open Source'],
-  ['events', 'Events'],
+  ['contact', 'Contact'],
 ];
 
 var renderNavigation = (list, scope) => (
@@ -107,16 +100,6 @@ class Navigation extends Component {
           <div className="Navigation-content">
             <div className="Navigation-header">About Skookum</div>
             {renderNavigation(PRIMARY, this)}
-            <div className="Navigation-divider" />
-            <div className="Navigation-header">Community</div>
-            {renderNavigation(SECONDARY, this)}
-            <hr className="Navigation-hr" />
-            <div className="Navigation-socials">
-              <a className="Navigation-sublink" href="https://www.twitter.com/skookum">Twitter</a>
-              <a className="Navigation-sublink" href="https://www.linkedin.com/company/skookum-digital-works">LinkedIn</a>
-              <a className="Navigation-sublink" href="https://www.facebook.com/SkookumDigitalWorks">Facebook</a>
-              <a className="Navigation-sublink" href="https://www.github.com/skookum">GitHub</a>
-            </div>
           </div>
         </div>
       </div>

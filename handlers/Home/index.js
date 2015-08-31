@@ -27,7 +27,7 @@ class Home extends React.Component {
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} />
         <div className="Home-statement">
-          Skookum is a full service software development shop.
+          Skookum is a full service software development firm.
         </div>
         <Services />
         <CaseStudy />
@@ -37,7 +37,7 @@ class Home extends React.Component {
               There is no limit.
             </div>
             <div className="Home-content-description">
-              We’re a technically diverse bunch of strategists, designers and engineers. We have no proprietary platforms to sell. Your business needs determine our technology–not the other way around.
+              We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
             </div>
             <Button className="Home-content-button" to="capabilities" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
           </div>
