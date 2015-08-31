@@ -8,7 +8,7 @@ var {PropTypes} = React;
 
 class Button extends React.Component {
   render(): ReactElement {
-    var {children, className, color, style, type, ...props} = this.props;
+    var {children, className, color, style, type, target, ...props} = this.props;
     var buttonStyle = color ? {...style, color: color, borderColor: color} : style;
 
     type = type ? `is-${type}` : '';
@@ -23,7 +23,7 @@ class Button extends React.Component {
 
     if (this.props.href) {
       return (
-        <a {...props} className={className} style={buttonStyle}>{children}</a>
+        <a {...props} className={className} target={target} style={buttonStyle}>{children}</a>
       );
     }
 

@@ -129,6 +129,7 @@
 
   .CultureContent-benefits-list {
     columns: 1;
+    padding-left: 5%;
   }
 
   .CultureContent-benefits-item {

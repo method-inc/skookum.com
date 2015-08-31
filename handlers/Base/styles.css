@@ -5,6 +5,7 @@
 .AppBase {
   font-family: Lato;
   position: relative;
+  margin: 10px;
 }
 
 body {
@@ -55,4 +56,10 @@ blockquote p {
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #e1e1e1;
+}
+
+@media screen and (max-width: 600px) {
+  .AppBase {
+    margin: 0;
+  }
 }

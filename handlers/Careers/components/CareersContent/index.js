@@ -13,7 +13,7 @@ var renderCareer: ReactElement = pos => (
     <div className="CareersContent-item-segment">
       <div className="CareersContent-job-title">{pos.title}</div>
       <div className="CareersContent-meta">{pos.location.name}</div>
-      <Button className="CareersContent-button" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}} href={pos.absolute_url}>View Details & Apply</Button>
+      <Button className="CareersContent-button" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '1px solid #efefef', borderRadius: '0'}} href={pos.absolute_url} target="_blank">View Details & Apply</Button>
     </div>
   </li>
 );
