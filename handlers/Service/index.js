@@ -8,6 +8,7 @@ import ServiceContact from 'ServiceContact';
 import api from 'api';
 import lookup from 'lookup';
 import {Link} from 'react-router';
+import markdown from 'markdown';
 
 
 class Service extends React.Component {
@@ -44,9 +45,7 @@ class Service extends React.Component {
                 <div className="Service-highlight-title">
                   {n.title}
                 </div>
-                <div className="Service-highlight-description">
-                  {n.description}
-                </div>
+                <div className="Service-highlight-description" dangerouslySetInnerHTML={{__html: markdown(n.description)}} />
               </div>
             </div>
           ))}
@@ -54,7 +53,7 @@ class Service extends React.Component {
         <div className="Service-footer">
           <div className="Service-footer-links">
             {capabilities.map(n => (
-              <Link to="service" params={{service: n.slug}} className="Service-footer-link">{n.name}</Link>  
+              <Link to="service" params={{service: n.slug}} className="Service-footer-link">{n.name}</Link>
             ))}
           </div>
           <ServiceContact />
@@ -91,4 +90,3 @@ export default Resolver.createContainer(Service, {
     },
   },
 });
-
