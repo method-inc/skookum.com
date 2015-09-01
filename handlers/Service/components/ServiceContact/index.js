@@ -13,6 +13,8 @@ var {PropTypes} = React;
 var last = n => n[n.length - 1];
 var pluck = (o, ...keys) =>
   keys.reduce((result, k) => ((result[k] = o[k]), result), {});
+var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+
 
 class ServiceContact extends React.Component {
   constructor(props: mixed, context: mixed): void {
@@ -37,6 +39,11 @@ class ServiceContact extends React.Component {
   handleSubmit(event: mixed): void {
     event.preventDefault();
     var data = pluck(this.state, 'firstname', 'email', 'how_can_we_help_you_', 'newsletter_subscription');
+
+    if (!re.test(data.email)) {
+      return this.setState({error: { message: 'Your email address appears invalid.' }});
+    }
+    
     var id = last(event.target.action.split('/'));
     // reading cookies are so awesome
     var crumbs = document.cookie.split(/=|;/);
