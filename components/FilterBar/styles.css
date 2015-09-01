@@ -15,7 +15,7 @@
   border-bottom: 1px solid transparent;
   color: #333;
   display: inline-block;
-  font-size: 0.75em;
+  font-size: 0.875em;
   padding: 1.3em 1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -24,4 +24,3 @@
 .FilterBar-link.is-active {
   border-bottom-color: #000;
 }
-
