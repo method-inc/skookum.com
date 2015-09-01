@@ -33,13 +33,12 @@
   box-sizing: border-box;
   color: #393939;
   font-weight: 300;
-  padding: 3em 2%;
+  padding: 2em;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 33.333%;
   text-decoration: none;
-  transition: padding-bottom ease 200ms;
 }
 
 .HomeCaseStudy-feature-title {
@@ -53,19 +52,10 @@
 }
 
 .HomeCaseStudy-feature-learn {
-  font-weight: 600;
+  font-weight: 100;
   font-size: 1em;
   padding-top: 1em;
-}
-
-.HomeCaseStudy-feature:hover,
-.HomeCaseStudy-feature:focus {
-  padding-bottom: 4em;
-}
-
-.HomeCaseStudy-feature:hover .HomeCaseStudy-feature-learn,
-.HomeCaseStudy-feature:focus .HomeCaseStudy-feature-learn {
-  text-decoration: underline;
+  transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275) , opacity 350ms ease;
 }
 
 .HomeCaseStudy-inner {
@@ -94,6 +84,32 @@
   );
 }
 
+@media screen and (min-width: 1024px) {
+
+  .HomeCaseStudy-feature-container {
+    transition: transform 150ms ease-out;
+    transform: translate3d(0, 13%, 0);
+  }
+
+  .HomeCaseStudy-feature-learn {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  .HomeCaseStudy-feature:hover .HomeCaseStudy-feature-learn,
+  .HomeCaseStudy-feature:focus .HomeCaseStudy-feature-learn {
+    opacity: 1;
+    transition-delay: 150ms;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .HomeCaseStudy-feature:hover .HomeCaseStudy-feature-container,
+  .HomeCaseStudy-feature:focus .HomeCaseStudy-feature-container {
+    transition-delay: 50ms;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @media screen and (max-width: 600px) {
 
   .HomeCaseStudy-banner {
@@ -112,7 +128,6 @@
 
   .HomeCaseStudy-feature {
     width: 100%;
-    padding: 1em 5%;
   }
   
 }
