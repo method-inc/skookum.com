@@ -128,8 +128,8 @@
 
   .HomeCaseStudy-feature {
     width: 100%;
+    background-color: rgba(250, 171, 24, 1);
   }
-  
 }
 
 @media screen and (max-width: 480px) {

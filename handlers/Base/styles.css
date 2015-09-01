@@ -10,6 +10,7 @@
 
 body {
   scroll-behavior: smooth;
+  color: #393939;
 }
 
 body.noscroll {
