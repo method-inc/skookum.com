@@ -28,9 +28,7 @@ class Service extends React.Component {
             <div className="Service-statement-title">
               {capability.headline}
             </div>
-            <div className="Service-statement-description">
-              {capability.description}
-            </div>
+            <div className="Service-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>
           </div>
         </div>
         <div className="Service-title">
