@@ -10,7 +10,7 @@
 
 .HomeCaseStudy-banner {
   box-sizing: border-box;
-  padding: 0 4%;
+  padding: 0 5%;
   max-width: 670px;
   width: 66.666%;
 }
@@ -113,7 +113,7 @@
 @media screen and (max-width: 600px) {
 
   .HomeCaseStudy-banner {
-    margin-top: -130px;
+    margin-top: -30px;
     width: 100%;
   }
 
@@ -128,8 +128,25 @@
 
   .HomeCaseStudy-feature {
     width: 100%;
-    background-color: rgba(250, 171, 24, 1);
+    height: 100%;
+    color: white;
+
+    background-color: transparent;
   }
+
+  .HomeCaseStudy-feature-container {
+    display: none;
+  }
+
+  .HomeCaseStudy-feature-title {
+    display: none;
+  }
+
+  .HomeCaseStudy-feature-learn {
+    position: absolute;
+    bottom: 10%;
+  }
+
 }
 
 @media screen and (max-width: 480px) {

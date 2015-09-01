@@ -55,7 +55,7 @@ class CaseStudy extends Component {
             We help businesses evolve.
           </div>
           <div className="HomeCaseStudy-description">
-            For our clients, this means new revenue streams, substantial efficiency gains and a better quality of life for employees and customers.
+            For our clients, this means new revenue, substantial efficiency gains and a better quality of life for employees and customers.
           </div>
         </div>
         <Link key={slug} to="study-article" params={{slug: slug}}>
