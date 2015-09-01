@@ -6,10 +6,10 @@
   box-sizing: border-box;
   display: inline-block;
   padding: 2.25em;
+  padding-left: 5%;
   position: relative;
   border: 1px solid #eee;
   width: 50%;
-  max-width: 700px;
   vertical-align: top;
   height: 270px;
   font-weight: 100;
@@ -91,5 +91,3 @@
     bottom: 20%;
   }
 }
-
-
