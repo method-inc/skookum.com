@@ -13,7 +13,7 @@
   color: #393939;
   display: block;
   font-weight: 300;
-  padding: 2em 0;
+  padding: 4em 0;
   position: relative;
   border-bottom: 1px solid #eee;
 }
@@ -37,6 +37,9 @@
 
 .EventsContent-button {
   line-height: 4;
+  margin-top: 15px;
+  font-size: 16px;
+  letter-spacing: 0;
 }
 
 .EventsContent-button:hover,
@@ -61,5 +64,3 @@
   }
 
 }
-
-

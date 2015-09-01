@@ -79,17 +79,19 @@
 
 .ContactLocations-name {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: 600;
   margin-bottom: 6px;
   margin-right: 8%;
+  color: #393939;
 }
 
 .ContactLocations-addr,
 .ContactLocations-phone {
-  font-size: 1em;
+  font-size: 1.125em;
   display: inline-block;
   margin-right: 8%;
+  color: #393939;
 }
 
 .ContactLocations-phone {
@@ -114,5 +116,3 @@
     background-position: -380px -150px;
   }
 }
-
-

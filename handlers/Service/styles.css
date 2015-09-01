@@ -17,19 +17,19 @@
 
 .Service-statement-container {
   position: relative;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
 }
 
 .Service-statement-title {
-  font-size: 2em;
-  margin-bottom: 70px;
-  max-width: 920px;
+  font-size: 4em;
+  margin-bottom: 30px;
+  max-width: 1024px;
 }
 
 .Service-statement-description {
   font-size: 1.5em;
-  max-width: 850px;
+  max-width: 1024px;
 }
 
 .Service-title {
@@ -41,7 +41,7 @@
 }
 
 .Service-highlights {
-  padding: 0 5%;
+  padding: 0 15%;
 }
 
 .Service-highlight {
@@ -52,7 +52,7 @@
 
 .Service-highlight-container {
   position: relative;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   margin-right: 400px;
 }
@@ -83,12 +83,13 @@
 }
 
 .Service-footer-links {
-  padding-bottom: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
 }
 
 .Service-footer-link {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-right: 2.5em;
   text-decoration: none;
@@ -98,6 +99,12 @@
 .Service-footer-link:hover,
 .Service-footer-link.active {
   color: #FAAB18;
+}
+
+@media screen and (max-width: 1200px) {
+  .Service-highlights {
+    padding: 0 5%;
+  }
 }
 
 @media screen and (min-width: 851px) {
@@ -141,5 +148,3 @@
     margin-right: 0;
   }
 }
-
-

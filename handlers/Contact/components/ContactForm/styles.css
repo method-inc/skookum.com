@@ -4,13 +4,15 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 800px;
-  padding: 4em;
+  padding: 6em;
   width: 100%;
 }
 
 .ContactForm-header {
-  font-weight: 900;
-  font-size: 1.3333em;
+  font-weight: 300;
+  font-size: 2.25em;
+  color: #393939;
+  padding-bottom: 15px;
 }
 
 .ContactForm-header-icon {
@@ -35,7 +37,7 @@
 
 .ContactForm-fieldset {
   border: 0;
-  padding: 1em 0 1.5em;
+  padding: 1em 0 2.5em;
 }
 
 .ContactForm-label {
@@ -69,6 +71,9 @@
 
 .ContactForm-checkbox {
   margin-right: 0.5em;
+}
+.ContactForm-submit {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 600px) {
