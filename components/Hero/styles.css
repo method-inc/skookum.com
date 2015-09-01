@@ -12,6 +12,7 @@
 
 .Hero.is-skinny {
   height: 60vh;
+  max-height: 500px;
 }
 
 .Hero-content {

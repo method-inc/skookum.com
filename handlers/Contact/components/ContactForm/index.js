@@ -93,15 +93,15 @@ class ContactForm extends React.Component {
         method="POST"
         noValidate={true}
         onSubmit={this.handleSubmit}>
-        <header className="ContactForm-header">Submit an Inquiry</header>
+        <header className="ContactForm-header">Say Hello</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
-        <Input required onChange={this.handleChange} value={this.state.firstname} label="What’s your name?" name="firstname" />
-        <Input required onChange={this.handleChange} value={this.state.email} label="And how about your email?" name="email" type="email" />
-        <Input required onChange={this.handleChange} value={this.state.how_can_we_help_you_} element="textarea" label="Submit your message here" name="how_can_we_help_you_" />
+        <Input required onChange={this.handleChange} value={this.state.firstname} label="Name?" name="firstname" />
+        <Input required onChange={this.handleChange} value={this.state.email} label="Email?" name="email" type="email" />
+        <Input required onChange={this.handleChange} value={this.state.how_can_we_help_you_} element="textarea" label="How can we help you?" name="how_can_we_help_you_" />
         <fieldset className="ContactForm-fieldset">
           <label className="ContactForm-label is-checkbox">
             <input onChange={this.handleChange} className="ContactForm-checkbox" type="checkbox" name="newsletter_subscription" />
-            Sign me up to receive the Skookum Gazette
+            Sign me up to receive the newsletter
           </label>
         </fieldset>
         <Button className="ContactForm-submit" type="primary">Send</Button>
