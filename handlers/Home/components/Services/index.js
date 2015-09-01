@@ -5,6 +5,7 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
+import markdown from 'markdown';
 
 
 class Services extends React.Component {
@@ -15,13 +16,13 @@ class Services extends React.Component {
         <ul className="HomeServices-list">
           {services.items.map((s, imageUrl) => (
             (imageUrl = lookup(s.image, 'fields.file.url') || '/public/images/services-default.png'),
-            <li ref={s[1]} 
+            <li ref={s[1]}
                 style={{backgroundImage: `url(${imageUrl})`}}
                 className="HomeServices-item" key={s.name}>
               <div className="HomeServices-overlay"></div>
               <div className="HomeServices-content">
                 <div className="HomeServices-title">{s.name}</div>
-                <span className="HomeServices-description">{s.description}</span>
+                <span className="HomeServices-description" dangerouslySetInnerHTML={{__html: markdown(s.description)}} />
               </div>
             </li>
           ))}
