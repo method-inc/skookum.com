@@ -21,8 +21,10 @@ class OpenSource extends React.Component {
           subtitle={lookup(heroInfo, 'subtitle')} />
         {data.map(o => (
           <a href={o.github} target="_blank" className="OpenSource-project">
-            <div className="OpenSource-title">{o.name}</div>
-            <div className="OpenSource-description">{o.description}</div>
+            <div className="OpenSource-container">
+              <div className="OpenSource-title">{o.name}</div>
+              <div className="OpenSource-description">{o.description}</div>
+            </div>
             <div className="OpenSource-view">View on GitHub</div>
           </a>
         ))}
