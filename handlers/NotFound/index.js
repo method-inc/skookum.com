@@ -16,8 +16,9 @@ class NotFound extends React.Component {
     return (
       <div>
         <Hero color="black" 
-          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
-          video={lookup(heroInfo.video, 'fields.file.url')}
+          image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
+          videos={lookup(heroInfo, 'videos')}
+          poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
         <div className="NotFound-statement">

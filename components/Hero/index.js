@@ -7,7 +7,7 @@ import invariant from 'react/lib/invariant';
 import {Link} from 'react-router';
 import Logo from 'Logo';
 import Hamburger from 'Hamburger';
-
+import lookup from 'lookup';
 import {nameToRgba, nameToBinary} from 'nameToColor';
 
 /*eslint-disable*/
@@ -16,6 +16,33 @@ var EMPTY_OBJECT = {};
 
 
 class Hero extends Component {
+
+  constructor(props: mixed): void {
+    super(props);
+
+    this.renderBackground = this.renderBackground.bind(this);
+  }
+
+  renderBackground() {
+    var {videos, image, poster} = this.props;
+    if (videos && videos.length > 0) {
+      return (
+        <div>
+          <video autoPlay muted loop className="Hero-video" poster={poster} >
+            {videos.map(video => (
+              <source key={video.fields.file.url} src={video.fields.file.url} type={video.fields.file.contentType} />
+            ))}
+          </video>
+          <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
+        </div>
+      );
+    }
+
+    return (
+      <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />
+    );
+  }
+
   render(): ReactElement {
     var {
       title,
@@ -57,17 +84,7 @@ class Hero extends Component {
         <div className="Hero-overlay" style={{
           background: backgroundColor,
         }} />
-        {video && (
-          <div>
-            <video autoPlay muted loop className="Hero-video" >
-              <source src={video} />
-            </video>
-            <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
-          </div>
-        )}
-        {image && !video && (
-          <div className="Hero-image" style={{backgroundImage: `url(${image})`}} />
-        )}
+        {this.renderBackground()}
       </div>
     );
   }
