@@ -67,16 +67,23 @@
     font-size: 1.8em;
     text-align: left;
   }
+
+  .Home-content {
+    height: inherit;
+    padding: 4em 5%;
+    text-align: left;
+  }
+
+  .Home-content-container {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 600px) {
   .Home-wordmark {
     bottom: 10%;
-  }
-
-  .Home-content {
-    height: 608px;
-    text-align: left;
   }
 
   .Home-content-title {
