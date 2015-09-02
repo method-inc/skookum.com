@@ -102,10 +102,25 @@
   transform: translate3d(0, -40%, 0);
 }
 
+@media screen and (max-width: 1024px) {
+  .HomeServices-item {
+    cursor: pointer;
+  }
+
+  .HomeServices-title {
+    font-size: 1.3em;
+  }
+
+  .HomeServices-description {
+    font-size: 1em;
+  }
+}
+
 @media screen and (max-width: 770px) {
   .HomeServices-item {
     height: 35vw;
     width: 50%;
+    cursor: pointer;
   }
 
   .HomeServices-item:nth-child(3),
@@ -116,12 +131,22 @@
 }
 
 @media screen and (max-width: 600px) {
+
   .HomeServices-item {
-    width: 50%;
+    width: 100%;
+  }
+
+  .HomeServices-item:hover {
+    height: inherit;
+  }
+
+  .HomeServices-item:hover .HomeServices-content {
+    padding: 2em 5%;
   }
 
   .HomeServices-title {
     font-size: 1.2em;
+    padding-top: 18%;
   }
 
   .HomeServices-description {
@@ -129,19 +154,18 @@
     font-weight: 300;
     padding-top: 15px;
   }
-}
 
-@media screen and (max-width: 500px) {
-  .HomeServices-item {
-    width: 100%;
+  .HomeServices-item:hover .HomeServices-title,
+  .HomeServices-item:focus .HomeServices-title {
+    color: #FAAB18;
+    transform: translate3d(0, 0, 0);
+    padding-top: 0;
   }
 
-  .HomeServices-item:hover,
-  .HomeServices-item:focus {
-    height: 66vw;
-  }
-
-  .HomeServices-title {
-    padding-top: 18%;
+  .HomeServices-item:hover .HomeServices-description,
+  .HomeServices-item:focus .HomeServices-description {
+    display: block;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

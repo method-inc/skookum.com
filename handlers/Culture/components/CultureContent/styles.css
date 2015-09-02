@@ -24,6 +24,7 @@
 
 .CultureContent-culture-image {
   background-size: cover;
+  background-position: center;
   bottom: 0;
   display: inline-block;
   left: 0;
