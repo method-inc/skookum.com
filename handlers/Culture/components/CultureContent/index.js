@@ -31,14 +31,14 @@ class CultureContent extends Component {
     return (
       <div className="CultureContent">
         <div className={cn('culture')}>
-          <div className={cn('culture-image')} style={{backgroundImage: 'url(/public/images/culture-benefits.png)'}}>
+          <div className={cn('culture-image')} style={{backgroundImage: 'url(/public/images/careers1.jpg)'}}>
           </div>
           <div className={cn('culture-statement')}>
             <span style={{color: '#FAAB18', fontSize: '64px', marginRight: '-7px'}}>W</span>e build business critical applications. We tackle problems we don’t always know how to solve. You will have the opportunity to push yourself and grow from offices in beautiful Charlotte, NC and Denver, CO. We believe in work/life balance and offer a ton of competive perks.
           </div>
         </div>
         <div className={cn('benefits')}>
-          <div className={cn('benefits-image')} style={{backgroundImage: 'url(/public/images/culture-benefits.png)'}} />
+          <div className={cn('benefits-image')} style={{backgroundImage: 'url(/public/images/careers2.jpg)'}} />
           <div className={cn('benefits-overlay')}/>
           <div className={cn('benefits-title')}>Benefits</div>
           <ul className={cn('benefits-list')}>
