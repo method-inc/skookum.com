@@ -121,8 +121,40 @@
 }
 
 @media screen and (max-width: 850px) {
+
+  .Service-statement {
+    height: inherit;
+    padding: 4em 5%;
+  }
+
+  .Service-statement-container {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+  }
+
+  .Service-statement-title {
+    font-size: 2.2em;
+  }
+
+  .Service-statement-description {
+    font-size: 1.5em;
+  }
+
+  .Service-title {
+    font-size: 2.2em;
+  }
+
   .Service-highlight {
     height: 100%;
+  }
+
+  .Service-highlight-title {
+    font-size: 1.5em;
+  }
+
+  .Service-highlight-description {
+    font-size: 1.3em;
   }
 
   .Service-highlight-image {
