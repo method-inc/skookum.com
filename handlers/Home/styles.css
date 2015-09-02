@@ -43,7 +43,6 @@
 .Home-content-description {
   font-size: 2em;
   margin: 0 auto 70px;
-  max-width: 1024px;
 }
 
 .Home-content-button {
@@ -54,6 +53,13 @@
 .Home-content-button:hover,
 .Home-content-button:focus {
   box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
+}
+
+@media screen and (min-width: 1024px) {
+  .Home-content-description {
+    max-width: 1024px;
+  }
+
 }
 
 @media screen and (max-width: 769px) {
