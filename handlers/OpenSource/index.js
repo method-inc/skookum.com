@@ -15,8 +15,9 @@ class OpenSource extends React.Component {
     return (
       <div className="OpenSource">
         <Hero color="black" 
-          image={lookup(heroInfo.image, 'fields.file.url') || '/public/images/hero-default.png'}
-          video={lookup(heroInfo.video, 'fields.file.url')}
+          image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
+          videos={lookup(heroInfo, 'videos')}
+          poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
         {data.map(o => (

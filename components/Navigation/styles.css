@@ -180,6 +180,17 @@
 
 }
 
+@media screen and (max-width: 1024px) {
+  .Navigation-main.is-not-visible {
+    transform: translateY(0px);
+    background-color: #393939;
+  }
+
+  .Navigation-hamburger.is-not-visible {
+    transform: translateY(0px);
+  }
+}
+
 @media screen and (max-width: 810px) {
   .Navigation-main-link {
     font-size: 0.9em;

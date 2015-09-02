@@ -55,13 +55,11 @@ class BlogArticle extends React.Component {
         <div
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
-        <div className="BlogArticle-share">
-          <ShareLinks title={title} />
-        </div>
         <div className="BlogArticle-author">
+          {author.photoUrl &&
           <div className="BlogArticle-author-image">
             <img className="BlogArticle-author-img" src={author.photoUrl} />
-          </div>
+          </div>}
           <div className="BlogArticle-author-details">
             <div>
               <span className="BlogArticle-author-name">{author.name}</span>
@@ -69,6 +67,9 @@ class BlogArticle extends React.Component {
             </div>
             {author.twitter && <span className="BlogArticle-author-twitter">{author.twitter}</span>}
           </div>
+        </div>
+        <div className="BlogArticle-share">
+          <ShareLinks title={title} />
         </div>
       </article>
     );

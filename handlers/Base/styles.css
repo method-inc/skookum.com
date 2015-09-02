@@ -17,6 +17,10 @@ body.noscroll {
   overflow: hidden;
 }
 
+a {
+  cursor: pointer;
+}
+
 img {
   display: block;
 }

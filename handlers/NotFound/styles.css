@@ -5,3 +5,12 @@
 
 }
 
+.NotFound-statement {
+  background-color: #DADADA;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 1.8em 1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
