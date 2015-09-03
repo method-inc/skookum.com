@@ -17,18 +17,19 @@ class Gist extends Component {
   }
 
   id(): string {
-    return `gist-${this.props.id}`;
+
+    var id = this.props.id.replace('.js', '');
+    return `gist-${id}`;
   }
 
   _updateIframeContent(): void {
     if (typeof document === 'undefined') return;
-
+    var id = this.props.id.replace('.js', '');
     var iframe = document.getElementById(this.id());
     var doc = iframe.document || iframe.contentDocument || iframe.contentWindow.document;
-
-    var gistScript = `<script type="text/javascript" src={this.props.id}></script>`;
+    var gistScript = `<script type="text/javascript" src="${id}.js"></script>`;
     var styles = '<style>*{font-size:12px;}</style>';
-    var resizeScript = `onload="parent.document.getElementById('gist-${this.props.id}').style.height=document.body.scrollHeight + 'px'"`;
+    var resizeScript = `onload="parent.document.getElementById('gist-${id}').style.height=document.body.scrollHeight + 'px'"`;
     var iframeHtml = `<html><head><base target="_parent">${styles}</head><body ${resizeScript}>${gistScript}</body></html>`;
 
     doc.open();
