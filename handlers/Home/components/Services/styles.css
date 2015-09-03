@@ -116,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 800px) {
   .HomeServices-item {
     height: 35vw;
     width: 50%;

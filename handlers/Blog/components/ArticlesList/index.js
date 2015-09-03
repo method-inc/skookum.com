@@ -34,7 +34,7 @@ class ArticlesList extends Component {
           <div key={a.slug} className="Blog-article">
             <div className="Blog-article-content">
               <Link className="Blog-article-title" to="blog-article" params={{slug: a.slug}}>{a.title}</Link>
-              <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || (a.body.split('\n')[0]))}} />
+              <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || '')}} />
               <div className="Blog-article-info">
                 <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
               </div>

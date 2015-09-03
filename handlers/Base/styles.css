@@ -8,6 +8,20 @@
   margin: 10px;
 }
 
+.AppBase-content {
+  min-height: calc( 100vh - 123px );
+}
+
+.AppBase-nav-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: 108px;
+  background-color: #393939;
+  z-index: 0;
+}
+
 body {
   scroll-behavior: smooth;
   color: #393939;
@@ -65,6 +79,11 @@ blockquote p {
 
 @media screen and (max-width: 600px) {
   .AppBase {
+    margin: 0;
+  }
+
+  .AppBase-nav-background {
+    height: 80px;
     margin: 0;
   }
 }
