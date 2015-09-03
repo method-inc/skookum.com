@@ -11,6 +11,7 @@ import {scrollTo} from 'FilterBar';
 import Typography from 'Typography';
 import api from 'api';
 import * as fmt from 'fmt';
+import lookup from 'lookup';
 
 const DEFAULT_QUERY = {
   page: '1',
@@ -34,7 +35,7 @@ class ArticlesList extends Component {
           <div key={a.slug} className="Blog-article">
             <div className="Blog-article-content">
               <Link className="Blog-article-title" to="blog-article" params={{slug: a.slug}}>{a.title}</Link>
-              <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || (a.body.split('\n')[0]))}} />
+              <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || '')}} />
               <div className="Blog-article-info">
                 <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>
               </div>
