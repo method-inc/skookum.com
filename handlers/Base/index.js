@@ -26,7 +26,10 @@ class AppBase extends Component {
     return (
       <div className="AppBase">
         <Navigation id="navigation" />
-        <RouteHandler key={this.getHandlerKey()} />
+        <div className="AppBase-nav-background" />
+        <div className="AppBase-content">
+          <RouteHandler key={this.getHandlerKey()} />
+        </div>
         <Footer />
       </div>
     );
