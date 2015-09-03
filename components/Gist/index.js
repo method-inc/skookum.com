@@ -26,7 +26,7 @@ class Gist extends Component {
     var iframe = document.getElementById(this.id());
     var doc = iframe.document || iframe.contentDocument || iframe.contentWindow.document;
 
-    var gistScript = `<script type="text/javascript" src="https://gist.github.com/${this.props.id}.js"></script>`;
+    var gistScript = `<script type="text/javascript" src={this.props.id}></script>`;
     var styles = '<style>*{font-size:12px;}</style>';
     var resizeScript = `onload="parent.document.getElementById('gist-${this.props.id}').style.height=document.body.scrollHeight + 'px'"`;
     var iframeHtml = `<html><head><base target="_parent">${styles}</head><body ${resizeScript}>${gistScript}</body></html>`;
