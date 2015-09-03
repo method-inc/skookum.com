@@ -11,7 +11,6 @@ import {scrollTo} from 'FilterBar';
 import Typography from 'Typography';
 import api from 'api';
 import * as fmt from 'fmt';
-import lookup from 'lookup';
 
 const DEFAULT_QUERY = {
   page: '1',
