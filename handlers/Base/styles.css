@@ -13,8 +13,7 @@
 }
 
 .AppBase-nav-background {
-  margin: 0 10px;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 4;
