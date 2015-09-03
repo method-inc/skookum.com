@@ -15,10 +15,17 @@
 .BlogArticle-content ul,
 .BlogArticle-content ol,
 .BlogArticle-content p,
+.BlogArticle-content hr,
 .BlogArticle-author {
   max-width: 600px;
   margin: 0 auto 2.333rem;
   padding: 0 5%;
+}
+
+.BlogArticle-content hr {
+  height: 1px;
+  border: 0;
+  background-color: #dedede;
 }
 
 .BlogArticle-content blockquote {
