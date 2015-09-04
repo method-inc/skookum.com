@@ -19,16 +19,24 @@ class Hero extends Component {
 
   constructor(props: mixed): void {
     super(props);
-
+    this.state = {isMobile: false};
     this.renderBackground = this.renderBackground.bind(this);
   }
 
+  componentDidMount(): void {
+    if (typeof document === 'undefined') return;
+    if (document.body.clientWidth < 1025) {
+      this.setState({isMobile: true});
+    }
+  }
+
   renderBackground() {
+
     var {videos, image, poster} = this.props;
-    if (videos && videos.length > 0) {
+    if (videos && videos.length > 0 && !this.state.isMobile) {
       return (
         <div>
-          <video autoPlay muted loop className="Hero-video" poster={poster} >
+          <video preload="auto" autoPlay muted loop className="Hero-video" poster={poster} >
             {videos.map(video => (
               <source key={video.fields.file.url} src={video.fields.file.url} type={video.fields.file.contentType} />
             ))}
