@@ -36,7 +36,7 @@ class Hero extends Component {
     if (videos && videos.length > 0 && !this.state.isMobile) {
       return (
         <div>
-          <video autoPlay muted loop className="Hero-video" poster={poster} >
+          <video preload="auto" autoPlay muted loop className="Hero-video" poster={poster} >
             {videos.map(video => (
               <source key={video.fields.file.url} src={video.fields.file.url} type={video.fields.file.contentType} />
             ))}
