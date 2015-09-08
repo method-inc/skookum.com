@@ -102,6 +102,28 @@
   transform: translate3d(0, -40%, 0);
 }
 
+@media screen and (min-width: 1200px) {
+  .HomeServices-title {
+    font-size: 2em;
+  }
+
+  .HomeServices-description {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .HomeServices-description {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .HomeServices-description {
+    font-size: 1.4em;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .HomeServices-item {
     cursor: pointer;
