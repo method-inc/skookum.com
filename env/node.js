@@ -33,8 +33,6 @@ var REDIRECTS = [
   ['jobs', 'careers']
 ];
 
-console.log(REDIRECTS);
-
 var tmpl = o => read('./index.html', 'utf8')
   .replace('†react†', o.html)
   .replace('†__resolver__†', JSON.stringify(o.data))
