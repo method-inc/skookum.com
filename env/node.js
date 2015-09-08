@@ -27,7 +27,7 @@ app.use('/public', express.static(join(process.cwd(), 'public')));
 
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
-  res.send("User-agent: *\nDisallow:")
+  res.send('User-agent: *\nDisallow:');
 });
 
 app.get('*', function(req, res) {
