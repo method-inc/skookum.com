@@ -25,6 +25,11 @@ app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
 
+app.get('/robots.txt', function(req, res) {
+  res.type('text/plain');
+  res.send('User-agent: *\nDisallow:');
+});
+
 app.get('*', function(req, res) {
   var router = Router.create({
     routes: routes,
@@ -52,4 +57,3 @@ var server = app.listen(process.env.PORT || 4444, function () {
 
   debug('%s listening at http://%s:%s', 'The Skookums are', host, port);
 });
-
