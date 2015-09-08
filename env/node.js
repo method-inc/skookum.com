@@ -14,8 +14,6 @@ import {resources} from './webpack';
 import {readFileSync as read} from 'fs';
 import {join} from 'path';
 
-// Line #184
-// https://docs.google.com/spreadsheets/d/1XPzkWgY6OwmXY21b0CXvh0C28LVm8dhL4d0XfO3hxOI/edit#gid=599200323
 var REDIRECTS = [
   ['case-studies', 'work'],
   ['node', 'open-source'],
@@ -31,7 +29,8 @@ var REDIRECTS = [
   ['blog/tags/net', 'blog/tags/development'],
   ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4121/', 'blog'],
   ['blog/forget-native-learn-to-write-html5-apps/dsc_4048/', 'blog'],
-  ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4129/', 'blog']
+  ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4129/', 'blog'],
+  ['jobs', 'careers']
 ];
 
 console.log(REDIRECTS);
