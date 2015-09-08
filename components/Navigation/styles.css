@@ -197,7 +197,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .Navigation-main {
     margin: 0;
     top: 0;

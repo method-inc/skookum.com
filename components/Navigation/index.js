@@ -86,7 +86,7 @@ class Navigation extends Component {
       <div>
         <div className={mainClass}>
           <div className="Navigation-main-links">
-            <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40}} color="#fff" /></Link>
+            <Link to="home" className="Navigation-main-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '10px', height: 40, width: 48}} color="#fff" /></Link>
             <Link to="work" className="Navigation-main-link">Work</Link>
             <Link to="capabilities" className="Navigation-main-link">Capabilities</Link>
             <Link to="blog" className="Navigation-main-link">Blog</Link>

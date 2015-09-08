@@ -1,4 +1,5 @@
 require('isomorphic-fetch');
+require('es6-promise').polyfill();
 
 import React from 'react';
 import Router from 'react-router';

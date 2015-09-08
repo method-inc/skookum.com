@@ -56,7 +56,7 @@
 
 .HomeServices-content {
   background-color: transparent;
-  padding: 0 8%;
+  padding: 0 5%;
   height: 100%;
   position: relative;
   transition: background-color 400ms ease-out;
@@ -67,7 +67,7 @@
   font-size: 1.6em;
   font-weight: 300;
   padding-top: 36%;
-  transition: transform 150ms ease-out, color 150ms ease-out ;
+  transition: transform 150ms ease-out, color 150ms ease-out;
 }
 
 .HomeServices-description {
@@ -102,6 +102,28 @@
   transform: translate3d(0, -40%, 0);
 }
 
+@media screen and (min-width: 1200px) {
+  .HomeServices-title {
+    font-size: 2em;
+  }
+
+  .HomeServices-description {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .HomeServices-description {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .HomeServices-description {
+    font-size: 1.4em;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .HomeServices-item {
     cursor: pointer;
@@ -130,7 +152,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 601px) {
 
   .HomeServices-item {
     width: 100%;
