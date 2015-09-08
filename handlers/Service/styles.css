@@ -27,6 +27,13 @@
   max-width: 1024px;
 }
 
+.Service-statement-cite {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
 .Service-statement-description {
   font-size: 1.5em;
   max-width: 1024px;

@@ -19,6 +19,7 @@ class Service extends React.Component {
 
     var heroImage = lookup(capability.heroImage, 'fields.file.url') || '/public/images/hero-default.png';
     var headlineImage = lookup(capability.headlineImage, 'fields.file.url') || '/public/images/headline-default.png';
+    var cite = lookup(capability, 'cite');
 
     return (
       <div className="Service">
@@ -26,7 +27,8 @@ class Service extends React.Component {
         <div className="Service-statement" style={{backgroundImage: `url(${headlineImage})`}} >
           <div className="Service-statement-container">
             <div className="Service-statement-title">
-              {capability.headline}
+              {capability.headline} 
+              {cite && <span className="Service-statement-cite"> - {cite}</span>}
             </div>
             <div className="Service-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>
           </div>
