@@ -111,11 +111,11 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
 
   .CultureContent-culture {
-    height: 760px;
-    padding-bottom: 1em;
+    height: initial;
+    padding-bottom: 4em;
   }
 
   .CultureContent-benefits {
@@ -138,13 +138,13 @@
   }
 
   .CultureContent-benefits-item:before {
-    left: -4px;
+    left: 0px;
   }
 
   .CultureContent-culture-image {
     background-size: cover;
     display: block;
-    height: 50%;
+    height: 300px;
     position: relative;
     width: 100%;  
   }
@@ -153,7 +153,7 @@
     box-sizing: border-box;
     display: block;
     float: none;
-    height: 50%;
+    height: initial;
     padding: 3em 5% 0;
     width: 100%;
   }

@@ -115,28 +115,43 @@
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 960px) {
   .Hero-subtitle {
     font-size: 3em;
+    bottom: 10%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .Hero {
-    height: 600px;
+    height: initial;
+    min-height: 350px;
   }
   .Hero-overlay {
     right: 0;
   }
 
+  .Hero-content {
+    position: relative;
+    padding-bottom: 3em;
+  }
+
   .Hero-title {
     font-size: 2em;
-    padding-top: 85px;
+    padding-top: 100px;
   }
 
   .Hero-subtitle {
-    bottom: 12%;
-    font-size: 2.3em;
+    position: relative;
+    margin-top: 3em;
+    font-size: 2em;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Hero-title {
+    font-size: 2em;
+    padding-top: 85px;
   }
 }

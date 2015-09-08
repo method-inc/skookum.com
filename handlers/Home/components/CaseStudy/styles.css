@@ -116,7 +116,20 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 960px) {
+  .HomeCaseStudy-title {
+    font-size: 2.5em;
+    padding-top: 2em;
+  }
+
+  .HomeCaseStudy-description {
+    font-size: 1.5em;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
 
   .HomeCaseStudy-banner {
     margin-top: -30px;
@@ -128,8 +141,8 @@
   }
 
   .HomeCaseStudy-description {
-    font-size: 1.5em;
     padding-top: 40px;
+    padding-bottom: 3em;
   }
 
   .HomeCaseStudy-feature {
