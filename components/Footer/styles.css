@@ -33,7 +33,7 @@
   font-size: 1em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .Footer-link {
     display: inline-block;
     width: 50%;

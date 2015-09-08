@@ -12,7 +12,7 @@ class Footer extends React.Component {
         <div className="Footer-links">
           <Link to="events" className="Footer-link">Events</Link>
           <Link to="careers" className="Footer-link">Careers</Link>
-          <Link to="open-source" className="Footer-link">Open Source</Link>
+          <Link to="open-source" className="Footer-link">Open&nbsp;Source</Link>
           <a href="https://www.twitter.com/skookum" target="_blank" className="Footer-link">Twitter</a>
           <a href="https://www.linkedin.com/company/skookum-digital-works" target="_blank" className="Footer-link">Linkedin</a>
           <a href="https://www.facebook.com/SkookumDigitalWorks" target="_blank" className="Footer-link">Facebook</a>
