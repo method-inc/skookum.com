@@ -87,7 +87,7 @@ CaseStudy.propTypes = {
 export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
-      return api(`contentful?content_type=case_study&limit=1`);
+      return api(`contentful?content_type=case_study&limit=1&fields.featured=true`);
     },
   },
 });

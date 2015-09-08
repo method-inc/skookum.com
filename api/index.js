@@ -91,6 +91,12 @@ api.get('/contentful', function(req, res) {
     query['fields.tags[in]'] = capitalize(req.query.tag);
   }
 
+  for (var key in req.query) {
+    if (key.indexOf('fields') > -1 && req.query.hasOwnProperty(key)) {
+      query[key] = req.query[key];
+    }
+  }
+
   if (contentType === 'blog_post') {
     order = '-fields.datePublished';
   }
