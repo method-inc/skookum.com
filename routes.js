@@ -17,6 +17,7 @@ import OpenSource from'./handlers/OpenSource';
 import Services from './handlers/Services';
 import Service from './handlers/Service';
 import StyleGuide from './handlers/StyleGuide';
+import InnovationCamp from './handlers/InnovationCamp';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -43,9 +44,9 @@ var routes = (
       <DefaultRoute handler={Services} />
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
+    <Route name="innovation-camp" path="innovation-camp" handler={InnovationCamp} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
 
 export default routes;
-
