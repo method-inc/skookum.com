@@ -14,6 +14,28 @@ import {resources} from './webpack';
 import {readFileSync as read} from 'fs';
 import {join} from 'path';
 
+// Line #184
+// https://docs.google.com/spreadsheets/d/1XPzkWgY6OwmXY21b0CXvh0C28LVm8dhL4d0XfO3hxOI/edit#gid=599200323
+var REDIRECTS = [
+  ['case-studies', 'work'],
+  ['node', 'open-source'],
+  ['hunter-loftis-speaker-info', 'events'],
+  ['events/townhall-event-w-mayor-anthony-foxx', 'events'],
+  ['josh-oakhurst-speaker-info', 'events'],
+  ['events/mobile-apps-from-a-z-a-skookum-digital-workshop', 'events'],
+  ['visit-us', 'contact'],
+  ['living-and-working-in-charlotte-north-carolina-jobs-relocating', 'careers'],
+  ['jobs', 'careers'],
+  ['internet-of-things', 'the-internet-of-things-applications'],
+  ['it-consulting', 'capabilities'],
+  ['blog/tags/net', 'blog/tags/development'],
+  ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4121/', 'blog'],
+  ['blog/forget-native-learn-to-write-html5-apps/dsc_4048/', 'blog'],
+  ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4129/', 'blog']
+];
+
+console.log(REDIRECTS);
+
 var tmpl = o => read('./index.html', 'utf8')
   .replace('†react†', o.html)
   .replace('†__resolver__†', JSON.stringify(o.data))
@@ -25,9 +47,16 @@ app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
 
+REDIRECTS.forEach(function(redirect) {
+  var [old, current] = redirect;
+  app.get('/' + old, function(req, res) {
+    res.redirect(301, '/' + current);
+  });
+});
+
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
-  res.send('User-agent: *\nDisallow:');
+  res.send('User-agent: *\nDisallow:\n');
 });
 
 app.get('*', function(req, res) {
