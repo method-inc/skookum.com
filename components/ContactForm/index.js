@@ -64,7 +64,7 @@ class ContactForm extends React.Component {
         thisFormId = formelement.id || '',
         thisFormName = formelement.name || '',
         bi = function(i) {
-          return d.getElementByIdd(i);
+          return d.getElementById(i);
         },
         bn = function(i) {
           return d.getElementsByName(i)[0];
