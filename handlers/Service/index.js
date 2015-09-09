@@ -9,6 +9,7 @@ import api from 'api';
 import lookup from 'lookup';
 import {Link} from 'react-router';
 import markdown from 'markdown';
+import CapabilityHighlights from 'CapabilityHighlights';
 
 
 class Service extends React.Component {
@@ -36,20 +37,7 @@ class Service extends React.Component {
         <div className="Service-title">
           {capability.slogan}
         </div>
-        <div className="Service-highlights">
-          {capabilityHighlights.map((n, imageUrl) =>(
-            (imageUrl = lookup(n.image, 'fields.file.url') || '/public/images/capability-highlight-default.png'),
-            <div className="Service-highlight">
-              <div className="Service-highlight-image" style={{backgroundImage: `url(${imageUrl})`}}/>
-              <div className="Service-highlight-container">
-                <div className="Service-highlight-title">
-                  {n.title}
-                </div>
-                <div className="Service-highlight-description" dangerouslySetInnerHTML={{__html: markdown(n.description)}} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <CapabilityHighlights highlights={capabilityHighlights} />
         <div className="Service-footer">
           <div className="Service-footer-links">
             {capabilities.map(n => (

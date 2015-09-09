@@ -7,6 +7,7 @@ import api from 'api';
 import ContactForm from 'ContactForm';
 import lookup from 'lookup';
 import Hero from 'Hero';
+import CapabilityHighlights from 'CapabilityHighlights';
 import markdown from 'markdown';
 
 class InnovationCamp extends React.Component {
@@ -29,20 +30,7 @@ class InnovationCamp extends React.Component {
 
         <div className="InnovationCamp-title">The Schedule</div>
 
-        <div className="Service-highlights">
-          {capabilityHighlights.map((n, imageUrl) =>(
-            (imageUrl = lookup(n.image, 'fields.file.url') || '/public/images/capability-highlight-default.png'),
-            <div className="Service-highlight">
-              <div className="Service-highlight-image" style={{backgroundImage: `url(${imageUrl})`}}/>
-              <div className="Service-highlight-container">
-                <div className="Service-highlight-title">
-                  {n.title}
-                </div>
-                <div className="Service-highlight-description" dangerouslySetInnerHTML={{__html: markdown(n.description)}} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <CapabilityHighlights highlights={capabilityHighlights} />
 
         <div className="InnovationCamp-contact">
           <ContactForm header="Interested in more information?" labelColor="#fff" />
