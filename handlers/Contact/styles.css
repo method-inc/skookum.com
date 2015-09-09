@@ -1,11 +1,38 @@
-@media screen and (min-width: 601px) {
+
+
+.Contact-flex input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #393939;
+}
+
+.Contact-flex input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #393939;
+   opacity:  1;
+}
+.Contact-flex input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #393939;
+   opacity:  1;
+}
+.Contact-flex input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #393939;
+}
+
+
+@media screen and (min-width: 768px) {
   .Contact-flex {
+    color: #393939;
     display: flex;
+    padding: 6em;
   }
 
   .NewsletterInfo {
     flex: 0.333;
     padding-right: 15%;
     padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Contact-flex {
+    padding: 2em;
   }
 }

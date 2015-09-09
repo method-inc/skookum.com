@@ -4,7 +4,7 @@ require('./styles.css');
 import React, {PropTypes, Component} from 'react';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
-import ServiceContact from 'ServiceContact';
+import ContactForm from 'ContactForm';
 import api from 'api';
 import lookup from 'lookup';
 import {Link} from 'react-router';
@@ -56,7 +56,9 @@ class Service extends React.Component {
               <Link to="service" params={{service: n.slug}} className="Service-footer-link">{n.name}</Link>
             ))}
           </div>
-          <ServiceContact />
+          <div className="Service-contact">
+            <ContactForm header="Interested in more information?" labelColor="#fff"/>
+          </div>
         </div>
       </div>
     );
