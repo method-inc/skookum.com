@@ -1,4 +1,4 @@
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 768px) {
   .Contact-flex {
     color: #393939;
     display: flex;
@@ -9,5 +9,11 @@
     flex: 0.333;
     padding-right: 15%;
     padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Contact-flex {
+    padding: 2em;
   }
 }

@@ -25,6 +25,7 @@ class ContactForm extends React.Component {
       first_name: '',
       last_name: '',
       email: '',
+      showThankYou: false,
       /* eslint-disable */
       how_can_we_help: '',
       newsletter_subscription: false,
@@ -184,6 +185,10 @@ class ContactForm extends React.Component {
     event.preventDefault();
     var missingFields = this.getMissingFields();
 
+    if (this.state.showThankYou) {
+      return;
+    }
+
     if (missingFields.length > 0) {
      return this.setState({error: {message: 'Oops. It looks like you’re missing some required fields.', fields: missingFields}});
     }
@@ -193,6 +198,7 @@ class ContactForm extends React.Component {
     }
 
     this.AoProcessForm(event.target);
+    return this.setState({showThankYou: true, error: null});
   }
 
   getMissingFields() {
@@ -222,6 +228,7 @@ class ContactForm extends React.Component {
 
 
     var labelStyle = {color: this.props.labelColor};
+
     return (
       <form
         className="ContactForm"
@@ -231,16 +238,16 @@ class ContactForm extends React.Component {
         <header className="ContactForm-header">{this.props.header}</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
         <div className="ContactForm-field">
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="First Name" name="first_name" />
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="First Name*" name="first_name" />
         </div>
         <div className="ContactForm-field">
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.last_name} label="Last Name" name="last_name" />
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.last_name} label="Last Name*" name="last_name" />
         </div>
         <div className="ContactForm-field">  
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email" name="email" type="email" />
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
         <div className="ContactForm-field">  
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.phone} label="Phone (Opt)" name="phone" type="tel" />
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.phone} label="Phone" name="phone" type="tel" />
         </div>
         <label style={labelStyle} className="ContactForm-label is-textarea">How can we help you?</label>
         <textarea className="ContactForm-textarea" onChange={this.handleChange} value={this.state.how_can_we_help} name="how_can_we_help"></textarea>
@@ -251,6 +258,7 @@ class ContactForm extends React.Component {
           </label>
         </fieldset>
         <Button style={{border: 0}} className="ContactForm-submit" type="primary">Send</Button>
+        {this.state.showThankYou && <span className="ContactForm-thanks">Thanks, we'll be in touch!</span>}
       </form>
     );
   }

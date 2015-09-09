@@ -89,11 +89,25 @@
   font-size: 18px;
 }
 
-@media screen and (max-width: 600px) {
+.ContactForm-thanks {
+  margin-left: 4em;
+  font-size: 2em;
+}
+
+
+@media screen and (max-width: 767px) {
   .ContactForm-submit {
     width: 100%
   }
   .ContactForm-field {
     width: 100%;
+  }
+
+  .ContactForm-thanks {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.6em;
   }
 }
