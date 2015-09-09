@@ -46,42 +46,6 @@
   padding: 0 5%;
 }
 
-.Service-highlights {
-  padding: 0 15%;
-}
-
-.Service-highlight {
-  position: relative;
-  height: 321px;
-  margin-bottom: 3em;
-}
-
-.Service-highlight-container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 400px;
-}
-
-.Service-highlight-title {
-  font-size: 2.2em;
-}
-
-.Service-highlight-description {
-  margin-top: 20px;
-  font-size: 1.5em;
-}
-
-.Service-highlight-image {
-  background-size: cover;
-  background-position: center;
-  height: 321px;
-  width: 321px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .Service-footer {
   background-color: #393939;
   margin-top: 6em;
@@ -130,25 +94,6 @@
    color: #e1e1e1;
 }
 
-@media screen and (max-width: 1200px) {
-  .Service-highlights {
-    padding: 0 5%;
-  }
-}
-
-@media screen and (min-width: 851px) {
-
-  .Service-highlight:nth-child(even) .Service-highlight-image {
-    right: 0;
-    left: 0;
-  }
-
-  .Service-highlight:nth-child(even) .Service-highlight-container {
-    margin-right: 0;
-    margin-left: 400px;
-  }
-}
-
 @media screen and (max-width: 850px) {
 
   .Service-statement {
@@ -172,34 +117,6 @@
 
   .Service-title {
     font-size: 2.2em;
-  }
-
-  .Service-highlight {
-    height: 100%;
-  }
-
-  .Service-highlight-title {
-    font-size: 1.5em;
-  }
-
-  .Service-highlight-description {
-    font-size: 1.3em;
-  }
-
-  .Service-highlight-image {
-    height: 189px;
-    width: 189px;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: 1em auto;
-  }
-
-  .Service-highlight-container {
-    top:  0;
-    transform: translateY(0);
-    margin: 0;
   }
 
   .Service-footer-link {
