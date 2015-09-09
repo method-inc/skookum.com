@@ -1,6 +1,8 @@
 @media screen and (min-width: 601px) {
   .Contact-flex {
+    color: #393939;
     display: flex;
+    padding: 6em;
   }
 
   .NewsletterInfo {

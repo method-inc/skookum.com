@@ -3,15 +3,31 @@
 .ContactForm {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 800px;
-  padding: 6em;
+  max-width: 1000px;
   width: 100%;
+}
+
+.ContactForm-field {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-right: 10px;
+  width: 50%;
+}
+
+.ContactForm-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #e1e1e1;
+  height: 8em;
+  margin-bottom: 13px;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .ContactForm-header {
   font-weight: 300;
   font-size: 2.25em;
-  color: #393939;
   padding-bottom: 15px;
 }
 
@@ -51,8 +67,12 @@
   font-size: 0.75em;
 }
 
-.ContactForm-input,
-.ContactForm-textarea {
+.ContactForm-label.is-textarea {
+  margin-top: 15px;
+  text-transform: none;
+}
+
+.ContactForm-input {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -61,13 +81,6 @@
   margin-top: 0.5em;
 }
 
-.ContactForm-textarea {
-  height: 5em;
-}
-
-.ContactForm-textarea {
-  border: 1px solid #e1e1e1;
-}
 
 .ContactForm-checkbox {
   margin-right: 0.5em;
@@ -77,10 +90,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .ContactForm {
-    padding: 2em;
-  }
   .ContactForm-submit {
     width: 100%
+  }
+  .ContactForm-field {
+    width: 100%;
   }
 }
