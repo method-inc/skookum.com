@@ -21,12 +21,11 @@ class ContactForm extends React.Component {
     this.state = {
       message: null, // ?string
       error: null, // ?{message: string, fields: Array<string>}
-
-      first_name: '',
-      last_name: '',
       email: '',
       showThankYou: false,
       /* eslint-disable */
+      first_name: '',
+      last_name: '',
       how_can_we_help: '',
       newsletter_subscription: false,
       /* eslint-enable */
@@ -38,13 +37,14 @@ class ContactForm extends React.Component {
     this.getMissingFields = this.getMissingFields.bind(this);
   }
 
-  
   handleChange(event: mixed): void {
     var {name, value} = event.target;
     this.setState({[name]: value});
   }
 
   AoProcessForm(formelement) {
+    //from ActOn - form submission script
+    /* eslint-disable */
     var aoProtocol = location.protocol;
     if ( aoProtocol.indexOf('http') < 0 ) aoProtocol = 'http:';
     var aoCAP = {
@@ -53,8 +53,9 @@ class ContactForm extends React.Component {
       did: 'd-0001',
       server: 'gettoknow.skookum.com',
       formId: 'form_0003',
-      protocol: aoProtocol
+      protocol: aoProtocol,
     };
+
     var aoArr = aoArr || []; aoArr.push(aoCAP);
 
     for (var AoI = 0; AoI < aoArr.length; AoI++) {
@@ -63,10 +64,10 @@ class ContactForm extends React.Component {
         thisFormId = formelement.id || '',
         thisFormName = formelement.name || '',
         bi = function(i) {
-          return d.getElementById(i)
+          return d.getElementByIdd(i);
         },
         bn = function(i) {
-          return d.getElementsByName(i)[0]
+          return d.getElementsByName(i)[0];
         },
         names = [],
         values = [],
@@ -77,7 +78,7 @@ class ContactForm extends React.Component {
         isLoaded = false,
         ud = 'undefined',
         st = function(f, i) {
-          w.setTimeout(f, i)
+          w.setTimeout(f, i);
         },
         ce = function(t) {
           return d.createElement(t)
@@ -116,8 +117,8 @@ class ContactForm extends React.Component {
           dForm.action = (aoCAP.protocol || w.location.protocol) + '//' + aoCAP.server + '/acton/forms/userSubmit.jsp';
           d.body.appendChild(dForm); // generate form 
 
-          for (var i = 0; i < len; i++) {
-            var el = targetIdOrName.elements[i];
+          for (var z = 0; z < len; z++) {
+            var el = targetIdOrName.elements[z];
             var name = typeof(el.name) != ud ? el.name : null;
             var value = typeof(el.value) != ud ? el.value : null;
             var tagName = el.nodeName.toLowerCase();
@@ -130,7 +131,7 @@ class ContactForm extends React.Component {
             if (name != null && name != '') {
               names.push(name);
               values.push(value);
-              console.log("Element name: " + el.name + " / Element value: " + value);
+              //console.log("Element name: " + el.name + " / Element value: " + value);
               params[name] = value;
             };
             addInput( dForm, el.name, value );
@@ -179,6 +180,7 @@ class ContactForm extends React.Component {
         console.log('aoCAP property missing');
         } 
       }
+      /* eslint-enable */
   }
 
   handleSubmit(event) {
@@ -190,15 +192,17 @@ class ContactForm extends React.Component {
     }
 
     if (missingFields.length > 0) {
-     return this.setState({error: {message: 'Oops. It looks like you’re missing some required fields.', fields: missingFields}});
+      this.setState({error: {message: 'Oops. It looks like you’re missing some required fields.', fields: missingFields}});
+      return;
     }
 
     if (!re.test(this.state.email)) {
-      return this.setState({error: { message: 'Your email address appears invalid.' }});
+      this.setState({error: { message: 'Your email address appears invalid.' }});
+      return;
     }
 
     this.AoProcessForm(event.target);
-    return this.setState({showThankYou: true, error: null});
+    this.setState({showThankYou: true, error: null});
   }
 
   getMissingFields() {
