@@ -214,7 +214,7 @@
 
 
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 768px) {
 
   .Navigation-hamburger {
     display: none;

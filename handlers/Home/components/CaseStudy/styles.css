@@ -117,10 +117,10 @@
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 961px) {
   .HomeCaseStudy-title {
-    font-size: 2.5em;
-    padding-top: 2em;
+    font-size: 3em;
+    padding-top: 6em;
   }
 
   .HomeCaseStudy-description {

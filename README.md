@@ -42,7 +42,7 @@ A few of the things that you will find in here:
   client and server built-in.
 * A component architecture with colocated concerns.
 * Test suites that are ready to go.
-* A UI toolchain. We expect and prefer that you’re data layer be somewhere else.
+* A UI toolchain. We expect and prefer that your data layer be somewhere else.
   The data and UI layers should be able to scale independently as needed.
 * SuitCSS conformance checking. CSS in and of itself includes many foot-guns.
   Suit will keep the safety on. (We will likely be exploring other more
