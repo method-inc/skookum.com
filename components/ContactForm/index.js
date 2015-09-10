@@ -238,6 +238,7 @@ class ContactForm extends React.Component {
         className="ContactForm"
         id="form_0003"
         noValidate={true}
+        style={this.props.formStyle}
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">{this.props.header}</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
