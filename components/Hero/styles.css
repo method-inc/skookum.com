@@ -4,7 +4,7 @@
   background: #393939;
   color: #fff;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   max-height: 768px;
   position: relative;
   overflow: hidden;
@@ -12,6 +12,7 @@
 
 .Hero.is-skinny {
   height: 60vh;
+  min-height: 400px;
   max-height: 500px;
 }
 
