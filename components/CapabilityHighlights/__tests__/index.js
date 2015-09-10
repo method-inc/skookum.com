@@ -3,20 +3,20 @@
 
 jest.dontMock('../index.js');
 
-describe('ServiceContact', function() {
+describe('CapabilityHighlight', function() {
   it('validates on propTypes', function() {
     spyOn(console, 'warn');
 
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const ServiceContact = require('../index.js');
+    const CapabilityHighlight = require('../index.js');
 
     Renderer.render(
-      <ServiceContact />
+      <CapabilityHighlight />
     );
 
     Renderer.render(
-      <ServiceContact id="1234" />
+      <CapabilityHighlight id="1234" />
     );
 
     const REQUIRED_PROP_TYPES = [
@@ -27,17 +27,17 @@ describe('ServiceContact', function() {
     expect(console.warn.calls[0].args[0]).toBe(
       'Warning: Failed propType: Required prop `' +
       REQUIRED_PROP_TYPES[0] +
-      '` was not specified in `ServiceContact`.'
+      '` was not specified in `CapabilityHighlight`.'
     );
   });
 
   it('renders', function() {
     const React = require('react');
     const Renderer = require('react/lib/ReactTestUtils').createRenderer();
-    const ServiceContact = require('../index.js');
+    const CapabilityHighlight = require('../index.js');
 
     Renderer.render(
-      <ServiceContact />
+      <CapabilityHighlight />
     );
 
     const result = Renderer.getRenderOutput();

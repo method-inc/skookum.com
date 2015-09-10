@@ -4,7 +4,6 @@
   font-weight: 100;
 }
 
-
 .Service-statement {
   background-size: cover;
   background-position: center;
@@ -47,42 +46,6 @@
   padding: 0 5%;
 }
 
-.Service-highlights {
-  padding: 0 15%;
-}
-
-.Service-highlight {
-  position: relative;
-  height: 321px;
-  margin-bottom: 3em;
-}
-
-.Service-highlight-container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 400px;
-}
-
-.Service-highlight-title {
-  font-size: 2.2em;
-}
-
-.Service-highlight-description {
-  margin-top: 20px;
-  font-size: 1.5em;
-}
-
-.Service-highlight-image {
-  background-size: cover;
-  background-position: center;
-  height: 321px;
-  width: 321px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .Service-footer {
   background-color: #393939;
   margin-top: 6em;
@@ -108,23 +71,27 @@
   color: #FAAB18;
 }
 
-@media screen and (max-width: 1200px) {
-  .Service-highlights {
-    padding: 0 5%;
-  }
+.Service-contact {
+  color: white;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 3em 0;
 }
 
-@media screen and (min-width: 851px) {
+.Service-contact input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e1e1e1;
+}
 
-  .Service-highlight:nth-child(even) .Service-highlight-image {
-    right: 0;
-    left: 0;
-  }
-
-  .Service-highlight:nth-child(even) .Service-highlight-container {
-    margin-right: 0;
-    margin-left: 400px;
-  }
+.Service-contact input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #e1e1e1;
+   opacity:  1;
+}
+.Service-contact input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #e1e1e1;
+   opacity:  1;
+}
+.Service-contact input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #e1e1e1;
 }
 
 @media screen and (max-width: 850px) {
@@ -150,34 +117,6 @@
 
   .Service-title {
     font-size: 2.2em;
-  }
-
-  .Service-highlight {
-    height: 100%;
-  }
-
-  .Service-highlight-title {
-    font-size: 1.5em;
-  }
-
-  .Service-highlight-description {
-    font-size: 1.3em;
-  }
-
-  .Service-highlight-image {
-    height: 189px;
-    width: 189px;
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: 1em auto;
-  }
-
-  .Service-highlight-container {
-    top:  0;
-    transform: translateY(0);
-    margin: 0;
   }
 
   .Service-footer-link {
