@@ -21,7 +21,7 @@ class Contact extends React.Component {
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
         <div className="Contact-flex">
-          <ContactForm />
+          <ContactForm header="Say Hello" labelColor="#393939"/>
         </div>
         <Locations />
       </div>

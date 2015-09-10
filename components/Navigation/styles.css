@@ -147,7 +147,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .Navigation-mobile {
     padding: 1.5em;
     overflow: auto;

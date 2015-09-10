@@ -1,0 +1,89 @@
+/** @define CapabilityHighlights; use strict */
+
+
+.CapabilityHighlights-highlights {
+  padding: 0 15%;
+  font-weight: 100;
+}
+
+.CapabilityHighlights {
+  position: relative;
+  height: 321px;
+  margin-bottom: 3em;
+}
+
+.CapabilityHighlights-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 400px;
+}
+
+.CapabilityHighlights-title {
+  font-size: 2.2em;
+}
+
+.CapabilityHighlights-description {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.CapabilityHighlights-image {
+  background-size: cover;
+  background-position: center;
+  height: 321px;
+  width: 321px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 851px) {
+
+  .CapabilityHighlights:nth-child(even) .CapabilityHighlights-image {
+    right: 0;
+    left: 0;
+  }
+
+  .CapabilityHighlights:nth-child(even) .CapabilityHighlights-container {
+    margin-right: 0;
+    margin-left: 400px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .CapabilityHighlights {
+    height: 100%;
+  }
+
+  .CapabilityHighlights-title {
+    font-size: 1.5em;
+  }
+
+  .CapabilityHighlights-description {
+    font-size: 1.3em;
+  }
+
+  .CapabilityHighlights-image {
+    height: 189px;
+    width: 189px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 1em auto;
+  }
+
+  .CapabilityHighlights-container {
+    top:  0;
+    transform: translateY(0);
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .CapabilityHighlights-highlights {
+    padding: 0 5%;
+  }
+}
