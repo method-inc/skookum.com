@@ -42,5 +42,22 @@
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MBN823');
     </script>
+    <script>
+      var _z = window.history.pushState;
+
+      window.history.pushState = function(o, s, p) {
+        var a = (p || "").split("/").pop().
+              split("-").map(function(c) { return c.charAt(0).toUpperCase() + c.substr(1).toLowerCase(); }).
+              join(" "),
+            t = "Skookum";
+
+          if (0 !== t.length)
+            t = t + " - " + a;
+
+          document.title = t;
+
+          _z.apply(this, Array.prototype.slice.call(arguments));
+        };
+    </script>
   </body>
 </html>
