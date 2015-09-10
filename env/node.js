@@ -65,7 +65,7 @@ app.get('/sitemap.xml', function(req, res) {
 app.get('/google81a679ad3faaa5e0.html', function(req, res) {
   res.type('text/html');
   res.send('google-site-verification: google81a679ad3faaa5e0.html');
-})
+});
 
 // robots.txt
 app.get('/robots.txt', function(req, res) {
