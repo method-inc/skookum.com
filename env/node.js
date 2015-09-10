@@ -13,6 +13,9 @@ import {resources} from './webpack';
 
 import {readFileSync as read} from 'fs';
 import {join} from 'path';
+import fs from 'fs';
+
+var siteMap = fs.readFileSync(join(process.cwd(), 'sitemap.xml'));
 
 var REDIRECTS = [
   ['case-studies', 'work'],
@@ -52,6 +55,19 @@ REDIRECTS.forEach(function(redirect) {
   });
 });
 
+// sitemap.xml
+app.get('/sitemap.xml', function(req, res) {
+  res.type('application/xml; charset=utf-8');
+  res.send(siteMap);
+});
+
+// Google Webmaster Tools Verification.
+app.get('/google81a679ad3faaa5e0.html', function(req, res) {
+  res.type('text/html');
+  res.send('google-site-verification: google81a679ad3faaa5e0.html');
+})
+
+// robots.txt
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
   res.send('User-agent: *\nDisallow:\n');
