@@ -45,7 +45,7 @@ class Service extends React.Component {
             ))}
           </div>
           <div className="Service-contact">
-            <ContactForm header="Interested in more information?" labelColor="#fff"/>
+            <ContactForm formStyle={{margin: '0'}} header="Interested in more information?" labelColor="#fff"/>
           </div>
         </div>
       </div>
