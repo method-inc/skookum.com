@@ -9,6 +9,9 @@
 }
 
 .HomeCaseStudy-banner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   box-sizing: border-box;
   padding: 0 5%;
   width: 66.666%;
@@ -17,7 +20,6 @@
 .HomeCaseStudy-title {
   font-size: 4em;
   font-weight: 300;
-  padding-top: 190px;
 }
 
 .HomeCaseStudy-description {
@@ -120,7 +122,6 @@
 @media screen and (max-width: 961px) {
   .HomeCaseStudy-title {
     font-size: 3em;
-    padding-top: 6em;
   }
 
   .HomeCaseStudy-description {
@@ -132,12 +133,16 @@
 @media screen and (max-width: 767px) {
 
   .HomeCaseStudy-banner {
-    margin-top: -30px;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    padding: 5em 5%;
     width: 100%;
   }
 
   .HomeCaseStudy-title {
     font-size: 3em;
+    padding-top: 1em;
   }
 
   .HomeCaseStudy-description {
