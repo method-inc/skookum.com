@@ -47,6 +47,7 @@ var app = express();
 app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
+app.use('/email', express.static(join(process.cwd(), 'email')));
 
 REDIRECTS.forEach(function(redirect) {
   var [old, current] = redirect;
