@@ -16,6 +16,7 @@
 .BlogArticle-content ol,
 .BlogArticle-content p,
 .BlogArticle-content hr,
+.BlogArticle-content pre,
 .BlogArticle-author {
   max-width: 600px;
   margin: 0 auto 2.333rem;

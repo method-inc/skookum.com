@@ -47,6 +47,7 @@ var app = express();
 app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
+app.use('/email', express.static(join(process.cwd(), 'email')));
 
 REDIRECTS.forEach(function(redirect) {
   var [old, current] = redirect;
@@ -65,7 +66,7 @@ app.get('/sitemap.xml', function(req, res) {
 app.get('/google81a679ad3faaa5e0.html', function(req, res) {
   res.type('text/html');
   res.send('google-site-verification: google81a679ad3faaa5e0.html');
-})
+});
 
 // robots.txt
 app.get('/robots.txt', function(req, res) {

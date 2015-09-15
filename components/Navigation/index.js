@@ -44,7 +44,7 @@ class Navigation extends Component {
       var showNav = true;
       var atTop = false;
 
-      if (this.previousScrollPos - window.scrollY < 0) {
+      if (this.previousScrollPos - window.scrollY <= 0) {
         showNav = false;
       } else {
         showNav = true;

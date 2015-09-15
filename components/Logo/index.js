@@ -13,7 +13,7 @@ class Logo extends React.Component {
 
     return (
       <svg {...props} className={className} viewBox="0 0 250 207" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <title>Skookum Digital Works</title>
+        <title>Skookum</title>
         <description></description>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <path fill={color || '#F16521'} className="Logo-path" d="M202.427,207 L129.432,207 C128.194,207 127.174,205.978 127.174,204.742 L127.149,89.873 C127.149,89.378 127.756,89.321 127.834,89.827 L133.733,128.916 C135.774,142.166 145.631,159.011 156.18,167.277 L203.393,204.21 C205.346,205.742 204.909,207 202.427,207" />
