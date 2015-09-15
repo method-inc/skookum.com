@@ -26,6 +26,7 @@ class ContactForm extends React.Component {
       /* eslint-disable */
       first_name: '',
       last_name: '',
+      phone: '',
       how_can_we_help: '',
       newsletter_subscription: false,
       /* eslint-enable */
