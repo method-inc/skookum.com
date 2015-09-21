@@ -25,6 +25,7 @@ var renderNavigation = (list, scope) => (
   </ul>
 );
 
+
 class Navigation extends Component {
 
   constructor(props: mixed, context: mixed): void {
@@ -33,6 +34,7 @@ class Navigation extends Component {
     this.previousScrollPos = 0;
 
     this.toggleOverlay = this.toggleOverlay.bind(this);
+    this.navScroll = this.navScroll.bind(this);
   }
 
   componentDidMount(): void {
@@ -40,30 +42,34 @@ class Navigation extends Component {
     if (window.scrollY) {
       this.setState({atTop: false});
     }
-    window.addEventListener('scroll', _ => {
-      var showNav = true;
-      var atTop = false;
-
-      if (this.previousScrollPos - window.scrollY <= 0) {
-        showNav = false;
-      } else {
-        showNav = true;
-      }
-
-      if (window.scrollY < 10) {
-        showNav = true;
-        atTop = true;
-      }
-
-      this.previousScrollPos = window.scrollY;
-      this.setState({showNav: showNav, atTop: atTop});
-
-    }, false);
+    window.addEventListener('scroll', this.navScroll, false);
   }
 
   componentWillUnmount(): void {
     if (typeof window === 'undefined') return;
-    window.removeEventListener('scroll');
+    window.removeEventListener('scroll', this.navScroll);
+  }
+
+  navScroll() {
+    var showNav = true;
+    var atTop = false;
+    var currentRoutes = this.context.router.getCurrentRoutes();
+    var lastRoute = currentRoutes[currentRoutes.length - 1];
+    var inBlog = lastRoute.path.indexOf('/blog') > -1 && lastRoute.path.indexOf('/blog/:slug') === -1;
+
+    if (this.previousScrollPos - window.scrollY <= 0 || (inBlog && window.scrollY > 300)) {
+      showNav = false;
+    } else if (inBlog ) {
+      showNav = true;
+    }
+
+    if (window.scrollY < 10) {
+      showNav = true;
+      atTop = true;
+    }
+
+    this.previousScrollPos = window.scrollY;
+    this.setState({showNav: showNav, atTop: atTop});
   }
 
   toggleOverlay(): void {
@@ -77,7 +83,6 @@ class Navigation extends Component {
 
   render(): ?ReactElement {
     var mobileClassName = `Navigation-mobile ${this.state.overlayVisible ? 'is-visible' : 'is-not-visible'}`;
-
     var navVisible = this.state.showNav ? 'is-visible' : 'is-not-visible';
     var mainClass = `Navigation-main ${navVisible} ${this.state.atTop ? 'is-top' : ''}`;
     var hamburgerClass = `Navigation-hamburger ${navVisible}`;
@@ -106,5 +111,11 @@ class Navigation extends Component {
     );
   }
 }
+
+Navigation.displayName = 'Navigation';
+
+Navigation.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
 
 export default Navigation;
