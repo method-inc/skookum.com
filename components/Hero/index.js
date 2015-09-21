@@ -32,14 +32,13 @@ class Hero extends Component {
 
   renderBackground() {
 
-    var {videos, image, poster} = this.props;
-    if (videos && videos.length > 0 && !this.state.isMobile) {
+    var {videoName, image, poster} = this.props;
+    if (videoName && !this.state.isMobile) {
       return (
         <div>
           <video preload="auto" autoPlay muted loop className="Hero-video" poster={poster} >
-            {videos.map(video => (
-              <source key={video.fields.file.url} src={video.fields.file.url} type={video.fields.file.contentType} />
-            ))}
+            <source src={`/public/videos/${videoName}.webm`} type="video/webm" />
+            <source src={`/public/videos/${videoName}.mp4`} type="video/mp4" />
           </video>
           <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
         </div>
