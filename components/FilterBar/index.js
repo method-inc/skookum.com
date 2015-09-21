@@ -9,6 +9,17 @@ var _renderedFilterBar = null;
 var previousPosition = 0;
 var atTop = true;
 
+var filterScroll = () => {
+  if (window.scrollY === 0 && !atTop && previousPosition > 300) {
+    return;
+  }
+  atTop = false;
+  if (window.scrollY === 0) {
+    atTop = true;
+  }
+  previousPosition = window.scrollY;
+};
+
 class FilterBar extends Component {
   componentDidMount(): void {
     var scroller = this.refs.scroller.getDOMNode();
@@ -19,7 +30,7 @@ class FilterBar extends Component {
     scroller.style.width = width + 'px';
     scroller.style.minWidth = 0;
     _renderedFilterBar = this.refs.scroller.getDOMNode();
-    window.addEventListener('scroll',filterScroll, false);
+    window.addEventListener('scroll', filterScroll, false);
   }
 
   componentDidUnmount(): void {
@@ -68,7 +79,7 @@ FilterBar.scrollTo = _ => setTimeout(__ => {
     var diff = currentY - targetY;
 
     if (diff !== 0) {
-      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff)/10) : 30;
+      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff) / 10) : 30;
       var scrollEnd = diff < 0 ? currentY + scrollAmount : currentY - scrollAmount;
       // previousPosition = scrollEnd;
       window.scrollTo(0, scrollEnd);
@@ -76,19 +87,5 @@ FilterBar.scrollTo = _ => setTimeout(__ => {
     }
   }
 });
-
-var filterScroll = () => {
-
-  if (window.scrollY === 0 && !atTop && previousPosition > 300) {
-    return;
-  }
-
-  atTop = false;
-  if (window.scrollY === 0) {
-    atTop = true;
-  }
-
-  previousPosition = window.scrollY;
-};
 
 export default FilterBar;
