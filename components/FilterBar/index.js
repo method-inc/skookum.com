@@ -6,6 +6,19 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
 var _renderedFilterBar = null;
+var previousPosition = 0;
+var atTop = true;
+
+var filterScroll = () => {
+  if (window.scrollY === 0 && !atTop && previousPosition > 300) {
+    return;
+  }
+  atTop = false;
+  if (window.scrollY === 0) {
+    atTop = true;
+  }
+  previousPosition = window.scrollY;
+};
 
 class FilterBar extends Component {
   componentDidMount(): void {
@@ -17,10 +30,14 @@ class FilterBar extends Component {
     scroller.style.width = width + 'px';
     scroller.style.minWidth = 0;
     _renderedFilterBar = this.refs.scroller.getDOMNode();
+    window.addEventListener('scroll', filterScroll, false);
   }
 
   componentDidUnmount(): void {
     _renderedFilterBar = null;
+    atTop = true;
+    previousPosition = 0;
+    window.removeEventListener('scroll', filterScroll);
   }
 
   render(): ReactElement {
@@ -48,7 +65,27 @@ FilterBar.propTypes = {
 };
 
 FilterBar.scrollTo = _ => setTimeout(__ => {
-  if (_renderedFilterBar) _renderedFilterBar.scrollIntoView(true);
+  if (_renderedFilterBar) {
+
+    window.scrollTo(0, previousPosition);
+    var AppOffset = document.getElementsByClassName('AppBase')[0].offsetTop;
+
+    if (screen.width < 768) {
+      AppOffset = document.getElementsByClassName('Navigation-main')[0].scrollHeight * -1;
+    }
+
+    var targetY = _renderedFilterBar.offsetTop + AppOffset;
+    var currentY = window.scrollY;
+    var diff = currentY - targetY;
+
+    if (diff !== 0) {
+      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff) / 10) : 30;
+      var scrollEnd = diff < 0 ? currentY + scrollAmount : currentY - scrollAmount;
+      // previousPosition = scrollEnd;
+      window.scrollTo(0, scrollEnd);
+      setTimeout(FilterBar.scrollTo, 4);
+    }
+  }
 });
 
 export default FilterBar;
