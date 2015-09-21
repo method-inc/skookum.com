@@ -43,8 +43,11 @@ class Navigation extends Component {
     window.addEventListener('scroll', _ => {
       var showNav = true;
       var atTop = false;
+      var currentRoutes = this.context.router.getCurrentRoutes();
+      var lastRoute = currentRoutes[currentRoutes.length-1];
+      var inBlog = lastRoute.path.indexOf('/blog') > -1 && lastRoute.path.indexOf('/blog/:slug') === -1;
 
-      if (this.previousScrollPos - window.scrollY <= 0) {
+      if (this.previousScrollPos - window.scrollY <= 0 || inBlog) {
         showNav = false;
       } else {
         showNav = true;
@@ -77,7 +80,6 @@ class Navigation extends Component {
 
   render(): ?ReactElement {
     var mobileClassName = `Navigation-mobile ${this.state.overlayVisible ? 'is-visible' : 'is-not-visible'}`;
-
     var navVisible = this.state.showNav ? 'is-visible' : 'is-not-visible';
     var mainClass = `Navigation-main ${navVisible} ${this.state.atTop ? 'is-top' : ''}`;
     var hamburgerClass = `Navigation-hamburger ${navVisible}`;
@@ -106,5 +108,11 @@ class Navigation extends Component {
     );
   }
 }
+
+Navigation.displayName = 'Navigation';
+
+Navigation.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
 
 export default Navigation;
