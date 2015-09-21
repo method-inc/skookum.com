@@ -55,8 +55,14 @@ FilterBar.propTypes = {
 
 FilterBar.scrollTo = _ => setTimeout(__ => {
   if (_renderedFilterBar) {
+
     window.scrollTo(0, previousPosition);
     var AppOffset = document.getElementsByClassName('AppBase')[0].offsetTop;
+
+    if (screen.width < 768) {
+      AppOffset = document.getElementsByClassName('Navigation-main')[0].scrollHeight * -1;
+    }
+
     var targetY = _renderedFilterBar.offsetTop + AppOffset;
     var currentY = window.scrollY;
     var diff = currentY - targetY;
