@@ -9,28 +9,28 @@ import {Link} from 'react-router';
 import lookup from 'lookup';
 import api from 'api';
 
-class Services extends React.Component {
+class Capabilities extends React.Component {
   render(): ReactElement {
     var {capabilities, heroInfo} = this.props;
     heroInfo = heroInfo[0];
     return (
-      <div className="Services">
+      <div className="Capabilities">
         <Hero color="black" 
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
-        <ul className="Services-list">
+        <ul className="Capabilities-list">
           {capabilities.map((s, imageUrl) => (
             (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/services-default.png'),
             <li style={{backgroundImage: `url(${imageUrl})`}}
-                className="Services-item" key={s.slug}>
-              <Link className="Services-link" to='service' params={{service: s.slug}}>
-                <div className="Services-overlay"></div>
-                <div className="Services-content">
-                  <div className="Services-title">{s.name}</div>
-                  <span className="Services-view">View Information</span>
+                className="Capabilities-item" key={s.slug}>
+              <Link className="Capabilities-link" to='capability' params={{capability: s.slug}}>
+                <div className="Capabilities-overlay"></div>
+                <div className="Capabilities-content">
+                  <div className="Capabilities-title">{s.name}</div>
+                  <span className="Capabilities-view">View Information</span>
                 </div>
               </Link>
             </li>
@@ -41,11 +41,11 @@ class Services extends React.Component {
   }
 }
 
-Services.propTypes = {};
+Capabilities.propTypes = {};
 
-Services.displayName = 'Services';
+Capabilities.displayName = 'Capabilities';
 
-export default Resolver.createContainer(Services, {
+export default Resolver.createContainer(Capabilities, {
   resolve: {
     capabilities(props, context) {
       return api(`contentful/capabilities`);
