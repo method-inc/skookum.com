@@ -9,6 +9,7 @@ import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
 import Hero from 'Hero';
+import Headline from 'Headline';
 
 class NotFound extends React.Component {
   render(): ?ReactElement {
@@ -21,9 +22,9 @@ class NotFound extends React.Component {
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
-        <div className="NotFound-statement">
-          Please use the main navigation to locate the content you were originally searching for. Godspeed, friend.
-        </div>
+        <Headline
+          style={{padding: '1.8em 5%'}}
+          text="Please use the main navigation to locate the content you were originally searching for. Godspeed, friend." />
         <RouteHandler />
       </div>
     );

@@ -8,15 +8,6 @@
   padding-top: 10px;
 }
 
-.Home-statement {
-  background-color: #DADADA;
-  font-size: 2em;
-  font-weight: 300;
-  padding: 1.5em 5%;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .Home-content {
   background-image: url(/public/images/homepage-capabilities.jpg);
   background-size: cover;
@@ -45,16 +36,6 @@
   margin: 0 auto 70px;
 }
 
-.Home-content-button {
-  letter-spacing: 0;
-  font-size: 1em;
-}
-
-.Home-content-button:hover,
-.Home-content-button:focus {
-  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
-}
-
 @media screen and (min-width: 1024px) {
   .Home-content-description {
     max-width: 1024px;
@@ -63,11 +44,6 @@
 }
 
 @media screen and (max-width: 769px) {
-  .Home-statement {
-    font-size: 1.8em;
-    text-align: left;
-  }
-
   .Home-content {
     height: inherit;
     padding: 4em 5%;

@@ -1,10 +1,10 @@
-/** @define Service; use strict */
+/** @define Capability; use strict */
 
-.Service {
+.Capability {
   font-weight: 100;
 }
 
-.Service-statement {
+.Capability-statement {
   background-size: cover;
   background-position: center;
   color: #393939;
@@ -14,31 +14,31 @@
   position: relative;
 }
 
-.Service-statement-container {
+.Capability-statement-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.Service-statement-title {
+.Capability-statement-title {
   font-size: 4em;
   margin-bottom: 30px;
   max-width: 1024px;
 }
 
-.Service-statement-cite {
+.Capability-statement-cite {
   font-size: 2rem;
   font-weight: 100;
   margin-left: 12px;
   white-space: nowrap;
 }
 
-.Service-statement-description {
+.Capability-statement-description {
   font-size: 1.5em;
   max-width: 1024px;
 }
 
-.Service-title {
+.Capability-title {
   font-size: 4em;
   text-align: center;
   max-width: 920px;
@@ -46,18 +46,18 @@
   padding: 0 5%;
 }
 
-.Service-footer {
+.Capability-footer {
   background-color: #393939;
   margin-top: 6em;
   padding: 2em 5% 0;
 }
 
-.Service-footer-links {
+.Capability-footer-links {
   padding-top: 0.5em;
   padding-bottom: 2.5em;
 }
 
-.Service-footer-link {
+.Capability-footer-link {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -66,60 +66,60 @@
   text-transform: uppercase;
 }
 
-.Service-footer-link:hover,
-.Service-footer-link.active {
+.Capability-footer-link:hover,
+.Capability-footer-link.active {
   color: #FAAB18;
 }
 
-.Service-contact {
+.Capability-contact {
   color: white;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   padding: 3em 0;
 }
 
-.Service-contact input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.Capability-contact input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #e1e1e1;
 }
 
-.Service-contact input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.Capability-contact input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color: #e1e1e1;
    opacity:  1;
 }
-.Service-contact input::-moz-placeholder { /* Mozilla Firefox 19+ */
+.Capability-contact input::-moz-placeholder { /* Mozilla Firefox 19+ */
    color: #e1e1e1;
    opacity:  1;
 }
-.Service-contact input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.Capability-contact input:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #e1e1e1;
 }
 
 @media screen and (max-width: 850px) {
 
-  .Service-statement {
+  .Capability-statement {
     height: inherit;
     padding: 4em 5%;
   }
 
-  .Service-statement-container {
+  .Capability-statement-container {
     position: relative;
     top: 0;
     transform: translateY(0);
   }
 
-  .Service-statement-title {
+  .Capability-statement-title {
     font-size: 2.2em;
   }
 
-  .Service-statement-description {
+  .Capability-statement-description {
     font-size: 1.5em;
   }
 
-  .Service-title {
+  .Capability-title {
     font-size: 2.2em;
   }
 
-  .Service-footer-link {
+  .Capability-footer-link {
     display: inline-block;
     width: 50%;
     padding-bottom: 1.5em;

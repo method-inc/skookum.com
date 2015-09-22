@@ -8,6 +8,7 @@ import ContactForm from 'ContactForm';
 import lookup from 'lookup';
 import Hero from 'Hero';
 import CapabilityHighlights from 'CapabilityHighlights';
+import Headline from 'Headline';
 import markdown from 'markdown';
 
 class InnovationCamp extends React.Component {
@@ -24,16 +25,16 @@ class InnovationCamp extends React.Component {
           title={heroInfo.title} 
           subtitle={lookup(heroInfo, 'subtitle')} />
 
-        <div className="InnovationCamp-statement">
-          Innovation camp is a one week program to help propel innovative ideas forward.
-        </div>
+        <Headline text="Innovation camp is a one week program to help propel innovative ideas forward." />
 
         <div className="InnovationCamp-title">The Schedule</div>
 
         <CapabilityHighlights highlights={capabilityHighlights} />
 
         <div className="InnovationCamp-contact">
-          <ContactForm header="Interested in more information?" labelColor="#fff" />
+          <div className="InnovationCamp-contact-wrapper">
+            <ContactForm header="Interested in more information?" labelColor="#fff" />
+          </div>
         </div>
       </div>
     );

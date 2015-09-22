@@ -11,6 +11,7 @@ import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
+import Headline from 'Headline';
 
 var cn = s => `Home-${s}`;
 
@@ -27,9 +28,7 @@ class Home extends React.Component {
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} />
-        <div className="Home-statement">
-          Skookum is a full service software development firm.
-        </div>
+        <Headline text="Skookum is a full service software development firm." />
         <Services />
         <CaseStudy />
         <div className="Home-content">
@@ -40,7 +39,7 @@ class Home extends React.Component {
             <div className="Home-content-description">
               We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
             </div>
-            <Button className="Home-content-button" to="capabilities" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
+            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>Learn more about our capabilities</Button>
           </div>
         </div>
         <Clients />
