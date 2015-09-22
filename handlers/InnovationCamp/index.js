@@ -32,7 +32,9 @@ class InnovationCamp extends React.Component {
         <CapabilityHighlights highlights={capabilityHighlights} />
 
         <div className="InnovationCamp-contact">
-          <ContactForm header="Interested in more information?" labelColor="#fff" />
+          <div className="InnovationCamp-contact-wrapper">
+            <ContactForm header="Interested in more information?" labelColor="#fff" />
+          </div>
         </div>
       </div>
     );

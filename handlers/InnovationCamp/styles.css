@@ -9,10 +9,13 @@
 
 .InnovationCamp-contact {
   color: white;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding: 3em 5%;
+  padding: 0 5%;
   background-color: #393939;
+}
+
+.InnovationCamp-contact-wrapper {
+  padding: 3em 0;
+  border-bottom: 1px solid #fff;
 }
 
 .InnovationCamp-contact input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
