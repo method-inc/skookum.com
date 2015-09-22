@@ -11,6 +11,7 @@ import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
+import Headline from 'Headline'
 
 var cn = s => `Home-${s}`;
 
@@ -27,9 +28,7 @@ class Home extends React.Component {
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} />
-        <div className="Home-statement">
-          Skookum is a full service software development firm.
-        </div>
+        <Headline text="Skookum is a full service software development firm." />
         <Services />
         <CaseStudy />
         <div className="Home-content">
