@@ -40,7 +40,7 @@ class Home extends React.Component {
             <div className="Home-content-description">
               We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
             </div>
-            <Button className="Home-content-button" to="capabilities" style={{color: '#393939', backgroundColor: '#fff', textTransform: 'none', border: '0', borderRadius: '0'}}>Learn more about our capabilities</Button>
+            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>Learn more about our capabilities</Button>
           </div>
         </div>
         <Clients />
