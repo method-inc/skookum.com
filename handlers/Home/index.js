@@ -11,7 +11,7 @@ import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
-import Headline from 'Headline'
+import Headline from 'Headline';
 
 var cn = s => `Home-${s}`;
 
