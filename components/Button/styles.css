@@ -67,7 +67,7 @@
   border-radius: 0;
   letter-spacing: 0;
   font-size: 1em;
-  transition: box-shadow 350ms ease;
+  transition: box-shadow 200ms ease;
 }
 
 .Button.is-white:hover,
