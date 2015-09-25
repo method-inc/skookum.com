@@ -14,8 +14,8 @@ import Events from'./handlers/Events';
 import Home from'./handlers/Home';
 import NotFound from './handlers/NotFound';
 import OpenSource from'./handlers/OpenSource';
-import Services from './handlers/Services';
-import Service from './handlers/Service';
+import Capabilities from './handlers/Capabilities';
+import Capability from './handlers/Capability';
 import StyleGuide from './handlers/StyleGuide';
 import InnovationCamp from './handlers/InnovationCamp';
 
@@ -40,8 +40,8 @@ var routes = (
     <Route name="contact" path="contact" handler={Contact} />
     <Route name="open-source" path="open-source" handler={OpenSource} />
     <Route name="capabilities" path="capabilities">
-      <Route name="service" path=":service" handler={Service} />
-      <DefaultRoute handler={Services} />
+      <Route name="capability" path=":capability" handler={Capability} />
+      <DefaultRoute handler={Capabilities} />
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
     <Route name="innovation-camp" path="innovation-camp" handler={InnovationCamp} />

@@ -12,9 +12,8 @@ import markdown from 'markdown';
 import CapabilityHighlights from 'CapabilityHighlights';
 
 
-class Service extends React.Component {
+class Capability extends React.Component {
   render(): ReactElement {
-    var {service} = this.context.router.getCurrentParams();
     var {capability, capabilityHighlights, capabilities} = this.props;
     capability = capability[0];
 
@@ -23,28 +22,28 @@ class Service extends React.Component {
     var cite = lookup(capability, 'cite');
 
     return (
-      <div className="Service">
+      <div className="Capability">
         <Hero childrenPosition="before" color="black" image={heroImage} title={capability.name} />
-        <div className="Service-statement" style={{backgroundImage: `url(${headlineImage})`}} >
-          <div className="Service-statement-container">
-            <div className="Service-statement-title">
+        <div className="Capability-statement" style={{backgroundImage: `url(${headlineImage})`}} >
+          <div className="Capability-statement-container">
+            <div className="Capability-statement-title">
               {capability.headline} 
-              {cite && <span className="Service-statement-cite"> - {cite}</span>}
+              {cite && <span className="Capability-statement-cite"> - {cite}</span>}
             </div>
-            <div className="Service-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>
+            <div className="Capability-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>
           </div>
         </div>
-        <div className="Service-title">
+        <div className="Capability-title">
           {capability.slogan}
         </div>
         <CapabilityHighlights highlights={capabilityHighlights} />
-        <div className="Service-footer">
-          <div className="Service-footer-links">
+        <div className="Capability-footer">
+          <div className="Capability-footer-links">
             {capabilities.map(n => (
-              <Link to="service" params={{service: n.slug}} className="Service-footer-link">{n.name}</Link>
+              <Link to="capability" params={{capability: n.slug}} className="Capability-footer-link">{n.name}</Link>
             ))}
           </div>
-          <div className="Service-contact">
+          <div className="Capability-contact">
             <ContactForm formStyle={{margin: '0'}} header="Interested in more information?" labelColor="#fff"/>
           </div>
         </div>
@@ -53,27 +52,27 @@ class Service extends React.Component {
   }
 }
 
-Service.propTypes = {};
+Capability.propTypes = {};
 
-Service.displayName = 'Service';
+Capability.displayName = 'Capability';
 
 
-Service.contextTypes = {
+Capability.contextTypes = {
   router: PropTypes.func.isRequired,
 };
 
 
-export default Resolver.createContainer(Service, {
-  contextTypes: Service.contextTypes,
+export default Resolver.createContainer(Capability, {
+  contextTypes: Capability.contextTypes,
 
   resolve: {
     capabilityHighlights(props, context) {
-      var {service} = context.router.getCurrentParams();
-      return api(`contentful/capability_highlights/${service}`);
+      var {capability} = context.router.getCurrentParams();
+      return api(`contentful/capability_highlights/${capability}`);
     },
     capability(props, context) {
-      var {service} = context.router.getCurrentParams();
-      return api(`contentful/capability/${service}`);
+      var {capability} = context.router.getCurrentParams();
+      return api(`contentful/capability/${capability}`);
     },
     capabilities(props, context) {
       return api(`contentful/capabilities`);
