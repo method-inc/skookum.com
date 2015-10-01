@@ -88,10 +88,16 @@ app.get('*', function(req, res) {
     },
   });
 
-  router.run((Handler, state) => (
-    Resolver.renderToString(<Handler />)
-      .then(o => res.send(tmpl({html: o.toString(), data: o.data})))
-  ));
+  router.run((Handler, state) => {
+    var isNotFound = state.routes.some(function(route) {
+      return route.isNotFound;
+    });
+
+    var status = isNotFound ? 404 : 200;
+
+    return (Resolver.renderToString(<Handler />)
+      .then(o => res.status(status).send(tmpl({html: o.toString(), data: o.data}))));
+  });
 });
 
 debug(`app server starting on ${process.env.PORT}`);
