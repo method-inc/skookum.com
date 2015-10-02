@@ -4,7 +4,6 @@ import React from 'react';
 import markdown from 'markdown';
 import {Resolver} from 'react-resolver';
 import * as fmt from 'fmt';
-
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
@@ -36,6 +35,7 @@ class BlogArticle extends React.Component {
       datePublished,
       body,
       poster,
+      summary,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
 
@@ -46,13 +46,19 @@ class BlogArticle extends React.Component {
     }
 
     return (
-      <article className="BlogArticle">
+      <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
         <Hero
-          title={title}
+          title={<div itemProp="headline">{title}</div>}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
           color="black" />
+        <span className="BlogArticle-meta">
+          <image itemProp="image" src={poster}/>
+          <span itemProp="description">{summary}</span>
+          <span itemProp="datePublished">{fmt.date(new Date(datePublished))}</span>
+        </span>
         <div
+          itemProp="articleBody"
           className="BlogArticle-content"
           dangerouslySetInnerHTML={{__html: markdown(body)}} />
         <div className="BlogArticle-author">
@@ -62,7 +68,7 @@ class BlogArticle extends React.Component {
           </div>}
           <div className="BlogArticle-author-details">
             <div>
-              <span className="BlogArticle-author-name">{author.name}</span>
+              <span itemProp="author" className="BlogArticle-author-name">{author.name}</span>
               {jobTitle && <span className="BlogArticle-author-title">{jobTitle}</span>}
             </div>
             {author.twitter && <span className="BlogArticle-author-twitter">{author.twitter}</span>}
