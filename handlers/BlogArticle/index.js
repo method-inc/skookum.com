@@ -36,7 +36,6 @@ class BlogArticle extends React.Component {
       body,
       poster,
       summary,
-      datePublished,
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
 
