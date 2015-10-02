@@ -75,6 +75,11 @@ app.get('/robots.txt', function(req, res) {
 });
 
 app.get('*', function(req, res) {
+
+  if (req.url !== '/' && req.url.slice(-1) === '/') {
+    return res.redirect(301, req.url.substring(0, req.url.length - 1));
+  }
+
   var router = Router.create({
     routes: routes,
     location: req.url,
