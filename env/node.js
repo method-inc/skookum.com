@@ -40,7 +40,7 @@ var baseRedirects = (req, res, next) => {
     return res.redirect(301, url);
   }
   next();
-}
+};
 
 var REDIRECTS = [
   ['case-studies', 'work'],
