@@ -17,6 +17,31 @@ import fs from 'fs';
 
 var siteMap = fs.readFileSync(join(process.cwd(), 'sitemap.xml'));
 
+var baseRedirects = (req, res, next) => {
+  var redirect = false;
+  var url = req.url;
+
+  if (url !== '/' && url.indexOf('/?') > -1) {
+    redirect = true;
+    url = url.substring(0, url.indexOf('/?'));
+  }
+
+  if (url.indexOf('2013/blog') > -1) {
+    redirect = true;
+    url = url.substring(url.indexOf('/blog/'));
+  }
+
+  if (url !== '/' && url.slice(-1) === '/') {
+    redirect = true;
+    url = url.substring(0, url.length - 1);
+  }
+
+  if (redirect) {
+    return res.redirect(301, url);
+  }
+  next();
+}
+
 var REDIRECTS = [
   ['case-studies', 'work'],
   ['node', 'open-source'],
@@ -74,12 +99,7 @@ app.get('/robots.txt', function(req, res) {
   res.send('User-agent: *\nDisallow:\n');
 });
 
-app.get('*', function(req, res) {
-
-  if (req.url !== '/' && req.url.slice(-1) === '/') {
-    return res.redirect(301, req.url.substring(0, req.url.length - 1));
-  }
-
+app.get('*', baseRedirects, function(req, res) {
   var router = Router.create({
     routes: routes,
     location: req.url,
