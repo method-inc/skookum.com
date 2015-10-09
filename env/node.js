@@ -101,7 +101,13 @@ app.get('*', function(req, res) {
     var status = isNotFound ? 404 : 200;
 
     return (Resolver.renderToString(<Handler />)
-      .then(o => res.status(status).send(tmpl({html: o.toString(), data: o.data}))));
+      .then(o => {
+        var renderedHtmlString = tmpl({html: o.toString(), data: o.data});
+        var meta = renderedHtmlString.substring(renderedHtmlString.indexOf('‡') + 1, renderedHtmlString.lastIndexOf('‡'));
+        //move meta into head for initial page load
+        renderedHtmlString = renderedHtmlString.replace(meta, '').replace('†meta†', meta);
+        res.status(status).send(renderedHtmlString);
+      }));
   });
 });
 
