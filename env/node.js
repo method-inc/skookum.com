@@ -34,7 +34,7 @@ var REDIRECTS = [
   ['blog/forget-native-learn-to-write-html5-apps/dsc_4048/', 'blog'],
   ['blog/node-js-you-learn-to-write-the-real-time-web/dsc_4129/', 'blog'],
   ['jobs', 'careers'],
-  ['resources/solve-for-bob.pdf', 'public/pdfs/solve-for-bob.pdf']
+  ['resources/solve-for-bob.pdf', 'public/pdfs/solve-for-bob.pdf'],
 ];
 
 var tmpl = o => read('./index.html', 'utf8')

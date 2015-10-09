@@ -46,7 +46,7 @@ class BlogArticle extends React.Component {
       poster = poster.fields.file.url;
     }
 
-    var tags = [
+    var metaTags = [
       {name: 'title', content: title},
       {name: 'description', content: summary},
       {itemProp: 'name', content: title},
@@ -64,11 +64,11 @@ class BlogArticle extends React.Component {
       {property: 'og:image', content: 'http://example.com/image.jpg'},
       {property: 'og:description', content: summary},
       {property: 'og:site_name', content: 'Skookum Digital Works'},
-    ]
+    ];
 
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
-        <DocMeta tags={tags} />
+        <DocMeta tags={metaTags} />
         <Hero
           title={<div itemProp="headline">{title}</div>}
           image={poster}

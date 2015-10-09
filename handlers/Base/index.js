@@ -42,9 +42,9 @@ class AppBase extends Component {
       // {property: 'og:image', content: skookumLogoUrl},
       {property: 'og:description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
       {property: 'og:site_name', content: 'Skookum Digital Works'},
-    ]
+    ];
 
-    var isServerRender = 'undefined' === typeof window;
+    var isServerRender = typeof window === 'undefined';
 
     if (isServerRender) {
       //tags to be placed in hidden string output then moved to
@@ -68,7 +68,7 @@ class AppBase extends Component {
           <RouteHandler key={this.getHandlerKey()} />
         </div>
         <Footer />
-        { isServerRender &&  <div style={hiddenStyle} dangerouslySetInnerHTML={{ __html: metaTagsHtml }} /> }
+        { isServerRender && <div style={hiddenStyle} dangerouslySetInnerHTML={{ __html: metaTagsHtml }} /> }
       </div>
     );
   }
