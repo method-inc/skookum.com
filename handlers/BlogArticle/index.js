@@ -60,8 +60,8 @@ class BlogArticle extends React.Component {
       // {name: 'twitter:image', content: extractedImageOrSkookumLogo},
       {property: 'og:title', content: title},
       {property: 'og:type', content: 'article'},
-      {property: 'og:url', content: 'http://www.example.com/'},
-      {property: 'og:image', content: 'http://example.com/image.jpg'},
+      {property: 'og:url', content: `http://skookum.com/blog/${this.props.article.slug}`},
+      // {property: 'og:image', content: 'http://example.com/image.jpg'},
       {property: 'og:description', content: summary},
       {property: 'og:site_name', content: 'Skookum Digital Works'},
     ];
