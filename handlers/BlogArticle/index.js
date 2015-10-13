@@ -7,6 +7,7 @@ import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
+import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
 
@@ -45,8 +46,29 @@ class BlogArticle extends React.Component {
       poster = poster.fields.file.url;
     }
 
+    var metaTags = [
+      {name: 'title', content: title},
+      {name: 'description', content: summary},
+      {itemProp: 'name', content: title},
+      {itemProp: 'description', content: summary},
+      // {itemProp: 'image', content: extractedImageOrSkookumLogo},
+      {name: 'twitter:card', content: 'summary'},
+      {name: 'twitter:site', content: '@skookum'},
+      {name: 'twitter:title', content: title},
+      {name: 'twitter:description', content: summary},
+      {name: 'twitter:creator', content: author.twitter || '@skookum'},
+      // {name: 'twitter:image', content: extractedImageOrSkookumLogo},
+      {property: 'og:title', content: title},
+      {property: 'og:type', content: 'article'},
+      {property: 'og:url', content: `http://skookum.com/blog/${this.props.article.slug}`},
+      // {property: 'og:image', content: 'http://example.com/image.jpg'},
+      {property: 'og:description', content: summary},
+      {property: 'og:site_name', content: 'Skookum Digital Works'},
+    ];
+
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
+        <DocMeta tags={metaTags} />
         <Hero
           title={<div itemProp="headline">{title}</div>}
           image={poster}
