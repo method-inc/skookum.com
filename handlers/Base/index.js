@@ -35,11 +35,11 @@ class AppBase extends Component {
       {name: 'twitter:title', content: 'Skookum'},
       {name: 'twitter:description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
       {name: 'twitter:creator', content: '@skookum'},
-      // {name: 'twitter:image', content: skookumLogoUrl},
+      {name: 'twitter:image', content: 'https://pbs.twimg.com/profile_images/648570516459008000/26E19ffH.png'},
       {property: 'og:title', content: 'Skookum'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'http://skookum.com/'},
-      // {property: 'og:image', content: skookumLogoUrl},
+      {property: 'og:image', content: 'https://pbs.twimg.com/profile_images/648570516459008000/26E19ffH.png'},
       {property: 'og:description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
       {property: 'og:site_name', content: 'Skookum Digital Works'},
     ];
@@ -80,4 +80,3 @@ AppBase.contextTypes = {
 
 
 export default AppBase;
-
