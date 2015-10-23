@@ -21,9 +21,9 @@ var baseRedirects = (req, res, next) => {
   var redirect = false;
   var url = req.url;
 
-  if (url !== '/' && url.indexOf('/?') > -1) {
+  if (url.indexOf('/?') > -1 && url.indexOf('/?') !== 0) {
     redirect = true;
-    url = url.substring(0, url.indexOf('/?'));
+    url = url.replace('/?', '?');
   }
 
   if (url.indexOf('2013/blog') > -1) {
