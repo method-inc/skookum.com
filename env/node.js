@@ -81,6 +81,11 @@ REDIRECTS.forEach(function(redirect) {
   });
 });
 
+// labs.skookum.com - a large number of visits come to the site through this and should be handled.
+app.get('/demos/*', function(req, res) {
+  res.redirect('http://labs.skookum.com')
+});
+
 // sitemap.xml
 app.get('/sitemap.xml', function(req, res) {
   res.type('application/xml; charset=utf-8');
