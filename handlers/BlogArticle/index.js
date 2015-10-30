@@ -86,7 +86,7 @@ class BlogArticle extends React.Component {
         <div className="BlogArticle-author">
           {author.photoUrl &&
           <div className="BlogArticle-author-image">
-            <img className="BlogArticle-author-img" src={author.photoUrl} />
+            <img className="BlogArticle-author-img" src={author.photoUrl} alt={author.name}/>
           </div>}
           <div className="BlogArticle-author-details">
             <div>
