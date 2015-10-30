@@ -20,6 +20,8 @@
 .OpenSource-title {
   font-size: 2.2em;
   color: #FAAB18;
+  margin: 0;
+  font-weight: 100;
 }
 
 .OpenSource-description {
