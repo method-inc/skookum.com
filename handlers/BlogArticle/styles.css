@@ -37,6 +37,7 @@
 .BlogArticle-content td {
   border: 1px solid #333;
   padding: 10px;
+  text-align: left;
 }
 
 .BlogArticle-content hr {
