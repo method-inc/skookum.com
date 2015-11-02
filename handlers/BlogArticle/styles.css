@@ -22,10 +22,22 @@
 .BlogArticle-content p,
 .BlogArticle-content hr,
 .BlogArticle-content pre,
+.BlogArticle-content table,
 .BlogArticle-author {
   max-width: 600px;
   margin: 0 auto 2.333rem;
   padding: 0 5%;
+}
+
+.BlogArticle-content table {
+  width: 100%;
+}
+
+.BlogArticle-content th,
+.BlogArticle-content td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
 }
 
 .BlogArticle-content hr {
