@@ -18,6 +18,7 @@ import Capabilities from './handlers/Capabilities';
 import Capability from './handlers/Capability';
 import StyleGuide from './handlers/StyleGuide';
 import InnovationCamp from './handlers/InnovationCamp';
+import Landing from './handlers/Landing';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -45,6 +46,7 @@ var routes = (
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
     <Route name="innovation-camp" path="innovation-camp" handler={InnovationCamp} />
+    <Route name="landing" path="landing/:slug" handler={Landing} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
