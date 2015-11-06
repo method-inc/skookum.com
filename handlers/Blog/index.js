@@ -14,6 +14,11 @@ import lookup from 'lookup';
 class Blog extends Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
+
+    var metaTags = [
+      {name: 'title', content: heroInfo.metaTitle},
+      {name: 'description', content: heroInfo.metaDescription},
+    ];
     return (
       <div className="Blog">
         <Hero color="black" 
@@ -21,7 +26,8 @@ class Blog extends Component {
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} />
+          subtitle={lookup(heroInfo, 'subtitle')} 
+          metaTags={metaTags} />
         <FilterBar items={this.props.tags} />
         <ArticlesList />
       </div>

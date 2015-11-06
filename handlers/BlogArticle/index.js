@@ -7,7 +7,6 @@ import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
-import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
 
@@ -68,12 +67,12 @@ class BlogArticle extends React.Component {
 
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
-        <DocMeta tags={metaTags} />
         <Hero
           title={<div itemProp="headline">{title}</div>}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
-          color="black" />
+          color="black" 
+          metaTags={metaTags} />
         <span className="BlogArticle-meta">
           <image itemProp="image" src={poster}/>
           <span itemProp="description">{summary}</span>

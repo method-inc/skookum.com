@@ -12,6 +12,10 @@ import data from './data';
 class OpenSource extends React.Component {
   render(): ?ReactElement {
     var heroInfo = this.props.heroInfo[0];
+    var metaTags = [
+      {name: 'title', content: heroInfo.metaTitle},
+      {name: 'description', content: heroInfo.metaDescription},
+    ];
     return (
       <div className="OpenSource">
         <Hero color="black" 
@@ -19,7 +23,8 @@ class OpenSource extends React.Component {
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} />
+          subtitle={lookup(heroInfo, 'subtitle')}
+          metaTags={metaTags} />
         {data.map(o => (
           <a href={o.github} target="_blank" className="OpenSource-project">
             <div className="OpenSource-container">

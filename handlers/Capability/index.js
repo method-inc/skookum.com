@@ -21,9 +21,14 @@ class Capability extends React.Component {
     var headlineImage = lookup(capability.headlineImage, 'fields.file.url') || '/public/images/headline-default.png';
     var cite = lookup(capability, 'cite');
 
+    var metaTags = [
+      {name: 'title', content: capability.metaTitle},
+      {name: 'description', content: capability.metaDescription},
+    ];
+
     return (
       <div className="Capability">
-        <Hero childrenPosition="before" color="black" image={heroImage} title={capability.name} />
+        <Hero childrenPosition="before" color="black" image={heroImage} title={capability.name} metaTags={metaTags}/>
         <div className="Capability-statement" style={{backgroundImage: `url(${headlineImage})`}} >
           <div className="Capability-statement-container">
             <div className="Capability-statement-title">
