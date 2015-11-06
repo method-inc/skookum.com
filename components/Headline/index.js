@@ -8,9 +8,9 @@ var {PropTypes} = React;
 class Headline extends React.Component {
   render(): ?ReactElement {
     return (
-      <div className="Headline" style={this.props.style}>
+      <h2 className="Headline" style={this.props.style}>
         {this.props.text}
-      </div>
+      </h2>
     );
   }
 }
