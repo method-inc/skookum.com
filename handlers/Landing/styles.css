@@ -54,10 +54,15 @@
 }
 
 .Landing-layer-content {
-  max-width: 1084px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 310px;
+  width: calc(100% - 400px);
+  max-width: 690px;
   margin: 0 auto;
   padding: 0 35px;
-  transform: translateY(50%);
+  transform: translateY(-50%);
 }
 
 .Landing-layer-image {
@@ -107,14 +112,9 @@
 .Landing-stat {
   margin: 0;
   padding: 20px 58px;
-  border-top: 1px solid #EFEFEF;
+  border: 1px solid #EFEFEF;
   height: 133.333px;
   box-sizing: border-box;
-}
-
-.Landing-stat.is-right {
-  border-top: 0;
-  border-bottom: 1px solid #EFEFEF;
 }
 
 .Landing-stat-number {

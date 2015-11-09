@@ -57,15 +57,15 @@ class Landing extends React.Component {
               </div>
             </div>
             <ul className="Landing-stats is-right">
-              <li className="Landing-stat is-right">
+              <li className="Landing-stat">
                 <div className="Landing-stat-number">10</div>
                 <div className="Landing-stat-text">years in business</div>
               </li>
-              <li className="Landing-stat is-right">
+              <li className="Landing-stat">
                 <div className="Landing-stat-number">10</div>
                 <div className="Landing-stat-text">years in business</div>
               </li>
-              <li className="Landing-stat is-right">
+              <li className="Landing-stat">
                 <div className="Landing-stat-number">10</div>
                 <div className="Landing-stat-text">years in business</div>
               </li>
