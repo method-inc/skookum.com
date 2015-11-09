@@ -9,7 +9,6 @@ import lookup from 'lookup';
 
 class Clients extends Component {
   render(): ?ReactElement {
-    console.log(this.props.clients.items);
     return (
       <div className="HomeClients">
         <div className="HomeClients-content">
