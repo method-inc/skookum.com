@@ -5,6 +5,7 @@ import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import api from 'api';
 import lookup from 'lookup';
+import ContactForm from 'ContactForm';
 
 class Landing extends React.Component {
 
@@ -81,6 +82,11 @@ class Landing extends React.Component {
               </div>
             ))}
           </div>
+        </section>
+        <section className="Landing-footer">
+          <section className="Landing-contact">
+            <ContactForm formStyle={{margin: '0'}} header="Fill out the form below to consult with a Solutions Architect" labelColor="#fff" isLandingPage={true}/>
+          </section>
         </section>
       </div>
     );

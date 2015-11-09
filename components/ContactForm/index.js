@@ -36,6 +36,7 @@ class ContactForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.getMissingFields = this.getMissingFields.bind(this);
+    this.renderLandingPageForm = this.renderLandingPageForm.bind(this);
   }
 
   handleChange(event: mixed): void {
@@ -75,15 +76,46 @@ class ContactForm extends React.Component {
   }
 
   getMissingFields() {
-    const REQUIRED_FIELDS = [
-      'first_name', 'last_name', 'email',
-    ];
+    var requiredFields = [];
+    if (this.props.isLandingPage) {
+      requiredFields = [
+        'first_name', 'last_name', 'email',
+      ];
+    } else {
+      requiredFields = [
+        'name', 'email',
+      ];
+    }
+    
 
-    var missingFields = REQUIRED_FIELDS.reduce(
+    var missingFields = requiredFields.reduce(
       (missing, n) =>
         (typeof this.state[n] === 'undefined' || this.state[n] === '') ? missing.concat(n) : missing,
     []);
     return missingFields;
+  }
+
+  renderLandingPageForm(labelStyle) {
+    return (
+      <form
+        className="ContactForm"
+        id="form_0003"
+        noValidate={true}
+        style={this.props.formStyle}
+        onSubmit={this.handleSubmit}>
+        <header className="ContactForm-header">{this.props.header}</header>
+        {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
+        <div className="ContactForm-field is-landing">
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="Name*" name="first_name" />
+        </div>
+        <div className="ContactForm-field is-landing">  
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
+        </div>
+        <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
+        <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.how_can_we_help} name="how_can_we_help"></textarea>
+        <Button style={{border: 0}} className="ContactForm-submit is-landing" type="primary">Request Consultation</Button>
+      </form>
+    );
   }
 
   render(): ReactElement {
@@ -100,6 +132,11 @@ class ContactForm extends React.Component {
     }
 
     var labelStyle = {color: this.props.labelColor};
+    console.log(this.props.isLandingPage);
+
+    if (this.props.isLandingPage) {
+      return this.renderLandingPageForm(labelStyle);
+    }
 
     return (
       <form

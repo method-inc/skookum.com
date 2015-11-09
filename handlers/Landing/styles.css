@@ -148,3 +148,30 @@
 .Landing-client-image {
   width: 100%;
 }
+
+.Landing-footer {
+  background-color: #393939;
+  padding: 3em;
+}
+
+.Landing-contact {
+  color: white;
+  max-width: 1084px;
+  margin: 0 auto;
+}
+
+.Landing-contact input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e1e1e1;
+}
+
+.Landing-contact input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #e1e1e1;
+   opacity:  1;
+}
+.Landing-contact input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #e1e1e1;
+   opacity:  1;
+}
+.Landing-contact input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #e1e1e1;
+}
