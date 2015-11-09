@@ -24,6 +24,12 @@ class Capability extends React.Component {
     var metaTags = [
       {name: 'title', content: capability.metaTitle},
       {name: 'description', content: capability.metaDescription},
+      {name: 'twitter:title', content: capability.metaTitle},
+      {name: 'twitter:description', content: capability.metaDescription},
+      {property: 'og:title', content: capability.metaTitle},
+      {property: 'og:description', content: capability.metaDescription},
+      {itemProp: 'name', content: capability.metaTitle},
+      {itemProp: 'description', content: capability.metaDescription},
     ];
 
     return (

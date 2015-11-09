@@ -26,6 +26,12 @@ class CaseStudyArticle extends React.Component {
     var metaTags = [
       {name: 'title', content: title},
       {name: 'description', content: body},
+      {name: 'twitter:title', content: title},
+      {name: 'twitter:description', content: body},
+      {property: 'og:title', content: title},
+      {property: 'og:description', content: body},
+      {itemProp: 'name', content: title},
+      {itemProp: 'description', content: body},
     ];
 
     return (

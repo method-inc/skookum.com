@@ -12,10 +12,18 @@ import data from './data';
 class OpenSource extends React.Component {
   render(): ?ReactElement {
     var heroInfo = this.props.heroInfo[0];
+    
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},
+      {name: 'twitter:title', content: heroInfo.metaTitle},
+      {name: 'twitter:description', content: heroInfo.metaDescription},
+      {property: 'og:title', content: heroInfo.metaTitle},
+      {property: 'og:description', content: heroInfo.metaDescription},
+      {itemProp: 'name', content: heroInfo.metaTitle},
+      {itemProp: 'description', content: heroInfo.metaDescription},
     ];
+
     return (
       <div className="OpenSource">
         <Hero color="black" 
