@@ -62,7 +62,7 @@ class BlogArticle extends React.Component {
       {property: 'og:url', content: `http://skookum.com/blog/${this.props.article.slug}`},
       // {property: 'og:image', content: 'http://example.com/image.jpg'},
       {property: 'og:description', content: summary},
-      {property: 'og:site_name', content: 'Skookum Digital Works'},
+      {property: 'og:site_name', content: 'Skookum'},
     ];
 
     return (
