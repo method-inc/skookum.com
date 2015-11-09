@@ -7,6 +7,7 @@ import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
+import NotFound from '../../handlers/NotFound';
 import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
@@ -26,9 +27,10 @@ function getDefaultImage(tags: Array): String {
   return IMAGES.all;
 }
 
-
 class BlogArticle extends React.Component {
+
   render(): ?ReactElement {
+    if (this.props.article === 'notfound') { return <NotFound />; }
     var {
       title,
       tags,
@@ -113,7 +115,7 @@ BlogArticle.displayName = 'BlogArticle';
 export default Resolver.createContainer(BlogArticle, {
   resolve: {
     article(props) {
-      return api(`contentful/${props.params.slug}`);
+      return api(`contentful/${props.params.slug}`).catch(err => 'notfound');
     },
   },
 });
