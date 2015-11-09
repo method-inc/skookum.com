@@ -26,7 +26,7 @@ class Clients extends Component {
                 {lookup(n, 'description') || 'Nothing to see here, move along!'}
               </div>
               <div className="HomeClients-image-container">
-                <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} />
+                <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} alt={n.image[0].fields.title}/>
               </div>
             </div>
           ))}
