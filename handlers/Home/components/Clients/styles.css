@@ -11,7 +11,9 @@
 }
 
 .HomeClients-title {
-  font-size: 4em; 
+  font-size: 4em;
+  margin: 0;
+  font-weight: 300;
 }
 
 .HomeClients-description {

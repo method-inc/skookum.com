@@ -40,7 +40,7 @@ class CultureContent extends Component {
         <div className={cn('benefits')}>
           <div className={cn('benefits-image')} style={{backgroundImage: 'url(/public/images/careers2.jpg)'}} />
           <div className={cn('benefits-overlay')}/>
-          <div className={cn('benefits-title')}>Benefits</div>
+          <h2 className={cn('benefits-title')}>Benefits</h2>
           <ul className={cn('benefits-list')}>
             {BENEFITS.map((n, i) => (
               <li key={i} className={cn('benefits-item')}>{n}</li>

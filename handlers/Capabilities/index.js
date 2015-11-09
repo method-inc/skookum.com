@@ -13,6 +13,18 @@ class Capabilities extends React.Component {
   render(): ReactElement {
     var {capabilities, heroInfo} = this.props;
     heroInfo = heroInfo[0];
+
+    var metaTags = [
+      {name: 'title', content: heroInfo.metaTitle},
+      {name: 'description', content: heroInfo.metaDescription},
+      {name: 'twitter:title', content: heroInfo.metaTitle},
+      {name: 'twitter:description', content: heroInfo.metaDescription},
+      {property: 'og:title', content: heroInfo.metaTitle},
+      {property: 'og:description', content: heroInfo.metaDescription},
+      {itemProp: 'name', content: heroInfo.metaTitle},
+      {itemProp: 'description', content: heroInfo.metaDescription},
+    ];
+
     return (
       <div className="Capabilities">
         <Hero color="black" 
@@ -20,7 +32,8 @@ class Capabilities extends React.Component {
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} />
+          subtitle={lookup(heroInfo, 'subtitle')}
+          metaTags={metaTags} />
         <ul className="Capabilities-list">
           {capabilities.map((s, imageUrl) => (
             (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/services-default.png'),
@@ -29,7 +42,7 @@ class Capabilities extends React.Component {
               <Link className="Capabilities-link" to='capability' params={{capability: s.slug}}>
                 <div className="Capabilities-overlay"></div>
                 <div className="Capabilities-content">
-                  <div className="Capabilities-title">{s.name}</div>
+                  <h2 className="Capabilities-title">{s.name}</h2>
                   <span className="Capabilities-view">View Information</span>
                 </div>
               </Link>

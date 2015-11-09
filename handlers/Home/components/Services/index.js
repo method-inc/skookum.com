@@ -21,7 +21,7 @@ class Services extends React.Component {
                 className="HomeServices-item" key={s.name}>
               <div className="HomeServices-overlay"></div>
               <div className="HomeServices-content">
-                <div className="HomeServices-title">{s.name}</div>
+                <h2 className="HomeServices-title">{s.name}</h2>
                 <span className="HomeServices-description" dangerouslySetInnerHTML={{__html: markdown(s.description)}} />
               </div>
             </li>
