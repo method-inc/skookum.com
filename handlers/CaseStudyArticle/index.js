@@ -24,6 +24,17 @@ class CaseStudyArticle extends React.Component {
     } = this.props.article;
     var jobTitle = author.title || author.jobTitle;
 
+    var metaTags = [
+      {name: 'title', content: title},
+      {name: 'description', content: body},
+      {name: 'twitter:title', content: title},
+      {name: 'twitter:description', content: body},
+      {property: 'og:title', content: title},
+      {property: 'og:description', content: body},
+      {itemProp: 'name', content: title},
+      {itemProp: 'description', content: body},
+    ];
+
     return (
       <article className="CaseStudyArticle">
         <Hero

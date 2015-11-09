@@ -14,6 +14,18 @@ import Headline from 'Headline';
 class NotFound extends React.Component {
   render(): ?ReactElement {
     var heroInfo = this.props.heroInfo[0];
+
+    var metaTags = [
+      {name: 'title', content: heroInfo.metaTitle},
+      {name: 'description', content: heroInfo.metaDescription},
+      {name: 'twitter:title', content: heroInfo.metaTitle},
+      {name: 'twitter:description', content: heroInfo.metaDescription},
+      {property: 'og:title', content: heroInfo.metaTitle},
+      {property: 'og:description', content: heroInfo.metaDescription},
+      {itemProp: 'name', content: heroInfo.metaTitle},
+      {itemProp: 'description', content: heroInfo.metaDescription},
+    ];
+    
     return (
       <div>
         <Hero color="black" 
@@ -21,7 +33,8 @@ class NotFound extends React.Component {
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} />
+          subtitle={lookup(heroInfo, 'subtitle')}
+          metaTags={metaTags} />
         <Headline
           style={{padding: '1.8em 5%'}}
           text="Please use the main navigation to locate the content you were originally searching for. Godspeed, friend." />

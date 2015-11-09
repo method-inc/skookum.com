@@ -65,17 +65,17 @@ class BlogArticle extends React.Component {
       {property: 'og:url', content: `http://skookum.com/blog/${this.props.article.slug}`},
       // {property: 'og:image', content: 'http://example.com/image.jpg'},
       {property: 'og:description', content: summary},
-      {property: 'og:site_name', content: 'Skookum Digital Works'},
+      {property: 'og:site_name', content: 'Skookum'},
     ];
 
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
-        <DocMeta tags={metaTags} />
         <Hero
           title={<div itemProp="headline">{title}</div>}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
-          color="black" />
+          color="black" 
+          metaTags={metaTags} />
         <span className="BlogArticle-meta">
           <image itemProp="image" src={poster}/>
           <span itemProp="description">{summary}</span>
