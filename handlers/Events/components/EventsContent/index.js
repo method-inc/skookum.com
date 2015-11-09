@@ -69,7 +69,7 @@ class EventsContent extends React.Component {
         <ol className="EventsContent-list">
           {events.length > 0 ? events.map(e => (
             <li key={e.event_url} className="EventsContent-item">
-              <div className="EventsContent-eventName">{e.name}</div>
+              <h2 className="EventsContent-eventName">{e.name}</h2>
               {this.renderDate(e.time)}
               <div className="EventsContent-groupName">{e.group.name}</div>
               <Button className="EventsContent-button" type="white" href={e.event_url} target="_blank">View More Details & RSVP</Button>

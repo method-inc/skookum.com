@@ -77,9 +77,11 @@
 
 .CultureContent-benefits-title {
   font-size: 3em;
+  font-weight: 300;
   padding: 2em 0;
   position: relative;
   text-align: center;
+  margin: 0;
 }
 
 .CultureContent-benefits-list {

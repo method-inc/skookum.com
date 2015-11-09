@@ -17,9 +17,9 @@ class CapabilityHighlights extends React.Component {
           <div className="CapabilityHighlights">
             <div className="CapabilityHighlights-image" style={{backgroundImage: `url(${imageUrl})`}}/>
             <div className="CapabilityHighlights-container">
-              <div className="CapabilityHighlights-title">
+              <h3 className="CapabilityHighlights-title">
                 {n.title}
-              </div>
+              </h3>
               <div className="CapabilityHighlights-description" dangerouslySetInnerHTML={{__html: markdown(n.description)}} />
             </div>
           </div>

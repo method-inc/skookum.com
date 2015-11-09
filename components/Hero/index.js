@@ -87,9 +87,9 @@ class Hero extends Component {
       <div className={`Hero ${skinny}`} style={style}>
         <DocMeta tags={tags} />
         <div className="Hero-content">
-          <div className="Hero-title" style={titleStyle}>
+          <h1 className="Hero-title" style={titleStyle}>
               {title}
-          </div>
+          </h1>
           <div className="Hero-subtitle" style={subtitleStyle}>
             {subtitle}
           </div>

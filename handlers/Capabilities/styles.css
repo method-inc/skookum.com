@@ -64,6 +64,7 @@
   font-weight: 300;
   padding-top: 36%;
   transition: transform 150ms ease-out;
+  margin: 0;
 }
 
 .Capabilities-view {

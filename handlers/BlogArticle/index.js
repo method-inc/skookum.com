@@ -7,6 +7,8 @@ import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
+import NotFound from '../../handlers/NotFound';
+import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
 
@@ -25,9 +27,10 @@ function getDefaultImage(tags: Array): String {
   return IMAGES.all;
 }
 
-
 class BlogArticle extends React.Component {
+
   render(): ?ReactElement {
+    if (this.props.article === 'notfound') { return <NotFound />; }
     var {
       title,
       tags,
@@ -85,7 +88,7 @@ class BlogArticle extends React.Component {
         <div className="BlogArticle-author">
           {author.photoUrl &&
           <div className="BlogArticle-author-image">
-            <img className="BlogArticle-author-img" src={author.photoUrl} />
+            <img className="BlogArticle-author-img" src={author.photoUrl} alt={author.name}/>
           </div>}
           <div className="BlogArticle-author-details">
             <div>
@@ -112,7 +115,7 @@ BlogArticle.displayName = 'BlogArticle';
 export default Resolver.createContainer(BlogArticle, {
   resolve: {
     article(props) {
-      return api(`contentful/${props.params.slug}`);
+      return api(`contentful/${props.params.slug}`).catch(err => 'notfound');
     },
   },
 });
