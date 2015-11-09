@@ -29,7 +29,7 @@ class Capabilities extends React.Component {
               <Link className="Capabilities-link" to='capability' params={{capability: s.slug}}>
                 <div className="Capabilities-overlay"></div>
                 <div className="Capabilities-content">
-                  <div className="Capabilities-title">{s.name}</div>
+                  <h2 className="Capabilities-title">{s.name}</h2>
                   <span className="Capabilities-view">View Information</span>
                 </div>
               </Link>

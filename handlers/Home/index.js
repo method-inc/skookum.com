@@ -33,9 +33,9 @@ class Home extends React.Component {
         <CaseStudy />
         <div className="Home-content">
           <div className="Home-content-container">
-            <div className="Home-content-title">
+            <h2 className="Home-content-title">
               There is no limit.
-            </div>
+            </h2>
             <div className="Home-content-description">
               We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
             </div>

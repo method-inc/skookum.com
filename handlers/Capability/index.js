@@ -26,16 +26,16 @@ class Capability extends React.Component {
         <Hero childrenPosition="before" color="black" image={heroImage} title={capability.name} />
         <div className="Capability-statement" style={{backgroundImage: `url(${headlineImage})`}} >
           <div className="Capability-statement-container">
-            <div className="Capability-statement-title">
+            <h2 className="Capability-statement-title">
               {capability.headline} 
               {cite && <span className="Capability-statement-cite"> - {cite}</span>}
-            </div>
+            </h2>
             <div className="Capability-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>
           </div>
         </div>
-        <div className="Capability-title">
+        <h2 className="Capability-title">
           {capability.slogan}
-        </div>
+        </h2>
         <CapabilityHighlights highlights={capabilityHighlights} />
         <div className="Capability-footer">
           <div className="Capability-footer-links">

@@ -12,9 +12,9 @@ class Clients extends Component {
     return (
       <div className="HomeClients">
         <div className="HomeClients-content">
-          <div className="HomeClients-title">
+          <h2 className="HomeClients-title">
             For over a decade
-          </div>
+          </h2>
           <div className="HomeClients-description">
             we have produced mission-critical software for companies of all sizes and types.
           </div>

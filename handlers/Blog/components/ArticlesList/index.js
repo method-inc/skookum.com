@@ -33,7 +33,9 @@ class ArticlesList extends Component {
         {this.props.articles.items.map(a => (
           <div key={a.slug} className="Blog-article">
             <div className="Blog-article-content">
-              <Link className="Blog-article-title" to="blog-article" params={{slug: a.slug}}>{a.title}</Link>
+              <Link className="Blog-article-title-link" to="blog-article" params={{slug: a.slug}}>
+                <h2 className="Blog-article-title">{a.title}</h2>
+              </Link>
               <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || '')}} />
               <div className="Blog-article-info">
                 <a href="#TODO" className="Blog-article-author">{a.author.fields.name}</a> | <span>{fmt.date(new Date(a.datePublished))}</span>

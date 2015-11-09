@@ -29,6 +29,8 @@
 .Home-content-title {
   font-size: 4em;
   margin-bottom: 70px;
+  margin-top: 0;
+  font-weight: 300;
 }
 
 .Home-content-description {
