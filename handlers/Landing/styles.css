@@ -6,7 +6,7 @@
 .Landing-container.is-fixed {
   max-width: 1084px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 35px;
 }
 
 .Landing-description {
@@ -48,13 +48,15 @@
 
 .Landing-layer-container {
   display: inline-block;
-  width: calc(100% - 310px);
+  width: 100%;
   box-sizing: border-box;
   vertical-align: top;
 }
 
 .Landing-layer-content {
-  position: absolute;
+  max-width: 1084px;
+  margin: 0 auto;
+  padding: 0 35px;
   transform: translateY(50%);
 }
 
@@ -78,6 +80,7 @@
   font-weight: 100;
   font-size: 1.5em;
   max-width: 680px;
+  margin-top: 20px;
 }
 
 .Landing-stats {
