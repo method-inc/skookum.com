@@ -1,0 +1,84 @@
+/** @define Landing; use strict */
+
+.Landing-container {
+  padding-top: 200px;
+}
+
+.Landing-description {
+  font-weight: 100;
+  font-size: 1.5em;
+  max-width: 768px;
+}
+
+.Landing-icon-container {
+  height: 95px;
+  width: 95px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 150px;
+}
+
+.Landing-icon-container:first-child {
+  margin-left: 0;
+}
+
+.Landing-icon {
+  width: 100%;
+}
+
+.Landing-icon-title {
+  display: inline-block;
+  font-weight: 100;
+  font-size: 1em;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+
+.Landing-layer {
+  background-color: #EFEFEF;
+  position: relative;
+}
+
+.Landing-layer-content {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 80px 0;
+}
+
+.Landing-layer-title {
+  font-weight: 100;
+  font-size: 4em;
+}
+
+.Landing-layer-description {
+  font-weight: 100;
+  font-size: 1.5em;
+  max-width: 680px;
+}
+
+.Landing-stats {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 310px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.Landing-stat {
+  padding: 20px 58px;
+  border-top: 1px solid #EFEFEF;
+}
+
+.Landing-stat-number {
+  font-weight: 100;
+  font-size: 4em;
+}
+
+.Landing-stat-text {
+  font-weight: 300;
+  font-size: .8em;
+  text-transform: uppercase;
+}
