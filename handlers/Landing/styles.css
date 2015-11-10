@@ -1,6 +1,7 @@
 /** @define Landing; use strict */
 
 .Landing-container {
+  margin-top: 120px;
 }
 
 .Landing-container.is-fixed {
@@ -9,10 +10,44 @@
   padding: 0 35px;
 }
 
+.Landing-hero {
+  max-width: 1084px;
+  padding: 0 35px;
+  margin: 0 auto;
+}
+
+.Landing-header {
+  margin-top: 30px;
+}
+
+.Landing-request {
+  font-size: 14px;
+  padding: 0px 30px;
+  line-height: 44px;
+  float: right;
+}
+
+.Landing-title {
+  font-size: 4em;
+  font-weight: 100;
+  margin: 90px 0 0;
+}
+
+.Landing-subtitle {
+  font-size: .8em;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
 .Landing-description {
   font-weight: 100;
   font-size: 1.5em;
   max-width: 768px;
+  margin-top: 100px;
+}
+
+.Landing-icons {
+  margin-top: 100px;
 }
 
 .Landing-icon-container {
@@ -130,7 +165,7 @@
 }
 
 .Landing-clients {
-  margin:170px 0;
+  margin: 170px 0;
 }
 
 .Landing-client {
@@ -174,4 +209,9 @@
 }
 .Landing-contact input:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #e1e1e1;
+}
+
+
+@media screen and (max-width: 767px) {
+
 }

@@ -63,6 +63,7 @@ class Hero extends Component {
       style = EMPTY_OBJECT,
       titleStyle,
       subtitleStyle,
+      isLanding,
     } = this.props;
 
     className = 'Hero ' + className;
@@ -77,9 +78,9 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
 
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
-
+    var landingClass = isLanding ? "is-landing" : "";
     return (
-      <div className={`Hero ${skinny}`} style={style}>
+      <div className={`Hero ${skinny} ${landingClass}`}>
         <div className="Hero-content">
           <div className="Hero-title" style={titleStyle}>
               {title}
@@ -89,7 +90,7 @@ class Hero extends Component {
           </div>
           {children}
         </div>
-        <div className="Hero-overlay" style={{
+        <div className={`Hero-overlay ${landingClass}`} style={{
           background: backgroundColor,
         }} />
         {this.renderBackground()}

@@ -16,6 +16,11 @@
   max-height: 500px;
 }
 
+.Hero.is-landing {
+  height: 380px;
+  min-height: 380px;
+}
+
 .Hero-content {
   position: absolute;
   bottom: 0;
@@ -83,7 +88,8 @@
   z-index: 1;
 }
 
-.Hero.is-skinny .Hero-overlay {
+.Hero.is-skinny .Hero-overlay,
+.Hero.is-landing .Hero-overlay {
   right: 0;
 }
 

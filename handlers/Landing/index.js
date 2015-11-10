@@ -6,14 +6,33 @@ import Hero from 'Hero';
 import api from 'api';
 import lookup from 'lookup';
 import ContactForm from 'ContactForm';
+import {Link} from 'react-router';
+import Logo from 'Logo';
+import Button from 'Button';
 
 class Landing extends React.Component {
-
 
   renderHeroContent
   render(): ?ReactElement {
     return (
       <div className="Landing">
+        <Hero 
+          color="black" 
+          image="../../public/images/blogimg_all.png"
+          isLanding={true} >
+          <div className="Landing-hero">
+            <div className="Landing-header">
+              <Link to="home" className="Landing-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '0', height: 40, width: 48}} color="#fff" /></Link>
+              <Button style={{border: 0}} className="Landing-request" type="primary">Request Consultation</Button>
+            </div>
+            <h1 className="Landing-title">
+              Cloud Computing Services
+            </h1>
+            <h2 className="Landing-subtitle">
+              We help enable a strategic shift to the cloud.
+            </h2>
+          </div>
+        </Hero>
         <section className="Landing-container is-fixed">
           <div className="Landing-description">
             Whether you’re looking to build your own cloud, or leverage existing providers like AWS and Azure, we can customize a cloud strategy to meet your specific business needs. From strategic planning to implementation and support, we offer a complete range of services to help complement in-house capabilities and accelerage cloud adoption. 
