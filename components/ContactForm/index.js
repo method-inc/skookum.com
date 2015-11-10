@@ -2,7 +2,7 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import Input from 'Input';
 import Button from 'Button';
 import Label from 'Label';
@@ -46,7 +46,6 @@ class ContactForm extends React.Component {
     this.setState({[name]: value});
   }
 
-  
   handleSubmit(event) {
     event.preventDefault();
 
@@ -81,6 +80,10 @@ class ContactForm extends React.Component {
     }
 
     AoProcessForm(event.target, aoCAP);
+
+    if (this.props.isLandingPage) {
+      return this.context.router.transitionTo('thankyou');
+    }
     this.setState({showThankYou: true, error: null});
   }
 
@@ -182,6 +185,10 @@ class ContactForm extends React.Component {
     );
   }
 }
+
+ContactForm.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
 
 ContactForm.propTypes = {};
 

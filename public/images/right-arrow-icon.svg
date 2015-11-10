@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Tablet-ty" sketch:type="MSArtboardGroup" transform="translate(-315.000000, -446.000000)" fill="#FFFFFF">
+            <g id="Rectangle-15-Copy-6-+-Shape-Copy-Copy-Copy" sketch:type="MSLayerGroup" transform="translate(304.000000, 436.000000)">
+                <path d="M26.0710678,21 L12,21 L11,21 L11,19 L12,19 L26.0710678,19 L19.2928932,12.2218254 L20.7071068,10.8076118 L29.1923882,19.2928932 L29.8994949,20 L29.1923882,20.7071068 L20.7071068,29.1923882 L19.2928932,27.7781746 L26.0710678,21 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
