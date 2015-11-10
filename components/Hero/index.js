@@ -78,7 +78,7 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
 
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
-    var landingClass = isLanding ? "is-landing" : "";
+    var landingClass = isLanding ? 'is-landing' : '';
     return (
       <div className={`Hero ${skinny} ${landingClass}`}>
         <div className="Hero-content">

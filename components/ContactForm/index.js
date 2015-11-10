@@ -82,9 +82,10 @@ class ContactForm extends React.Component {
     AoProcessForm(event.target, aoCAP);
 
     if (this.props.isLandingPage) {
-      return this.context.router.transitionTo('thankyou');
+      this.context.router.transitionTo('thankyou');
+    } else {
+      this.setState({showThankYou: true, error: null});  
     }
-    this.setState({showThankYou: true, error: null});
   }
 
   getMissingFields() {
