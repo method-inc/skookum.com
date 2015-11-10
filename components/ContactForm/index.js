@@ -25,10 +25,12 @@ class ContactForm extends React.Component {
       email: '',
       showThankYou: false,
       /* eslint-disable */
+      name: '',
       first_name: '',
       last_name: '',
       phone: '',
       how_can_we_help: '',
+      additional_information: '',
       newsletter_subscription: false,
       /* eslint-enable */
     };
@@ -47,7 +49,9 @@ class ContactForm extends React.Component {
   
   handleSubmit(event) {
     event.preventDefault();
+
     var missingFields = this.getMissingFields();
+
 
     if (this.state.showThankYou) {
       return;
@@ -71,13 +75,18 @@ class ContactForm extends React.Component {
       formId: 'form_0003',
     };
 
+    if (this.props.isLandingPage) {
+      aoCAP.fid = '0007';
+      aoCAP.formId = 'form_0007';
+    }
+
     AoProcessForm(event.target, aoCAP);
     this.setState({showThankYou: true, error: null});
   }
 
   getMissingFields() {
     var requiredFields = [];
-    if (this.props.isLandingPage) {
+    if (!this.props.isLandingPage) {
       requiredFields = [
         'first_name', 'last_name', 'email',
       ];
@@ -99,20 +108,21 @@ class ContactForm extends React.Component {
     return (
       <form
         className="ContactForm"
-        id="form_0003"
+        id="form_0007"
         noValidate={true}
         style={this.props.formStyle}
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">{this.props.header}</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
         <div className="ContactForm-field is-landing">
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="Name*" name="first_name" />
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.name} label="Name*" name="name" />
         </div>
         <div className="ContactForm-field is-landing">  
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
+        <input type="hidden" value={this.props.campaign} name="campaign"/> 
         <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
-        <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.how_can_we_help} name="how_can_we_help"></textarea>
+        <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.additional_information} name="additional_information"></textarea>
         <Button style={{border: 0}} className="ContactForm-submit is-landing" type="primary">Request Consultation</Button>
       </form>
     );
