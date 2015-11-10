@@ -12,8 +12,23 @@ import Button from 'Button';
 
 class Landing extends React.Component {
 
-  renderHeroContent
+  parseStats(stats) {
+    var statsObject = {leftStats: [], rightStats: []};
+
+    for (var i = 0; i < stats.length; i++) {
+      if (i < stats.length / 2) {
+        statsObject.leftStats.push(stats[i]);
+      } else {
+        statsObject.rightStats.push(stats[i]);
+      }
+    }
+    return statsObject;
+  }
   render(): ?ReactElement {
+    var {pageData, clients} = this.props;
+    pageData = pageData[0];
+    var {leftStats, rightStats} = this.parseStats(pageData.stats);
+
     return (
       <div className="Landing">
         <Hero 
@@ -23,59 +38,39 @@ class Landing extends React.Component {
           <div className="Landing-hero">
             <div className="Landing-header">
               <Link to="home" className="Landing-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '0', height: 40, width: 48}} color="#fff" /></Link>
-              <Button style={{border: 0}} className="Landing-request" type="primary">Request Consultation</Button>
+              <Button onClick={this.scrollToFooter} style={{border: 0}} className="Landing-request" type="primary">Request Consultation</Button>
             </div>
             <h1 className="Landing-title">
-              Cloud Computing Services
+              {pageData.title}
             </h1>
             <h2 className="Landing-subtitle">
-              We help enable a strategic shift to the cloud.
+              {pageData.subTitle}
             </h2>
           </div>
         </Hero>
         <section className="Landing-container is-fixed">
           <div className="Landing-description">
-            Whether you’re looking to build your own cloud, or leverage existing providers like AWS and Azure, we can customize a cloud strategy to meet your specific business needs. From strategic planning to implementation and support, we offer a complete range of services to help complement in-house capabilities and accelerage cloud adoption. 
+            {pageData.description}
           </div>
           <div className="Landing-icons">
-            <div className="Landing-icon-container">
-              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
-              <span className="Landing-icon-title">test</span>
-            </div>
-            <div className="Landing-icon-container">
-              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
-              <span className="Landing-icon-title">test</span>
-            </div>
-            <div className="Landing-icon-container">
-              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
-              <span className="Landing-icon-title">test</span>
-            </div>
-            <div className="Landing-icon-container">
-              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
-              <span className="Landing-icon-title">test</span>
-            </div>
-            <div className="Landing-icon-container">
-              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
-              <span className="Landing-icon-title">test</span>
-            </div>
+            {pageData.iconImages.map(image => (
+              <div className="Landing-icon-container">
+                <img className="Landing-icon" title={image.fields.title} src={image.fields.file.url} alt={image.fields.title} />
+                <span className="Landing-icon-title">{image.fields.title}</span>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="Landing-container">
           <div className="Landing-layer">
             <ul className="Landing-stats is-left">
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
+              {leftStats.map(stat => (
+                <li className="Landing-stat">
+                  <div className="Landing-stat-number">{stat.number}</div>
+                  <div className="Landing-stat-text">{stat.text}</div>
+                </li>
+              ))}
             </ul>
             <div className="Landing-layer-container">
               <div className="Landing-layer-image" style={{backgroundImage: `url(../../public/images/blogimg_all.png)`}}/>
@@ -84,34 +79,28 @@ class Landing extends React.Component {
           <div className="Landing-layer">
             <div className="Landing-layer-container">
               <div className="Landing-layer-content">
-                <div className="Landing-layer-title">
-                  Why Skookum
-                </div>
+                <h2 className="Landing-layer-title">
+                  {pageData.bodyTitle}
+                </h2>
                 <div className="Landing-layer-description">
-                  The age of the customer is changing everything about the way companies go to market. As a long time partner for progressive CIOs and IT leaders, we have successfully delivered custom cloud solutions to help companies evolve in the new digital economy.
+                  {pageData.bodyDescription}
                 </div>
               </div>
             </div>
             <ul className="Landing-stats is-right">
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
-              <li className="Landing-stat">
-                <div className="Landing-stat-number">10</div>
-                <div className="Landing-stat-text">years in business</div>
-              </li>
+              {rightStats.map(stat => (
+                <li className="Landing-stat">
+                  <div className="Landing-stat-number">{stat.number}</div>
+                  <div className="Landing-stat-text">{stat.text}</div>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
         <section className="Landing-container is-fixed">
           <div className="Landing-clients">
-            {this.props.clients.items.map(n => (
+            {clients.items.map(n => (
               <div className="Landing-client" key={n.name}>
                   <img className="Landing-client-image" title={n.name} src={n.image[0].fields.file.url} alt={n.image[0].fields.title} />
               </div>
@@ -119,7 +108,7 @@ class Landing extends React.Component {
           </div>
         </section>
         <section className="Landing-footer">
-          <section className="Landing-contact">
+          <section ref="contact" className="Landing-contact">
             <ContactForm formStyle={{margin: '0'}} header="Fill out the form below to consult with a Solutions Architect" labelColor="#fff" isLandingPage={true}/>
           </section>
         </section>
@@ -139,5 +128,9 @@ export default Resolver.createContainer(Landing, {
     clients() {
       return api(`contentful?content_type=client&limit=7`);
     },
+    pageData(props) {
+      return api(`contentful/info/${props.params.slug}`);
+    },
   },
 });
+
