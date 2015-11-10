@@ -47,7 +47,7 @@ var routes = (
     </Route>
     <Route name="styleguide" path="styleguide" handler={StyleGuide} />
     <Route name="innovation-camp" path="innovation-camp" handler={InnovationCamp} />
-    <Route name="landing" path="landing/:slug" handler={Landing} />
+    <Route name="info" path="info/:slug" handler={Landing} />
     <Route name="thankyou" path="thankyou" handler={ThankYou} />
     <NotFoundRoute handler={NotFound}/>
   </Route>

@@ -60,7 +60,7 @@ class AppBase extends Component {
     }
 
     var handlerKey = this.getHandlerKey(),
-        showNavs = handlerKey !== 'landing' && handlerKey !== 'thankyou';
+        showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou';
 
     return (
       <div className="AppBase">
