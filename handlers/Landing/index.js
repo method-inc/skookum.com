@@ -42,6 +42,22 @@ class Landing extends React.Component {
               <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
               <span className="Landing-icon-title">test</span>
             </div>
+            <div className="Landing-icon-container">
+              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
+              <span className="Landing-icon-title">test</span>
+            </div>
+            <div className="Landing-icon-container">
+              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
+              <span className="Landing-icon-title">test</span>
+            </div>
+            <div className="Landing-icon-container">
+              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
+              <span className="Landing-icon-title">test</span>
+            </div>
+            <div className="Landing-icon-container">
+              <img className="Landing-icon" src="../../public/images/blogimg_all.png" />
+              <span className="Landing-icon-title">test</span>
+            </div>
           </div>
         </section>
 

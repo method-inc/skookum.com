@@ -1,5 +1,9 @@
 /** @define Landing; use strict */
 
+.Landing {
+  font-size: 16px;
+}
+
 .Landing-container {
   margin-top: 120px;
 }
@@ -21,7 +25,7 @@
 }
 
 .Landing-request {
-  font-size: 14px;
+  font-size: .9em;
   padding: 0px 30px;
   line-height: 44px;
   float: right;
@@ -34,7 +38,7 @@
 }
 
 .Landing-subtitle {
-  font-size: .8em;
+  font-size: .9em;
   font-weight: 600;
   margin: 20px 0 0;
 }
@@ -42,24 +46,25 @@
 .Landing-description {
   font-weight: 100;
   font-size: 1.5em;
-  max-width: 768px;
   margin-top: 100px;
+  padding-right: 20%;
 }
 
 .Landing-icons {
   margin-top: 100px;
+  text-align: center;
 }
 
 .Landing-icon-container {
-  height: 95px;
-  width: 95px;
+  width: 20%;
   display: inline-block;
+  box-sizing: border-box;
+  padding-left: 6%;
   text-align: center;
-  margin-left: 150px;
 }
 
 .Landing-icon-container:first-child {
-  margin-left: 0;
+  margin-left: -6%;
 }
 
 .Landing-icon {
@@ -160,7 +165,7 @@
 
 .Landing-stat-text {
   font-weight: 300;
-  font-size: .8em;
+  font-size: .9em;
   text-transform: uppercase;
 }
 
@@ -212,6 +217,108 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
+  .Landing {
+    font-size: 12px;
+  }
+
+  .Landing-subtitle {
+    font-size: 1em;
+  }
+
+  .Landing-stats {
+    width: 200px;
+  }
+
+  .Landing-layer-content {
+    right: 200px;
+    width: calc(100% - 290px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .Landing-container {
+    margin-top: 50px;
+  }
+
+  .Landing-container.is-fixed {
+    padding: 0 20px;
+  }
+
+  .Landing-hero {
+    padding: 0 20px;
+  }
+
+  .Landing-title {
+    font-size: 3em;
+  }
+
+  .Landing-description {
+    padding-right: 0;
+    margin-top: 50px;
+  }
+
+  .Landing-icons {
+    text-align: left;
+    margin-top: 0px;
+  }
+
+  .Landing-icon-container {
+    width: 50%;
+    margin-top: 50px;
+  }
+
+  .Landing-icon-container:nth-child(odd) {
+    margin-left: -6%;
+  }
+
+  .Landing-footer {
+    padding: 3em 20px;
+  }
+
+  .Landing-stats {
+    position: relative;
+    width: 100%;
+  }
+
+  .Landing-stat {
+    padding: 20px 20px;
+    width: 50%;
+    display: inline-block;
+  }
+
+  .Landing-layer {
+    height: auto;
+  }
+
+  .Landing-layer-container {
+    display: block;
+    height: auto;
+    min-height: 234px;
+    position: relative;
+  }
+
+  .Landing-layer-content {
+    width: auto;
+    position: relative;
+    transform: translateY(0);
+    padding: 40px 20px;
+  }
+
+  .Landing-layer-title {
+    font-size: 3em;
+  }
+
+  .Landing-clients {
+    margin: 50px 0 80px;
+    text-align: center;
+  }
+
+  .Landing-client {
+    width: 25%;
+    margin-top: 30px;
+  }
+
 
 }

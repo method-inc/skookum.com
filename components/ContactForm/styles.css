@@ -116,6 +116,10 @@
   .ContactForm-submit {
     width: 100%
   }
+
+  .ContactForm-submit.is-landing {
+    font-size: 12px;
+  }
   .ContactForm-field,
   .ContactForm-field.is-landing,
   .ContactForm-textarea.is-landing {
