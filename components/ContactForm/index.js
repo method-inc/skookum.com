@@ -132,7 +132,6 @@ class ContactForm extends React.Component {
     }
 
     var labelStyle = {color: this.props.labelColor};
-    console.log(this.props.isLandingPage);
 
     if (this.props.isLandingPage) {
       return this.renderLandingPageForm(labelStyle);

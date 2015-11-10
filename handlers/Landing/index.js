@@ -12,6 +12,16 @@ import Button from 'Button';
 
 class Landing extends React.Component {
 
+  constructor(props: mixed, context: mixed): void {
+    super(props, context);
+    this.scrollToFooter = this.scrollToFooter.bind(this);
+  }
+
+  scrollToFooter() {
+    var footer = this.refs.contact.getDOMNode();
+    footer.scrollIntoView();
+  }
+
   parseStats(stats) {
     var statsObject = {leftStats: [], rightStats: []};
 
@@ -33,7 +43,7 @@ class Landing extends React.Component {
       <div className="Landing">
         <Hero 
           color="black" 
-          image="../../public/images/blogimg_all.png"
+          image={pageData.heroImage.fields.file.url}
           isLanding={true} >
           <div className="Landing-hero">
             <div className="Landing-header">
@@ -73,7 +83,7 @@ class Landing extends React.Component {
               ))}
             </ul>
             <div className="Landing-layer-container">
-              <div className="Landing-layer-image" style={{backgroundImage: `url(../../public/images/blogimg_all.png)`}}/>
+              <div className="Landing-layer-image" style={{backgroundImage: `url(${pageData.bodyImage.fields.file.url})`}}/>
             </div>
           </div>
           <div className="Landing-layer">
