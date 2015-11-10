@@ -29,6 +29,12 @@
   padding: 0px 30px;
   line-height: 44px;
   float: right;
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.47);
+  border-radius: 0;
+}
+
+.Landing-request-icon {
+  display: none;
 }
 
 .Landing-title {
@@ -262,6 +268,18 @@
 
   .Landing-hero {
     padding: 0 20px;
+  }
+
+  .Landing-request {
+    padding: 12px;
+  }
+
+  .Landing-request-text {
+    display: none;
+  }
+
+  .Landing-request-icon {
+    display: block;
   }
 
   .Landing-title {

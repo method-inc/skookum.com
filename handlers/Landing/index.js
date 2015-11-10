@@ -48,7 +48,10 @@ class Landing extends React.Component {
           <div className="Landing-hero">
             <div className="Landing-header">
               <Link to="home" className="Landing-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '0', height: 40, width: 48}} color="#fff" /></Link>
-              <Button onClick={this.scrollToFooter} style={{border: 0}} className="Landing-request" type="primary">Request Consultation</Button>
+              <Button onClick={this.scrollToFooter} style={{border: 0}} className="Landing-request" type="primary">
+                <span className="Landing-request-text">Request Consultation</span>
+                <img className="Landing-request-icon" src="../../public/images/chat-bubble-icon.svg"/>
+              </Button>
             </div>
             <h1 className="Landing-title">
               {pageData.title}
