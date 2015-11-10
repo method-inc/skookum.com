@@ -104,6 +104,10 @@
 
 .ContactForm-submit.is-landing {
   margin-top: 35px;
+  font-size: 14px;
+  padding: 22px 31px;
+  line-height: 1rem;
+  border-radius: 0;
 }
 
 .ContactForm-thanks {
