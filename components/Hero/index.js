@@ -9,6 +9,8 @@ import Logo from 'Logo';
 import Hamburger from 'Hamburger';
 import lookup from 'lookup';
 import {nameToRgba, nameToBinary} from 'nameToColor';
+import DocMeta from 'react-doc-meta';
+import {getDefaultTags} from 'metaTags';
 
 /*eslint-disable*/
 var EMPTY_OBJECT = {};
@@ -64,6 +66,7 @@ class Hero extends Component {
       titleStyle,
       subtitleStyle,
       isLanding,
+      metaTags,
     } = this.props;
 
     className = 'Hero ' + className;
@@ -78,13 +81,18 @@ class Hero extends Component {
     var backgroundColor = nameToRgba(color) || nameToRgba(Hero.defaultProps.color);
 
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
+
     var landingClass = isLanding ? 'is-landing' : '';
+
+    var tags = getDefaultTags(metaTags);
+
     return (
       <div className={`Hero ${skinny} ${landingClass}`}>
+        <DocMeta tags={tags} />
         <div className="Hero-content">
-          <div className="Hero-title" style={titleStyle}>
+          <h1 className="Hero-title" style={titleStyle}>
               {title}
-          </div>
+          </h1>
           <div className="Hero-subtitle" style={subtitleStyle}>
             {subtitle}
           </div>

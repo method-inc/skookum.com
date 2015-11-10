@@ -8,6 +8,7 @@ import {RouteHandler} from 'react-router';
 import Navigation from 'Navigation';
 import Footer from 'Footer';
 import DocMeta from 'react-doc-meta';
+import {getDefaultTags} from 'metaTags';
 
 class AppBase extends Component {
   constructor(props: mixed, context: mixed): void {
@@ -24,25 +25,7 @@ class AppBase extends Component {
   }
 
   render(): ReactElement {
-    var tags = [
-      {name: 'title', content: 'Skookum'},
-      {name: 'description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
-      {itemProp: 'name', content: 'Skookum Digital Works'},
-      {itemProp: 'description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
-      // {itemProp: 'image', content: skookumLogoUrl},
-      {name: 'twitter:card', content: 'summary'},
-      {name: 'twitter:site', content: '@skookum'},
-      {name: 'twitter:title', content: 'Skookum'},
-      {name: 'twitter:description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
-      {name: 'twitter:creator', content: '@skookum'},
-      {name: 'twitter:image', content: 'http://pbs.twimg.com/profile_images/648570516459008000/26E19ffH.png'},
-      {property: 'og:title', content: 'Skookum'},
-      {property: 'og:type', content: 'website'},
-      {property: 'og:url', content: 'http://skookum.com/'},
-      {property: 'og:image', content: 'http://pbs.twimg.com/profile_images/648570516459008000/26E19ffH.png'},
-      {property: 'og:description', content: 'Skookum is a full service software development company with capabilities spanning product strategy, UI/UX design, development and support.'},
-      {property: 'og:site_name', content: 'Skookum Digital Works'},
-    ];
+    var tags = getDefaultTags();
 
     var isServerRender = typeof window === 'undefined';
 

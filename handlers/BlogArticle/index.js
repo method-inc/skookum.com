@@ -7,6 +7,7 @@ import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
+import NotFound from '../../handlers/NotFound';
 import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
@@ -26,9 +27,10 @@ function getDefaultImage(tags: Array): String {
   return IMAGES.all;
 }
 
-
 class BlogArticle extends React.Component {
+
   render(): ?ReactElement {
+    if (this.props.article === 'notfound') { return <NotFound />; }
     var {
       title,
       tags,
@@ -63,17 +65,17 @@ class BlogArticle extends React.Component {
       {property: 'og:url', content: `http://skookum.com/blog/${this.props.article.slug}`},
       // {property: 'og:image', content: 'http://example.com/image.jpg'},
       {property: 'og:description', content: summary},
-      {property: 'og:site_name', content: 'Skookum Digital Works'},
+      {property: 'og:site_name', content: 'Skookum'},
     ];
 
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
-        <DocMeta tags={metaTags} />
         <Hero
           title={<div itemProp="headline">{title}</div>}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
-          color="black" />
+          color="black" 
+          metaTags={metaTags} />
         <span className="BlogArticle-meta">
           <image itemProp="image" src={poster}/>
           <span itemProp="description">{summary}</span>
@@ -86,7 +88,7 @@ class BlogArticle extends React.Component {
         <div className="BlogArticle-author">
           {author.photoUrl &&
           <div className="BlogArticle-author-image">
-            <img className="BlogArticle-author-img" src={author.photoUrl} />
+            <img className="BlogArticle-author-img" src={author.photoUrl} alt={author.name}/>
           </div>}
           <div className="BlogArticle-author-details">
             <div>
@@ -113,7 +115,7 @@ BlogArticle.displayName = 'BlogArticle';
 export default Resolver.createContainer(BlogArticle, {
   resolve: {
     article(props) {
-      return api(`contentful/${props.params.slug}`);
+      return api(`contentful/${props.params.slug}`).catch(err => 'notfound');
     },
   },
 });

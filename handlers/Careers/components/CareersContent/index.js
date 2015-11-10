@@ -11,7 +11,7 @@ import api from 'api';
 var renderCareer: ReactElement = pos => (
   <li key={pos.id} className="CareersContent-item">
     <div className="CareersContent-item-segment">
-      <div className="CareersContent-job-title">{pos.title}</div>
+      <h3 className="CareersContent-job-title">{pos.title}</h3>
       <div className="CareersContent-meta">{pos.location.name}</div>
       <Button className="CareersContent-button" type="white" href={pos.absolute_url} target="_blank">View Details & Apply</Button>
     </div>
@@ -40,9 +40,9 @@ class CareersContent extends Component {
 
     return (
       <div className="CareersContent">
-        <div className="CareersContent-title">
+        <h2 className="CareersContent-title">
           Available Positions
-        </div>
+        </h2>
         <ul className="CareersContent-list">
           {careers.map(renderCareer)}
         </ul>

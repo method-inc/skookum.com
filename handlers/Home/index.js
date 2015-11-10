@@ -18,6 +18,17 @@ var cn = s => `Home-${s}`;
 class Home extends React.Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
+    var metaTags = [
+      {name: 'title', content: heroInfo.metaTitle},
+      {name: 'description', content: heroInfo.metaDescription},
+      {name: 'twitter:title', content: heroInfo.metaTitle},
+      {name: 'twitter:description', content: heroInfo.metaDescription},
+      {property: 'og:title', content: heroInfo.metaTitle},
+      {property: 'og:description', content: heroInfo.metaDescription},
+      {itemProp: 'name', content: heroInfo.metaTitle},
+      {itemProp: 'description', content: heroInfo.metaDescription},
+    ];
+
     return (
       <div className="Home">
         <Hero
@@ -27,15 +38,16 @@ class Home extends React.Component {
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} />
+          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>} 
+          metaTags={metaTags}/>
         <Headline text="Skookum is a full service software development firm." />
         <Services />
         <CaseStudy />
         <div className="Home-content">
           <div className="Home-content-container">
-            <div className="Home-content-title">
+            <h2 className="Home-content-title">
               There is no limit.
-            </div>
+            </h2>
             <div className="Home-content-description">
               We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
             </div>

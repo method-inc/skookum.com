@@ -16,7 +16,7 @@ class CaseStudiesContent extends Component {
           (imageUrl = lookup(f.image, 'fields.file.url')),
           <Link key={f.slug} to="study-article" params={{slug: f.slug}} className="CaseStudiesContent-item">
             <div className="CaseStudiesContent-text">
-              <span className="CaseStudiesContent-title">{f.clientname}</span>
+              <h2 className="CaseStudiesContent-title">{f.clientname}</h2>
               <span className="CaseStudiesContent-description">{f.summary}</span>
             </div>
             <div className="CaseStudiesContent-overlay" />

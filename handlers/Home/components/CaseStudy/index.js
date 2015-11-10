@@ -51,9 +51,9 @@ class CaseStudy extends Component {
         color="black"
         image={lookup(image, 'fields.file.url')}>
         <div className="HomeCaseStudy-banner">
-          <div className="HomeCaseStudy-title">
+          <h2 className="HomeCaseStudy-title">
             We help businesses evolve.
-          </div>
+          </h2>
           <div className="HomeCaseStudy-description">
             For our clients, this means new revenue, substantial efficiency gains and a better quality of life for employees and customers.
           </div>
@@ -61,9 +61,9 @@ class CaseStudy extends Component {
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-container">
-              <div className="HomeCaseStudy-feature-title">
+              <h3 className="HomeCaseStudy-feature-title">
                 {clientname}
-              </div>
+              </h3>
               <div className="HomeCaseStudy-feature-description">
                 {summary}
               </div>

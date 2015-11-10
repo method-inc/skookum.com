@@ -138,7 +138,7 @@ class ContactForm extends React.Component {
       return (
         <div className="ContactForm">
           <header className="ContactForm-header is-success">
-            <img className="ContactForm-header-icon" src="/public/images/sent.svg" />
+            <img className="ContactForm-header-icon" src="/public/images/sent.svg" alt="thank you" />
             {this.state.message}
           </header>
         </div>

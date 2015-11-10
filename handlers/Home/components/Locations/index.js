@@ -13,7 +13,7 @@ class Locations extends React.Component {
       <div className="Locations">
         {locations.map(n => (
           <div className={cn('block')} key={n.name}>
-            <img className={cn('image')} src={`/public/images/home-${n.name.toLowerCase()}.png`} />
+            <img className={cn('image')} src={`/public/images/home-${n.name.toLowerCase()}.png`} alt={n.name} />
             <div className={cn('content')}>
               <div className={cn('section')}>
                 <Typography type={Typography.PRIMARY_SECTION_HEADER}>{n.name}</Typography>
