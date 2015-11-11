@@ -24,7 +24,7 @@ class Landing extends React.Component {
     var diff = currentY - targetY;
     var atBottom = window.innerHeight + currentY >= document.body.offsetHeight;
     if (diff !== 0 && !atBottom) {
-      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff)/20) : 70;
+      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff) / 20) : 70;
       var scrollEnd = diff < 0 ? currentY + scrollAmount : currentY - scrollAmount;
       window.scrollTo(0, scrollEnd);
       setTimeout(()=>(this.scrollToElement(node)), 3);
