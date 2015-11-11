@@ -127,7 +127,9 @@ class ContactForm extends React.Component {
         <input type="hidden" value={this.props.campaign} name="campaign"/> 
         <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
         <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.additional_information} name="additional_information"></textarea>
-        <Button style={{border: 0}} className="ContactForm-submit is-landing" type="primary">Request Consultation</Button>
+        <div>
+          <Button style={{border: 0}} className="ContactForm-submit is-landing" type="primary">Request Consultation</Button>
+        </div>
       </form>
     );
   }
