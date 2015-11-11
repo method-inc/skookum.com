@@ -4,1009 +4,1745 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
 <url>
-  <loc>http://www.skookum.com/</loc>
+  <loc>http://skookum.com/</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/work</loc>
+  <loc>http://skookum.com/innovation-camp</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities</loc>
+  <loc>http://skookum.com/work</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog</loc>
+  <loc>http://skookum.com/capabilities</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/contact</loc>
+  <loc>http://skookum.com/blog</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/work/mobilizing-the-coca-cola-bottling-salesforce-by-making-net-work-with-ipads</loc>
+  <loc>http://skookum.com/contact</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/events</loc>
+  <loc>http://skookum.com/work/mobilizing-the-coca-cola-bottling-salesforce-by-making-net-work-with-ipads</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/careers</loc>
+  <loc>http://skookum.com/events</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/open-source</loc>
+  <loc>http://skookum.com/careers</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/work/hardware-hacking-leads-to-smartphone-adjustable-suspension-systems-by-jri</loc>
+  <loc>http://skookum.com/open-source</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/work/metal-marketing-group-inc</loc>
+  <loc>http://skookum.com/work/electric-power-research-Institute</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/work/electric-power-research-Institute</loc>
+  <loc>http://skookum.com/work/hardware-hacking-leads-to-smartphone-adjustable-suspension-systems-by-jri</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/custom-enterprise-software-solutions</loc>
+  <loc>http://skookum.com/work/metal-marketing-group-inc</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/new-product-development</loc>
+  <loc>http://skookum.com/capabilities/custom-enterprise-software-solutions</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/mobile-software</loc>
+  <loc>http://skookum.com/capabilities/new-product-development</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/cloud-services</loc>
+  <loc>http://skookum.com/capabilities/mobile-software</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/the-internet-of-things-applications</loc>
+  <loc>http://skookum.com/capabilities/cloud-services</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/capabilities/wearable-technology</loc>
+  <loc>http://skookum.com/capabilities/the-internet-of-things-applications</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development</loc>
+  <loc>http://skookum.com/capabilities/wearable-technology</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product</loc>
+  <loc>http://skookum.com/blog/tags/development</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business</loc>
+  <loc>http://skookum.com/blog/tags/product</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture</loc>
+  <loc>http://skookum.com/blog/tags/business</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/jsx-visual-studio</loc>
+  <loc>http://skookum.com/blog/tags/culture</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/how-to-incorporate-computer-science-in-the-classroom</loc>
+  <loc>http://skookum.com/blog/6-tips-for-building-omni-channel-software</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/concept-to-prototype-in-5-days</loc>
+  <loc>http://skookum.com/blog/LWTT-11-09-15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-foundation-of-working-remotely</loc>
+  <loc>http://skookum.com/blog/vr-is-coming-to-change-your-business</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/stop-asking-users-what-they-want</loc>
+  <loc>http://skookum.com/blog/LWTT-11-2-15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=2</loc>
+  <loc>http://skookum.com/blog?page=2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/wwdc-2015</loc>
+  <loc>http://skookum.com/blog/skookum-big-android-bbq-review</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/swift-everywhere</loc>
+  <loc>http://skookum.com/blog/tags/development?page=2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/isomorphic-round-2</loc>
+  <loc>http://skookum.com/blog/tags/product?page=2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=2</loc>
+  <loc>http://skookum.com/blog/the-purpose-and-the-promise-a-loose-framework-for-strategic-product-thinking</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/Ull-conference</loc>
+  <loc>http://skookum.com/blog/concept-to-prototype-in-5-days</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/optimize-for-naivety</loc>
+  <loc>http://skookum.com/blog/wwdc-2015</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=2</loc>
+  <loc>http://skookum.com/blog/cannon</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/cannon</loc>
+  <loc>http://skookum.com/blog/tags/business?page=2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/enterprise-technology-products-solve-for-the-front-lines</loc>
+  <loc>http://skookum.com/blog/events-on-our-radar-denver-startup-week</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/what-i-learned-at-a-startup</loc>
+  <loc>http://skookum.com/blog/make-the-most-of-denver-startup-week</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=2</loc>
+  <loc>http://skookum.com/blog/how-to-incorporate-computer-science-in-the-classroom</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/introducing-working-groups</loc>
+  <loc>http://skookum.com/blog/the-foundation-of-working-remotely</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=2</loc>
+  <loc>http://skookum.com/blog/isomorphic-round-2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=1</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=3</loc>
+  <loc>http://skookum.com/blog/LWTT-10-26-15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/Converge-SE-2015</loc>
+  <loc>http://skookum.com/blog/LWTT-10-19-15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/demystifying-funcs-in-csharp</loc>
+  <loc>http://skookum.com/blog/LWTT-10-12-15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/writing-code-that-people-can-read</loc>
+  <loc>http://skookum.com/blog?page=1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/new-year-improved-code</loc>
+  <loc>http://skookum.com/blog?page=3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=1</loc>
+  <loc>http://skookum.com/blog/promises</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=3</loc>
+  <loc>http://skookum.com/blog/jsx-visual-studio</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/watchkit</loc>
+  <loc>http://skookum.com/blog/tags/development?page=1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/new-rules-for-open-products</loc>
+  <loc>http://skookum.com/blog/tags/development?page=3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-night-shift</loc>
+  <loc>http://skookum.com/blog/tags/product?page=1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/engineering-the-perfect-move-denver-meet-sdw</loc>
+  <loc>http://skookum.com/blog/tags/product?page=3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=1</loc>
+  <loc>http://skookum.com/blog/enterprise-technology-products-solve-for-the-front-lines</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=3</loc>
+  <loc>http://skookum.com/blog/what-i-learned-at-a-startup</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/a-better-way-to-fire-people</loc>
+  <loc>http://skookum.com/blog/a-better-way-to-fire-people</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/hmf-now-half-as-long</loc>
+  <loc>http://skookum.com/blog/hmf-now-half-as-long</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/profitable-innovation-5-reason-why-big-companies-burn-big-dollars-when-ideating</loc>
+  <loc>http://skookum.com/blog/profitable-innovation-5-reason-why-big-companies-burn-big-dollars-when-ideating</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/stop-reading-techcrunch</loc>
+  <loc>http://skookum.com/blog/tags/business?page=1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/outsourcing-innovation-is-not-only-ok-its-preferred</loc>
+  <loc>http://skookum.com/blog/tags/business?page=3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=1</loc>
+  <loc>http://skookum.com/blog/introducing-working-groups</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=3</loc>
+  <loc>http://skookum.com/blog/write-less-to-communicate-more</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/write-less-to-communicate-more</loc>
+  <loc>http://skookum.com/blog/engineering-the-perfect-move-denver-meet-sdw</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/moby-goes-to-college</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-corey-daniels</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=1</loc>
+  <loc>http://skookum.com/blog?page=4</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=3</loc>
+  <loc>http://skookum.com/blog/swift-everywhere</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=4</loc>
+  <loc>http://skookum.com/blog/Converge-SE-2015</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/converting-a-project-from-amd-to-cjs-with-recast</loc>
+  <loc>http://skookum.com/blog/tags/development?page=4</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-crash-davis-approach-to-strategic-product-development</loc>
+  <loc>http://skookum.com/blog/stop-asking-users-what-they-want</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/breaking-development-2014-nashville-edition</loc>
+  <loc>http://skookum.com/blog/Ull-conference</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=4</loc>
+  <loc>http://skookum.com/blog/tags/product?page=4</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/announcing-bamboozled</loc>
+  <loc>http://skookum.com/blog/stop-reading-techcrunch</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/one-size-fits-none-the-hidden-costs-of-off-the-shelf-software</loc>
+  <loc>http://skookum.com/blog/outsourcing-innovation-is-not-only-ok-its-preferred</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/healthcare-govs-design-user-experience-flaws</loc>
+  <loc>http://skookum.com/blog/your-request-for-proposal-is-a-request-for-mediocrity</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/what-apples-new-ios-7-mobile-update-means-for-your-business</loc>
+  <loc>http://skookum.com/blog/rfis-rfqs-rfps-can-hurt-your-business</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=4</loc>
+  <loc>http://skookum.com/blog/sdw-world-headquarters-all-dressed-up</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/your-request-for-proposal-is-a-request-for-mediocrity</loc>
+  <loc>http://skookum.com/blog/tags/business?page=4</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/rfis-rfqs-rfps-can-hurt-your-business</loc>
+  <loc>http://skookum.com/blog/moby-goes-to-college</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-world-headquarters-all-dressed-up</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-corey-daniels</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/a-space-volcano-tour-in-pictures</loc>
+  <loc>http://skookum.com/blog/sdw-hosts-charlotte-code-for-america-kickoff-event</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/5-on-inc-s-hire-power-awards-2013</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-pat-morrell</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=4</loc>
+  <loc>http://skookum.com/blog/friday-tech-talks-mark-rickert-on-the-internet-of-things-and-the-killer-sentient-home</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/hmf-now-half-as-long/</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=4</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/authors/pat-morrell</loc>
+  <loc>http://skookum.com/blog?page=5</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/a-better-way-to-fire-people/</loc>
+  <loc>http://skookum.com/blog/demystifying-funcs-in-csharp</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/authors/josh-oakhurst</loc>
+  <loc>http://skookum.com/blog/writing-code-that-people-can-read</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/authors/stephen-davis</loc>
+  <loc>http://skookum.com/blog/optimize-for-naivety</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-hosts-charlotte-code-for-america-kickoff-event</loc>
+  <loc>http://skookum.com/blog/new-year-improved-code</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-pat-morrell</loc>
+  <loc>http://skookum.com/blog/converting-a-project-from-amd-to-cjs-with-recast</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/friday-tech-talks-mark-rickert-on-the-internet-of-things-and-the-killer-sentient-home</loc>
+  <loc>http://skookum.com/blog/tags/development?page=5</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-steve-moser</loc>
+  <loc>http://skookum.com/blog/watchkit</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-pedro-rodriguez</loc>
+  <loc>http://skookum.com/blog/new-rules-for-open-products</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=4</loc>
+  <loc>http://skookum.com/blog/skookum-night-shift</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=5</loc>
+  <loc>http://skookum.com/blog/tags/product?page=5</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/software-development-as-a-creative-process</loc>
+  <loc>http://skookum.com/blog/most-software-sucks-right-now-healthcare-gov-is-most-software</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-case-study-mobilizing-the-coca-cola-bottling-salesforce-by-making-net-work-with-ipads</loc>
+  <loc>http://skookum.com/blog/how-to-start-a-successful-software-project-its-not-with-an-rfp</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=5</loc>
+  <loc>http://skookum.com/blog/a-space-volcano-tour-in-pictures</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-meaning-of-customer-experience</loc>
+  <loc>http://skookum.com/blog/5-on-inc-s-hire-power-awards-2013</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-building-native-ios-apps-using-web-developer-friendly-tools</loc>
+  <loc>http://skookum.com/blog/why-innovation-isnt-innovative-and-is-now-a-terrible-buzzword</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-startup-failure-with-otherscreen-ceo-chris-halligan</loc>
+  <loc>http://skookum.com/blog/the-fastest-way-to-fail-3-of-the-most-misleading-terms-in-tech-right-now</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/charlotte-nc-technology-hub</loc>
+  <loc>http://skookum.com/blog/sdw-hardware-hacking-leads-to-smartphone-adjustable-suspension-systems-by-jri</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-case-study-metal-marketing-group-inc</loc>
+  <loc>http://skookum.com/blog/tags/business?page=5</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=5</loc>
+  <loc>http://skookum.com/blog/its-all-product-design</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/why-innovation-isnt-innovative-and-is-now-a-terrible-buzzword</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-steve-moser</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-fastest-way-to-fail-3-of-the-most-misleading-terms-in-tech-right-now</loc>
+  <loc>http://skookum.com/blog/tech-talks-meat-and-beyond</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-hardware-hacking-leads-to-smartphone-adjustable-suspension-systems-by-jri</loc>
+  <loc>http://skookum.com/blog/skookum-is-one-of-the-top-five-best-places-to-work-in-charlotte-nc</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/technology-giants-unable-to-be-agile</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=5</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-in-the-charlotte-business-journal-not-just-a-nice-little-tech-shop</loc>
+  <loc>http://skookum.com/blog?page=6</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.26</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=5</loc>
+  <loc>http://skookum.com/blog/software-development-as-a-creative-process</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tech-talks-meat-and-beyond</loc>
+  <loc>http://skookum.com/blog/the-crash-davis-approach-to-strategic-product-development</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-is-one-of-the-top-five-best-places-to-work-in-charlotte-nc</loc>
+  <loc>http://skookum.com/blog/breaking-development-2014-nashville-edition</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tech-talks-software-design-patterns-the-building-blocks-of-code</loc>
+  <loc>http://skookum.com/blog/one-size-fits-none-the-hidden-costs-of-off-the-shelf-software</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=5</loc>
+  <loc>http://skookum.com/blog/tags/development?page=6</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=6</loc>
+  <loc>http://skookum.com/blog/announcing-bamboozled</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/most-software-sucks-right-now-healthcare-gov-is-most-software</loc>
+  <loc>http://skookum.com/blog/healthcare-govs-design-user-experience-flaws</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/debugging-cross-platform-html5-apps-in-ios-7</loc>
+  <loc>http://skookum.com/blog/tags/product?page=6</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/women-in-technology-software-fields</loc>
+  <loc>http://skookum.com/blog/technology-giants-unable-to-be-agile</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/friday-tech-talks-post-mobile-computing-with-douglas-welton</loc>
+  <loc>http://skookum.com/blog/sdw-in-the-charlotte-business-journal-not-just-a-nice-little-tech-shop</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=6</loc>
+  <loc>http://skookum.com/blog/the-meaning-of-customer-experience</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/lowes-iris-smart-home-technology-platform-mobile-applications-home-security-digital-door-locks</loc>
+  <loc>http://skookum.com/blog/sdw-overcoming-barriers-to-innovation</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-quick-tech-software-engineer-eric-laforce-on-net</loc>
+  <loc>http://skookum.com/blog/tags/business?page=6</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/its-all-product-design</loc>
+  <loc>http://skookum.com/blog/tech-talks-software-design-patterns-the-building-blocks-of-code</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/windows-phone-8-vs-iphone</loc>
+  <loc>http://skookum.com/blog/aaron-draplin-and-origins-of-the-sdw-space-volcano</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/if-you-dont-work-here-yet-you-should</loc>
+  <loc>http://skookum.com/blog/tech-talks-introduction-to-the-go-programming-language-with-sdws-chuck-preslar</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=6</loc>
+  <loc>http://skookum.com/blog/blend-conf-charlotte-technology-event</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-overcoming-barriers-to-innovation</loc>
+  <loc>http://skookum.com/blog/from-intern-to-full-time-the-mel-shields-experience</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/how-to-start-a-successful-software-project-its-not-with-an-rfp</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=6</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-case-study-electric-power-research-institute</loc>
+  <loc>http://skookum.com/blog?page=7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.21</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-forrester-research-on-the-foundation-of-mobile-trust</loc>
+  <loc>http://skookum.com/blog/sdw-case-study-mobilizing-the-coca-cola-bottling-salesforce-by-making-net-work-with-ipads</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=6</loc>
+  <loc>http://skookum.com/blog/tags/development?page=7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/aaron-draplin-and-origins-of-the-sdw-space-volcano</loc>
+  <loc>http://skookum.com/blog/what-apples-new-ios-7-mobile-update-means-for-your-business</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tech-talks-introduction-to-the-go-programming-language-with-sdws-chuck-preslar</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-building-native-ios-apps-using-web-developer-friendly-tools</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/blend-conf-charlotte-technology-event</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-startup-failure-with-otherscreen-ceo-chris-halligan</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/from-intern-to-full-time-the-mel-shields-experience</loc>
+  <loc>http://skookum.com/blog/charlotte-nc-technology-hub</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/software-joe-ryans-carolina-panther-tailgate-or-why-you-want-to-live-in-charlotte</loc>
+  <loc>http://skookum.com/blog/tags/product?page=7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=6</loc>
+  <loc>http://skookum.com/blog/sdw-case-study-electric-power-research-institute</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=7</loc>
+  <loc>http://skookum.com/blog/sdw-forrester-research-on-the-foundation-of-mobile-trust</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/eric-laforce-to-drop-open-source-net-knowledge</loc>
+  <loc>http://skookum.com/blog/sdws-best-fit-clients-have-different-titles-but-similar-perspectives</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-challenges-solutions-for-building-software-beyond-borders</loc>
+  <loc>http://skookum.com/blog/sdw-case-study-metal-marketing-group-inc</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/javascript-wolfenstein-sdw-tech-talks-computer-science-for-regular-folks</loc>
+  <loc>http://skookum.com/blog/sdw-business-technology-experts</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=7</loc>
+  <loc>http://skookum.com/blog/tags/business?page=7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/vegas-strategy-a-numbers-game</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-mobile-solar-power-generators</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/apps-for-art</loc>
+  <loc>http://skookum.com/blog/rails-girls-in-clt-july-26th-27th-at-sdw-hq</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/charlotte-an-agile-home-for-skookum-digital-works</loc>
+  <loc>http://skookum.com/blog/software-joe-ryans-carolina-panther-tailgate-or-why-you-want-to-live-in-charlotte</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/make-your-apis-swagger</loc>
+  <loc>http://skookum.com/blog/friday-tech-talks-post-mobile-computing-with-douglas-welton</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/re-components-in-practice</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-web-traffic-forecasting-w-signalr-and-webapi</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=7</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdws-best-fit-clients-have-different-titles-but-similar-perspectives</loc>
+  <loc>http://skookum.com/blog?page=8</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.17</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-business-technology-experts</loc>
+  <loc>http://skookum.com/blog/debugging-cross-platform-html5-apps-in-ios-7</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/mobilebusinesstechnologyroi</loc>
+  <loc>http://skookum.com/blog/women-in-technology-software-fields</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/business-technology-custom-app-dev-a-few-logistical-notes</loc>
+  <loc>http://skookum.com/blog/tags/development?page=8</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=7</loc>
+  <loc>http://skookum.com/blog/lowes-iris-smart-home-technology-platform-mobile-applications-home-security-digital-door-locks</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/ecklenburg/county/ParkandRec/Parks/ParksByRegion/CentralRegion/Pages/Romare-Bearden-Park.aspx</loc>
+  <loc>http://skookum.com/blog/sdw-quick-tech-software-engineer-eric-laforce-on-net</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-mobile-solar-power-generators</loc>
+  <loc>http://skookum.com/blog/windows-phone-8-vs-iphone</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-web-traffic-forecasting-w-signalr-and-webapi</loc>
+  <loc>http://skookum.com/blog/tags/product?page=8</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-turn-your-cloud-infrastructure-into-skynet-w-chef</loc>
+  <loc>http://skookum.com/blog/mobilebusinesstechnologyroi</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=7</loc>
+  <loc>http://skookum.com/blog/business-technology-custom-app-dev-a-few-logistical-notes</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=8</loc>
+  <loc>http://skookum.com/blog/emerging-web-software-mobile-technology-trends-with-hunter-loftis</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/rails-girls-in-clt-july-26th-27th-at-sdw-hq</loc>
+  <loc>http://skookum.com/blog/fortune-magazine-and-the-dnc-like-clt-technology</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-net-series-part-3-hero</loc>
+  <loc>http://skookum.com/blog/charlotte-programming-company-helps-business-clients-go-digital</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-net-series-part-2-code-reuse</loc>
+  <loc>http://skookum.com/blog/tags/business?page=8</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-net-series-continuous-integration-with-teamcity</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-turn-your-cloud-infrastructure-into-skynet-w-chef</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-data-visualization-with-douglas-welton</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-challenges-solutions-for-building-software-beyond-borders</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=8</loc>
+  <loc>http://skookum.com/blog/share-charlotte-gets-even-awesomer</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/emerging-web-software-mobile-technology-trends-with-hunter-loftis</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=8</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/developer-x-visits-sdw-hq</loc>
+  <loc>http://skookum.com/blog?page=9</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.13</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/using-wordpress-as-a-user-and-authentication-database</loc>
+  <loc>http://skookum.com/blog/eric-laforce-to-drop-open-source-net-knowledge</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/debugging-with-the-weinre</loc>
+  <loc>http://skookum.com/blog/javascript-wolfenstein-sdw-tech-talks-computer-science-for-regular-folks</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/automated-wordpress-plugin-deployment</loc>
+  <loc>http://skookum.com/blog/tags/development?page=9</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=8</loc>
+  <loc>http://skookum.com/blog/if-you-dont-work-here-yet-you-should</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/www.cio.com</loc>
+  <loc>http://skookum.com/blog/vegas-strategy-a-numbers-game</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/fortune-magazine-and-the-dnc-like-clt-technology</loc>
+  <loc>http://skookum.com/blog/apps-for-art</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/charlotte-programming-company-helps-business-clients-go-digital</loc>
+  <loc>http://skookum.com/blog/charlotte-an-agile-home-for-skookum-digital-works</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/who-says-speed-kills</loc>
+  <loc>http://skookum.com/blog/make-your-apis-swagger</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-townhall-with-clt-mayor-foxx-recap</loc>
+  <loc>http://skookum.com/blog/tags/product?page=9</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/business?page=8</loc>
+  <loc>http://skookum.com/blog/www.cio.com</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/share-charlotte-gets-even-awesomer</loc>
+  <loc>http://skookum.com/blog/who-says-speed-kills</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=8</loc>
+  <loc>http://skookum.com/blog/sdw-townhall-with-clt-mayor-foxx-recap</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=9</loc>
+  <loc>http://skookum.com/blog/digital-manufacturing-in-a-21st-century-economy</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-cost-of</loc>
+  <loc>http://skookum.com/blog/ced-names-skookum-digital-works-north-carolina-technology-company-to-watch</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-gis-programming-open-government-data</loc>
+  <loc>http://skookum.com/blog/your-company-should-not-build-an-app</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-single-page-application-development</loc>
+  <loc>http://skookum.com/blog/tags/business?page=9</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/node-js-you-learn-to-write-the-real-time-web</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-hackerspace-charlottes-felt-radio</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=9</loc>
+  <loc>http://skookum.com/blog/aaron-draplin-at-sdw-may-16th</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/open-an-ios-app-from-an-email</loc>
+  <loc>http://skookum.com/blog/the-cost-of</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/in-the-future-all-golf-balls-will-hit-themselves</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=9</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/ignite-charlotte-3</loc>
+  <loc>http://skookum.com/blog?page=10</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.11</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/iphone-vs-android-paintball-edition</loc>
+  <loc>http://skookum.com/blog/sdw-net-series-continuous-integration-with-teamcity</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/re-thinking-the-state-dropdown-with-autocompletion</loc>
+  <loc>http://skookum.com/blog/sdw-net-series-part-3-hero</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=9</loc>
+  <loc>http://skookum.com/blog/sdw-net-series-part-2-code-reuse</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/digital-manufacturing-in-a-21st-century-economy</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-data-visualization-with-douglas-welton</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/ced-names-skookum-digital-works-north-carolina-technology-company-to-watch</loc>
+  <loc>http://skookum.com/blog/tags/development?page=10</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/your-company-should-not-build-an-app</loc>
+  <loc>http://skookum.com/blog/in-the-future-all-golf-balls-will-hit-themselves</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-tech-talks-hackerspace-charlottes-felt-radio</loc>
+  <loc>http://skookum.com/blog/re-components-in-practice</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/aaron-draplin-at-sdw-may-16th</loc>
+  <loc>http://skookum.com/blog/developer-x-visits-sdw-hq</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=9</loc>
+  <loc>http://skookum.com/blog/using-wordpress-as-a-user-and-authentication-database</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=10</loc>
+  <loc>http://skookum.com/blog/debugging-with-the-weinre</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/building-with-blocks</loc>
+  <loc>http://skookum.com/blog/tags/product?page=10</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/forget-native-learn-to-write-html5-apps</loc>
+  <loc>http://skookum.com/blog/building-a-non-trivial-app-in-node-js</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/best-sxsw-interactive-workshops-include-two-by-the-sdw</loc>
+  <loc>http://skookum.com/blog/iphone-vs-android-paintball-edition</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=10</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-gis-programming-open-government-data</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/fb://profile</loc>
+  <loc>http://skookum.com/blog/sdw-tech-talks-single-page-application-development</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/a-clean-url-generator-for-zend-framework</loc>
+  <loc>http://skookum.com/blog/skookumites-are-not-suffering-from-dissociative-identity-disorder</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/kohana-3-csrf-form-protection</loc>
+  <loc>http://skookum.com/blog/anonymizing-github-commits</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/arduino-101-part2</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=10</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/moving-wordpress</loc>
+  <loc>http://skookum.com/blog?page=11</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.09</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/arduino-101-part1</loc>
+  <loc>http://skookum.com/?p=3835</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=10</loc>
+  <loc>http://skookum.com/?p=3895</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookumites-are-not-suffering-from-dissociative-identity-disorder</loc>
+  <loc>http://skookum.com/blog/node-js-you-learn-to-write-the-real-time-web</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/anonymizing-github-commits</loc>
+  <loc>http://skookum.com/blog/building-with-blocks</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=10</loc>
+  <loc>http://skookum.com/blog/tags/development?page=11</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=11</loc>
+  <loc>http://skookum.com/blog/automated-wordpress-plugin-deployment</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/windows-phone-ill-miss-you</loc>
+  <loc>http://skookum.com/blog/open-an-ios-app-from-an-email</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/case-study-in-cross-platform-development-drive-thru-dining-guide</loc>
+  <loc>http://skookum.com/blog/ignite-charlotte-3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-making-of-bugle</loc>
+  <loc>http://skookum.com/blog/tags/product?page=11</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=11</loc>
+  <loc>http://skookum.com/blog/forget-native-learn-to-write-html5-apps</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/wp-campfire</loc>
+  <loc>http://skookum.com/blog/windows-phone-ill-miss-you</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tower-mac-git-manager-launches</loc>
+  <loc>http://skookum.com/blog/best-sxsw-interactive-workshops-include-two-by-the-sdw</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/hardware-hacking</loc>
+  <loc>http://skookum.com/blog/i-wish-santa-had-a-sack-full-of-code</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/googles-instant-preview</loc>
+  <loc>http://skookum.com/blog/sdw-joyent-a-match-made-in-tech-heaven</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/osx-git-manager</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=11</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=11</loc>
+  <loc>http://skookum.com/blog?page=12</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.07</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/i-wish-santa-had-a-sack-full-of-code</loc>
+  <loc>http://skookum.com/blog/tags/development?page=12</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sdw-joyent-a-match-made-in-tech-heaven</loc>
+  <loc>http://skookum.com/blog/re-thinking-the-state-dropdown-with-autocompletion</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=11</loc>
+  <loc>http://skookum.com/blog/a-clean-url-generator-for-zend-framework</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=12</loc>
+  <loc>http://skookum.com/blog/kohana-3-csrf-form-protection</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/20-html5-mobile-app-development-tips</loc>
+  <loc>http://skookum.com/blog/arduino-101-part2</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/categorizr-js-device-detection-for-your-responsive-websites</loc>
+  <loc>http://skookum.com/blog/moving-wordpress</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/sublime-workflow-to-best-coda</loc>
+  <loc>http://skookum.com/blog/tags/product?page=12</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=12</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-engineer-david-becher</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/beginners-guide-twitter-auth-with-oauth</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-senior-engineer-jim-snodgrass</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/incentives-and-viral-sites</loc>
+  <loc>http://skookum.com/blog/case-study-in-cross-platform-development-drive-thru-dining-guide</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/a-day-at-barcamp-charlotte</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-o-g-engineer-chad-moon</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/simple-game-physics-barcampclt</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-engineer-dustan-kasten</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/yep-apple-killed-the-cd</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=12</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/product?page=12</loc>
+  <loc>http://skookum.com/blog?page=13</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.05</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-senior-engineer-jim-snodgrass</loc>
+  <loc>http://skookum.com/blog/the-making-of-bugle</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-o-g-engineer-chad-moon</loc>
+  <loc>http://skookum.com/blog/tags/development?page=13</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-engineer-dustan-kasten</loc>
+  <loc>http://skookum.com/blog/arduino-101-part1</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-utility-infielder-rebecca-siler</loc>
+  <loc>http://skookum.com/blog/wp-campfire</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=12</loc>
+  <loc>http://skookum.com/blog/tower-mac-git-manager-launches</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=13</loc>
+  <loc>http://skookum.com/blog/hardware-hacking</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/developer-productivity</loc>
+  <loc>http://skookum.com/blog/googles-instant-preview</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/espn-developer-center-a-small-step-in-the-right-direction</loc>
+  <loc>http://skookum.com/blog/tags/product?page=13</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/dynamic-screenshots-on-the-server-with-phantomjs</loc>
+  <loc>http://skookum.com/blog/meet-the-sdw-utility-infielder-rebecca-siler</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/scraping-poorly-formatted-data-with-curl-and-phpquery</loc>
+  <loc>http://skookum.com/blog/lessons-learned-from-advanced-git-training</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=13</loc>
+  <loc>http://skookum.com/blog/one-git-archive-script-to-rule-them-all</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/get-app-savvy</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=13</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/custom-mapping-with-svg-and-raphaeljs</loc>
+  <loc>http://skookum.com/blog?page=14</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/contemplating-new-features-for-our-devices-and-software</loc>
+  <loc>http://skookum.com/blog/20-html5-mobile-app-development-tips</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/lessons-learned-from-advanced-git-training</loc>
+  <loc>http://skookum.com/blog/categorizr-js-device-detection-for-your-responsive-websites</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/one-git-archive-script-to-rule-them-all</loc>
+  <loc>http://skookum.com/blog/sublime-workflow-to-best-coda</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/meet-the-sdw-engineer-david-becher</loc>
+  <loc>http://skookum.com/blog/tags/development?page=14</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/the-guinea-pig-speaks-skookums-internship-program</loc>
+  <loc>http://skookum.com/blog/osx-git-manager</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=13</loc>
+  <loc>http://skookum.com/blog/beginners-guide-twitter-auth-with-oauth</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=14</loc>
+  <loc>http://skookum.com/blog/incentives-and-viral-sites</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/scraping-poorly-formatted-data-with-curl-and-phpquery/</loc>
+  <loc>http://skookum.com/blog/a-day-at-barcamp-charlotte</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/dont-let-string-sanitization-slow-you-down</loc>
+  <loc>http://skookum.com/blog/simple-game-physics-barcampclt</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/web-and-mobile-html5-developers-turned-windows-8-developers-overnight</loc>
+  <loc>http://skookum.com/blog/tags/product?page=14</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/html5-vs-native-mobile-apps</loc>
+  <loc>http://skookum.com/blog/the-guinea-pig-speaks-skookums-internship-program</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=14</loc>
+  <loc>http://skookum.com/blog/tech-talk-consistency-in-interactive-design</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tech-talk-consistency-in-interactive-design</loc>
+  <loc>http://skookum.com/blog/espn-developer-center-a-small-step-in-the-right-direction</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-digital-works-has-the-fire-we-will-share-it-with-you</loc>
+  <loc>http://skookum.com/blog/skookum-digital-works-has-the-fire-we-will-share-it-with-you</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/introducing-jason-snodgrass</loc>
+  <loc>http://skookum.com/blog/introducing-jason-snodgrass</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-digital-works-aaron-draplin-logo-photoshop-fun</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=14</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=14</loc>
+  <loc>http://skookum.com/blog?page=15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.04</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=15</loc>
+  <loc>http://skookum.com/blog/developer-productivity</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/5-things-ive-learned-in-my-first-month-of-being-a-manager</loc>
+  <loc>http://skookum.com/blog/dynamic-screenshots-on-the-server-with-phantomjs</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/linode-php-53-lamp-stackscript-fedora-64</loc>
+  <loc>http://skookum.com/blog/scraping-poorly-formatted-data-with-curl-and-phpquery</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/10-fantastic-libraries-to-use-in-your-next-ios-project</loc>
+  <loc>http://skookum.com/blog/tags/development?page=15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/an-intro-to-3d-in-the-browser-with-webgl-and-three-js</loc>
+  <loc>http://skookum.com/blog/yep-apple-killed-the-cd</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/ios-peeling-effect</loc>
+  <loc>http://skookum.com/blog/get-app-savvy</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=15</loc>
+  <loc>http://skookum.com/blog/custom-mapping-with-svg-and-raphaeljs</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/clt-mayor-foxx-to-visit-sdw</loc>
+  <loc>http://skookum.com/blog/contemplating-new-features-for-our-devices-and-software</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=15</loc>
+  <loc>http://skookum.com/blog/skookum-digital-works-aaron-draplin-logo-photoshop-fun</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=16</loc>
+  <loc>http://skookum.com/blog/5-things-ive-learned-in-my-first-month-of-being-a-manager</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/jeremy-olson-wins-apple-design-award</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=15</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/building-a-non-trivial-app-in-node-js</loc>
+  <loc>http://skookum.com/blog?page=16</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.03</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/and-app-savviness-was-had-by-many</loc>
+  <loc>http://skookum.com/blog/dont-let-string-sanitization-slow-you-down</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/nested-content-types-on-drupal-with-flexifield</loc>
+  <loc>http://skookum.com/blog/web-and-mobile-html5-developers-turned-windows-8-developers-overnight</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/web-dev-and-beer</loc>
+  <loc>http://skookum.com/blog/html5-vs-native-mobile-apps</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=16</loc>
+  <loc>http://skookum.com/blog/tags/development?page=16</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/vote-for-skookumdigitalworks-sxsw-topics</loc>
+  <loc>http://skookum.com/blog/clt-mayor-foxx-to-visit-sdw</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/lockpicking-101</loc>
+  <loc>http://skookum.com/blog/vote-for-skookumdigitalworks-sxsw-topics</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/safely-handling-mysql-transactions-in-zend-framework</loc>
+  <loc>http://skookum.com/blog/lockpicking-101</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=16</loc>
+  <loc>http://skookum.com/blog/safely-handling-mysql-transactions-in-zend-framework</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=17</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=16</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/practical-canvas-test-charlottejs</loc>
+  <loc>http://skookum.com/blog?page=17</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/2-things-i-dont-like-about-nodejs</loc>
+  <loc>http://skookum.com/blog/linode-php-53-lamp-stackscript-fedora-64</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/andriod-development-101</loc>
+  <loc>http://skookum.com/blog/10-fantastic-libraries-to-use-in-your-next-ios-project</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/node-js-tech-talk</loc>
+  <loc>http://skookum.com/blog/an-intro-to-3d-in-the-browser-with-webgl-and-three-js</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/development?page=17</loc>
+  <loc>http://skookum.com/blog/ios-peeling-effect</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/christmas-beer-update</loc>
+  <loc>http://skookum.com/blog/jeremy-olson-wins-apple-design-award</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=17</loc>
+  <loc>http://skookum.com/blog/tags/development?page=17</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=18</loc>
+  <loc>http://skookum.com/blog/and-app-savviness-was-had-by-many</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/whats-new-in-wordpress-3</loc>
+  <loc>http://skookum.com/blog/christmas-beer-update</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/making-smoother-animations-with-jquery</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=17</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/ttf-twitter-oauth</loc>
+  <loc>http://skookum.com/blog?page=18</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.02</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tech-talk-friday-outtake</loc>
+  <loc>http://skookum.com/blog/nested-content-types-on-drupal-with-flexifield</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/bermon-painter-on-ux-design</loc>
+  <loc>http://skookum.com/blog/web-dev-and-beer</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=18</loc>
+  <loc>http://skookum.com/blog/practical-canvas-test-charlottejs</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=19</loc>
+  <loc>http://skookum.com/blog/tags/development?page=18</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-welcomes-assaf-weinberg</loc>
+  <loc>http://skookum.com/blog/ttf-twitter-oauth</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/procedurally-generated-prints-for-the-skookum-labs-office</loc>
+  <loc>http://skookum.com/blog/tech-talk-friday-outtake</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=19</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=18</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=20</loc>
+  <loc>http://skookum.com/blog?page=19</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/atlantic-general-hospital-theres-an-app-for-that</loc>
+  <loc>http://skookum.com/blog/2-things-i-dont-like-about-nodejs</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/welcome-corey-max-and-jim</loc>
+  <loc>http://skookum.com/blog/andriod-development-101</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/there-can-be-only-one</loc>
+  <loc>http://skookum.com/blog/node-js-tech-talk</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/skookum-2-0</loc>
+  <loc>http://skookum.com/blog/whats-new-in-wordpress-3</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/tags/culture?page=20</loc>
+  <loc>http://skookum.com/blog/tags/development?page=19</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=21</loc>
+  <loc>http://skookum.com/blog/bermon-painter-on-ux-design</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=22</loc>
+  <loc>http://skookum.com/blog/skookum-welcomes-assaf-weinberg</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=23</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=19</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=24</loc>
+  <loc>http://skookum.com/blog?page=20</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog/google-analytics-for-node-js-writing-an-npm-module-nodealytics</loc>
+  <loc>http://skookum.com/blog/making-smoother-animations-with-jquery</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=25</loc>
+  <loc>http://skookum.com/blog/procedurally-generated-prints-for-the-skookum-labs-office</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=26</loc>
+  <loc>http://skookum.com/blog/atlantic-general-hospital-theres-an-app-for-that</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=27</loc>
+  <loc>http://skookum.com/blog/welcome-corey-max-and-jim</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=28</loc>
+  <loc>http://skookum.com/blog/there-can-be-only-one</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=29</loc>
+  <loc>http://skookum.com/blog/tags/culture?page=20</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=30</loc>
+  <loc>http://skookum.com/blog?page=21</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=31</loc>
+  <loc>http://skookum.com/blog/skookum-2-0</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=32</loc>
+  <loc>http://skookum.com/blog?page=22</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=33</loc>
+  <loc>http://skookum.com/blog?page=23</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.01</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=34</loc>
+  <loc>http://skookum.com/blog?page=24</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=35</loc>
+  <loc>http://skookum.com/blog?page=25</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=36</loc>
+  <loc>http://skookum.com/blog?page=26</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=37</loc>
+  <loc>http://skookum.com/blog/google-analytics-for-node-js-writing-an-npm-module-nodealytics</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=38</loc>
+  <loc>http://skookum.com/blog?page=27</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=39</loc>
+  <loc>http://skookum.com/blog?page=28</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=40</loc>
+  <loc>http://skookum.com/blog?page=29</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=41</loc>
+  <loc>http://skookum.com/blog?page=30</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 <url>
-  <loc>http://www.skookum.com/blog?page=42</loc>
+  <loc>http://skookum.com/blog?page=31</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=32</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=33</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=34</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=35</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=36</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=37</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=38</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=39</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=40</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=41</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=42</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=43</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>http://skookum.com/blog?page=44</loc>
+  <lastmod>2015-11-11T15:59:52+00:00</lastmod>
+  <priority>0.00</priority>
 </url>
 </urlset>
