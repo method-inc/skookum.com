@@ -53,6 +53,7 @@
 .Landing-description {
   font-weight: 300;
   font-size: 1.5em;
+  line-height: 1.6em;
   margin-top: 100px;
   padding-right: 20%;
 }
@@ -131,6 +132,7 @@
 .Landing-layer-description {
   font-weight: 300;
   font-size: 1.5em;
+  line-height: 1.6em;
   max-width: 680px;
   margin-top: 20px;
 }
