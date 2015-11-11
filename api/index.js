@@ -210,6 +210,21 @@ api.get('/contentful/hero/:slug', function(req, res) {
     );
 });
 
+api.get('/contentful/info/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'info_page')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.slug': req.params.slug,
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
 
 api.get('/contentful/:slug', function(req, res) {
   var bestFit = options => options.find(o => o.fields.slug === req.params.slug);

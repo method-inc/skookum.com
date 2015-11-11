@@ -1,0 +1,169 @@
+/** @define ThankYou; use strict */
+
+.ThankYou {
+  font-size: 16px;
+}
+
+.ThankYou-title {
+  font-size: 4em;
+  font-weight: 100;
+  margin: 90px 0 0;
+}
+
+.ThankYou-subtitle {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+.ThankYou-block {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 28vw;
+  min-height: 223px;
+  max-height: 400px;
+  position: relative;
+  vertical-align: top;
+}
+
+.ThankYou-block-image.is-mobileOnly {
+    display: none;
+  }
+
+.ThankYou-block.ThankYou-block--small {
+  width: 33.33%;
+}
+
+.ThankYou-block.ThankYou-block--large {
+  width: 66.66%;
+}
+
+.ThankYou-block-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ThankYou-block-content.is-right {
+  right: 12%;
+}
+
+.ThankYou-block-content.is-left {
+  left: 12%;
+}
+
+.ThankYou-block-text {
+  line-height: 34px;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.ThankYou-block-pretitle {
+  font-weight: 100;
+  font-size: 1.125em;
+  text-transform: uppercase;
+}
+
+.ThankYou-block-title {
+  font-size: 4em;
+  font-weight: 100;
+}
+
+.ThankYou-link {
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.47);
+  border-radius: 0;
+  padding: 10px 12px;
+  margin-top: 5px;
+}
+
+.ThankYou-line {
+  height: 3px;
+  width: 78px;
+  background-color: #FAAB18;
+  margin-top: 10px; 
+}
+
+.ThankYou-block-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.ThankYou-footer {
+  height: 46px;
+  width: 100%;
+  background-color: #393939;
+}
+
+@media screen and (max-width: 1200px) {
+  .ThankYou {
+    font-size: 13px;
+  }
+  .ThankYou-subtitle {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .ThankYou {
+    font-size: 10px;
+  }
+
+  .ThankYou-title {
+    font-size: 5em;
+  }
+
+  .ThankYou-subtitle {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ThankYou {
+    font-size: 8px;
+  }
+
+  .ThankYou-subtitle {
+    font-size: 1.5em;
+  }
+
+  .ThankYou-title {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ThankYou {
+    font-size: 10px;
+  }
+
+  .ThankYou-title {
+    font-size: 4em;
+  }
+
+  .ThankYou-subtitle {
+    font-size: 1.3em;
+  }
+
+  .ThankYou-block.is-deskOnly {
+    display: none;
+  }
+
+  .ThankYou-block-image.is-mobileOnly {
+    display: block;
+  }
+
+  .ThankYou-block.ThankYou-block--large,
+  .ThankYou-block.ThankYou-block--small {
+    width: 100%;
+  }
+
+  .ThankYou-block-content.is-right,
+  .ThankYou-block-content.is-left {
+    left: 25px;
+  }
+}

@@ -65,6 +65,7 @@ class Hero extends Component {
       style = EMPTY_OBJECT,
       titleStyle,
       subtitleStyle,
+      isLanding,
       metaTags,
     } = this.props;
 
@@ -81,10 +82,12 @@ class Hero extends Component {
 
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
 
+    var landingClass = isLanding ? 'is-landing' : '';
+
     var tags = getDefaultTags(metaTags);
 
     return (
-      <div className={`Hero ${skinny}`} style={style}>
+      <div className={`Hero ${skinny} ${landingClass}`}>
         <DocMeta tags={tags} />
         <div className="Hero-content">
           <h1 className="Hero-title" style={titleStyle}>
@@ -95,7 +98,7 @@ class Hero extends Component {
           </div>
           {children}
         </div>
-        <div className="Hero-overlay" style={{
+        <div className={`Hero-overlay ${landingClass}`} style={{
           background: backgroundColor,
         }} />
         {this.renderBackground()}
