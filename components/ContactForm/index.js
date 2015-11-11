@@ -2,11 +2,10 @@
 
 require('./styles.css');
 
-import React, {PropTypes, Component} from 'react';
+import React, {PropTypes} from 'react';
 import Input from 'Input';
 import Button from 'Button';
 import Label from 'Label';
-import api from 'api';
 import {AoProcessForm} from 'actOn';
 
 var last = n => n[n.length - 1];
@@ -84,7 +83,7 @@ class ContactForm extends React.Component {
     if (this.props.isLandingPage) {
       this.context.router.transitionTo('thankyou');
     } else {
-      this.setState({showThankYou: true, error: null});  
+      this.setState({showThankYou: true, error: null});
     }
   }
 
@@ -99,7 +98,6 @@ class ContactForm extends React.Component {
         'name', 'email',
       ];
     }
-    
 
     var missingFields = requiredFields.reduce(
       (missing, n) =>
@@ -121,10 +119,10 @@ class ContactForm extends React.Component {
         <div className="ContactForm-field is-landing">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.name} label="Name*" name="name" />
         </div>
-        <div className="ContactForm-field is-landing">  
+        <div className="ContactForm-field is-landing">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
-        <input type="hidden" value={this.props.campaign} name="campaign"/> 
+        <input type="hidden" value={this.props.campaign} name="campaign"/>
         <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
         <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.additional_information} name="additional_information"></textarea>
         <div>
@@ -168,10 +166,10 @@ class ContactForm extends React.Component {
         <div className="ContactForm-field">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.last_name} label="Last Name*" name="last_name" />
         </div>
-        <div className="ContactForm-field">  
+        <div className="ContactForm-field">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
-        <div className="ContactForm-field">  
+        <div className="ContactForm-field">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.phone} label="Phone" name="phone" type="tel" />
         </div>
         <label style={labelStyle} className="ContactForm-label is-textarea">How can we help you?</label>

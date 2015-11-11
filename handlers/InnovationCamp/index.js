@@ -9,14 +9,13 @@ import lookup from 'lookup';
 import Hero from 'Hero';
 import CapabilityHighlights from 'CapabilityHighlights';
 import Headline from 'Headline';
-import markdown from 'markdown';
 
 class InnovationCamp extends React.Component {
   render(): ReactElement {
 
     var heroInfo = this.props.heroInfo[0];
     var capabilityHighlights = this.props.capabilityHighlights;
-    
+
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},
@@ -30,12 +29,12 @@ class InnovationCamp extends React.Component {
 
     return (
       <div className="InnovationCamp">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} 
+          title={heroInfo.title}
+          subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags}/>
 
         <Headline text="Innovation camp is a one week program to help propel innovative ideas forward." />

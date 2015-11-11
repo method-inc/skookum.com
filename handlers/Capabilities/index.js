@@ -3,7 +3,6 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
-import Button from 'Button';
 import Hero from 'Hero';
 import {Link} from 'react-router';
 import lookup from 'lookup';
@@ -27,11 +26,11 @@ class Capabilities extends React.Component {
 
     return (
       <div className="Capabilities">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
+          title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <ul className="Capabilities-list">
@@ -48,7 +47,7 @@ class Capabilities extends React.Component {
               </Link>
             </li>
           ))}
-        </ul>  
+        </ul>
       </div>
     );
   }

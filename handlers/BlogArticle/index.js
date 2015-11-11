@@ -8,7 +8,6 @@ import api from 'api';
 import Hero from 'Hero';
 import ShareLinks from 'ShareLinks';
 import NotFound from '../../handlers/NotFound';
-import DocMeta from 'react-doc-meta';
 
 var {PropTypes} = React;
 
@@ -74,7 +73,7 @@ class BlogArticle extends React.Component {
           title={<div itemProp="headline">{title}</div>}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
-          color="black" 
+          color="black"
           metaTags={metaTags} />
         <span className="BlogArticle-meta">
           <image itemProp="image" src={poster}/>

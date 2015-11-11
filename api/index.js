@@ -25,22 +25,22 @@ function selectFields(arr: Object|Array, fields: Array): Object|Array {
   return o;
 }
 
-type BambooEmployee = {
-  id: string;
-  displayName: string;
-  firstName: string;
-  lastName: string;
-  nickname: string;
-  gender: string;
-  jobTitle: string;
-  workPhone: string;
-  mobilePhone: string;
-  workEmail: string;
-  department: string;
-  location: string;
-  photoUploaded: string;
-  canUploadPhoto: number;
-};
+// type BambooEmployee = {
+//   id: string;
+//   displayName: string;
+//   firstName: string;
+//   lastName: string;
+//   nickname: string;
+//   gender: string;
+//   jobTitle: string;
+//   workPhone: string;
+//   mobilePhone: string;
+//   workEmail: string;
+//   department: string;
+//   location: string;
+//   photoUploaded: string;
+//   canUploadPhoto: number;
+// };
 
 var employees = () => (
   cache('https://api.bamboohr.com/api/gateway.php/skookum/v1/employees/directory', {

@@ -3,12 +3,7 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import invariant from 'react/lib/invariant';
-import {Link} from 'react-router';
-import Logo from 'Logo';
-import Hamburger from 'Hamburger';
-import lookup from 'lookup';
-import {nameToRgba, nameToBinary} from 'nameToColor';
+import {nameToRgba} from 'nameToColor';
 import DocMeta from 'react-doc-meta';
 import {getDefaultTags} from 'metaTags';
 
@@ -60,9 +55,7 @@ class Hero extends Component {
       children,
       color,
       video,
-      image = '',
       className = '',
-      style = EMPTY_OBJECT,
       titleStyle,
       subtitleStyle,
       isLanding,

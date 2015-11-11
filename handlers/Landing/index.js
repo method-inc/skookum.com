@@ -1,10 +1,9 @@
 require('./styles.css');
 
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import api from 'api';
-import lookup from 'lookup';
 import ContactForm from 'ContactForm';
 import {Link} from 'react-router';
 import Logo from 'Logo';
@@ -41,8 +40,8 @@ class Landing extends React.Component {
 
     return (
       <div className="Landing">
-        <Hero 
-          color="black" 
+        <Hero
+          color="black"
           image={pageData.heroImage.fields.file.url}
           isLanding={true} >
           <div className="Landing-hero">

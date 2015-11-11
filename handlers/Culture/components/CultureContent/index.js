@@ -2,12 +2,9 @@
 
 require('./styles.css');
 
-import React, {Component, PropTypes} from 'react';
-import {Resolver} from 'react-resolver';
-import MajorSectionElement from 'MajorSectionElement';
-import api from 'api';
+import React, {Component} from 'react';
 import WallOfFaces from 'WallOfFaces';
-console.log('process.features.WALL_OF_FACES', process.features.WALL_OF_FACES);
+// console.log('process.features.WALL_OF_FACES', process.features.WALL_OF_FACES);
 
 var cn = s => `CultureContent-${s}`;
 
