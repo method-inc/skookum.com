@@ -38,8 +38,18 @@
   padding-bottom: 0.5em;
   outline: none;
   background-color: transparent;
+  font-size: 1em;
 }
 
 .Input-element.is-textarea {
   min-height: 118px;
+}
+
+@media screen and (max-width: 767px) {
+  .Input-label {
+    font-size: 1.1em;
+  }
+  .Input-element {
+    font-size: 1.2em;
+  }
 }

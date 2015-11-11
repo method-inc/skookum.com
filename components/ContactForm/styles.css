@@ -138,4 +138,8 @@
     margin-top: 30px;
     font-size: 1.6em;
   }
+
+  .ContactForm-label.is-textarea {
+    font-size: 1.2em;
+  }
 }
