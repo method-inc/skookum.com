@@ -39,19 +39,21 @@
 
 .Landing-title {
   font-size: 4em;
-  font-weight: 100;
+  font-weight: 300;
   margin: 90px 0 0;
 }
 
 .Landing-subtitle {
   font-size: .9em;
-  font-weight: 600;
+  font-weight: 700;
   margin: 20px 0 0;
+  text-transform: uppercase;
 }
 
 .Landing-description {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5em;
+  line-height: 1.6em;
   margin-top: 100px;
   padding-right: 20%;
 }
@@ -78,7 +80,7 @@
 
 .Landing-icon-title {
   display: inline-block;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1em;
   margin-top: 20px;
   text-transform: uppercase;
@@ -122,14 +124,15 @@
 }
 
 .Landing-layer-title {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 4em;
   margin: 0;
 }
 
 .Landing-layer-description {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5em;
+  line-height: 1.6em;
   max-width: 680px;
   margin-top: 20px;
 }
@@ -165,13 +168,13 @@
 }
 
 .Landing-stat-number {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 4em;
   line-height: 4rem;
 }
 
 .Landing-stat-text {
-  font-weight: 300;
+  font-weight: 400;
   font-size: .9em;
   text-transform: uppercase;
 }

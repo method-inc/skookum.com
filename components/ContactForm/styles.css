@@ -23,6 +23,7 @@
   box-sizing: border-box;
   width: 100%;
   background-color: transparent;
+  border-radius: 0;
   border: 1px solid #e1e1e1;
   height: 8em;
   margin-bottom: 13px;
@@ -136,5 +137,9 @@
     text-align: center;
     margin-top: 30px;
     font-size: 1.6em;
+  }
+
+  .ContactForm-label.is-textarea {
+    font-size: 1.2em;
   }
 }

@@ -6,14 +6,15 @@
 
 .ThankYou-title {
   font-size: 4em;
-  font-weight: 100;
+  font-weight: 300;
   margin: 90px 0 0;
 }
 
 .ThankYou-subtitle {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 700;
   margin: 20px 0 0;
+  text-transform: uppercase;
 }
 
 .ThankYou-block {
@@ -54,19 +55,19 @@
 
 .ThankYou-block-text {
   line-height: 34px;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5em;
 }
 
 .ThankYou-block-pretitle {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.125em;
   text-transform: uppercase;
 }
 
 .ThankYou-block-title {
   font-size: 4em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .ThankYou-link {
@@ -131,8 +132,16 @@
     font-size: 1.5em;
   }
 
+  .ThankYou-block-text {
+    font-size: 1.8em;
+  }
+
   .ThankYou-title {
     font-size: 6em;
+  }
+
+  .ThankYou-block-pretitle {
+    font-size: 1.5em;
   }
 }
 
@@ -143,10 +152,6 @@
 
   .ThankYou-title {
     font-size: 4em;
-  }
-
-  .ThankYou-subtitle {
-    font-size: 1.3em;
   }
 
   .ThankYou-block.is-deskOnly {

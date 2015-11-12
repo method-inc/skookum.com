@@ -14,12 +14,21 @@ class Landing extends React.Component {
 
   constructor(props: mixed, context: mixed): void {
     super(props, context);
-    this.scrollToFooter = this.scrollToFooter.bind(this);
+    this.scrollToElement = this.scrollToElement.bind(this);
   }
 
-  scrollToFooter() {
-    var footer = this.refs.contact.getDOMNode();
-    footer.scrollIntoView();
+  scrollToElement() {
+    var node = this.refs.contact.getDOMNode();
+    var targetY = node.offsetTop;
+    var currentY = window.scrollY;
+    var diff = currentY - targetY;
+    var atBottom = window.innerHeight + currentY >= document.body.offsetHeight;
+    if (diff !== 0 && !atBottom) {
+      var scrollAmount = Math.abs(diff) < 90 ? Math.ceil(Math.abs(diff) / 20) : 70;
+      var scrollEnd = diff < 0 ? currentY + scrollAmount : currentY - scrollAmount;
+      window.scrollTo(0, scrollEnd);
+      setTimeout(()=>(this.scrollToElement(node)), 3);
+    }
   }
 
   parseStats(stats) {
@@ -48,7 +57,7 @@ class Landing extends React.Component {
           <div className="Landing-hero">
             <div className="Landing-header">
               <Link to="home" className="Landing-link" style={{display: 'inline'}}><Logo style={{position: 'relative', top: '0', height: 40, width: 48}} color="#fff" /></Link>
-              <Button onClick={this.scrollToFooter} style={{border: 0}} className="Landing-request" type="primary">
+              <Button onClick={this.scrollToElement} style={{border: 0}} className="Landing-request" type="primary">
                 <span className="Landing-request-text">Request Consultation</span>
                 <img className="Landing-request-icon" src="../../public/images/chat-bubble-icon.svg"/>
               </Button>
