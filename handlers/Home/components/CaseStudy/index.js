@@ -19,7 +19,7 @@ class CaseStudy extends Component {
     super(props, context);
 
     this.state = {
-      word: 'business'
+      word: 'business',
     };
 
     this._interval = null;

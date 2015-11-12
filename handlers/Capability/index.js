@@ -1,7 +1,7 @@
 /** @flow */
 require('./styles.css');
 
-import React, {PropTypes, Component} from 'react';
+import React, {PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import Hero from 'Hero';
 import ContactForm from 'ContactForm';
@@ -38,7 +38,7 @@ class Capability extends React.Component {
         <div className="Capability-statement" style={{backgroundImage: `url(${headlineImage})`}} >
           <div className="Capability-statement-container">
             <h2 className="Capability-statement-title">
-              {capability.headline} 
+              {capability.headline}
               {cite && <span className="Capability-statement-cite"> - {cite}</span>}
             </h2>
             <div className="Capability-statement-description" dangerouslySetInnerHTML={{__html: markdown(capability.description)}}/>

@@ -2,10 +2,8 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-
 import Hero from 'Hero';
 import FilterBar from 'FilterBar';
-import FeaturedPosts from 'FeaturedPosts';
 import ArticlesList from 'ArticlesList';
 import {Resolver} from 'react-resolver';
 import api from 'api';
@@ -25,15 +23,15 @@ class Blog extends Component {
       {itemProp: 'name', content: heroInfo.metaTitle},
       {itemProp: 'description', content: heroInfo.metaDescription},
     ];
-    
+
     return (
       <div className="Blog">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
-          subtitle={lookup(heroInfo, 'subtitle')} 
+          title={heroInfo.title}
+          subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <FilterBar items={this.props.tags} />
         <ArticlesList />

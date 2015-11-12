@@ -3,10 +3,8 @@ require('./styles.css');
 import React from 'react';
 import markdown from 'markdown';
 import {Resolver} from 'react-resolver';
-import * as fmt from 'fmt';
 import api from 'api';
 import Hero from 'Hero';
-import ShareLinks from 'ShareLinks';
 import NotFound from '../../handlers/NotFound';
 
 var {PropTypes} = React;

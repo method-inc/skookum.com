@@ -11,8 +11,8 @@ class ThankYou extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="ThankYou">
-        <Hero 
-          color="black" 
+        <Hero
+          color="black"
           image="../public/images/thankyou-hero.png"
           isLanding={true} >
           <div className="Landing-hero">
@@ -30,7 +30,7 @@ class ThankYou extends React.Component {
         <div className="ThankYou-block ThankYou-block--small">
           <div className="ThankYou-block-content is-right">
             <div className="ThankYou-block-text">
-              <div>Interested in learning</div> 
+              <div>Interested in learning</div>
               <div>more about our culture?</div>
               <div className="ThankYou-line"/>
             </div>
