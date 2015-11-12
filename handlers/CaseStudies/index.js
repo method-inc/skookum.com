@@ -23,11 +23,11 @@ class CaseStudies extends React.Component {
 
     return (
       <div className="CaseStudies">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
+          title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <CaseStudiesContent />

@@ -4,7 +4,6 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
-import MajorSectionElement from 'MajorSectionElement';
 import api from 'api';
 
 var {PropTypes} = React;

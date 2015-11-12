@@ -3,12 +3,7 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import invariant from 'react/lib/invariant';
-import {Link} from 'react-router';
-import Logo from 'Logo';
-import Hamburger from 'Hamburger';
-import lookup from 'lookup';
-import {nameToRgba, nameToBinary} from 'nameToColor';
+import {nameToRgba} from 'nameToColor';
 import DocMeta from 'react-doc-meta';
 import {getDefaultTags} from 'metaTags';
 
@@ -60,11 +55,10 @@ class Hero extends Component {
       children,
       color,
       video,
-      image = '',
       className = '',
-      style = EMPTY_OBJECT,
       titleStyle,
       subtitleStyle,
+      isLanding,
       metaTags,
     } = this.props;
 
@@ -81,10 +75,12 @@ class Hero extends Component {
 
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
 
+    var landingClass = isLanding ? 'is-landing' : '';
+
     var tags = getDefaultTags(metaTags);
 
     return (
-      <div className={`Hero ${skinny}`} style={style}>
+      <div className={`Hero ${skinny} ${landingClass}`}>
         <DocMeta tags={tags} />
         <div className="Hero-content">
           <h1 className="Hero-title" style={titleStyle}>
@@ -95,7 +91,7 @@ class Hero extends Component {
           </div>
           {children}
         </div>
-        <div className="Hero-overlay" style={{
+        <div className={`Hero-overlay ${landingClass}`} style={{
           background: backgroundColor,
         }} />
         {this.renderBackground()}

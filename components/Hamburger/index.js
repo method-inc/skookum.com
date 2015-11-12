@@ -1,7 +1,6 @@
 require('./styles.css');
 
 import React, {Component, PropTypes} from 'react';
-import {nameToHex} from 'nameToColor';
 
 class Hamburger extends Component {
   render(): ?ReactElement {

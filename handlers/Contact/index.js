@@ -3,7 +3,6 @@ require('./styles.css');
 import React from 'react';
 import Hero from 'Hero';
 import ContactForm from 'ContactForm';
-import NewsletterInfo from 'NewsletterInfo';
 import Locations from 'Locations';
 import {Resolver} from 'react-resolver';
 import api from 'api';
@@ -26,11 +25,11 @@ class Contact extends React.Component {
 
     return (
       <div className="Contact">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
+          title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <div className="Contact-flex">

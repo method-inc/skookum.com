@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from 'Hero';
 import EventsContent from 'EventsContent';
-import FilterBar from 'FilterBar';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
@@ -24,11 +23,11 @@ class Events extends React.Component {
 
     return (
       <div className="Events">
-        <Hero color="black" 
+        <Hero color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
           videos={lookup(heroInfo, 'videos')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
-          title={heroInfo.title} 
+          title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <EventsContent />

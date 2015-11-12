@@ -25,22 +25,22 @@ function selectFields(arr: Object|Array, fields: Array): Object|Array {
   return o;
 }
 
-type BambooEmployee = {
-  id: string;
-  displayName: string;
-  firstName: string;
-  lastName: string;
-  nickname: string;
-  gender: string;
-  jobTitle: string;
-  workPhone: string;
-  mobilePhone: string;
-  workEmail: string;
-  department: string;
-  location: string;
-  photoUploaded: string;
-  canUploadPhoto: number;
-};
+// type BambooEmployee = {
+//   id: string;
+//   displayName: string;
+//   firstName: string;
+//   lastName: string;
+//   nickname: string;
+//   gender: string;
+//   jobTitle: string;
+//   workPhone: string;
+//   mobilePhone: string;
+//   workEmail: string;
+//   department: string;
+//   location: string;
+//   photoUploaded: string;
+//   canUploadPhoto: number;
+// };
 
 var employees = () => (
   cache('https://api.bamboohr.com/api/gateway.php/skookum/v1/employees/directory', {
@@ -198,6 +198,21 @@ api.get('/contentful/capabilities', function(req, res) {
 api.get('/contentful/hero/:slug', function(req, res) {
   return contentful.contentTypes()
     .then(n => n.filter(r => r.name === 'hero')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.slug': req.params.slug,
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/info/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'info_page')[0].sys.id)
     .then(id => contentful.entries({
       /*eslint-disable*/
       content_type: id,

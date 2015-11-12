@@ -14,15 +14,25 @@
   width: 50%;
 }
 
+.ContactForm-field.is-landing {
+  width: 75%;
+  margin-top: 10px;
+}
+
 .ContactForm-textarea {
   box-sizing: border-box;
   width: 100%;
   background-color: transparent;
+  border-radius: 0;
   border: 1px solid #e1e1e1;
   height: 8em;
   margin-bottom: 13px;
   margin-top: 10px;
   padding: 5px;
+}
+
+.ContactForm-textarea.is-landing {
+  width: 75%;
 }
 
 .ContactForm-header {
@@ -72,6 +82,10 @@
   text-transform: none;
 }
 
+.ContactForm-label.is-textarea.is-landing {
+  margin-top: 30px;
+}
+
 .ContactForm-input {
   box-sizing: border-box;
   display: block;
@@ -89,6 +103,14 @@
   font-size: 18px;
 }
 
+.ContactForm-submit.is-landing {
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 22px 31px;
+  line-height: 1rem;
+  border-radius: 0;
+}
+
 .ContactForm-thanks {
   margin-left: 4em;
   font-size: 2em;
@@ -99,7 +121,13 @@
   .ContactForm-submit {
     width: 100%
   }
-  .ContactForm-field {
+
+  .ContactForm-submit.is-landing {
+    font-size: 12px;
+  }
+  .ContactForm-field,
+  .ContactForm-field.is-landing,
+  .ContactForm-textarea.is-landing {
     width: 100%;
   }
 
@@ -109,5 +137,9 @@
     text-align: center;
     margin-top: 30px;
     font-size: 1.6em;
+  }
+
+  .ContactForm-label.is-textarea {
+    font-size: 1.2em;
   }
 }

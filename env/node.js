@@ -105,7 +105,7 @@ app.get('/google81a679ad3faaa5e0.html', function(req, res) {
 // robots.txt
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
-  res.send('User-agent: *\nDisallow:\n');
+  res.send('User-agent: *\nDisallow: /info/\n');
 });
 
 app.get('*', baseRedirects, function(req, res) {

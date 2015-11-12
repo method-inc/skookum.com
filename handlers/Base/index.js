@@ -42,15 +42,18 @@ class AppBase extends Component {
       };
     }
 
+    var handlerKey = this.getHandlerKey(),
+        showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou';
+
     return (
       <div className="AppBase">
         <DocMeta tags={tags} />
-        <Navigation id="navigation" />
+        {showNavs && <Navigation id="navigation" />}
         <div className="AppBase-nav-background" />
         <div className="AppBase-content">
-          <RouteHandler key={this.getHandlerKey()} />
+          <RouteHandler key={handlerKey} />
         </div>
-        <Footer />
+        {showNavs && <Footer />}
         { isServerRender && <div style={hiddenStyle} dangerouslySetInnerHTML={{ __html: metaTagsHtml }} /> }
       </div>
     );

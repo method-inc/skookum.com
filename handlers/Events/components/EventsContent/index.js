@@ -56,7 +56,7 @@ class EventsContent extends React.Component {
     var startTime = fmtTime(_date.getHours());
 
     return (
-      <div className="EventsContent-date">{month} {date}, {year} | {startTime}</div> 
+      <div className="EventsContent-date">{month} {date}, {year} | {startTime}</div>
     );
   }
 
