@@ -5,7 +5,7 @@ require('./styles.css');
 import React, {Component, PropTypes} from 'react';
 import {nameToRgba} from 'nameToColor';
 import DocMeta from 'react-doc-meta';
-import {getDefaultTags} from 'metaTags';
+import {setDefaultTags} from 'metaTags';
 
 /*eslint-disable*/
 var EMPTY_OBJECT = {};
@@ -77,7 +77,7 @@ class Hero extends Component {
 
     var landingClass = isLanding ? 'is-landing' : '';
 
-    var tags = getDefaultTags(metaTags);
+    var tags = setDefaultTags(metaTags);
 
     return (
       <div className={`Hero ${skinny} ${landingClass}`}>

@@ -8,7 +8,7 @@ import {RouteHandler} from 'react-router';
 import Navigation from 'Navigation';
 import Footer from 'Footer';
 import DocMeta from 'react-doc-meta';
-import {getDefaultTags} from 'metaTags';
+import {setDefaultTags} from 'metaTags';
 
 class AppBase extends Component {
   constructor(props: mixed, context: mixed): void {
@@ -25,7 +25,7 @@ class AppBase extends Component {
   }
 
   render(): ReactElement {
-    var tags = getDefaultTags();
+    var tags = setDefaultTags();
 
     var handlerKey = this.getHandlerKey(),
         showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou';
