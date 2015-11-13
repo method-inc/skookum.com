@@ -27,21 +27,6 @@ class AppBase extends Component {
   render(): ReactElement {
     var tags = getDefaultTags();
 
-    var isServerRender = typeof window === 'undefined';
-
-    if (isServerRender) {
-      //tags to be placed in hidden string output then moved to
-      var metaTags = DocMeta.rewind();
-      metaTags = metaTags.map((tag, index) => <meta data-doc-meta="true" key={index} {...tag} />);
-      var metaTagsHtml = React.renderToStaticMarkup(<div>‡{metaTags}‡</div>);
-
-      //to prevent visibility of server-rendered meta content
-      //before react mounts and removes it
-      var hiddenStyle = {
-        display: 'none',
-      };
-    }
-
     var handlerKey = this.getHandlerKey(),
         showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou';
 
@@ -54,7 +39,6 @@ class AppBase extends Component {
           <RouteHandler key={handlerKey} />
         </div>
         {showNavs && <Footer />}
-        { isServerRender && <div style={hiddenStyle} dangerouslySetInnerHTML={{ __html: metaTagsHtml }} /> }
       </div>
     );
   }

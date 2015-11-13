@@ -10,7 +10,7 @@ import {Resolver} from 'react-resolver';
 import api from '../api';
 import routes from '../routes';
 import {resources} from './webpack';
-
+import DocMeta from 'react-doc-meta';
 import {readFileSync as read} from 'fs';
 import {join} from 'path';
 import fs from 'fs';
@@ -132,9 +132,9 @@ app.get('*', baseRedirects, function(req, res) {
     return (Resolver.renderToString(<Handler />)
       .then(o => {
         var renderedHtmlString = tmpl({html: o.toString(), data: o.data});
-        var meta = renderedHtmlString.substring(renderedHtmlString.indexOf('‡') + 1, renderedHtmlString.lastIndexOf('‡'));
-        //move meta into head for initial page load
-        renderedHtmlString = renderedHtmlString.replace(meta, '').replace('†meta†', meta);
+        var meta = DocMeta.rewind().map((tag, index) =>
+              React.renderToStaticMarkup(<meta data-doc-meta="true" key={index} {...tag} />));
+        renderedHtmlString = renderedHtmlString.replace('†meta†', meta.join(' '));
         res.status(status).send(renderedHtmlString);
       }));
   });
