@@ -104,9 +104,9 @@ class ContactForm extends React.Component {
     var utmData = cookie.load('utmCodes');
     var inputFields = [];
     for (var key in utmData) {
-       if (utmData.hasOwnProperty(key) && key.toLowerCase().indexOf('utm') > -1) {
-          inputFields.push(<input key={key} type="hidden" value={utmData[key]} name={key}/>)
-        }
+      if (utmData.hasOwnProperty(key) && key.toLowerCase().indexOf('utm') > -1) {
+        inputFields.push(<input key={key} type="hidden" value={utmData[key]} name={key}/>);
+      }
     }
     return inputFields;
   }
