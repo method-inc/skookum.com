@@ -15,7 +15,7 @@
 }
 
 .ContactForm-field.is-landing {
-  width: 75%;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .ContactForm-textarea.is-landing {
-  width: 75%;
+  width: 100%;
 }
 
 .ContactForm-header {
