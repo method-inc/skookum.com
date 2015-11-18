@@ -9,6 +9,7 @@ import Navigation from 'Navigation';
 import Footer from 'Footer';
 import DocMeta from 'react-doc-meta';
 import {setDefaultTags} from 'metaTags';
+import cookie from 'react-cookie';
 
 class AppBase extends Component {
   constructor(props: mixed, context: mixed): void {
@@ -22,6 +23,14 @@ class AppBase extends Component {
     var id = router.getCurrentParams().id;
     if (id) { key += id; }
     return key;
+  }
+
+  componentWillMount() {
+    var {router} = this.context;
+    var query = JSON.stringify(router.getCurrentQuery());
+    if (query && query.indexOf('utm') > -1) {
+      cookie.save('utmCodes', query);
+    }
   }
 
   render(): ReactElement {
