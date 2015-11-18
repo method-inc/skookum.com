@@ -24,7 +24,6 @@ class ContactForm extends React.Component {
       email: '',
       showThankYou: false,
       /* eslint-disable */
-      name: '',
       first_name: '',
       last_name: '',
       phone: '',
@@ -116,13 +115,21 @@ class ContactForm extends React.Component {
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">{this.props.header}</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
-        <div className="ContactForm-field is-landing">
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.name} label="Name*" name="name" />
+        <div className="ContactForm-field">
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="First Name*" name="first_name" />
+        </div>
+        <div className="ContactForm-field">
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.last_name} label="Last Name*" name="last_name" />
         </div>
         <div className="ContactForm-field is-landing">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
         <input type="hidden" value={this.props.campaign} name="campaign"/>
+        <input type="hidden" value={this.props.campaign} name="utm_source"/>
+        <input type="hidden" value={this.props.campaign} name="utm_medium"/>
+        <input type="hidden" value={this.props.campaign} name="utm_term"/>
+        <input type="hidden" value={this.props.campaign} name="utm_content"/>
+        <input type="hidden" value={this.props.campaign} name="utm_campaign"/>
         <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
         <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.additional_information} name="additional_information"></textarea>
         <div>
