@@ -7,6 +7,7 @@ import Input from 'Input';
 import Button from 'Button';
 import Label from 'Label';
 import {AoProcessForm} from 'actOn';
+import cookie from 'react-cookie';
 
 var last = n => n[n.length - 1];
 var pluck = (o, ...keys) =>
@@ -24,7 +25,6 @@ class ContactForm extends React.Component {
       email: '',
       showThankYou: false,
       /* eslint-disable */
-      name: '',
       first_name: '',
       last_name: '',
       phone: '',
@@ -38,6 +38,7 @@ class ContactForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.getMissingFields = this.getMissingFields.bind(this);
     this.renderLandingPageForm = this.renderLandingPageForm.bind(this);
+    this.getUTMData = this.getUTMData.bind(this);
   }
 
   handleChange(event: mixed): void {
@@ -88,22 +89,26 @@ class ContactForm extends React.Component {
   }
 
   getMissingFields() {
-    var requiredFields = [];
-    if (!this.props.isLandingPage) {
-      requiredFields = [
-        'first_name', 'last_name', 'email',
-      ];
-    } else {
-      requiredFields = [
-        'name', 'email',
-      ];
-    }
+    var requiredFields = [
+      'first_name', 'last_name', 'email',
+    ];
 
     var missingFields = requiredFields.reduce(
       (missing, n) =>
         (typeof this.state[n] === 'undefined' || this.state[n] === '') ? missing.concat(n) : missing,
     []);
     return missingFields;
+  }
+
+  getUTMData() {
+    var utmData = cookie.load('utmCodes');
+    var inputFields = [];
+    for (var key in utmData) {
+      if (utmData.hasOwnProperty(key) && key.toLowerCase().indexOf('utm') > -1) {
+        inputFields.push(<input key={key} type="hidden" value={utmData[key]} name={key}/>);
+      }
+    }
+    return inputFields;
   }
 
   renderLandingPageForm(labelStyle) {
@@ -116,13 +121,17 @@ class ContactForm extends React.Component {
         onSubmit={this.handleSubmit}>
         <header className="ContactForm-header">{this.props.header}</header>
         {this.state.error && <Label style={{marginBottom: '1em'}} type="error">{this.state.error.message}</Label>}
-        <div className="ContactForm-field is-landing">
-          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.name} label="Name*" name="name" />
+        <div className="ContactForm-field">
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.first_name} label="First Name*" name="first_name" />
+        </div>
+        <div className="ContactForm-field">
+          <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.last_name} label="Last Name*" name="last_name" />
         </div>
         <div className="ContactForm-field is-landing">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.email} label="Email*" name="email" type="email" />
         </div>
         <input type="hidden" value={this.props.campaign} name="campaign"/>
+        {this.getUTMData()}
         <label style={labelStyle} className="ContactForm-label is-textarea is-landing">Additional Information to Help Us Prepare</label>
         <textarea className="ContactForm-textarea is-landing" onChange={this.handleChange} value={this.state.additional_information} name="additional_information"></textarea>
         <div>
@@ -133,7 +142,6 @@ class ContactForm extends React.Component {
   }
 
   render(): ReactElement {
-
     if (this.state.message) {
       return (
         <div className="ContactForm">
@@ -172,6 +180,7 @@ class ContactForm extends React.Component {
         <div className="ContactForm-field">
           <Input labelStyle={labelStyle} required onChange={this.handleChange} value={this.state.phone} label="Phone" name="phone" type="tel" />
         </div>
+        {this.getUTMData()}
         <label style={labelStyle} className="ContactForm-label is-textarea">How can we help you?</label>
         <textarea className="ContactForm-textarea" onChange={this.handleChange} value={this.state.how_can_we_help} name="how_can_we_help"></textarea>
         <fieldset className="ContactForm-fieldset">
