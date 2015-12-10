@@ -32,7 +32,7 @@ class ShareLinks extends React.Component {
         <a href={`http://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`} onClick={popUpWindow}>
           <LinkedinIcon />
         </a>
-        <a href={`https://twitter.com/intent/tweet?url=${url}L&text=${title}`} onClick={popUpWindow}>
+        <a href={`https://twitter.com/intent/tweet?url=${url}&text=${title}`} onClick={popUpWindow}>
           <TwitterIcon />
         </a>
         <a href={`http://www.facebook.com/sharer/sharer.php?u=${url}&title=${title}`} onClick={popUpWindow}>
