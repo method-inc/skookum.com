@@ -21,6 +21,11 @@ var baseRedirects = (req, res, next) => {
   var redirect = false;
   var url = req.url;
 
+  if (req.headers.host.slice(0, 4) === 'www.') {
+    var newHost = req.headers.host.slice(4);
+    return res.redirect(301, req.protocol + '://' + newHost + url);
+  }
+
   if (url.indexOf('/?') > -1 && url.indexOf('/?') !== 0) {
     redirect = true;
     url = url.replace('/?', '?');
