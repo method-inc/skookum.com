@@ -9,7 +9,7 @@ import WallOfFaces from 'WallOfFaces';
 var cn = s => `CultureContent-${s}`;
 
 var BENEFITS = [
-  '5 weeks paid vacation starting on day one',
+  'Open PTO policy, take the time you need',
   'Access to senior leadership',
   'Stocked kitchen including healthy snacks and delicious beer',
   'Awesome medical plan plus the ability to earn money from your deductible',
@@ -17,7 +17,7 @@ var BENEFITS = [
   'Professional masseuse occasionally in-office',
   'Regular company outings',
   'Free lunch every Friday',
-  'Professional growth opportunities including internal working groups, our library, and 5 conference days annually',
+  'Professional growth opportunities',
   'Matching 401k',
   'Work/life balance',
   'And other things we’d rather surprise you with',
