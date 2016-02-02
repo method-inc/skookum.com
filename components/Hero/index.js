@@ -17,7 +17,7 @@ class Hero extends Component {
   constructor(props: mixed): void {
     super(props);
     this.state = {
-      isMobile: false
+      isMobile: false,
     };
 
     this.renderBackground = this.renderBackground.bind(this);
@@ -32,12 +32,12 @@ class Hero extends Component {
 
   renderBackground() {
 
-    var { image, poster, video } = this.props;
+    var { image, video } = this.props;
     if (video && !this.state.isMobile) {
-      console.log(video);
       return (
         <div>
-          <iframe src={`${video.replace('vimeo.com', 'player.vimeo.com/video')}?loop=1&autoplay=1`} className="Hero-video" width="500" height="282" frameborder="0" ></iframe>
+          <iframe src={`${video.replace('vimeo.com', 'player.vimeo.com/video')}?background=1&api=1`}
+                  className="Hero-video" frameborder="0" ref="video" ></iframe>
           <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
         </div>
       );

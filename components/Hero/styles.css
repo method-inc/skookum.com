@@ -3,7 +3,7 @@
 .Hero {
   background: #393939;
   color: #fff;
-  height: 100vh;
+  height: 55vh;
   min-height: 600px;
   max-height: 768px;
   position: relative;
@@ -111,6 +111,10 @@
 }
 
 @media screen and (max-width: 1025px) {
+  .Hero {
+    height: 100vh;
+  }
+
   .Hero-subtitle {
     font-size: 3.5em;
   }
@@ -136,6 +140,7 @@
     height: initial;
     min-height: 350px;
   }
+
   .Hero-overlay {
     right: 0;
   }
