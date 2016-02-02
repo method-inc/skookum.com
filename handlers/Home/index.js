@@ -35,7 +35,7 @@ class Home extends React.Component {
           childrenPosition="before"
           color="black"
           image={lookup(heroInfo, 'image.fields.file.url') || '/public/images/hero-default.png'}
-          videos={lookup(heroInfo, 'videos')}
+          video={lookup(heroInfo, 'vimeo')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>}
@@ -71,5 +71,3 @@ export default Resolver.createContainer(Home, {
     },
   },
 });
-
-

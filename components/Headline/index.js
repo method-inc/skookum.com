@@ -17,7 +17,7 @@ class Headline extends React.Component {
 
 Headline.propTypes = {
   text: PropTypes.string.isRequired,
-  style: PropTypes.obj,
+  style: PropTypes.any,
 };
 
 export default Headline;
