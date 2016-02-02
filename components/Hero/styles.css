@@ -3,8 +3,8 @@
 .Hero {
   background: #393939;
   color: #fff;
-  height: 55vh;
-  min-height: 600px;
+  height: 54vw;
+  min-height: 568px;
   max-height: 768px;
   position: relative;
   overflow: hidden;
@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 1025px) {
   .Hero {
-    height: 100vh;
+    height: 100vw;
   }
 
   .Hero-subtitle {
