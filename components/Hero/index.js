@@ -16,28 +16,28 @@ class Hero extends Component {
 
   constructor(props: mixed): void {
     super(props);
-    this.state = {isMobile: false};
+    this.state = {
+      isMobile: false,
+    };
+
     this.renderBackground = this.renderBackground.bind(this);
   }
 
   componentDidMount(): void {
     if (typeof document === 'undefined') return;
     if (document.body.clientWidth < 1025) {
-      this.setState({isMobile: true});
+      this.setState({ isMobile: true });
     }
   }
 
   renderBackground() {
 
-    var {videos, image, poster} = this.props;
-    if (videos && videos.length > 0 && !this.state.isMobile) {
+    var { image, video } = this.props;
+    if (video && !this.state.isMobile) {
       return (
         <div>
-          <video preload="auto" autoPlay muted loop className="Hero-video" poster={poster} >
-            {videos.map(video => (
-              <source key={video.fields.file.url} src={video.fields.file.url} type={video.fields.file.contentType} />
-            ))}
-          </video>
+          <iframe src={`${video.replace('vimeo.com', 'player.vimeo.com/video')}?background=1&api=1`}
+                  className="Hero-video" frameborder="0" ref="video" ></iframe>
           <div className="Hero-image Hero-image--mobile" style={{backgroundImage: `url(${image})`}} />
         </div>
       );
@@ -54,7 +54,6 @@ class Hero extends Component {
       subtitle,
       children,
       color,
-      video,
       className = '',
       titleStyle,
       subtitleStyle,
@@ -66,7 +65,6 @@ class Hero extends Component {
     if (color === 'yellow') {
       className = className + 'is-light';
     }
-
 
     titleStyle = typeof title === 'undefined' ? titleStyle = {display: 'none'} : titleStyle;
     subtitleStyle = (typeof subtitle === 'undefined' || !subtitle) ? subtitleStyle = {display: 'none'} : subtitleStyle;
@@ -84,7 +82,7 @@ class Hero extends Component {
         <DocMeta tags={tags} />
         <div className="Hero-content">
           <h1 className="Hero-title" style={titleStyle}>
-              {title}
+            {title}
           </h1>
           <div className="Hero-subtitle" style={subtitleStyle}>
             {subtitle}
@@ -101,12 +99,13 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
+  title: PropTypes.any,
   subtitle: PropTypes.any,
   color: PropTypes.oneOf(['black', 'yellow', 'red', 'orange']),
   image: PropTypes.string.isRequired,
   video: PropTypes.string,
   children: PropTypes.node,
-  style: PropTypes.object,
+  style: PropTypes.any,
 };
 
 Hero.defaultProps = {
@@ -114,4 +113,3 @@ Hero.defaultProps = {
 };
 
 export default Hero;
-
