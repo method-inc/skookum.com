@@ -28,6 +28,15 @@ function getDefaultImage(tags: Array): String {
 
 class BlogArticle extends React.Component {
 
+  getTitle(title, date) {
+    return(
+      <div>
+        <div>{title}</div>
+        <div className="BlogArticle-date">{fmt.date(new Date(date))}</div>
+      </div>
+    )
+  }
+
   render(): ?ReactElement {
     if (this.props.article === 'notfound') { return <NotFound />; }
     var {
@@ -70,7 +79,7 @@ class BlogArticle extends React.Component {
     return (
       <article itemScope itemType="http://schema.org/BlogPosting" className="BlogArticle">
         <Hero
-          title={<div itemProp="headline">{title}</div>}
+          title={this.getTitle(title, datePublished)}
           image={poster}
           titleStyle={{textTransform: 'none', maxWidth: '600px', paddingRight: '5%'}}
           color="black"
