@@ -29,12 +29,12 @@ function getDefaultImage(tags: Array): String {
 class BlogArticle extends React.Component {
 
   getTitle(title, date) {
-    return(
+    return (
       <div>
         <div>{title}</div>
         <div className="BlogArticle-date">{fmt.date(new Date(date))}</div>
       </div>
-    )
+    );
   }
 
   render(): ?ReactElement {

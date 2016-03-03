@@ -62,11 +62,11 @@ class EventsContent extends React.Component {
   }
 
   getMeetupEvents(events) {
-    return Object.keys(this.props.events).reduce((events, location) => {
-      if (this.props.events[location]) {
-        this.props.events[location].forEach(n => events.push(n));
+    return Object.keys(events).reduce((results, location) => {
+      if (events[location]) {
+        events[location].forEach(n => results.push(n));
       }
-      return events;
+      return results;
     }, []);
   }
 
