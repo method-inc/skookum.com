@@ -11,6 +11,11 @@
   display: none;
 }
 
+.BlogArticle-date {
+  margin-top: 24px;
+  font-size: 2rem;
+}
+
 .BlogArticle-content h1,
 .BlogArticle-content h2,
 .BlogArticle-content h3,

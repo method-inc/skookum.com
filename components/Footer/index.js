@@ -10,7 +10,6 @@ class Footer extends React.Component {
     return (
       <footer className="Footer">
         <div className="Footer-links">
-          <Link to="events" className="Footer-link">Events</Link>
           <Link to="careers" className="Footer-link">Careers</Link>
           <Link to="open-source" className="Footer-link">Open&nbsp;Source</Link>
           <a href="https://www.twitter.com/skookum" target="_blank" className="Footer-link">Twitter</a>
