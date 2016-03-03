@@ -33,7 +33,14 @@
 
 .EventsContent-groupName {
   font-size: 1em;
+  font-weight: 400;
   margin-bottom: 10px;
+}
+
+.EventsContent-location,
+.EventsContent-description {
+  margin-bottom: 10px;
+  max-width: 900px;
 }
 
 .EventsContent-button {
