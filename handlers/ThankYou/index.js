@@ -23,7 +23,7 @@ class ThankYou extends React.Component {
               Thank You!
             </h1>
             <h2 className="ThankYou-subtitle">
-              We cant wait to hear more about your business.
+              We can't wait to hear more about your business.
             </h2>
           </div>
         </Hero>
