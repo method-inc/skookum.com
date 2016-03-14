@@ -26,10 +26,6 @@ const MONTHS = [
 
 var pad = n => n < 10 ? `0${n}` : ('' + n);
 
-var fmtTime = (date) => (
-  `${fmtHours(date.getHours())}:${fmtMinutes(date.getMinutes())} ${fmtAMPM(date.getHours())}`
-);
-
 var fmtAMPM = hr => (
   hr < 12 ? 'am' : 'pm'
 );
@@ -40,6 +36,10 @@ var fmtHours = hr => (
 
 var fmtMinutes = minute => (
   minute < 10 ? `0${minute}` : minute
+);
+
+var fmtTime = (date) => (
+  `${fmtHours(date.getHours())}:${fmtMinutes(date.getMinutes())} ${fmtAMPM(date.getHours())}`
 );
 
 class EventsContent extends React.Component {
