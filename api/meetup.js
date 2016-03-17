@@ -1,6 +1,6 @@
 import cache from './cache';
 
-const CHARLOTTE_OFFICE_ID = 1543691;
+const CHARLOTTE_OFFICE_ID = [1543691, 1376117, 23998720].toString();
 const DENVER_OFFICE_ID = 23650754;
 
 export default function(req, res) {
