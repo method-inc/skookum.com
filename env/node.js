@@ -23,7 +23,7 @@ var baseRedirects = (req, res, next) => {
   var redirect = false;
   var url = req.url;
   var host = req.headers.host;
-  var subDomainCheck = host.split('.')
+  var subDomainCheck = host.split('.');
   var subDomain = subDomainCheck.length > 2 ? subDomainCheck[0] : '';
   var domain = subDomainCheck.length > 2 ? subDomainCheck.slice(1).join('.') : subDomainCheck.join('.');
   var redirectStr = req.protocol + '://' + domain;
