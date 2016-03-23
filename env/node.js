@@ -17,14 +17,16 @@ import fs from 'fs';
 
 var siteMap = fs.readFileSync(join(process.cwd(), 'sitemap.xml'));
 
+var validPaths = ['blog', 'capabilities', 'work', 'contact', 'events', 'open-source', 'innovation-camp', 'careers', '2460dac7'];
+
 var baseRedirects = (req, res, next) => {
   var redirect = false;
   var url = req.url;
-
-  if (req.headers.host.slice(0, 4) === 'www.') {
-    var newHost = req.headers.host.slice(4);
-    return res.redirect(301, req.protocol + '://' + newHost + url);
-  }
+  var host = req.headers.host;
+  var subDomainCheck = host.split('.')
+  var subDomain = subDomainCheck.length > 2 ? subDomainCheck[0] : '';
+  var domain = subDomainCheck.length > 2 ? subDomainCheck.slice(1).join('.') : subDomainCheck.join('.');
+  var redirectStr = req.protocol + '://' + domain;
 
   if (url.indexOf('/?') > -1 && url.indexOf('/?') !== 0) {
     redirect = true;
@@ -41,8 +43,16 @@ var baseRedirects = (req, res, next) => {
     url = url.substring(0, url.length - 1);
   }
 
+  if (subDomain) {
+    redirect = true;
+    var validPath = validPaths.find((path) => path === subDomain);
+    if (validPath) {
+      redirectStr += url.indexOf('/' + validPath) === 0 ? '' : '/' + validPath;
+    }
+  }
+
   if (redirect) {
-    return res.redirect(301, url);
+    return res.redirect(301, redirectStr + url);
   }
   next();
 };
