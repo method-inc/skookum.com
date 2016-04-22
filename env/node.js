@@ -23,10 +23,15 @@ var baseRedirects = (req, res, next) => {
   var redirect = false;
   var url = req.url;
   var host = req.headers.host;
+  var isStaging = host === '45.55.81.193';
   var subDomainCheck = host.split('.');
   var subDomain = subDomainCheck.length > 2 ? subDomainCheck[0] : '';
   var domain = subDomainCheck.length > 2 ? subDomainCheck.slice(1).join('.') : subDomainCheck.join('.');
   var redirectStr = req.protocol + '://' + domain;
+
+  if (isStaging) {
+    redirectStr = req.protocol + '://' + req.headers.host;
+  }
 
   if (url.indexOf('/?') > -1 && url.indexOf('/?') !== 0) {
     redirect = true;
@@ -43,7 +48,7 @@ var baseRedirects = (req, res, next) => {
     url = url.substring(0, url.length - 1);
   }
 
-  if (subDomain) {
+  if (subDomain && !isStaging) {
     redirect = true;
     var validPath = validPaths.find((path) => path === subDomain);
     if (validPath) {
