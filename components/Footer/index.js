@@ -9,23 +9,20 @@ class Footer extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {msg: '', email: '', success: ''}
+    this.state = {msg: '', email: '', success: ''};
   }
 
   onSubmit(e){
     e.preventDefault();
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!reg.test(this.state.email)){
-      this.setState({msg: "Please enter a valid email address."})
-    } else{
+    if (!reg.test(this.state.email)){
+      this.setState({msg: 'Please enter a valid email address.'});
+    } else {
       fetch('http://gettoknow.skookum.com/acton/eform/17086/0005/d-ext-0001', {
-        method: 'post'
-      }).then(function(response) {
-        console.log(response)
-      }).catch(function(err) {
-        console.log(err)
+        method: 'post',
+        body: this.state.email,
       });
-      this.setState({success: "Thanks for signing up!", email: '', msg: ''})
+      this.setState({success: 'Thanks for signing up!', email: '', msg: ''});
     }
   }
 
