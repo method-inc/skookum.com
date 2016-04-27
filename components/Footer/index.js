@@ -30,7 +30,7 @@ class Footer extends React.Component {
       formId: 'form_0005',
     };
 
-    AoProcessForm(event.target, aoCAP);
+    AoProcessForm(e.target, aoCAP);
 
     this.setState({success: 'Thanks for signing up!', email: '', msg: ''});
   }
