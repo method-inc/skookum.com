@@ -65,9 +65,9 @@
 .PreFooter-GetInTouch a {
   text-decoration: none;
   color: white;
-  background-color: #d45b12;
   padding: 20px;
   border-radius: 5px;
+  border: 2px solid white;
 }
 
 .PreFooter-StayInformed {
@@ -154,47 +154,30 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 3em 5% 3em;
     justify-content: center;
   }
   .PreFooter-GetInTouch {
     height: 164px;
     width: 100%;
+    min-width: 0;
     margin-bottom: 10px;
     padding: 2.6em 5% 2.6em;
     text-align: center;
+    margin-right: 0;
   }
   .PreFooter-GetInTouch a {
-    text-decoration: none;
-    color: white;
-    background-color: #d45b12;
-    padding: 20px 40px;
-    border-radius: 5px;
     width: 100%;
   }
   .PreFooter-s1 {
     width: 100%;
-    /* padding-right: 0px; */
-    /* min-width: 250px; */
     margin-right: 0;
     margin-bottom: 30px;;
   }
   .PreFooter-s2{
     width: 100%;
-    min-width: 310px;
   }
   .PreFooter-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid white;
-    color: white;
-    height: 39px;
-    width: 100%;
-    min-width: 10.8em;
     margin-bottom: 30px;
-    margin-right: 19px;
-    outline: none;
     max-width: none;
-    /* font-size: 0.9em; */
   }
 }
