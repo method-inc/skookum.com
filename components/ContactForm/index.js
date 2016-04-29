@@ -183,12 +183,6 @@ class ContactForm extends React.Component {
         {this.getUTMData()}
         <label style={labelStyle} className="ContactForm-label is-textarea">How can we help you?</label>
         <textarea className="ContactForm-textarea" onChange={this.handleChange} value={this.state.how_can_we_help} name="how_can_we_help"></textarea>
-        <fieldset className="ContactForm-fieldset">
-          <label style={labelStyle} className="ContactForm-label is-checkbox">
-            <input onChange={this.handleChange} value="1" className="ContactForm-checkbox" type="checkbox" name="newsletter_subscription" />
-            Sign me up to receive the newsletter
-          </label>
-        </fieldset>
         <Button style={{border: 0}} className="ContactForm-submit" type="primary">Send</Button>
         {this.state.showThankYou && <span className="ContactForm-thanks">Thanks, we'll be in touch!</span>}
       </form>

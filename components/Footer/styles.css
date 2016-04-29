@@ -112,6 +112,9 @@
 }
 
 .PreFooter-input {
+    -webkit-appearance: none;
+    -webkit-border-radius:0;
+    border-radius:0;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
@@ -126,6 +129,9 @@
 
 .PreFooter-input::-webkit-input-placeholder {
     color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius:0;
+    border-radius:0;
 }
 
 .PreFooter-submit {
