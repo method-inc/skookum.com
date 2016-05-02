@@ -61,11 +61,20 @@
   width: 80px;
 }
 
+.ContactForm-fieldset {
+  border: 0;
+  padding: 1em 0 2.5em;
+}
+
 .ContactForm-label {
   color: #333;
   display: block;
   font-size: 0.875em;
   text-transform: uppercase;
+}
+
+.ContactForm-label.is-checkbox {
+  font-size: 0.75em;
 }
 
 .ContactForm-label.is-textarea {
@@ -84,6 +93,10 @@
   border: 0;
   border-bottom: 1px solid #e1e1e1;
   margin-top: 0.5em;
+}
+
+.ContactForm-checkbox {
+  margin-right: 0.5em;
 }
 
 .ContactForm-submit {

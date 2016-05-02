@@ -2,14 +2,14 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {AoProcessForm} from 'actOn';
 
 class Footer extends React.Component {
 
-  constructor(props){
-    super(props);
+  constructor(props, context){
+    super(props, context);
     this.state = {msg: '', email: '', success: ''};
   }
 
@@ -43,8 +43,27 @@ class Footer extends React.Component {
 
     const getYear = new Date().getFullYear();
 
+    if (this.context.router.getCurrentPathname() === '/contact'){
+      return (
+        <div>
+          <footer className="Footer">
+            <div className="Footer-links">
+              <Link to="careers" className="Footer-link">Careers</Link>
+              <Link to="open-source" className="Footer-link">Open&nbsp;Source</Link>
+              <a href="https://www.twitter.com/skookum" target="_blank" className="Footer-link">Twitter</a>
+              <a href="https://www.linkedin.com/company/skookum-digital-works" target="_blank" className="Footer-link">Linkedin</a>
+              <a href="https://www.facebook.com/SkookumInc" target="_blank" className="Footer-link">Facebook</a>
+              <a href="https://instagram.com/skookumpeople" target="_blank" className="Footer-link">Instagram</a>
+            </div>
+            <p className="Footer-legal">Ⓒ {getYear} Skookum. All Rights Reserved.</p>
+          </footer>
+        </div>
+      );
+    }
+
     return (
       <div>
+        {this.context.router.getCurrentPathname() === '/contact' ? '' :
         <div className="PreFooter">
           <div className="PreFooter-GetInTouch"><Link to="contact">Get in touch</Link></div>
             <div className="PreFooter-StayInformed">
@@ -56,6 +75,7 @@ class Footer extends React.Component {
                   An occasional email to keep you  in the loop on news and events
                 </p>
               </div>
+
               <div className="PreFooter-s2">
                 <form id="form_0005" onSubmit={this.onSubmit.bind(this)}>
                   {this.state.success ? this.state.success :
@@ -68,7 +88,7 @@ class Footer extends React.Component {
                 </form>
               </div>
             </div>
-        </div>
+        </div>}
         <footer className="Footer">
           <div className="Footer-links">
             <Link to="careers" className="Footer-link">Careers</Link>
@@ -84,4 +104,9 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
+
 export default Footer;
