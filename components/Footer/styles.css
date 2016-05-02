@@ -50,7 +50,7 @@
 
 .PreFooter-GetInTouch {
     width: 22%;
-    background-color: #f36505;
+    background-color: #F16521;
     margin-right: 10px;
     font-size: 33px;
     min-width: 250px;
@@ -72,7 +72,7 @@
 
 .PreFooter-StayInformed {
     width: 78%;
-    background-color: #f36505;
+    background-color: #F16521;
     height: 100%;
     justify-content: flex-start;
     display: flex;
@@ -85,8 +85,8 @@
 }
 
 .PreFooter-s1 {
-    width: 24%;
-    margin-right: 2vw;
+    width: 17%;
+    margin-right: 5vw;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -100,7 +100,7 @@
 
 .PreFooter-title {
     font-size: 33px;
-    font-weight: inherit;
+    font-weight: 300;
     line-height: 0px;
     margin-bottom: 26px;
 }
@@ -112,12 +112,16 @@
 }
 
 .PreFooter-input {
+    -webkit-appearance: none;
+    -webkit-border-radius:0;
+    border-radius:0;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
     color: white;
     height: 39px;
     width: 100%;
+    margin-right: 25px;
     min-width: 10.8em;
     margin-bottom: 15px;
     outline: none;
@@ -126,6 +130,9 @@
 
 .PreFooter-input::-webkit-input-placeholder {
     color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius:0;
+    border-radius:0;
 }
 
 .PreFooter-submit {
@@ -179,5 +186,6 @@
   .PreFooter-input {
     margin-bottom: 30px;
     max-width: none;
+    margin-right: 0;
   }
 }

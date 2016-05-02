@@ -2,14 +2,14 @@
 
 require('./styles.css');
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import {AoProcessForm} from 'actOn';
 
 class Footer extends React.Component {
 
-  constructor(props){
-    super(props);
+  constructor(props, context){
+    super(props, context);
     this.state = {msg: '', email: '', success: ''};
   }
 
@@ -45,6 +45,7 @@ class Footer extends React.Component {
 
     return (
       <div>
+        {this.context.router.getCurrentPathname() === '/contact' ? '' :
         <div className="PreFooter">
           <div className="PreFooter-GetInTouch"><Link to="contact">Get in touch</Link></div>
             <div className="PreFooter-StayInformed">
@@ -56,6 +57,7 @@ class Footer extends React.Component {
                   An occasional email to keep you  in the loop on news and events
                 </p>
               </div>
+
               <div className="PreFooter-s2">
                 <form id="form_0005" onSubmit={this.onSubmit.bind(this)}>
                   {this.state.success ? this.state.success :
@@ -68,7 +70,7 @@ class Footer extends React.Component {
                 </form>
               </div>
             </div>
-        </div>
+        </div>}
         <footer className="Footer">
           <div className="Footer-links">
             <Link to="careers" className="Footer-link">Careers</Link>
@@ -84,4 +86,9 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.contextTypes = {
+  router: PropTypes.func.isRequired,
+};
+
 export default Footer;
