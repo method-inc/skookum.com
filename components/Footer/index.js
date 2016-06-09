@@ -45,33 +45,23 @@ class Footer extends React.Component {
 
     return (
       <div>
-        {this.context.router.getCurrentPathname() === '/contact' ? '' :
-        <div className="PreFooter">
-          <div className="PreFooter-GetInTouch"><Link to="contact">Get in touch</Link></div>
-            <div className="PreFooter-StayInformed">
-              <div className="PreFooter-s1">
-                <p className="PreFooter-title">
-                  Stay informed
-                </p>
-                <p className="PreFooter-subtitle">
-                  An occasional email to keep you  in the loop on news and events
-                </p>
-              </div>
-
-              <div className="PreFooter-s2">
-                <form id="form_0005" onSubmit={this.onSubmit.bind(this)}>
-                  {this.state.success ? this.state.success :
-                    <span>
-                      <input className="PreFooter-input" name="email" type="text" placeholder="Enter your email address..." value={this.state.email} onChange={this.handleChange.bind(this)}/>
-                      <input className="PreFooter-submit" type="submit" value="SUBMIT" /><br/>
-                    </span>
-                  }
-                  {this.state.msg ? this.state.msg : ''}
-                </form>
-              </div>
-            </div>
-        </div>}
         <footer className="Footer">
+          <div className="Footer-subscribe">
+            <h2 className="Footer-subscribe-title">Stay Informed</h2>
+            <p className="Footer-subscribe-description">Our monthly <a href="#">newsletter</a> keeps you in the loop on news, trends and events.</p>
+            <form id="form_0005" className="Footer-subscribe-form" onSubmit={this.onSubmit.bind(this)}>
+              {this.state.success ? <div className="Footer-thanks-message">{this.state.success}</div> :
+                <span>
+                  <div className="Footer-input-container">
+                    <input name="email" type="text" value={this.state.email} onChange={this.handleChange.bind(this)} required/>
+                    <label>Email Address</label>
+                  </div>
+                  {this.state.msg ? <div className="Footer-input-message">{this.state.msg}</div> : ''}
+                  <button className="button-primary" type="submit" value="Subscribe">Subscribe</button>
+                </span>
+              }
+            </form>
+          </div>
           <div className="Footer-links">
             <Link to="careers" className="Footer-link">Careers</Link>
             <Link to="open-source" className="Footer-link">Open&nbsp;Source</Link>
@@ -79,6 +69,7 @@ class Footer extends React.Component {
             <a href="https://www.linkedin.com/company/skookum-digital-works" target="_blank" className="Footer-link">Linkedin</a>
             <a href="https://www.facebook.com/SkookumInc" target="_blank" className="Footer-link">Facebook</a>
             <a href="https://instagram.com/skookumpeople" target="_blank" className="Footer-link">Instagram</a>
+            <a href="https://dribbble.com/skookum" target="_blank" className="Footer-link">Dribbble</a>
           </div>
           <p className="Footer-legal">Ⓒ {getYear} Skookum. All Rights Reserved.</p>
         </footer>
