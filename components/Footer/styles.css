@@ -28,7 +28,6 @@
 }
 
 .Footer {
-  margin: 8px;
   background: #393939;
   padding: 48px;
 }
@@ -64,6 +63,7 @@
   border-radius: 0;
   font-size: 14px;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .Footer-input-container input:focus, .Footer-input-container input:valid {
@@ -152,7 +152,7 @@
 }
 
 .Footer-subscribe {
-  width: 300px;
+  max-width: 300px;
   margin: 12px auto;
   color: white;
 }
