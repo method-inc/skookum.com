@@ -20,6 +20,7 @@ import StyleGuide from './handlers/StyleGuide';
 import InnovationCamp from './handlers/InnovationCamp';
 import Landing from './handlers/Landing';
 import ThankYou from './handlers/ThankYou';
+import About from './handlers/About';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -49,6 +50,7 @@ var routes = (
     <Route name="innovation-camp" path="innovation-camp" handler={InnovationCamp} />
     <Route name="info" path="info/:slug" handler={Landing} />
     <Route name="thankyou" path="thankyou" handler={ThankYou} />
+    <Route name="about" path="about" handler={About} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );

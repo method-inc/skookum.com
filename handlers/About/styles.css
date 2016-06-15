@@ -1,0 +1,94 @@
+.About-story {
+  background-color: #F7F9FB;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.About-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4em 5%;
+  color: #393939;
+  text-align: center;
+}
+
+.About-story-title {
+  display: inline-block;
+  width: 33.33%;
+  padding: 0;
+  margin: .5em 0 0;
+  vertical-align: top;
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.About-story-text {
+  display: inline-block;
+  width: 66.66%;
+  padding: 0;
+  margin: -16px 0 0;
+  text-align: justify;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.About-leadership-title {
+  padding: 0;
+  margin: .5em 0 0;
+  font-size: 2.5em;
+}
+
+.About-leadership-text {
+  padding: 0;
+  margin: 2em auto;
+  text-align: justify;
+  font-weight: 300;
+  font-size: 1em;
+  max-width: 760px;
+}
+
+.About-leadership-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 5% 4em;
+}
+
+.About-values {
+  background-color: #f7f9fb;
+  padding-bottom: 2em;
+}
+
+.About-values-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0;
+  padding-top: 2em;
+}
+
+.About-values-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 5% 4em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1020px) {
+
+  .About-story {
+    background-position: center;
+  }
+
+  .About-story-title {
+    display: block;
+    width: 100%;
+  }
+
+  .About-story-text {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+  }
+
+}
