@@ -18,28 +18,33 @@
 .Leader-image-container {
   display: inline-block;
   width: 50%;
+  box-sizing: border-box;
+  padding-right: 6%;
 }
 
 .Leader-image-container.is-odd {
   float: right;
+  padding-right: 0;
+  padding-left: 6%;
 }
 
 .Leader-image {
   width: 100%;
+  box-shadow: 0 0 40px 0 #bdc7d0;
 }
 
 .Leader-meta {
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  padding: 2em 0;
-  padding-left: 9%;
+  padding: 1em 0;
+  padding-left: 6%;
   box-sizing: border-box;
 }
 
 .Leader-meta.is-odd {
   padding-left: 0;
-  padding-right: 9%;
+  padding-right: 6%;
 }
 
 .Leader-name {
@@ -48,9 +53,10 @@
 }
 
 .Leader-title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #f16521;
   margin: .5em 0 0;
+  font-weight: 500;
 }
 
 .Leader-description {
@@ -69,15 +75,21 @@
 
 @media screen and (max-width: 1020px) {
 
+  .Leader {
+    padding-bottom: 2em;
+  }
+
   .Leader-image-container {
     display: block;
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
   }
 
   .Leader-image-container.is-odd {
     float: none;
+    padding: 0;
   }
 
   .Leader-image {
@@ -95,6 +107,10 @@
 
   .Leader-meta.is-odd {
     padding-right: 0;
+  }
+
+  .Leader-name {
+    margin-top: 1.5rem;
   }
 
 }

@@ -151,9 +151,10 @@
 
 .Profile-image {
   width: 100%;
+  box-shadow: 0 0 40px 0 #cfd6de;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 900px) {
   .Profile-about {
     display: block;
     width: 100%;
