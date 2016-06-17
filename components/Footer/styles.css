@@ -168,6 +168,10 @@
   font-weight: 300;
 }
 
+.Footer-subscribe .Footer-input-container input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 .Footer-subscribe .Footer-input-container label {
   color: white;
   font-weight: 400;
@@ -201,12 +205,12 @@
   padding-bottom: 32px;
 }
 
-.Footer-subscribe-description a {
+.Footer-subscribe-description-newsletter {
   color: #F8AA31;
   text-decoration: none;
 }
 
-.Footer-subscribe .Footer-subscribe-description a:hover {
+.Footer-subscribe .Footer-subscribe-description-newsletter:hover {
   color: #f7a018;
 }
 
@@ -215,7 +219,8 @@
   font-weight: 300;
   padding-bottom: 24px;
   margin: 0;
-  line-height: 24px;
+  line-height: 50px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 767px) {
@@ -224,5 +229,8 @@
   }
   .Footer-links {
     margin-bottom: 48px;
+  }
+  .Footer-subscribe-title {
+    font-size: 2.7em;
   }
 }

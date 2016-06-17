@@ -48,8 +48,8 @@ class Footer extends React.Component {
         <footer className="Footer">
           <div className="Footer-subscribe">
             <h2 className="Footer-subscribe-title">Stay Informed</h2>
-            <p className="Footer-subscribe-description">Our monthly <a href="#">newsletter</a> keeps you in the loop on news, trends and events.</p>
-            <form id="form_0005" className="Footer-subscribe-form" onSubmit={this.onSubmit.bind(this)}>
+            <div className="Footer-subscribe-description">Our monthly <span className="Footer-subscribe-description-newsletter">newsletter</span> keeps you in the loop on news, trends and events.</div>
+            <form autoComplete="off" id="form_0005" className="Footer-subscribe-form" onSubmit={this.onSubmit.bind(this)}>
               {this.state.success ? <div className="Footer-thanks-message">{this.state.success}</div> :
                 <span>
                   <div className="Footer-input-container">
