@@ -1,0 +1,187 @@
+.Profile {
+  padding-top: 108px;
+  color: #393939;
+}
+
+.Profile-actionshot {
+  height: 60vh;
+  min-height: 400px;
+  max-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.Profile-header {
+  padding: 4em 5%;
+}
+
+.Profile-name {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.Profile-title {
+  color: #f16521;
+  font-size: 1.3em;
+}
+
+.Profile-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4em 5%;
+}
+
+.Profile-about {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  border-right: 1px solid #d3dbe4;
+  padding-top: 1em;
+  padding-right: 3em;
+}
+
+.Profile-description p {
+  margin: 2em 0;
+  font-weight: 300;
+}
+
+.Profile-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 3em;
+}
+
+.Profile-link {
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+.Profile-link:first-child {
+  margin-left: 0;
+}
+
+.Profile-link a {
+  color: #393939;
+}
+
+.Profile-thoughts {
+  display: inline-block;
+  width: 30%;
+  box-sizing: border-box;
+  padding-top: 1em;
+  padding-left: 3em;
+  vertical-align: top;
+}
+
+.Profile-thoughts-header {
+  font-size: 2em;
+  margin: 0;
+}
+
+.Profile-thoughts-list {
+  list-style: none;
+  margin: 2.7em 0 0 0;
+  padding: 0;
+}
+
+.Profile-thoughts-item {
+  margin-bottom: 2em;
+}
+
+.Profile-thoughts-item:last-child {
+  margin-bottom: 0;
+}
+
+.Profile-thoughts-item:last-child .Profile-thought-divider {
+  display: none;
+}
+
+.Profile-thought-title {
+  margin: 0;
+}
+
+.Profile-thought-title a {
+  font-size: 1.3em;
+  color: #393939;
+  text-decoration: none;
+}
+
+.Profile-thought-title a:hover {
+  color: #f16521;
+}
+
+.Profile-thought-summary {
+  margin-bottom: 0;
+}
+
+.Profile-thought-divider {
+  height: 1px;
+  background-color: #f16521;
+  width: 70px;
+  color: transparent;
+  border: 0;
+  margin: 2em 0 0;
+}
+
+.Profile-exec-team {
+  background-color: #f7f9fb;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.Profile-team-list {
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4em 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Profile-team-item {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+  min-width: 20%;
+  margin: 0;
+}
+
+.Profile-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .Profile-about {
+    display: block;
+    width: 100%;
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .Profile-thoughts {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 3em;
+    padding-left: 0;
+  }
+
+  .Profile-team-item {
+    min-width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Profile-team-item {
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Profile-team-item {
+    min-width: 100%;
+  }
+}

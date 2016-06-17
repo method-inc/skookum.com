@@ -4,6 +4,7 @@ require('./styles.css');
 
 import React from 'react';
 import lookup from 'lookup';
+import {Link} from 'react-router';
 
 var {PropTypes} = React;
 
@@ -22,7 +23,7 @@ class Leader extends React.Component {
       <h3 className="Leader-name">{leader.firstName} {leader.lastName}</h3>
       <h4 className="Leader-title">{leader.title}</h4>
       <p className="Leader-description">{leader.description.slice(0,250)}...</p>
-      <a className="Leader-link" href="#">More</a>
+      <Link to="profile" params={{slug: leader.slug}} className="Leader-link">More</Link>
       </div>
       </li>
     );
