@@ -9,4 +9,3 @@ var syncToken;
 client.sync({initial: true}).then(d => syncToken = d.nextSyncToken);
 
 export default client;
-

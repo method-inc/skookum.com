@@ -48,16 +48,6 @@ class Capability extends React.Component {
           {capability.slogan}
         </h2>
         <CapabilityHighlights highlights={capabilityHighlights} />
-        <div className="Capability-footer">
-          <div className="Capability-footer-links">
-            {capabilities.map(n => (
-              <Link to="capability" params={{capability: n.slug}} className="Capability-footer-link">{n.name}</Link>
-            ))}
-          </div>
-          <div className="Capability-contact">
-            <ContactForm formStyle={{margin: '0'}} header="Interested in more information?" labelColor="#fff"/>
-          </div>
-        </div>
       </div>
     );
   }

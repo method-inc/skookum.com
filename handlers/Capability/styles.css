@@ -49,31 +49,6 @@
   font-weight: 300;
 }
 
-.Capability-footer {
-  background-color: #393939;
-  margin-top: 6em;
-  padding: 2em 5% 0;
-}
-
-.Capability-footer-links {
-  padding-top: 0.5em;
-  padding-bottom: 2.5em;
-}
-
-.Capability-footer-link {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  margin-right: 2.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.Capability-footer-link:hover,
-.Capability-footer-link.active {
-  color: #FAAB18;
-}
-
 .Capability-contact {
   color: white;
   border-top: 1px solid #fff;
