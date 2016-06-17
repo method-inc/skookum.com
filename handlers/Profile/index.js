@@ -50,7 +50,7 @@ class Profile extends React.Component {
           <h2 className="Profile-name">Meet more of our team</h2>
           <ul className="Profile-team-list">
             {team.map(n => 
-              <li className="Profile-team-item" style={{width: `${100/team.length}%`}}>
+              <li className="Profile-team-item" style={{width: `${100 / team.length}%`}}>
                 <Link to="profile" params={{slug: n.slug}}>
                   <img className="Profile-image" src={lookup(n, 'headShot.fields.file.url')} />
                 </Link>

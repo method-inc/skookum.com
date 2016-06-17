@@ -13,7 +13,7 @@ class Leader extends React.Component {
   render(): ?ReactElement {
     var leader = this.props.leader;
     var index = this.props.index;
-    var floatClass = index%2 ? ' is-odd' : '';
+    var floatClass = index % 2 ? ' is-odd' : '';
     return (
       <li className="Leader">
        <div className={`Leader-image-container${floatClass}`}>
@@ -22,7 +22,7 @@ class Leader extends React.Component {
       <div className={`Leader-meta ${floatClass}`}>
       <h3 className="Leader-name">{leader.firstName} {leader.lastName}</h3>
       <h4 className="Leader-title">{leader.title}</h4>
-      <p className="Leader-description">{leader.description.slice(0,250)}...</p>
+      <p className="Leader-description">{leader.description.slice(0, 250)}...</p>
       <Link to="profile" params={{slug: leader.slug}} className="Leader-link">More</Link>
       </div>
       </li>
