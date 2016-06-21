@@ -38,9 +38,9 @@ class Home extends React.Component {
           video={lookup(heroInfo, 'vimeo')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>}
+          subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
-        <Headline text="Skookum is a full service software development firm." />
+        <Headline text="SKOOKUM IS A FULL-SERVICE DIGITAL PRODUCT FIRM" />
         <Services />
         <CaseStudy />
         <div className="Home-content">
