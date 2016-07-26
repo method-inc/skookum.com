@@ -11,36 +11,7 @@ import {Link} from 'react-router';
 
 var {PropTypes} = React;
 
-const words = ['business', 'design', 'technical'];
-
 class CaseStudy extends Component {
-
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {
-      word: 'business',
-    };
-
-    this._interval = null;
-    this.wordInterval = this.wordInterval.bind(this);
-  }
-
-  componentDidMount(): void {
-    this._interval = setInterval(this.wordInterval, 2000);
-  }
-
-  componentWillUnmount(): void {
-    clearInterval(this._interval);
-  }
-
-
-  wordInterval(): void {
-    var currentWord = this.state.word,
-        index = words.indexOf(this.state.word) + 1,
-        word = index < words.length ? words[index] : words[0];
-    this.setState({word});
-  }
 
   render(): ReactElement {
     var {slug, clientname, summary, image} = this.props.study.items[0];
@@ -49,7 +20,8 @@ class CaseStudy extends Component {
       <Hero
         childrenPosition="before"
         color="black"
-        image={lookup(image, 'fields.file.url')}>
+        image={lookup(image, 'fields.file.url')}
+        dontSetMetaTags={true}>
         <div className="HomeCaseStudy-banner">
           <h2 className="HomeCaseStudy-title">
             We help businesses evolve.
