@@ -159,19 +159,15 @@
     color: white;
     padding: 2em 5%;
     background-color: transparent;
-  }
-
-  .HomeCaseStudy-feature-container {
-    display: none;
-  }
-
-  .HomeCaseStudy-feature-title {
     display: none;
   }
 
   .HomeCaseStudy-feature-learn {
     position: absolute;
+    left: 5%;
     bottom: 10%;
+    color: white;
+    text-decoration: none;
   }
 
 }

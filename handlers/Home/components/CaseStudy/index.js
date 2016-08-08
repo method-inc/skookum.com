@@ -24,20 +24,20 @@ class CaseStudy extends Component {
         dontSetMetaTags={true}>
         <div className="HomeCaseStudy-banner">
           <h2 className="HomeCaseStudy-title">
-            We help businesses evolve.
+            We focus on people – and that starts with you.
           </h2>
           <div className="HomeCaseStudy-description">
-            For our clients, this means new revenue, substantial efficiency gains and a better quality of life for employees and customers.
+            Great software experiences empower people to do remarkable things. We believe that a great software partner should do the same.
           </div>
         </div>
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-container">
               <h3 className="HomeCaseStudy-feature-title">
-                {clientname}
+                Client Success Story
               </h3>
               <div className="HomeCaseStudy-feature-description">
-                {summary}
+                With the help of a new mobile solution, sales force productivity at Coca Cola Bottling increased 25%.
               </div>
             </div>
             <div className="HomeCaseStudy-feature-learn">
@@ -45,6 +45,7 @@ class CaseStudy extends Component {
             </div>
           </div>
          </Link>
+         <Link className="HomeCaseStudy-feature-learn is-mobile" key="hcs-mobile-link" to="work">View our work</Link>
       </Hero>
     );
   }
