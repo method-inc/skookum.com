@@ -11,7 +11,8 @@ var PRIMARY = [
   ['home', 'Home'],
   ['work', 'Work'],
   ['about', 'About'],
-  ['capabilities', 'capabilities'],
+  ['capabilities', 'Capabilities'],
+  ['news', 'News'],
   ['blog', 'Blog'],
   ['events', 'Events'],
   ['contact', 'Contact'],
@@ -97,6 +98,7 @@ class Navigation extends Component {
             <Link to="work" className="Navigation-main-link">Work</Link>
             <Link to="about" className="Navigation-main-link">About</Link>
             <Link to="capabilities" className="Navigation-main-link">Capabilities</Link>
+            <Link to="news" className="Navigation-main-link">News</Link>
             <Link to="blog" className="Navigation-main-link">Blog</Link>
             <Link to="events" className="Navigation-main-link">Events</Link>
             <Link to="contact" className="Navigation-main-link">Contact</Link>

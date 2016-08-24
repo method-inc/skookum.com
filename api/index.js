@@ -101,6 +101,10 @@ api.get('/contentful', function(req, res) {
     order = '-fields.datePublished';
   }
 
+  if (contentType === 'news') {
+    order = '-fields.date';
+  }
+
   if (contentType === 'service') {
     order = 'fields.order';
   }

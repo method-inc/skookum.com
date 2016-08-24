@@ -22,6 +22,7 @@ import Landing from './handlers/Landing';
 import ThankYou from './handlers/ThankYou';
 import About from './handlers/About';
 import Profile from './handlers/Profile';
+import News from './handlers/News';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -55,6 +56,7 @@ var routes = (
       <Route name="profile" path=":slug" handler={Profile} />
       <DefaultRoute name="about" handler={About} />
     </Route>
+    <Route name="news" path="news" handler={News} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
