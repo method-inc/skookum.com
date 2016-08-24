@@ -18,6 +18,10 @@ var cn = s => `Home-${s}`;
 class Home extends React.Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
+    var textInfo = this.props.textInfo;
+    var headlineText = textInfo.find(n => n.id === 'home-headline');
+    var homeCapabiltiesText = textInfo.find(n => n.id === 'home-capabilities');
+    var capabilitiesButtonText = textInfo.find(n => n.id === 'home-capabilities-button');
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},
@@ -28,7 +32,6 @@ class Home extends React.Component {
       {itemProp: 'name', content: heroInfo.metaTitle},
       {itemProp: 'description', content: heroInfo.metaDescription},
     ];
-
     return (
       <div className="Home">
         <Hero
@@ -38,20 +41,20 @@ class Home extends React.Component {
           video={lookup(heroInfo, 'vimeo')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>}
+          subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
-        <Headline text="Skookum is a full service software development firm." />
+        <Headline text={headlineText.title} />
         <Services />
         <CaseStudy />
         <div className="Home-content">
           <div className="Home-content-container">
             <h2 className="Home-content-title">
-              There is no limit.
+              {homeCapabiltiesText.title}
             </h2>
             <div className="Home-content-description">
-              We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
+               {homeCapabiltiesText.text}
             </div>
-            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>Learn more about our capabilities</Button>
+            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>{capabilitiesButtonText.title}</Button>
           </div>
         </div>
         <Clients />
@@ -68,6 +71,9 @@ export default Resolver.createContainer(Home, {
   resolve: {
     heroInfo() {
       return api(`contentful/hero/home`);
+    },
+    textInfo() {
+      return api(`contentful/text/home`);
     },
   },
 });

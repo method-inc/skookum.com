@@ -11,61 +11,36 @@ import {Link} from 'react-router';
 
 var {PropTypes} = React;
 
-const words = ['business', 'design', 'technical'];
-
 class CaseStudy extends Component {
-
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {
-      word: 'business',
-    };
-
-    this._interval = null;
-    this.wordInterval = this.wordInterval.bind(this);
-  }
-
-  componentDidMount(): void {
-    this._interval = setInterval(this.wordInterval, 2000);
-  }
-
-  componentWillUnmount(): void {
-    clearInterval(this._interval);
-  }
-
-
-  wordInterval(): void {
-    var currentWord = this.state.word,
-        index = words.indexOf(this.state.word) + 1,
-        word = index < words.length ? words[index] : words[0];
-    this.setState({word});
-  }
 
   render(): ReactElement {
     var {slug, clientname, summary, image} = this.props.study.items[0];
+    var textInfo = this.props.textInfo;
+    var caseStudyText = textInfo.find(n => n.id === 'home-casestudy');
+    var featureText = textInfo.find(n => n.id === 'home-casestudy-feature');
 
     return (
       <Hero
         childrenPosition="before"
         color="black"
-        image={lookup(image, 'fields.file.url')}>
+        image={lookup(image, 'fields.file.url')}
+        dontSetMetaTags={true}>
         <div className="HomeCaseStudy-banner">
           <h2 className="HomeCaseStudy-title">
-            We help businesses evolve.
+            {caseStudyText.title}
           </h2>
           <div className="HomeCaseStudy-description">
-            For our clients, this means new revenue, substantial efficiency gains and a better quality of life for employees and customers.
+            {caseStudyText.text}
           </div>
         </div>
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-container">
               <h3 className="HomeCaseStudy-feature-title">
-                {clientname}
+                {featureText.title}
               </h3>
               <div className="HomeCaseStudy-feature-description">
-                {summary}
+                {featureText.text}
               </div>
             </div>
             <div className="HomeCaseStudy-feature-learn">
@@ -73,6 +48,7 @@ class CaseStudy extends Component {
             </div>
           </div>
          </Link>
+         <Link className="HomeCaseStudy-feature-learn is-mobile" key="hcs-mobile-link" to="work">View our work</Link>
       </Hero>
     );
   }
@@ -82,12 +58,16 @@ CaseStudy.displayName = 'CaseStudy';
 
 CaseStudy.propTypes = {
   study: PropTypes.any.isRequired,
+  textInfo: PropTypes.any.isRequired
 };
 
 export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
       return api(`contentful?content_type=case_study&limit=1&fields.featured=true`);
+    },
+    textInfo() {
+      return api(`contentful/text/home`);
     },
   },
 });

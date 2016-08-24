@@ -37,7 +37,7 @@ CaseStudiesContent.propTypes = {
 export default Resolver.createContainer(CaseStudiesContent, {
   resolve: {
     caseStudies() {
-      return api(`contentful?content_type=case_study`);
+      return api(`contentful?content_type=case_study&limit=100`);
     },
   },
 });

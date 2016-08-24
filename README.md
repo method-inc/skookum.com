@@ -46,7 +46,7 @@ A few of the things that you will find in here:
   The data and UI layers should be able to scale independently as needed.
 * SuitCSS conformance checking. CSS in and of itself includes many foot-guns.
   Suit will keep the safety on. (We will likely be exploring other more
-  restrictive options in the future)
+  restrictive options in the future).
 * Rich documentation and style guide web interface.
 
 Ideally, in this environment you should have less to think about while writing a
