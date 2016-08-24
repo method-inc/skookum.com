@@ -34,7 +34,7 @@ class Profile extends React.Component {
             </ul>
           </div>
           <div className="Profile-thoughts">
-            <h3 className="Profile-thoughts-header">Thoughts</h3>
+            <h3 className="Profile-thoughts-header">Perspective</h3>
             <ul className="Profile-thoughts-list">
               {leader.articles.map(n =>
                 <li className="Profile-thoughts-item">

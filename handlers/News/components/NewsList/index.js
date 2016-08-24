@@ -33,11 +33,11 @@ class NewsList extends Component {
         {this.props.articles.items.map(a => (
           <div key={a.title} className="Blog-article">
             <div className="Blog-article-content">
-              <a className="Blog-article-title-link" href={a.url}>
+              <a className="Blog-article-title-link" href={a.url} target="_blank">
                 <h2 className="Blog-article-title">{a.title}</h2>
               </a>
               <Typography className="Blog-article-summary" type={Typography.DESCRIPTION_TEXT} dangerouslySetInnerHTML={{__html: markdown(a.summary || '')}} />
-              <a className="NewsList-url" href={a.url}>{a.urlTitle} &raquo;</a>
+              <a className="NewsList-url" href={a.url} target="_blank">{a.urlTitle} &raquo;</a>
               <div className="Blog-article-info">
                 <span className="Blog-article-author">{a.source}</span> | <span>{fmt.date(new Date(a.date))}</span>
               </div>
