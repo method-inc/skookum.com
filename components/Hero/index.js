@@ -59,6 +59,7 @@ class Hero extends Component {
       subtitleStyle,
       isLanding,
       metaTags,
+      dontSetMetaTags,
     } = this.props;
 
     className = 'Hero ' + className;
@@ -74,12 +75,11 @@ class Hero extends Component {
     var skinny = typeof children === 'undefined' && (typeof subtitle === 'undefined' || !subtitle) ? 'is-skinny' : '';
 
     var landingClass = isLanding ? 'is-landing' : '';
-
     var tags = setDefaultTags(metaTags);
 
     return (
       <div className={`Hero ${skinny} ${landingClass}`}>
-        <DocMeta tags={tags} />
+        {!dontSetMetaTags && <DocMeta tags={tags} />}
         <div className="Hero-content">
           <h1 className="Hero-title" style={titleStyle}>
             {title}

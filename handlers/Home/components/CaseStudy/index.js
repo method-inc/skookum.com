@@ -11,36 +11,7 @@ import {Link} from 'react-router';
 
 var {PropTypes} = React;
 
-const words = ['business', 'design', 'technical'];
-
 class CaseStudy extends Component {
-
-  constructor(props: mixed, context: mixed): void {
-    super(props, context);
-
-    this.state = {
-      word: 'business',
-    };
-
-    this._interval = null;
-    this.wordInterval = this.wordInterval.bind(this);
-  }
-
-  componentDidMount(): void {
-    this._interval = setInterval(this.wordInterval, 2000);
-  }
-
-  componentWillUnmount(): void {
-    clearInterval(this._interval);
-  }
-
-
-  wordInterval(): void {
-    var currentWord = this.state.word,
-        index = words.indexOf(this.state.word) + 1,
-        word = index < words.length ? words[index] : words[0];
-    this.setState({word});
-  }
 
   render(): ReactElement {
     var {slug, clientname, summary, image} = this.props.study.items[0];
@@ -49,23 +20,24 @@ class CaseStudy extends Component {
       <Hero
         childrenPosition="before"
         color="black"
-        image={lookup(image, 'fields.file.url')}>
+        image={lookup(image, 'fields.file.url')}
+        dontSetMetaTags={true}>
         <div className="HomeCaseStudy-banner">
           <h2 className="HomeCaseStudy-title">
-            We help businesses evolve.
+            We focus on people – and that starts with you.
           </h2>
           <div className="HomeCaseStudy-description">
-            For our clients, this means new revenue, substantial efficiency gains and a better quality of life for employees and customers.
+            Great software experiences empower people to do remarkable things. We believe that a great software partner should do the same.
           </div>
         </div>
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-container">
               <h3 className="HomeCaseStudy-feature-title">
-                {clientname}
+                Client Success Story
               </h3>
               <div className="HomeCaseStudy-feature-description">
-                {summary}
+                With the help of a new mobile solution, sales force productivity at Coca Cola Bottling increased 25%.
               </div>
             </div>
             <div className="HomeCaseStudy-feature-learn">
@@ -73,6 +45,7 @@ class CaseStudy extends Component {
             </div>
           </div>
          </Link>
+         <Link className="HomeCaseStudy-feature-learn is-mobile" key="hcs-mobile-link" to="work">View our work</Link>
       </Hero>
     );
   }

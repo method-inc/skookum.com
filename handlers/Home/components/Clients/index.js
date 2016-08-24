@@ -16,7 +16,7 @@ class Clients extends Component {
             For over a decade
           </h2>
           <div className="HomeClients-description">
-            we have produced mission-critical software for companies of all sizes and types.
+            we have helped ambitious business and technology teams differentiate, compete and win.
           </div>
         </div>
         <div className="HomeClients-clients">

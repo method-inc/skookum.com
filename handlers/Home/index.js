@@ -38,18 +38,18 @@ class Home extends React.Component {
           video={lookup(heroInfo, 'vimeo')}
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
-          subtitle={<span>Custom software for companies and the <span style={{color: nameToHex('orange')}}>people</span> they empower.</span>}
+          subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
-        <Headline text="Skookum is a full service software development firm." />
+        <Headline text="SKOOKUM IS A FULL SERVICE DIGITAL PRODUCT FIRM" />
         <Services />
         <CaseStudy />
         <div className="Home-content">
           <div className="Home-content-container">
             <h2 className="Home-content-title">
-              There is no limit.
+              Make an impact
             </h2>
             <div className="Home-content-description">
-              We’re a diverse bunch of strategists, designers and engineers. We blend broad experience in bleeding-edge tech with deep expertise in implementing enterprise-grade solutions. If you can dream it, we can give it life.
+               Our team of product, design and technology professionals work in partnership with organizations that want to make their customer and employee experiences distinctly more meaningful, efficient – and enjoyable. This in turn drives business growth and sustainable competitive advantage.
             </div>
             <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>Learn more about our capabilities</Button>
           </div>
