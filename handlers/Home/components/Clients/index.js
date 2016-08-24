@@ -9,14 +9,17 @@ import lookup from 'lookup';
 
 class Clients extends Component {
   render(): ?ReactElement {
+    var textInfo = this.props.textInfo || [];
+    var clientText = textInfo.find(n => n.id === 'home-clients');
+
     return (
       <div className="HomeClients">
         <div className="HomeClients-content">
           <h2 className="HomeClients-title">
-            For over a decade
+            {clientText.title}
           </h2>
           <div className="HomeClients-description">
-            we have helped ambitious business and technology teams differentiate, compete and win.
+            {clientText.text}
           </div>
         </div>
         <div className="HomeClients-clients">
@@ -40,12 +43,16 @@ Clients.displayName = 'Clients';
 
 Clients.propTypes = {
   clients: PropTypes.any.isRequired,
+  textInfo: PropTypes.any.isRequired
 };
 
 export default Resolver.createContainer(Clients, {
   resolve: {
     clients() {
       return api(`contentful?content_type=client&limit=8`);
+    },
+    textInfo() {
+      return api(`contentful/text/home`);
     },
   },
 });

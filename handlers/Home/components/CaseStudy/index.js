@@ -15,6 +15,9 @@ class CaseStudy extends Component {
 
   render(): ReactElement {
     var {slug, clientname, summary, image} = this.props.study.items[0];
+    var textInfo = this.props.textInfo;
+    var caseStudyText = textInfo.find(n => n.id === 'home-casestudy');
+    var featureText = textInfo.find(n => n.id === 'home-casestudy-feature');
 
     return (
       <Hero
@@ -24,20 +27,20 @@ class CaseStudy extends Component {
         dontSetMetaTags={true}>
         <div className="HomeCaseStudy-banner">
           <h2 className="HomeCaseStudy-title">
-            We focus on people – and that starts with you.
+            {caseStudyText.title}
           </h2>
           <div className="HomeCaseStudy-description">
-            Great software experiences empower people to do remarkable things. We believe that a great software partner should do the same.
+            {caseStudyText.text}
           </div>
         </div>
         <Link key={slug} to="study-article" params={{slug: slug}}>
           <div className="HomeCaseStudy-feature">
             <div className="HomeCaseStudy-feature-container">
               <h3 className="HomeCaseStudy-feature-title">
-                Client Success Story
+                {featureText.title}
               </h3>
               <div className="HomeCaseStudy-feature-description">
-                With the help of a new mobile solution, sales force productivity at Coca Cola Bottling increased 25%.
+                {featureText.text}
               </div>
             </div>
             <div className="HomeCaseStudy-feature-learn">
@@ -55,12 +58,16 @@ CaseStudy.displayName = 'CaseStudy';
 
 CaseStudy.propTypes = {
   study: PropTypes.any.isRequired,
+  textInfo: PropTypes.any.isRequired
 };
 
 export default Resolver.createContainer(CaseStudy, {
   resolve: {
     study() {
       return api(`contentful?content_type=case_study&limit=1&fields.featured=true`);
+    },
+    textInfo() {
+      return api(`contentful/text/home`);
     },
   },
 });
