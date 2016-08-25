@@ -28,10 +28,12 @@ class NewsList extends Component {
     var linkTo = router.getRouteAtDepth(router.getCurrentRoutes().length - 1);
     linkTo = linkTo ? linkTo.name : 'news';
 
+    var showNext = this.props.articles.items.length === 5;
+
     return (
       <div className="NewsList">
         {this.props.articles.items.map(a => (
-          <div key={a.title} className="Blog-article">
+          <div key={a.title} className="Blog-article Blog-article--small">
             <div className="Blog-article-content">
               <a className="Blog-article-title-link" href={a.url} target="_blank">
                 <h2 className="Blog-article-title">{a.title}</h2>
@@ -44,11 +46,12 @@ class NewsList extends Component {
             </div>
           </div>
         ))}
-        {this.props.articles.totals > 5 && <div className="Blog-pager">
+        <div className="Blog-pager">
           {query.page > 1 && <Link onClick={scrollTo} className="Blog-article-pager is-previous" to={linkTo} params={params} query={{page: query.page - 1}}>Previous Page</Link>}
           <div className="Blog-page">Page {query.page} / {Math.round(this.props.articles.total / 5)}</div>
-          {this.props.articles.items.length === 5 && <Link onClick={scrollTo} className="Blog-article-pager is-next" params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>}
-        </div>}
+          <Link onClick={scrollTo} className={`Blog-article-pager is-next ${!showNext ? 'is-hidden' : ''}`}
+            params={params} to={linkTo} query={{page: +query.page + 1}}>Next Page</Link>
+        </div>
       </div>
     );
   }
