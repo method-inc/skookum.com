@@ -7,6 +7,7 @@ import Hero from 'Hero';
 import api from 'api';
 import lookup from 'lookup';
 import NewsList from 'NewsList';
+import FilterBar from 'FilterBar';
 
 class News extends React.Component {
   render(): ReactElement {
@@ -32,6 +33,7 @@ class News extends React.Component {
           title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
+        <FilterBar items={[]} />
         <NewsList />
       </div>
     );
