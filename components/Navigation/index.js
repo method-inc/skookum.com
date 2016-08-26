@@ -57,11 +57,11 @@ class Navigation extends Component {
     var atTop = false;
     var currentRoutes = this.context.router.getCurrentRoutes();
     var lastRoute = currentRoutes[currentRoutes.length - 1];
-    var inBlog = lastRoute.path.indexOf('/blog') > -1 && lastRoute.path.indexOf('/blog/:slug') === -1;
+    var inArticleList = (lastRoute.path.indexOf('/blog') > -1 && lastRoute.path.indexOf('/blog/:slug') === -1) || lastRoute.path.indexOf('/news') > -1;
 
-    if (this.previousScrollPos - window.scrollY <= 0 || (inBlog && window.scrollY > 300)) {
+    if (this.previousScrollPos - window.scrollY <= 0 || (inArticleList && window.scrollY > 300)) {
       showNav = false;
-    } else if (inBlog ) {
+    } else if (inArticleList ) {
       showNav = true;
     }
 
