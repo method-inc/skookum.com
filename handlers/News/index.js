@@ -33,7 +33,7 @@ class News extends React.Component {
           title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
-        <FilterBar items={[]}  />
+        <FilterBar items={[]} />
         <NewsList />
       </div>
     );
