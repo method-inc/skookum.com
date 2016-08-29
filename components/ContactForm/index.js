@@ -12,7 +12,7 @@ import cookie from 'react-cookie';
 var last = n => n[n.length - 1];
 var pluck = (o, ...keys) =>
   keys.reduce((result, k) => ((result[k] = o[k]), result), {});
-var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum|co)\b/;
 
 // TODO: handle required fields a bit better than current'
 class ContactForm extends React.Component {

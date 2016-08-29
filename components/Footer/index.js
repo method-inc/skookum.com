@@ -15,7 +15,7 @@ class Footer extends React.Component {
 
   onSubmit(e){
     e.preventDefault();
-    const reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+    const reg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum|co)\b/;
 
     if (!reg.test(this.state.email)){
       this.setState({msg: 'Please enter a valid email address.'});
@@ -64,6 +64,7 @@ class Footer extends React.Component {
           </div>
           <div className="Footer-links">
             <Link to="careers" className="Footer-link">Careers</Link>
+            <Link to="news" className="Footer-link">News</Link>
             <Link to="open-source" className="Footer-link">Open&nbsp;Source</Link>
             <a href="https://www.twitter.com/skookum" target="_blank" className="Footer-link">Twitter</a>
             <a href="https://www.linkedin.com/company/skookum-digital-works" target="_blank" className="Footer-link">Linkedin</a>

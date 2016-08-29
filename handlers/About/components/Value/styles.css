@@ -1,0 +1,36 @@
+.Value {
+  margin: 0;
+  padding: 5em 8%;
+  list-style: none;
+  display: inline-block;
+  width: 47%;
+  background-color: white;
+  margin-top: 3em;
+  text-align: center;
+  box-sizing: border-box;
+  color: #393939;
+}
+
+.Value-image {
+  height: 120px;
+  width: 160px;
+  margin: 0 auto;
+}
+
+.Value-title {
+  font-size: 2em;
+}
+
+.Value-text {
+  max-width: 440px;
+  font-weight: 300;
+  line-height: 2em;
+  color: #77787e;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .Value {
+    width: 100%;
+  }
+}

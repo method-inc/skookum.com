@@ -101,6 +101,10 @@ api.get('/contentful', function(req, res) {
     order = '-fields.datePublished';
   }
 
+  if (contentType === 'news') {
+    order = '-fields.date';
+  }
+
   if (contentType === 'service') {
     order = 'fields.order';
   }
@@ -195,6 +199,36 @@ api.get('/contentful/capabilities', function(req, res) {
     );
 });
 
+api.get('/contentful/leaders', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'leader')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      order: 'fields.order',
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/values', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'value')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      order: 'fields.order',
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
 api.get('/contentful/events', function(req, res) {
   return contentful.contentTypes()
     .then(n => n.filter(r => r.name === 'event')[0].sys.id)
@@ -218,6 +252,21 @@ api.get('/contentful/hero/:slug', function(req, res) {
       content_type: id,
       /*eslint-enable*/
       'fields.slug': req.params.slug,
+    }))
+    .then(
+      n => res.send(n.map(r => r.fields)),
+      error => res.send(error)
+    );
+});
+
+api.get('/contentful/text/:slug', function(req, res) {
+  return contentful.contentTypes()
+    .then(n => n.filter(r => r.name === 'text')[0].sys.id)
+    .then(id => contentful.entries({
+      /*eslint-disable*/
+      content_type: id,
+      /*eslint-enable*/
+      'fields.page': req.params.slug,
     }))
     .then(
       n => res.send(n.map(r => r.fields)),
@@ -267,4 +316,3 @@ api.get('/careers', function(req, res) {
 api.post('/contact', contact);
 
 export default api;
-

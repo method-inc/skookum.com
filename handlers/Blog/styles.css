@@ -10,6 +10,10 @@
   padding: 4em 5%;
 }
 
+.Blog-article.Blog-article--small {
+  padding: 3em 5%;
+}
+
 .Blog-article-content {
   margin: 0 auto;
 }
@@ -83,6 +87,11 @@
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
+  visibility: visible;
+}
+
+.Blog-article-pager.is-hidden {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 600px) {

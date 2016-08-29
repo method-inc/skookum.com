@@ -1,0 +1,11 @@
+/** @define NewsList; use strict */
+
+.NewsList-url {
+  font-size: 1.1em;
+  color: #FAAB18;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 500;
+}
+
