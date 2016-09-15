@@ -17,7 +17,7 @@ import fs from 'fs';
 
 var siteMap = fs.readFileSync(join(process.cwd(), 'sitemap.xml'));
 
-var validPaths = ['blog', 'capabilities', 'work', 'contact', 'events', 'open-source', 'innovation-camp', 'careers'];
+var validPaths = ['blog', 'capabilities', 'work', 'contact', 'events', 'open-source', 'innovation-camp', 'careers', 'staging'];
 
 var baseRedirects = (req, res, next) => {
   var redirect = false;
