@@ -56,7 +56,7 @@ var baseRedirects = (req, res, next) => {
     }
   }
 
-  if (subDomain === 'staging' && isStaging) {
+  if (subDomain === 'staging') {
     redirect = false;
   }
 
