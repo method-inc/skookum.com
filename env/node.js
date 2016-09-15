@@ -56,6 +56,10 @@ var baseRedirects = (req, res, next) => {
     }
   }
 
+  if (subDomain === 'staging' && isStaging) {
+    redirect = false;
+  }
+
   if (redirect) {
     return res.redirect(301, redirectStr + url);
   }
