@@ -17,7 +17,7 @@ import fs from 'fs';
 
 var siteMap = fs.readFileSync(join(process.cwd(), 'sitemap.xml'));
 
-var validPaths = ['blog', 'capabilities', 'work', 'contact', 'events', 'open-source', 'innovation-camp', 'careers', 'staging'];
+var validPaths = ['blog', 'capabilities', 'work', 'contact', 'events', 'open-source', 'innovation-camp', 'careers'];
 
 var baseRedirects = (req, res, next) => {
   var redirect = false;
@@ -54,6 +54,10 @@ var baseRedirects = (req, res, next) => {
     if (validPath) {
       redirectStr += url.indexOf('/' + validPath) === 0 ? '' : '/' + validPath;
     }
+  }
+
+  if (subDomain === 'staging' && isStaging) {
+    redirect = false;
   }
 
   if (redirect) {
