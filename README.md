@@ -10,7 +10,7 @@ loosely so that you can change it if you so desire.
 
 ## Get Hacking
 
-Requires node. Ask @jordancardwell or @iamdustan for a makefile with the
+Requires node. Ask @scpaye506 for a makefile with the
 required environment variables.
 
 Otherwise disable all things that talk to third party services and do the
