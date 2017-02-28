@@ -68,6 +68,9 @@ footer {
     padding-top: 40px;
     margin: 0 auto;
   }
+  .flex-container {
+    padding-top: 0; 
+  }
 
 }
 

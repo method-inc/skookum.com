@@ -54,10 +54,6 @@ p span {
   line-height: 40px;
   color: #282C34;
 }
-/*.cta p {
-  color: #ffffff;
-  opacity: 0.5;
-}*/
 a {
   font-weight: 400;
   text-transform: uppercase;
@@ -89,9 +85,6 @@ a:hover {
 footer a:focus {
   opacity: 1
 }
-
-
-
 
 /* Larger than mobile */
 @media (min-width: 320px) {
