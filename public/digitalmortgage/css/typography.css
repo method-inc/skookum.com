@@ -16,7 +16,12 @@ h2 {
   color: #282C34;
   margin: 20px 0;
 }
-footer h2, header a .item-content {
+.cta h1, .cta p {
+  margin-top: 0;
+  color: #282C34;
+  text-align: center;
+}
+header a .item-content {
   color: #ffffff;
 }
 footer a .item-content, footer h4 {
@@ -70,19 +75,16 @@ a .item-content {
   opacity: 1;
 }
 a {
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 a:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 footer a:focus {
   opacity: 1
 }
-
-
-
 
 /* Larger than mobile */
 @media (min-width: 320px) {
