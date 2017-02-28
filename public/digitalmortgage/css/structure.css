@@ -6,6 +6,9 @@
   display: block;
   margin: 80px 0;
 }
+.flex-container {
+  padding-top: 40px;
+}
 .column-container {
   display: flex;
   flex-direction: row;
@@ -20,16 +23,23 @@
   text-align: center;
   box-shadow: 0 5px 100px 0px #DFE3EC;
 }
-footer {
-  width: 100%;
-  background-color: #282C34;
-  padding-top: 40px;
-  margin-top: 80px;
+.cta {
+  background-color: #FFEC63;
 }
-.footer-section {
+.cta .section {
+  display: block;
+  padding: 80px 40px;
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+footer {
   width: 90%;
-  margin-left: 10%;
-  padding-bottom: 80px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282C34;
+  padding: 80px 5%;
 }
 .flex-item {
   display: flex;
@@ -46,10 +56,6 @@ footer {
     width: 95%;
     margin-left: 5%;
   }
-  .footer-section {
-    width: 95%;
-    margin-left: 5%;
-  }
   .wrapper {
     width: 90%;
   }
@@ -62,6 +68,7 @@ footer {
     padding-top: 40px;
     margin: 0 auto;
   }
+
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -88,10 +95,6 @@ footer {
     width: 90%;
     margin-left: 10%;
   }
-  .footer-section {
-    width: 90%;
-    margin-left: 10%;
-  }
   .wrapper {
     width: 80%;
   }
@@ -112,7 +115,3 @@ footer {
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-
-.logo a {
-  opacity: 1.0;
-}
