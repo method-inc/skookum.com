@@ -101,7 +101,6 @@ app.use('/api', api);
 app.use('/cdn', express.static(join(process.cwd(), 'dist')));
 app.use('/public', express.static(join(process.cwd(), 'public')));
 app.use('/email', express.static(join(process.cwd(), 'email')));
-app.use('/digitalmortgage', express.static(join(process.cwd(), 'public/digitalmortgage')));
 
 REDIRECTS.forEach(function(redirect) {
   var [old, current] = redirect;
