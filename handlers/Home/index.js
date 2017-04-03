@@ -43,21 +43,37 @@ class Home extends React.Component {
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
-        <Headline text={headlineText.title} />
         <Services />
+        <Clients />
         <CaseStudy />
-        <div className="Home-content">
-          <div className="Home-content-container">
-            <h2 className="Home-content-title">
-              {homeCapabiltiesText.title}
-            </h2>
-            <div className="Home-content-description">
-               {homeCapabiltiesText.text}
-            </div>
-            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>{capabilitiesButtonText.title}</Button>
+        <div className="HomeTestimonial">
+          <div className="HomeTestimonial-inner">
+            <q className="HomeTestimonial-quote">
+              Skookum’s approach to product design and development is all encompassing, powerful, and helped
+              us find the right market fit from the start.
+            </q>
+            <cite className="HomeTestimonial-citation">
+              Lisa May, Synchrony Financial
+            </cite>
           </div>
         </div>
-        <Clients />
+        <div className="Contact">
+          <div className="Contact-inner">
+            <div className="Contact-textContainer">
+              <h2 className="Contact-title">
+                Ready to get started?
+              </h2>
+              <p className="Contact-blurb">
+                Contact us to discuss your digital business objectives.
+              </p>
+            </div>
+            <div className="Contact-ctaContainer">
+              <Button className="Contact-link" to="contact">
+                Start the Conversation
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

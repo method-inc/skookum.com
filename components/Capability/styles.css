@@ -1,0 +1,24 @@
+.Capability {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 2px 13.5px 0 rgba(207, 214, 222, 0.3);
+  display: flex;
+  flex: 0 1 32%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 80px;
+}
+
+.Capability-subTitle {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin: 1.5em auto 0 auto;
+}
+
+.Capability-underline {
+  background-color: #393939;
+  display: block;
+  height: 3px;
+  margin: 2em auto 0 auto;
+  width: 20%;
+}

@@ -1,122 +1,29 @@
 /** @define HomeClients; use strict */
 
 .HomeClients {
-  padding: 8%;
-}
-
-.HomeClients-content {
-  font-weight: 300;
-  padding: 0 0 8%;
   text-align: center;
+  padding: 70px 0 80px 0;
 }
 
-.HomeClients-title {
-  font-size: 4em;
-  margin: 0;
-  font-weight: 300;
+.HomeClients-blurb {
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
-.HomeClients-description {
-  font-size: 2em;
-  padding-top: 20px;
+.HomeClients-clients {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  max-width: 1024px;
+  margin: 50px auto 0 auto;
 }
 
-.HomeClients-client {
-  box-sizing: border-box;
-  display: inline-block;
-  height: 10em;
-  margin-bottom: -3px;
+.HomeClients-imgWrapper {
+  flex: 1;
+  margin: 0 1rem;
   position: relative;
-  width: 50%;
-}
-
-.HomeClients-context {
-  box-sizing: border-box;
-  background-color: #efefef;
-  font-weight: 300;
-  font-size: 1.2em;
-  line-height: 1.6em;
-  padding: 15%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: opacity ease 300ms;
-}
-
-.HomeClients-image-container {
-  background-color: #fff;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: all ease-out 300ms;
 }
 
 .HomeClients-img {
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 85%;
+  width: 100%;
 }
-
- .HomeClients-client:hover .HomeClients-image-container,
-.HomeClients-client:focus .HomeClients-image-container {
-  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.23);
-  transform: translate3d(0, -100%, 0);
-  z-index: 2;
-}
-
-.HomeClients-client:hover:nth-child(-n+4) .HomeClients-image-container,
-.HomeClients-client:focus:nth-child(-n+4) .HomeClients-image-container {
-  transform: translate3d(0, 100%, 0);
-}
-
-.HomeClients-client:hover .HomeClients-context,
-.HomeClients-client:focus .HomeClients-context {
-  opacity: 1;
-}
-
-@media screen and (min-width: 1024px) {
-  .HomeClients {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
-@media screen and (min-width: 601px) {
-  .HomeClients-client {
-    width: 25%;
-    height: 14em;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .HomeClients-context {
-    font-size: 1em;
-  }
-}
-
-
-@media screen and (max-width: 700px) {
-  .HomeClients-context {
-    font-size: 0.9em;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .HomeClients-context {
-    font-size: 0.8em;
-  }
-}
-

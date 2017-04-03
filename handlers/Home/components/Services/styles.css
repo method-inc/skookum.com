@@ -1,5 +1,65 @@
 /** @define HomeServices; use strict */
 
+.HomeServices {
+  background-color: rgba(224, 230, 235,  0.2);
+  padding: 64px 88px 50px 88px;
+  text-align: center;
+}
+
+.HomeServices-blurb {
+  color: #393939;
+  font-family: 'Lato';
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 1024px;
+  text-align: center;
+}
+
+.HomeServices-type--business {
+  color: #eb4e1a;
+}
+
+.HomeServices-type--design {
+  color: #f79b15;
+}
+
+.HomeServices-type--technology {
+  color: #edcc09;
+}
+
+.HomeServices-capabilities {
+  margin-top: 60px;
+}
+
+.HomeServices-capabilitiesTitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.HomeServices-capabilitiesWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.Contact-link.is-secondary,
+.HomeServices-link.is-secondary {
+  border: 2px solid #393939;
+  border-radius: 0;
+  color: #393939;
+  margin: 90px auto 0 auto;
+  transition: color background-color 0.3s;
+}
+
+.Contact-link.is-secondary:hover,
+.HomeServices-link.is-secondary:hover {
+  background: #393939;
+  border: 2px solid #393939;
+  color: #fff;
+}
+
+
 .HomeServices-list {
   border-top: 1px solid white;
   margin: 0;
