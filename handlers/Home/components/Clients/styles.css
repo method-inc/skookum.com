@@ -13,20 +13,20 @@
 .HomeClients-clients {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin: 50px auto 0 auto;
   max-width: 400px;
 }
 
 .HomeClients-imgWrapper {
-  flex: 0 1 42%;
-  margin: 3em 4%;
+  width: 42%;
+  margin: 3em 0;
   position: relative;
 }
 
 .HomeClients-imgWrapper:nth-child(-n + 2) {
-  margin: 0 4% 3em 4%;
+  margin: 0 0 3em 0;
 }
 
 .HomeClients-img {
@@ -35,27 +35,31 @@
 
 @media screen and (min-width: 767px) {
   .HomeClients-clients {
-    max-width: initial;
-    margin: 50px 0 0 0;
+    max-width: 70%;
   }
 
   .HomeClients-imgWrapper {
-    flex: 0 1 20%;
-    margin: 0.5em 2.5%;
+    width: 21%;
+    margin: 0.5em 0;
   }
 
   .HomeClients-imgWrapper:nth-child(-n + 2) {
-    margin: 0.5em 2.5%;
+    margin: 0.5em 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .HomeClients-clients {
+    max-width: 100%;
+    margin: 50px 0 0 0;
+  }
+
   .HomeClients-imgWrapper {
-    flex: 1;
-    margin: 0 1em;
+    width: 9%;
+    margin: 0;
   }
 
   .HomeClients-imgWrapper:nth-child(-n + 2) {
-    margin: 0 1em;
+    margin: 0;
   }
 }

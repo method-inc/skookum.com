@@ -77,7 +77,7 @@ class Capabilities extends React.Component {
 
                   <ul className="CapabilityBlock-specialities">
                     { this.capabilities[capability].specialties.map(specialty => (
-                        <li className="CapabilityBlock-specialty">
+                        <li key={specialty} className="CapabilityBlock-specialty">
                           { specialty }
                         </li>
                       ))
