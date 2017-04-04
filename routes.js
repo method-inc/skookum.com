@@ -23,6 +23,7 @@ import ThankYou from './handlers/ThankYou';
 import About from './handlers/About';
 import Profile from './handlers/Profile';
 import News from './handlers/News';
+import DigitalMortgage from './handlers/DigitalMortgage';
 
 var routes = (
   <Route path="/" handler={App}>
@@ -57,9 +58,9 @@ var routes = (
       <DefaultRoute name="about" handler={About} />
     </Route>
     <Route name="news" path="news" handler={News} />
+    <Route name="digitalmortgage" path="digitalmortgage" handler={DigitalMortgage} />
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
 
 export default routes;
-

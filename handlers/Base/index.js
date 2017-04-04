@@ -37,13 +37,13 @@ class AppBase extends Component {
     var tags = setDefaultTags();
 
     var handlerKey = this.getHandlerKey(),
-        showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou';
+        showNavs = handlerKey !== 'info' && handlerKey !== 'thankyou' && handlerKey !== 'digitalmortgage';
 
     return (
       <div className="AppBase">
         <DocMeta tags={tags} />
         {showNavs && <Navigation id="navigation" />}
-        <div className="AppBase-nav-background" />
+        {handlerKey !== 'digitalmortgage' && <div className="AppBase-nav-background" />}
         <div className="AppBase-content">
           <RouteHandler key={handlerKey} />
         </div>

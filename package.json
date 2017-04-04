@@ -58,6 +58,7 @@
     "style-loader": "0.12.3",
     "suitcss-preprocessor": "0.4.0",
     "url-loader": "0.5.6",
+    "node-libs-browser": "<=0.6.0",
     "webpack": "1.9.10"
   },
   "devDependencies": {
@@ -65,7 +66,7 @@
     "eslint": "1.10.3",
     "eslint-plugin-react": "3.14.0",
     "jest-cli": "0.4.5",
-    "node-libs-browser": "^0.6.0",
+    "node-gyp": "^3.5.0",
     "react-hot-loader": "1.2.7",
     "rework-suit-conformance": "0.4.2",
     "webpack-dev-server": "1.9.0"

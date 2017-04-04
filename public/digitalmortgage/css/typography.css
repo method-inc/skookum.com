@@ -1,0 +1,103 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  margin-top: 10%;
+}
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #282C34;
+  margin: 20px 0;
+}
+.cta h1, .cta p {
+  margin-top: 0;
+  color: #282C34;
+  text-align: center;
+}
+header a .item-content {
+  color: #ffffff;
+}
+footer a .item-content, footer h4 {
+  color: #ABB2BF;
+}
+h3 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 40px;
+  color: #282C34;
+}
+h4 {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  color: #282C34;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 10px 0;
+  color: #282C34;
+}
+p span {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 40px;
+  color: #282C34;
+}
+a {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+}
+a .item-content {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.button a{
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #282C34;
+  opacity: 1;
+}
+a {
+  opacity: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+a:hover {
+  opacity: 0.6;
+}
+footer a:focus {
+  opacity: 1
+}
+
+/* Larger than mobile */
+@media (min-width: 320px) {
+  h1 {
+    font-size: 34px;
+    line-height: 54px;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}

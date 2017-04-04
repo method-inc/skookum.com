@@ -1,0 +1,380 @@
+
+
+
+.DigitalMortgage .Contact-flex input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #393939;
+}
+
+.DigitalMortgage .Contact-flex input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #393939;
+   opacity:  1;
+}
+.DigitalMortgage .Contact-flex input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #393939;
+   opacity:  1;
+}
+.DigitalMortgage .Contact-flex input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #393939;
+}
+
+
+@media screen and (min-width: 768px) {
+  .DigitalMortgage .Contact-flex {
+    color: #393939;
+    display: flex;
+    padding: 0;
+    text-align: left;
+  }
+
+  .NewsletterInfo {
+    flex: 0.333;
+    padding-right: 15%;
+    padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .DigitalMortgage .Contact-flex {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.DigitalMortgage .ContactForm-header {
+  font-weight: 700;
+}
+
+.DigitalMortgage .ContactForm-submit {
+  width: 100%;
+  max-width: 300px;
+  background-color: #282C34;
+  color: #FFEC63;
+  border-radius: 5px;
+  margin: 20px auto;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  outline: 0;
+}
+.DigitalMortgage .ContactForm-submit:hover,
+.DigitalMortgage .ContactForm-submit:focus {
+  box-shadow: 0 0 50px 2px rgba(40, 44, 52,0.2);
+  background-color: #282C34;
+  opacity: 0.6;
+}
+
+.DigitalMortgage input {
+  border-color: #282c34;
+}
+
+.DigitalMortgage textarea {
+  border-color: #282c34;
+  outline: 0;
+}
+
+.DigitalMortgage h1 {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  margin-top: 10%;
+}
+.DigitalMortgage  h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #282C34;
+  margin: 20px 0;
+}
+.DigitalMortgage .cta h1, .DigitalMortgage .cta p {
+  margin-top: 0;
+  color: #282C34;
+  text-align: center;
+}
+.DigitalMortgage header a .item-content {
+  color: #ffffff;
+}
+.DigitalMortgage footer a .item-content, .DigitalMortgage footer h4 {
+  color: #ABB2BF;
+}
+.DigitalMortgage h3 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 40px;
+  color: #282C34;
+}
+.DigitalMortgage h4 {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  color: #282C34;
+}
+.DigitalMortgage p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 10px 0;
+  color: #282C34;
+}
+.DigitalMortgage p span {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 40px;
+  color: #282C34;
+}
+.DigitalMortgage a {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+}
+.DigitalMortgage a .item-content {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.DigitalMortgage .button a{
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #282C34;
+  opacity: 1;
+}
+.DigitalMortgage a {
+  opacity: 1;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.DigitalMortgage .button a.left {
+  margin: 40px 0;
+}
+.DigitalMortgage a:hover {
+  opacity: 0.6;
+}
+.DigitalMortgage footer a:focus {
+  opacity: 1
+}
+
+.DigitalMortgage .wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.DigitalMortgage .section {
+  display: block;
+  margin: 80px 0;
+}
+.DigitalMortgage .flex-container {
+  padding-top: 40px;
+}
+.DigitalMortgage .column-container {
+  display: flex;
+  flex-direction: row;
+}
+.DigitalMortgage .col-2 {
+  padding: 0 10px;
+  height: 200px;
+}
+.DigitalMortgage .paper {
+  display: block;
+  padding: 40px 40px 60px 40px;
+  text-align: center;
+  box-shadow: 0 5px 100px 0px #DFE3EC;
+}
+.DigitalMortgage .cta {
+  background-color: #FFEC63;
+}
+.DigitalMortgage .cta .section {
+  display: block;
+  padding: 80px 40px;
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+.DigitalMortgage footer {
+  width: 90%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282C34;
+  padding: 80px 5%;
+}
+.DigitalMortgage .flex-item {
+  display: flex;
+  flex-grow: 1;
+}
+.DigitalMortgage .item-content {
+  padding: 10px 10px 0 0;
+}
+
+
+/* Larger than mobile */
+@media (min-width: 320px) {
+  .DigitalMortgage header .logo {
+    width: 95%;
+    margin-left: 5%;
+  }
+  .DigitalMortgage .wrapper {
+    width: 90%;
+  }
+  .DigitalMortgage .column-container {
+    flex-direction: column;
+  }
+  .DigitalMortgage .col-2 {
+    height: 50%;
+    width: 50%;
+    padding-top: 40px;
+    margin: 0 auto;
+  }
+  .DigitalMortgage .flex-container {
+    padding-top: 0;
+  }
+
+}
+
+.DigitalMortgage header .logo {
+  border-bottom: #ffffff solid 1px;
+}
+.DigitalMortgage header.hero {
+  background-image: url('/public/digitalmortgage/imgs/hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+}
+.DigitalMortgage .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+  }
+.DigitalMortgage .embed-container iframe, .DigitalMortgage .embed-container object, .DigitalMortgage .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.DigitalMortgage hr {
+  display: block;
+  width: 50px;
+  background-color: #FFDD2D;
+  border: 0;
+  margin: 30px auto;
+  height: 2px;
+}
+.DigitalMortgage .button a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px 0;
+  background-color: #FFDD2D;
+  border-radius: 5px;
+  margin: 40px auto;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.DigitalMortgage .button a:hover {
+  box-shadow: 0 0 50px 2px rgba(40, 44, 52,0.2);
+}
+.DigitalMortgage .cta .button a {
+  display: flex;
+  background-color: #282C34;
+  color: #FFEC63;
+}
+.DigitalMortgage .fullgraphic {
+  width: 100%;
+  max-width: 580px;
+  display: block;
+  margin: 0 auto;
+}
+.DigitalMortgage footer .logo img {
+  padding: 20px 40px 40px 0;
+  display: inline-block;
+}
+
+
+/* Larger than mobile */
+@media (min-width: 320px) {
+  .DigitalMortgage .logo img {
+    height: 40px;
+    padding: 20px 0;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .DigitalMortgage .logo img {
+    height: 50px;
+    padding: 30px 0;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .DigitalMortgage .flex-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding-top: 40px;
+  }
+  .DigitalMortgage .column-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .DigitalMortgage .col-2 {
+    padding: 0 10px;
+    height: 200px;
+    width: auto;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .DigitalMortgage header .logo {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .DigitalMortgage .wrapper {
+    width: 80%;
+  }
+  .DigitalMortgage .flex-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .DigitalMortgage .flex-container {
+    width: 80%;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
+/* Larger than mobile */
+@media (min-width: 320px) {
+  .DigitalMortgage h1 {
+    font-size: 34px;
+    line-height: 54px;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .DigitalMortgage h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
