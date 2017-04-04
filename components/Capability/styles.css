@@ -6,8 +6,11 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1em;
   padding: 32px 40px;
+}
+
+.Capability:nth-child(n + 2) {
+  margin-top: 1em;
 }
 
 .Capability-subTitle {
@@ -27,6 +30,9 @@
 @media screen and (min-width: 767px) {
   .Capability {
     flex: 0 1 32%;
+  }
+
+  .Capability:nth-child(n + 2) {
     margin-top: 0;
   }
 }

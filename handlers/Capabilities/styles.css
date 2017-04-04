@@ -26,6 +26,7 @@
 .CapabilityBlock-image {
   background-clip: content-box;
   background-size: cover;
+  background-position: center;
   padding: 1em;
   min-height: 300px;
 }
