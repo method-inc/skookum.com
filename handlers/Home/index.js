@@ -39,9 +39,8 @@ class Home extends React.Component {
           subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
         <Services />
-        <Clients />
         <CaseStudy />
-        <Testimonial />
+        <Clients />
         <ContactSection />
       </div>
     );

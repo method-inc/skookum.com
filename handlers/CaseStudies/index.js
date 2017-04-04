@@ -2,6 +2,7 @@
 import React from 'react';
 import Hero from 'Hero';
 import CaseStudiesContent from 'CaseStudiesContent';
+import ContactSection from 'ContactSection';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
@@ -31,6 +32,7 @@ class CaseStudies extends React.Component {
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <CaseStudiesContent />
+        <ContactSection />
       </div>
     );
   }

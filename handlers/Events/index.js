@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from 'Hero';
 import EventsContent from 'EventsContent';
+import ContactSection from 'ContactSection';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
@@ -31,6 +32,7 @@ class Events extends React.Component {
           subtitle={lookup(heroInfo, 'subtitle')}
           metaTags={metaTags} />
         <EventsContent />
+        <ContactSection />
       </div>
     );
   }
