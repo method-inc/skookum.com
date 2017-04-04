@@ -5,7 +5,6 @@ require('./styles.css');
 import React, {Component, PropTypes} from 'react';
 import {Resolver} from 'react-resolver';
 import api from 'api';
-import lookup from 'lookup';
 
 class Clients extends Component {
   render(): ?ReactElement {
@@ -39,6 +38,6 @@ export default Resolver.createContainer(Clients, {
   resolve: {
     clients() {
       return api(`contentful?content_type=client&limit=8`);
-    }
+    },
   },
 });

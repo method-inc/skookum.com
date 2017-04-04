@@ -5,7 +5,6 @@ import React from 'react';
 import Hero from 'Hero';
 import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
-import Button from 'Button';
 import Services from 'Services';
 import Testimonial from 'Testimonial';
 import ContactSection from 'ContactSection';
@@ -13,17 +12,11 @@ import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
-import Headline from 'Headline';
-
-var cn = s => `Home-${s}`;
 
 class Home extends React.Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
     var textInfo = this.props.textInfo;
-    var headlineText = textInfo.find(n => n.id === 'home-headline');
-    var homeCapabiltiesText = textInfo.find(n => n.id === 'home-capabilities');
-    var capabilitiesButtonText = textInfo.find(n => n.id === 'home-capabilities-button');
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},

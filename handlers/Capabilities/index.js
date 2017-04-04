@@ -6,7 +6,6 @@ import {Resolver} from 'react-resolver';
 import cx from 'classnames';
 import Hero from 'Hero';
 import ContactSection from 'ContactSection';
-import {Link} from 'react-router';
 import lookup from 'lookup';
 import api from 'api';
 
@@ -17,19 +16,19 @@ class Capabilities extends React.Component {
         title: 'Digital Strategy',
         description: `We help our clients pinpoint new opportunities, answer
         critical business technology questions and devise a plan to accelerate time-to-value.`,
-        specialties: ['Rapid Innovation', 'Technology Assessment', 'Proof of Concept', 'Product Strategy']
+        specialties: ['Rapid Innovation', 'Technology Assessment', 'Proof of Concept', 'Product Strategy'],
       },
       design: {
         title: 'Experience Design',
         description: `We combine human-centered design with deep technology expertise to
         radically simplify and differentiate across the customer journey.`,
-        specialties: ['Journey Mapping', 'Design Sprints', 'Front-end Prototyping', 'Usability Testing']
+        specialties: ['Journey Mapping', 'Design Sprints', 'Front-end Prototyping', 'Usability Testing'],
       },
       engineering: {
         title: 'Engineering',
         description: `We help our clients develop, integrate and scale their solutions by
         employing proven, repeatable processes and the latest project management tools.`,
-        specialties: ['Custom Software Development', 'Team Augmentation', 'Integrations', 'Ongoing Support']
+        specialties: ['Custom Software Development', 'Team Augmentation', 'Integrations', 'Ongoing Support'],
       },
     };
   }

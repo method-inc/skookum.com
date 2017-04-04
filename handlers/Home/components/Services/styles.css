@@ -56,7 +56,7 @@
   transition: color background-color 0.3s;
 }
 
-.Contact-link.is-secondary:hover,
+.HomeContact-link.is-secondary,
 .HomeServices-link.is-secondary:hover {
   background: #393939;
   border: 2px solid #393939;

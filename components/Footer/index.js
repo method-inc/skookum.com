@@ -4,7 +4,6 @@ require('./styles.css');
 
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
-import {AoProcessForm} from 'actOn';
 
 class Footer extends React.Component {
   render(): ?ReactElement {

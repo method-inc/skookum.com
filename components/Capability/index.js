@@ -3,7 +3,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Icon} from 'Icon';
 
 var {PropTypes} = React;
 
@@ -34,7 +33,7 @@ class Capability extends React.Component {
 }
 
 Capability.propTypes = {
-  capability: PropTypes.string.isRequired
+  capability: PropTypes.string.isRequired,
 };
 
 export default Capability;

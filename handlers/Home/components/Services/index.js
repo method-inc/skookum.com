@@ -2,10 +2,6 @@
 require('./styles.css');
 
 import React from 'react';
-import {Resolver} from 'react-resolver';
-import api from 'api';
-import lookup from 'lookup';
-import markdown from 'markdown';
 import Capability from 'Capability';
 import Button from 'Button';
 
@@ -45,4 +41,4 @@ Services.propTypes = {};
 
 Services.displayName = 'Services';
 
-export default Services
+export default Services;
