@@ -2,7 +2,7 @@
 
 .HomeServices {
   background-color: rgba(224, 230, 235,  0.2);
-  padding: 128px 5% 90px 5%;
+  padding: 70px 5% 80px 5%;
 }
 
 .HomeServices-inner {
@@ -52,8 +52,9 @@
   border: 2px solid #393939;
   border-radius: 0;
   color: #393939;
+  letter-spacing: 0.025em;
   margin: 90px auto 0 auto;
-  transition: color background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .HomeContact-link.is-secondary,
@@ -68,5 +69,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .HomeServices {
+    padding: 128px 5% 90px 5%;
   }
 }

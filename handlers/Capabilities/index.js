@@ -64,7 +64,7 @@ class Capabilities extends React.Component {
               <section className={cx('CapabilityBlock', { 'CapabilityBlock--last': i === 2, 'CapabilityBlock--reverse': i === 1 })}
                 key={capability}
               >
-                <div className="CapabilityBlock-image" style={{ backgroundImage: 'url(/public/images/careers1.jpg)' }} />
+                <div className="CapabilityBlock-image" style={{ backgroundImage: `url(/public/images/${capability}.jpg)` }} />
                 <div className="CapabilityBlock-meta">
                   <h2 className="CapabilityBlock-title">
                     { this.capabilities[capability].title }
