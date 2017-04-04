@@ -9,6 +9,8 @@ import lookup from 'lookup';
 import markdown from 'markdown';
 import Leader from 'Leader';
 import Value from 'Value';
+import ContactSection from 'ContactSection';
+
 var {PropTypes} = React;
 
 class About extends React.Component {
@@ -53,7 +55,7 @@ class About extends React.Component {
             <div className="About-leadership-text" dangerouslySetInnerHTML={{__html: markdown(leadershipText.text)}}/>
           </div>}
           <ul className="About-leadership-list">
-            {leadersInfo.map((n, i) => 
+            {leadersInfo.map((n, i) =>
               <Leader key={i} leader={n} index={i} />
             )}
           </ul>
@@ -61,11 +63,12 @@ class About extends React.Component {
         <section className="About-values">
           <h2 className="About-values-title">Our Values</h2>
           <ul className="About-values-list">
-            {valuesInfo.map((n, i) => 
+            {valuesInfo.map((n, i) =>
               <Value value={n} key={i}/>
             )}
           </ul>
         </section>
+        <ContactSection />
       </div>
     );
   }

@@ -6,7 +6,6 @@ import Hero from 'Hero';
 import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
 import Services from 'Services';
-import Testimonial from 'Testimonial';
 import ContactSection from 'ContactSection';
 import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
@@ -16,7 +15,6 @@ import lookup from 'lookup';
 class Home extends React.Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
-    var textInfo = this.props.textInfo;
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},
@@ -39,9 +37,8 @@ class Home extends React.Component {
           subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
         <Services />
-        <Clients />
         <CaseStudy />
-        <Testimonial />
+        <Clients />
         <ContactSection />
       </div>
     );
@@ -56,9 +53,6 @@ export default Resolver.createContainer(Home, {
   resolve: {
     heroInfo() {
       return api(`contentful/hero/home`);
-    },
-    textInfo() {
-      return api(`contentful/text/home`);
     },
   },
 });
