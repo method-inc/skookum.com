@@ -19,7 +19,7 @@ class Capability extends React.Component {
     return (
       <div className="Capability">
         <img className="Capability-icon"
-          src={`/public/images/capability-${this.image(capability)}.svg`}
+          src={`/public/images/${this.image(capability)}.svg`}
           alt={`${this.image(capability)}-icon`}
         />
         <h3 className="Capability-subTitle">
