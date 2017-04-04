@@ -12,15 +12,17 @@ class Clients extends Component {
 
     return (
       <div className="HomeClients">
-        <p className="HomeClients-blurb">
-          For more than a decade, we have helped over 350 clients transition to digital.
-        </p>
-        <div className="HomeClients-clients">
-          {this.props.clients.items.map(n => (
-            <div key={n.name} className="HomeClients-imgWrapper">
-              <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} alt={n.image[0].fields.title}/>
-            </div>
-          ))}
+        <div className="HomeClients-inner">
+          <p className="HomeClients-blurb">
+            For more than a decade, we have helped over 350 clients transition to digital.
+          </p>
+          <div className="HomeClients-clients">
+            {this.props.clients.items.map(n => (
+              <div key={n.name} className="HomeClients-imgWrapper">
+                <img className="HomeClients-img" title={n.name} src={n.image[0].fields.file.url} alt={n.image[0].fields.title}/>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

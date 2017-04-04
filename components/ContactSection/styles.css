@@ -1,0 +1,75 @@
+.ContactSection {
+  background-color: #ffc75f;
+  padding: 72px 5% 104px 5%;
+  text-align: center;
+}
+
+.ContactSection-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.ContactSection-textContainer {
+  flex: 1;
+}
+
+.ContactSection-title {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.ContactSection-blurb {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.ContactSection-ctaContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  margin-top: 2em;
+  justify-content: center;
+}
+
+.ContactSection-link.is-secondary {
+  border: 2px solid #393939;
+  border-radius: 0;
+  color: #393939;
+  margin-left: 0 auto;
+  padding: 0 3em;
+  transition: color background-color 0.3s;
+}
+
+.ContactSection-link.is-secondary:hover {
+  background: #393939;
+  border: 2px solid #393939;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .ContactSection {
+    padding: 144px 5%;
+    text-align: left;
+  }
+
+  .ContactSection-inner {
+    flex-direction: row;
+  }
+
+  .ContactSection-textContainer {
+    flex: 1;
+  }
+
+  .ContactSection-ctaContainer {
+    flex: 0 1 40%;
+    justify-content: flex-end;
+  }
+
+  .ContactSection-link.is-secondary {
+    margin: 0;
+  }
+
+}

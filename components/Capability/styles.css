@@ -3,9 +3,10 @@
   box-sizing: border-box;
   box-shadow: 0 2px 13.5px 0 rgba(207, 214, 222, 0.3);
   display: flex;
-  flex: 0 1 32%;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1em;
   padding: 72px 80px;
 }
 
@@ -21,4 +22,11 @@
   height: 3px;
   margin: 2em auto 0 auto;
   width: 20%;
+}
+
+@media screen and (min-width: 767px) {
+  .Capability {
+    margin-top: 0;
+    flex: 0 1 32%;
+  }
 }

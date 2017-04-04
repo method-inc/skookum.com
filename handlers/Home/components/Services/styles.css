@@ -2,7 +2,12 @@
 
 .HomeServices {
   background-color: rgba(224, 230, 235,  0.2);
-  padding: 64px 88px 50px 88px;
+  padding: 128px 5% 90px 5%;
+}
+
+.HomeServices-inner {
+  margin: 0 auto;
+  max-width: 1024px;
   text-align: center;
 }
 
@@ -12,7 +17,6 @@
   font-size: 1.5em;
   line-height: 1.5em;
   margin: 0 auto;
-  max-width: 1024px;
   text-align: center;
 }
 
@@ -39,11 +43,11 @@
 
 .HomeServices-capabilitiesWrapper {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   margin-top: 80px;
 }
 
-.Contact-link.is-secondary,
+.HomeContact-link.is-secondary,
 .HomeServices-link.is-secondary {
   border: 2px solid #393939;
   border-radius: 0;
@@ -59,7 +63,15 @@
   color: #fff;
 }
 
+@media screen and (min-width: 767px) {
+  .HomeServices-capabilitiesWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 
+/*
 .HomeServices-list {
   border-top: 1px solid white;
   margin: 0;
@@ -252,3 +264,4 @@
     transform: translate3d(0, 0, 0);
   }
 }
+*/

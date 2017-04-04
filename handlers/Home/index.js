@@ -7,6 +7,8 @@ import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
 import Button from 'Button';
 import Services from 'Services';
+import Testimonial from 'Testimonial';
+import ContactSection from 'ContactSection';
 import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
@@ -46,34 +48,8 @@ class Home extends React.Component {
         <Services />
         <Clients />
         <CaseStudy />
-        <div className="HomeTestimonial">
-          <div className="HomeTestimonial-inner">
-            <q className="HomeTestimonial-quote">
-              Skookum’s approach to product design and development is all encompassing, powerful, and helped
-              us find the right market fit from the start.
-            </q>
-            <cite className="HomeTestimonial-citation">
-              Lisa May, Synchrony Financial
-            </cite>
-          </div>
-        </div>
-        <div className="Contact">
-          <div className="Contact-inner">
-            <div className="Contact-textContainer">
-              <h2 className="Contact-title">
-                Ready to get started?
-              </h2>
-              <p className="Contact-blurb">
-                Contact us to discuss your digital business objectives.
-              </p>
-            </div>
-            <div className="Contact-ctaContainer">
-              <Button className="Contact-link" to="contact">
-                Start the Conversation
-              </Button>
-            </div>
-          </div>
-        </div>
+        <Testimonial />
+        <ContactSection />
       </div>
     );
   }

@@ -3,14 +3,39 @@ require('./styles.css');
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import cx from 'classnames';
 import Hero from 'Hero';
+import ContactSection from 'ContactSection';
 import {Link} from 'react-router';
 import lookup from 'lookup';
 import api from 'api';
 
 class Capabilities extends React.Component {
+  get capabilities() {
+    return {
+      strategy: {
+        title: 'Digital Strategy',
+        description: `We help our clients pinpoint new opportunities, answer
+        critical business technology questions and devise a plan to accelerate time-to-value.`,
+        specialties: ['Rapid Innovation', 'Technology Assessment', 'Proof of Concept', 'Product Strategy']
+      },
+      design: {
+        title: 'Experience Design',
+        description: `We combine human-centered design with deep technology expertise to
+        radically simplify and differentiate across the customer journey.`,
+        specialties: ['Journey Mapping', 'Design Sprints', 'Front-end Prototyping', 'Usability Testing']
+      },
+      engineering: {
+        title: 'Engineering',
+        description: `We help our clients develop, integrate and scale their solutions by
+        employing proven, repeatable processes and the latest project management tools.`,
+        specialties: ['Custom Software Development', 'Team Augmentation', 'Integrations', 'Ongoing Support']
+      },
+    };
+  }
+
   render(): ReactElement {
-    var {capabilities, heroInfo} = this.props;
+    var {heroInfo} = this.props;
     heroInfo = heroInfo[0];
 
     var metaTags = [
@@ -32,22 +57,39 @@ class Capabilities extends React.Component {
           poster={lookup(heroInfo, 'poster.fields.file.url')}
           title={heroInfo.title}
           subtitle={lookup(heroInfo, 'subtitle')}
-          metaTags={metaTags} />
-        <ul className="Capabilities-list">
-          {capabilities.map((s, imageUrl) => (
-            (imageUrl = lookup(s.heroImage, 'fields.file.url') || '/public/images/services-default.png'),
-            <li style={{backgroundImage: `url(${imageUrl})`}}
-                className="Capabilities-item" key={s.slug}>
-              <Link className="Capabilities-link" to='capability' params={{capability: s.slug}}>
-                <div className="Capabilities-overlay"></div>
-                <div className="Capabilities-content">
-                  <h2 className="Capabilities-title">{s.name}</h2>
-                  <span className="Capabilities-view">View Information</span>
+          metaTags={metaTags}
+        />
+        <div className="Capabilities-wrapper">
+          {
+            Object.keys(this.capabilities).map((capability, i) => (
+              <section className={cx('CapabilityBlock', { 'CapabilityBlock--last': i === 2, 'CapabilityBlock--reverse': i === 1 })}
+                key={capability}
+              >
+                <div className="CapabilityBlock-image" style={{ backgroundImage: 'url(/public/images/careers1.jpg)' }} />
+                <div className="CapabilityBlock-meta">
+                  <h2 className="CapabilityBlock-title">
+                    { this.capabilities[capability].title }
+                  </h2>
+                  <p className="CapabilityBlock-description">
+                  { this.capabilities[capability].description }
+                  </p>
+
+                  <span className="CapabilityBlock-underline" />
+
+                  <ul className="CapabilityBlock-specialities">
+                    { this.capabilities[capability].specialties.map(specialty => (
+                        <li className="CapabilityBlock-specialty">
+                          { specialty }
+                        </li>
+                      ))
+                    }
+                  </ul>
                 </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+              </section>
+            ))
+          }
+        </div>
+        <ContactSection />
       </div>
     );
   }
@@ -59,9 +101,6 @@ Capabilities.displayName = 'Capabilities';
 
 export default Resolver.createContainer(Capabilities, {
   resolve: {
-    capabilities(props, context) {
-      return api(`contentful/capabilities`);
-    },
     heroInfo() {
       return api(`contentful/hero/capabilities`);
     },

@@ -8,42 +8,6 @@
   padding-top: 10px;
 }
 
-.Contact {
-  background-color: #ffc75f;
-  padding: 144px 0;
-}
-
-.Contact-inner {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1024px;
-}
-
-.Contact-textContainer {
-  flex: 1;
-}
-
-.Contact-title {
-  font-size: 2em;
-  font-weight: 600;
-}
-
-.Contact-blurb {
-  font-size: 1.5em;
-  font-weight: normal;
-}
-
-.Contact-ctaContainer {
-  align-items: center;
-  display: flex;
-  flex: 0 1 40%;
-  text-align: center;
-}
-
-.Contact-link.is-secondary {
-  margin-top: 0;
-}
-
 .Home-content-container {
   position: relative;
   top: 50%;
@@ -60,32 +24,6 @@
 .Home-content-description {
   font-size: 2em;
   margin: 0 auto 70px;
-}
-
-.HomeTestimonial {
-  background-color: rgba(224, 230, 235, 0.2);
-  padding: 90px 0;
-  text-align: center;
-}
-
-.HomeTestimonial-inner {
-  margin: 0 auto;
-  max-width: 55%;
-}
-
-.HomeTestimonial-quote {
-  line-height: 1.3em;
-  font-size: 2em;
-  font-weight: 300;
-}
-
-.HomeTestimonial-citation {
-  display: block;
-  font-size: 0.8em;
-  font-style: normal;
-  font-weight: normal;
-  margin: 40px auto 0 auto;
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
