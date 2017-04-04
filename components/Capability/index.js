@@ -34,7 +34,7 @@ class Capability extends React.Component {
 }
 
 Capability.propTypes = {
-
+  capability: PropTypes.string.isRequired
 };
 
 export default Capability;
