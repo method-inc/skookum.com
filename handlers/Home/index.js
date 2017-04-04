@@ -5,23 +5,18 @@ import React from 'react';
 import Hero from 'Hero';
 import Clients from 'Clients';
 import CaseStudy from 'CaseStudy';
-import Button from 'Button';
 import Services from 'Services';
+import Testimonial from 'Testimonial';
+import ContactSection from 'ContactSection';
 import {nameToHex} from 'nameToColor';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
-import Headline from 'Headline';
-
-var cn = s => `Home-${s}`;
 
 class Home extends React.Component {
   render(): ReactElement {
     var heroInfo = this.props.heroInfo[0];
     var textInfo = this.props.textInfo;
-    var headlineText = textInfo.find(n => n.id === 'home-headline');
-    var homeCapabiltiesText = textInfo.find(n => n.id === 'home-capabilities');
-    var capabilitiesButtonText = textInfo.find(n => n.id === 'home-capabilities-button');
     var metaTags = [
       {name: 'title', content: heroInfo.metaTitle},
       {name: 'description', content: heroInfo.metaDescription},
@@ -43,21 +38,11 @@ class Home extends React.Component {
           title={<img className="Home-wordmark-image" src="/public/images/wordmark.svg" alt="Skookum" />}
           subtitle={<span>We help companies create <span style={{color: nameToHex('orange')}}>digital products</span> people love to use.</span>}
           metaTags={metaTags}/>
-        <Headline text={headlineText.title} />
         <Services />
-        <CaseStudy />
-        <div className="Home-content">
-          <div className="Home-content-container">
-            <h2 className="Home-content-title">
-              {homeCapabiltiesText.title}
-            </h2>
-            <div className="Home-content-description">
-               {homeCapabiltiesText.text}
-            </div>
-            <Button className="Home-content-button" to="capabilities" type="white" style={{border: 0}}>{capabilitiesButtonText.title}</Button>
-          </div>
-        </div>
         <Clients />
+        <CaseStudy />
+        <Testimonial />
+        <ContactSection />
       </div>
     );
   }

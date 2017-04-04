@@ -8,18 +8,6 @@
   padding-top: 10px;
 }
 
-.Home-content {
-  background-image: url(/public/images/homepage-capabilities.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #393939;
-  font-weight: 300;
-  height: 786px;
-  padding: 0 5%;
-  position: relative;
-  text-align: center;
-}
-
 .Home-content-container {
   position: relative;
   top: 50%;
