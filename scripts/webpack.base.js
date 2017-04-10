@@ -93,10 +93,7 @@ module.exports = function(options) {
         },
         {test: /\.json$/, loader: 'json'},
         {test: /\.jsx?$/,
-          exclude: [
-            // exclude everything that isn’t a react- component
-            /node_modules(?!\/react-)/,
-          ],
+          exclude: /node_modules/,
           loaders: concat(
             options.hotloader && 'react-hot',
             'babel?{"optional": "runtime", "stage": 1}'

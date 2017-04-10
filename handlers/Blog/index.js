@@ -5,6 +5,7 @@ import React, {Component, PropTypes} from 'react';
 import Hero from 'Hero';
 import FilterBar from 'FilterBar';
 import ArticlesList from 'ArticlesList';
+import ContactSection from 'ContactSection';
 import {Resolver} from 'react-resolver';
 import api from 'api';
 import lookup from 'lookup';
@@ -35,6 +36,7 @@ class Blog extends Component {
           metaTags={metaTags} />
         <FilterBar items={this.props.tags} />
         <ArticlesList />
+        <ContactSection />
       </div>
     );
   }
